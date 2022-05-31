@@ -70,19 +70,31 @@ bool excesoDeVelocidad(viaje v) {
     return false;
 }
 
+/***************************************** EJERCICIO flota
+ * ***************************************/
+bool estabaEnViaje(viaje v, tiempo t0,  tiempo tf) {
+    for (int i = 0; i < v.size(); i++) {
+        if (get<0>(v[i]) >= t0 && get<0>(v[i]) <= tf) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int flota(vector<viaje> f, tiempo t0, tiempo tf) {
+    int resp = 0;
+    for (int i = 0; i < f.size(); i++) {
+        if (estabaEnViaje(f[i], t0, tf)) {
+            resp++;
+        }
+    }
+    return resp;
+}
+
 /************************************ EJERCICIO recorridoCubierto
  * *******************************/
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
     vector<gps> resp;
-    // codigo
-
-    return resp;
-}
-
-/***************************************** EJERCICIO flota
- * ***************************************/
-int flota(vector<viaje> f, tiempo t0, tiempo tf) {
-    int resp;
     // codigo
 
     return resp;
