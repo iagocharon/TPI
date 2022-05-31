@@ -8,6 +8,7 @@
 #include "auxiliares.h"
 
 using namespace std;
+//sajdnfaskjnfdk
 
 /******++++**************************** EJERCICIO tiempoTotal
  * ***********+++***********************/
