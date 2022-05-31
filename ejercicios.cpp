@@ -93,10 +93,22 @@ int flota(vector<viaje> f, tiempo t0, tiempo tf) {
 
 /************************************ EJERCICIO recorridoCubierto
  * *******************************/
+bool estaCubierto(gps p, viaje v, distancia u) {
+    for (int i = 0; i < v.size(); i++) {
+        if (distanciaEntre(p, get<1>(v[i])) <= u) {
+            return true;
+        }
+    }
+    return false;
+}
+
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
     vector<gps> resp;
-    // codigo
-
+    for (int i = 0; i < r.size(); i++) {
+        if (!estaCubierto(r[i], v, u)) {
+            resp.push_back(r[i]);
+        }
+    }
     return resp;
 }
 
