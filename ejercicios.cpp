@@ -8,7 +8,6 @@
 #include "auxiliares.h"
 
 using namespace std;
-//sajdnfaskjnfdk
 
 /******++++**************************** EJERCICIO tiempoTotal
  * ***********+++***********************/
@@ -32,25 +31,29 @@ tiempo tiempoMaximo(viaje v) {
     return aux;
 }
 
-tiempo tiempoTotal(viaje v) {
-    return tiempoMaximo(v) - tiempoMinimo(v);
-}
+tiempo tiempoTotal(viaje v) { return tiempoMaximo(v) - tiempoMinimo(v); }
 
 /************++*********************** EJERCICIO distanciaTotal
  * ************++*********************/
-
 viaje viajeOrdenado(viaje v) {
     viaje aux = v;
-
-
-
+    sort(aux.begin(), aux.end(),
+         [](auto a, auto b) { return get<1>(a) < get<1>(b); });
     return aux;
 }
 
-distancia distanciaTotal(viaje v) {
-    distancia d;
-    // codigo
+distancia distanciaEntre(gps a, gps b) {
+    return sqrt(pow(get<0>(a) - get<0>(b), 2) + pow(get<1>(a) - get<1>(b), 2));
+}
 
+distancia distanciaTotal(viaje v) {
+    distancia d = 0;
+    viaje aux = viajeOrdenado(v);
+
+    for (int i = 0; i < aux.size(); i++) {
+        d += distanciaEntre(get<1>(aux[i - 1]), get<1>(aux[i]));
+    }
+    
     return d;
 }
 
