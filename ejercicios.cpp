@@ -79,7 +79,7 @@ bool excesoDeVelocidad(viaje v) {
 
 /***************************************** EJERCICIO flota
  * ***************************************/
-bool estabaEnViaje(viaje v, tiempo t0,  tiempo tf) {
+bool estabaEnViaje(viaje v, tiempo t0, tiempo tf) {
     for (int i = 0; i < v.size(); i++) {
         if (get<0>(v[i]) >= t0 && get<0>(v[i]) <= tf) {
             return true;
@@ -122,8 +122,19 @@ vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
 /************************************** EJERCICIO construirGrilla
  * *******************************/
 grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
+    int ladoHorizontal = (get<0>(esq2) - get<0>(esq1)) / n;
+    int ladoVertical = (get<1>(esq2) - get<1>(esq1)) / m;
     grilla resp = {};
-    // codigo
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            gps auxEsq1 = {get<0>(esq1) + i * ladoHorizontal,
+                           get<1>(esq1) + j * ladoVertical};
+            gps auxEsq2 = {get<0>(esq1) + (i + 1) * ladoHorizontal,
+                           get<1>(esq1) + (j + 1) * ladoVertical};
+            resp.push_back({auxEsq1, auxEsq2, {i, j}});
+        }
+    }
 
     return resp;
 }
