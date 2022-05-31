@@ -1,21 +1,51 @@
 #include "ejercicios.h"
-#include "auxiliares.h"
-#include <iostream>
+
 #include <algorithm>
 #include <fstream>
 #include <iomanip>
+#include <iostream>
+
+#include "auxiliares.h"
 
 using namespace std;
 
-/******++++**************************** EJERCICIO tiempoTotal ***********+++***********************/
-tiempo tiempoTotal(viaje v) {
-    tiempo t;
-    // codigo
-
-    return t;
+/******++++**************************** EJERCICIO tiempoTotal
+ * ***********+++***********************/
+tiempo tiempoMinimo(viaje v) {
+    tiempo aux = get<0>(v[0]);
+    for (int i = 1; i < v.size(); i++) {
+        if (get<0>(v[i]) < aux) {
+            aux = get<0>(v[i]);
+        }
+    }
+    return aux;
 }
 
-/************++*********************** EJERCICIO distanciaTotal ************++*********************/
+tiempo tiempoMaximo(viaje v) {
+    tiempo aux = get<0>(v[0]);
+    for (int i = 1; i < v.size(); i++) {
+        if (get<0>(v[i]) > aux) {
+            aux = get<0>(v[i]);
+        }
+    }
+    return aux;
+}
+
+tiempo tiempoTotal(viaje v) {
+    return tiempoMaximo(v) - tiempoMinimo(v);
+}
+
+/************++*********************** EJERCICIO distanciaTotal
+ * ************++*********************/
+
+viaje viajeOrdenado(viaje v) {
+    viaje aux = v;
+
+
+
+    return aux;
+}
+
 distancia distanciaTotal(viaje v) {
     distancia d;
     // codigo
@@ -23,7 +53,8 @@ distancia distanciaTotal(viaje v) {
     return d;
 }
 
-/*****************************+***** EJERCICIO excesoDeVelocidad **********************************/
+/*****************************+***** EJERCICIO excesoDeVelocidad
+ * **********************************/
 bool excesoDeVelocidad(viaje v) {
     bool resp = false;
     // codigo
@@ -31,7 +62,8 @@ bool excesoDeVelocidad(viaje v) {
     return resp;
 }
 
-/************************************ EJERCICIO recorridoCubierto *******************************/
+/************************************ EJERCICIO recorridoCubierto
+ * *******************************/
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
     vector<gps> resp;
     // codigo
@@ -39,7 +71,8 @@ vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
     return resp;
 }
 
-/***************************************** EJERCICIO flota ***************************************/
+/***************************************** EJERCICIO flota
+ * ***************************************/
 int flota(vector<viaje> f, tiempo t0, tiempo tf) {
     int resp;
     // codigo
@@ -47,7 +80,8 @@ int flota(vector<viaje> f, tiempo t0, tiempo tf) {
     return resp;
 }
 
-/************************************** EJERCICIO construirGrilla *******************************/
+/************************************** EJERCICIO construirGrilla
+ * *******************************/
 grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
     grilla resp = {};
     // codigo
@@ -55,7 +89,8 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
     return resp;
 }
 
-/************************************* EJERCICIO cantidadDeSaltos ******************************/
+/************************************* EJERCICIO cantidadDeSaltos
+ * ******************************/
 int cantidadDeSaltos(grilla g, viaje v) {
     int resp;
     // codigo
@@ -63,9 +98,9 @@ int cantidadDeSaltos(grilla g, viaje v) {
     return resp;
 }
 
-
-/************************************* EJERCICIO corregirViaje ******************************/
-void corregirViaje(viaje& v, vector<tiempo> errores){
+/************************************* EJERCICIO corregirViaje
+ * ******************************/
+void corregirViaje(viaje& v, vector<tiempo> errores) {
     // codig
 
     return;
