@@ -14,6 +14,7 @@ typedef double tiempo;
 typedef double distancia;
 typedef tuple<double, double> gps;
 typedef vector<gps> recorrido;
+typedef tuple<tiempo, gps> puntoViaje;
 typedef vector<tuple<tiempo, gps> > viaje;
 typedef tuple<int, int> nombre;
 typedef tuple<gps, gps, nombre> celda;

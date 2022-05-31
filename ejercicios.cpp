@@ -49,21 +49,25 @@ distancia distanciaEntre(gps a, gps b) {
 distancia distanciaTotal(viaje v) {
     distancia d = 0;
     viaje aux = viajeOrdenado(v);
-
     for (int i = 0; i < aux.size(); i++) {
         d += distanciaEntre(get<1>(aux[i - 1]), get<1>(aux[i]));
     }
-    
     return d;
 }
 
 /*****************************+***** EJERCICIO excesoDeVelocidad
  * **********************************/
-bool excesoDeVelocidad(viaje v) {
-    bool resp = false;
-    // codigo
+bool hayExceso(puntoViaje a, puntoViaje b) {
+    return distanciaEntre(get<1>(a), get<1>(b)) / (get<0>(b) - get<0>(a)) > 80;
+}
 
-    return resp;
+bool excesoDeVelocidad(viaje v) {
+    for (int i = 0; i < v.size() - 1; i++) {
+        if (hayExceso(v[i], v[i + 1])) {
+            return true;
+        }
+    }
+    return false;
 }
 
 /************************************ EJERCICIO recorridoCubierto
