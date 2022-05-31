@@ -36,17 +36,17 @@ tiempo tiempoTotal(viaje v) { return tiempoMaximo(v) - tiempoMinimo(v); }
 /************++*********************** EJERCICIO distanciaTotal
  * ************++*********************/
 viaje viajeOrdenado(viaje v) {
-    viaje aux = v;
-    for (int i = 0; i < v.size(); i++) {
-        for (int j = 0; j < v.size() - i; j++) {
-            if (get<0>(v[j]) > get<0>(v[j + 1])) {
-                puntoViaje aux = v[j];
-                v[j] = v[j + 1];
-                v[j + 1] = aux;
+    viaje auxViaje = v;
+    for (int i = 0; i < auxViaje.size(); i++) {
+        for (int j = 0; j < auxViaje.size() - i; j++) {
+            if (get<0>(auxViaje[j]) > get<0>(auxViaje[j + 1])) {
+                puntoViaje auxPunto = auxViaje[j];
+                auxViaje[j] = auxViaje[j + 1];
+                auxViaje[j + 1] = auxPunto;
             }
         }
     }
-    return aux;
+    return auxViaje;
 }
 
 distancia distanciaEntre(gps a, gps b) {
