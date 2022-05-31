@@ -3,6 +3,7 @@
     "vector": "cpp",
     "tuple": "cpp",
     "__tuple": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "__locale": "cpp"
   }
 }

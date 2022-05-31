@@ -169,8 +169,87 @@ int cantidadDeSaltos(grilla g, viaje v) {
 
 /************************************* EJERCICIO corregirViaje
  * ******************************/
+
+bool esError(puntoViaje p, vector<tiempo> errores) {
+    for (int i = 0; i < errores.size(); i++) {
+        if (get<0>(p) == errores[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+void setPuntosCercanos(tiempo error, viaje v, vector<tiempo> errores,
+                       puntoViaje puntoCercano1, puntoViaje puntoCercano2) {
+    puntoCercano1 = v[0];
+    puntoCercano2 = v[0];
+    tiempo minimo = (tiempoMaximo(v) - tiempoMinimo(v));
+    for (int i = 0; i < v.size(); i++) {
+        if ((abs(get<0>(v[i]) - error) < minimo) &&
+            (abs(get<0>(v[i]) - error) != 0) && (!esError(v[i], errores))) {
+            minimo = abs(get<0>(v[i]) - error);
+            puntoCercano1 = v[i];
+        }
+    }
+
+    tiempo minimo = (tiempoMaximo(v) - tiempoMinimo(v));
+    for (int i = 0; i < v.size(); i++) {
+        if ((abs(get<0>(v[i]) - error) < minimo) &&
+            (abs(get<0>(v[i]) - error) != 0) && (!esError(v[i], errores)) &&
+            (v[i] != puntoCercano1)) {
+            minimo = abs(get<0>(v[i]) - error);
+            puntoCercano2 = v[i];
+        }
+    }
+}
+
+int getIndiceViaje(viaje v, tiempo t) {
+    for (int i = 0; i < v.size(); i++) {
+        if (get<0>(v[i]) == t) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+double velocidadMedia(puntoViaje p1, puntoViaje p2) {
+    return distanciaEntre(get<1>(p1), get<1>(p2)) / (get<0>(p2) - get<0>(p1));
+}
+
+puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
+                          puntoViaje puntoCercano2) {
+    double velocidadMediaPuntosCercanos =
+        velocidadMedia(puntoCercano1, puntoCercano2);
+    tiempo tiempoHastaError = get<0>(error) - get<0>(puntoCercano1);
+    distancia distanciaHastaError =
+        velocidadMediaPuntosCercanos * tiempoHastaError;
+    double factorRecorrido =
+        (distanciaHastaError /
+         distanciaEntre(get<1>(puntoCercano1), get<1>(puntoCercano2)));
+
+    distancia distanciaHorizontalRecorrida =
+        (get<0>(get<1>(puntoCercano2)) - get<0>(get<1>(puntoCercano1))) *
+        factorRecorrido;
+    distancia distanciaVerticalRecorrida =
+        (get<1>(get<1>(puntoCercano2)) - get<1>(get<1>(puntoCercano1))) *
+        factorRecorrido;
+
+    puntoViaje aux = error;
+
+    get<0>(get<1>(aux)) =
+        get<0>(get<1>(puntoCercano1)) + distanciaHorizontalRecorrida;
+
+    get<1>(get<1>(aux)) =
+        get<1>(get<1>(puntoCercano1)) + distanciaVerticalRecorrida;
+
+    return aux;
+}
+
 void corregirViaje(viaje& v, vector<tiempo> errores) {
-    // codig
+    for (int i = 0; i < errores.size(); i++) {
+        puntoViaje puntoCercano1, puntoCercano2;
+        v[i] = puntoCorregido(v[i], puntoCercano1, puntoCercano2);
+    }
 
     return;
 }
