@@ -37,8 +37,15 @@ tiempo tiempoTotal(viaje v) { return tiempoMaximo(v) - tiempoMinimo(v); }
  * ************++*********************/
 viaje viajeOrdenado(viaje v) {
     viaje aux = v;
-    sort(aux.begin(), aux.end(),
-         [](auto a, auto b) { return get<1>(a) < get<1>(b); });
+    for (int i = 0; i < v.size(); i++) {
+        for (int j = 0; j < v.size() - i; j++) {
+            if (get<0>(v[j]) > get<0>(v[j + 1])) {
+                puntoViaje aux = v[j];
+                v[j] = v[j + 1];
+                v[j + 1] = aux;
+            }
+        }
+    }
     return aux;
 }
 
