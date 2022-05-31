@@ -141,9 +141,28 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
 
 /************************************* EJERCICIO cantidadDeSaltos
  * ******************************/
+nombre getNombreCelda(gps p, grilla g) {
+    for (int i = 0; i < g.size(); i++) {
+        if (p >= get<0>(g[i]) && p <= get<1>(g[i])) {
+            return get<2>(g[i]);
+        }
+    }
+    return {-1, -1};
+}
+
+int distanciaEnCeldas(gps p1, gps p2, grilla g) {
+    nombre n1 = getNombreCelda(p1, g);
+    nombre n2 = getNombreCelda(p2, g);
+    return abs(get<0>(n1) - get<0>(n2)) + abs(get<1>(n1) - get<1>(n2));
+}
+
 int cantidadDeSaltos(grilla g, viaje v) {
-    int resp;
-    // codigo
+    int resp = 0;
+    for (int i = 0; i < v.size() - 1; i++) {
+        if (distanciaEnCeldas(get<1>(v[i]), get<1>(v[i + 1]), g) >= 2) {
+            resp++;
+        }
+    }
 
     return resp;
 }
