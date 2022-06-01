@@ -1015,14 +1015,14 @@
         -: 1010:    std::is_arithmetic<_A2>::value,
         -: 1011:    std::__promote<_A1, _A2>
         -: 1012:>::type
-function _ZL3powIdiENSt3__19_MetaBaseIXaasr3std13is_arithmeticIT_EE5valuesr3std13is_arithmeticIT0_EE5valueEE13_EnableIfImplINS0_9__promoteIS2_S3_vEEE4typeES2_S3_ called 54 returned 100% blocks executed 100%
-       54: 1013:pow(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+function _ZL3powIdiENSt3__19_MetaBaseIXaasr3std13is_arithmeticIT_EE5valuesr3std13is_arithmeticIT0_EE5valueEE13_EnableIfImplINS0_9__promoteIS2_S3_vEEE4typeES2_S3_ called 62 returned 100% blocks executed 100%
+       62: 1013:pow(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
         -: 1014:{
         -: 1015:    typedef typename std::__promote<_A1, _A2>::type __result_type;
         -: 1016:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
         -: 1017:                     std::_IsSame<_A2, __result_type>::value)), "");
-       54: 1018:    return ::pow((__result_type)__lcpp_x, (__result_type)__lcpp_y);
-       54: 1018-block  0
+       62: 1018:    return ::pow((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+       62: 1018-block  0
         -: 1019:}
         -: 1020:
         -: 1021:// sin

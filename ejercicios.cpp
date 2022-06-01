@@ -183,7 +183,7 @@ tuple<puntoViaje, puntoViaje> puntosCercanos(tiempo error, viaje v, vector<tiemp
     tiempo minimo = (tiempoMaximo(v) - tiempoMinimo(v));
     for (int i = 0; i < v.size(); i++) {
         if ((abs(obtenerTiempo(v[i]) - error) < minimo) &&
-            (abs(obtenerTiempo(v[i]) - error) != 0) && (!esError(v[i], errores))) {
+            (!esError(v[i], errores))) {
             minimo = abs(obtenerTiempo(v[i]) - error);
             puntoCercano1 = v[i];
         }
@@ -192,8 +192,7 @@ tuple<puntoViaje, puntoViaje> puntosCercanos(tiempo error, viaje v, vector<tiemp
     minimo = (tiempoMaximo(v) - tiempoMinimo(v));
     for (int i = 0; i < v.size(); i++) {
         if ((abs(obtenerTiempo(v[i]) - error) < minimo) &&
-            (abs(obtenerTiempo(v[i]) - error) != 0) && (!esError(v[i], errores)) &&
-            (v[i] != puntoCercano1)) {
+            (!esError(v[i], errores)) && (v[i] != puntoCercano1)) {
             minimo = abs(obtenerTiempo(v[i]) - error);
             puntoCercano2 = v[i];
         }
@@ -231,8 +230,6 @@ puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
          obtenerLongitud(obtenerPosicion(puntoCercano1))) *
         factorRecorrido;
 
-    puntoViaje aux = error;
-
     double auxLatitud =
         obtenerLatitud(obtenerPosicion(puntoCercano1)) +
         distanciaHorizontalRecorrida;
@@ -247,6 +244,7 @@ void corregirViaje(viaje &v, vector<tiempo> errores) {
     for (int i = 0; i < errores.size(); i++) {
         puntoViaje puntoCercano1 = get<0>(puntosCercanos(errores[i], v, errores));
         puntoViaje puntoCercano2 = get<1>(puntosCercanos(errores[i], v, errores));
-        v[getIndiceViaje(v, errores[i])] = puntoCorregido(v[getIndiceViaje(v, errores[i])], puntoCercano1, puntoCercano2);
+        int indiceError = getIndiceViaje(v, errores[i]);
+        v[indiceError] = puntoCorregido(v[indiceError], puntoCercano1, puntoCercano2);
     }
 }

@@ -31,6 +31,6 @@ TEST(tiempoTotalTEST, noEmpiezaPorElMenor){
                medicion(5.5, P),
                medicion(7.2, P),
                medicion(1.9, P)};
-    EXPECT_DOUBLE_EQ(tiempoTotal(v),6.1);
+    EXPECT_DOUBLE_EQ(tiempoTotal(v),6);
 }
 

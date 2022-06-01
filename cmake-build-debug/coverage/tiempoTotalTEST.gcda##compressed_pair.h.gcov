@@ -43,9 +43,9 @@
         -:   38:  typedef const _Tp& const_reference;
         -:   39:
         -:   40:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
-function _ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2ENS_18__default_init_tagE called 4 returned 100% blocks executed 100%
-        4:   41:  __compressed_pair_elem(__default_init_tag) {}
-        4:   41-block  0
+function _ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2ENS_18__default_init_tagE called 2 returned 100% blocks executed 100%
+        2:   41:  __compressed_pair_elem(__default_init_tag) {}
+        2:   41-block  0
         -:   42:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
         -:   43:  __compressed_pair_elem(__value_init_tag) : __value_() {}
         -:   44:
@@ -72,10 +72,10 @@ function _ZNSt3__122__compressed_pair_elemIPNS_5tupleIJdNS1_IJddEEEEEELi0ELb0EEC
         -:   63:
         -:   64:
 function _ZNSt3__122__compressed_pair_elemIPNS_5tupleIJdNS1_IJddEEEEEELi0ELb0EE5__getEv called 0 returned 0% blocks executed 0%
-function _ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv called 2 returned 100% blocks executed 100%
-        2:   65:  _LIBCPP_INLINE_VISIBILITY reference __get() _NOEXCEPT { return __value_; }
+function _ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv called 0 returned 0% blocks executed 0%
+    #####:   65:  _LIBCPP_INLINE_VISIBILITY reference __get() _NOEXCEPT { return __value_; }
     $$$$$:   65-block  0
-        2:   65-block  1
+    $$$$$:   65-block  1
         -:   66:  _LIBCPP_INLINE_VISIBILITY
 function _ZNKSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv called 0 returned 0% blocks executed 0%
 function _ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJdNS1_IJddEEEEEELi0ELb0EE5__getEv called 8 returned 100% blocks executed 100%
@@ -96,10 +96,10 @@ function _ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJdNS1_IJddEEEEEELi0ELb0EE
         -:   79:
         -:   80:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR __compressed_pair_elem() = default;
         -:   81:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
-function _ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2ENS_18__default_init_tagE called 4 returned 100% blocks executed 100%
+function _ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2ENS_18__default_init_tagE called 2 returned 100% blocks executed 100%
 function _ZNSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEELi1ELb1EEC2ENS_18__default_init_tagE called 2 returned 100% blocks executed 100%
-        6:   82:  __compressed_pair_elem(__default_init_tag) {}
-        4:   82-block  0
+        4:   82:  __compressed_pair_elem(__default_init_tag) {}
+        2:   82-block  0
         2:   82-block  1
         -:   83:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
         -:   84:  __compressed_pair_elem(__value_init_tag) : __value_type() {}
@@ -160,16 +160,16 @@ function _ZNKSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJdNS2_IJddEE
         -:  132:
         -:  133:  template <class _U1, class _U2>
         -:  134:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
-function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_EC1INS_18__default_init_tagESA_EEOT_OT0_ called 4 returned 100% blocks executed 100%
-function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_EC2INS_18__default_init_tagESA_EEOT_OT0_ called 4 returned 100% blocks executed 100%
+function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_EC1INS_18__default_init_tagESA_EEOT_OT0_ called 2 returned 100% blocks executed 100%
+function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_EC2INS_18__default_init_tagESA_EEOT_OT0_ called 2 returned 100% blocks executed 100%
 function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC1IDnNS_18__default_init_tagEEEOT_OT0_ called 2 returned 100% blocks executed 100%
 function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC2IDnNS_18__default_init_tagEEEOT_OT0_ called 2 returned 100% blocks executed 100%
 function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC1IDnS6_EEOT_OT0_ called 0 returned 0% blocks executed 0%
 function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC2IDnS6_EEOT_OT0_ called 0 returned 0% blocks executed 0%
-       12:  135:  __compressed_pair(_U1&& __t1, _U2&& __t2)
-       12:  136:      : _Base1(_VSTD::forward<_U1>(__t1)), _Base2(_VSTD::forward<_U2>(__t2)) {}
-        4:  136-block  0
-        4:  136-block  1
+        8:  135:  __compressed_pair(_U1&& __t1, _U2&& __t2)
+        8:  136:      : _Base1(_VSTD::forward<_U1>(__t1)), _Base2(_VSTD::forward<_U2>(__t2)) {}
+        2:  136-block  0
+        2:  136-block  1
         2:  136-block  2
         2:  136-block  3
     $$$$$:  136-block  4
@@ -188,11 +188,11 @@ function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS
         -:  148:
         -:  149:  _LIBCPP_INLINE_VISIBILITY
 function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE5firstEv called 0 returned 0% blocks executed 0%
-function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E5firstEv called 2 returned 100% blocks executed 100%
-        2:  150:  typename _Base1::reference first() _NOEXCEPT {
-        2:  151:    return static_cast<_Base1&>(*this).__get();
+function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E5firstEv called 0 returned 0% blocks executed 0%
+    #####:  150:  typename _Base1::reference first() _NOEXCEPT {
+    #####:  151:    return static_cast<_Base1&>(*this).__get();
     $$$$$:  151-block  0
-        2:  151-block  1
+    $$$$$:  151-block  1
         -:  152:  }
         -:  153:
         -:  154:  _LIBCPP_INLINE_VISIBILITY

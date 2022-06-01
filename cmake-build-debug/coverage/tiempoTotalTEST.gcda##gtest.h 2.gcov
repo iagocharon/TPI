@@ -1689,7 +1689,7 @@ function _ZN7testing4Test5SetupEv called 0 returned 0% blocks executed 0%
         -: 1665://
         -: 1666:// INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.
         -: 1667:template <typename RawType>
-function _ZN7testing8internal24CmpHelperFloatingPointEQIdEENS_15AssertionResultEPKcS4_T_S5_ called 2 returned 100% blocks executed 63%
+function _ZN7testing8internal24CmpHelperFloatingPointEQIdEENS_15AssertionResultEPKcS4_T_S5_ called 2 returned 100% blocks executed 13%
         2: 1668:AssertionResult CmpHelperFloatingPointEQ(const char* lhs_expression,
         -: 1669:                                         const char* rhs_expression,
         -: 1670:                                         RawType lhs_value,
@@ -1698,59 +1698,59 @@ function _ZN7testing8internal24CmpHelperFloatingPointEQIdEENS_15AssertionResultE
         -: 1673:
         2: 1674:  if (lhs.AlmostEquals(rhs)) {
         2: 1674-block  0
-branch  0 taken 1
-branch  1 taken 1
-        1: 1675:    return AssertionSuccess();
-        1: 1675-block  0
+branch  0 taken 2
+branch  1 taken 0
+        2: 1675:    return AssertionSuccess();
+        2: 1675-block  0
         -: 1676:  }
         -: 1677:
-        1: 1678:  ::std::stringstream lhs_ss;
-        1: 1679:  lhs_ss << std::setprecision(std::numeric_limits<RawType>::digits10 + 2)
-        1: 1679-block  0
-branch  0 taken 1
-branch  1 taken 0
-        1: 1679-block  1
-branch  2 taken 1
-branch  3 taken 0
-        1: 1680:         << lhs_value;
-        1: 1680-block  0
-branch  0 taken 1
-branch  1 taken 0
+    #####: 1678:  ::std::stringstream lhs_ss;
+    #####: 1679:  lhs_ss << std::setprecision(std::numeric_limits<RawType>::digits10 + 2)
+    $$$$$: 1679-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$: 1679-block  1
+branch  2 never executed
+branch  3 never executed
+    #####: 1680:         << lhs_value;
+    $$$$$: 1680-block  0
+branch  0 never executed
+branch  1 never executed
         -: 1681:
-        1: 1682:  ::std::stringstream rhs_ss;
-        1: 1682-block  0
-branch  0 taken 1
-branch  1 taken 0
-        1: 1683:  rhs_ss << std::setprecision(std::numeric_limits<RawType>::digits10 + 2)
-        1: 1683-block  0
-branch  0 taken 1
-branch  1 taken 0
-        1: 1683-block  1
-branch  2 taken 1
-branch  3 taken 0
-        1: 1684:         << rhs_value;
-        1: 1684-block  0
-branch  0 taken 1
-branch  1 taken 0
+    #####: 1682:  ::std::stringstream rhs_ss;
+    $$$$$: 1682-block  0
+branch  0 never executed
+branch  1 never executed
+    #####: 1683:  rhs_ss << std::setprecision(std::numeric_limits<RawType>::digits10 + 2)
+    $$$$$: 1683-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$: 1683-block  1
+branch  2 never executed
+branch  3 never executed
+    #####: 1684:         << rhs_value;
+    $$$$$: 1684-block  0
+branch  0 never executed
+branch  1 never executed
         -: 1685:
-        2: 1686:  return EqFailure(lhs_expression,
-        1: 1686-block  0
-branch  0 taken 0
-branch  1 taken 1
+    #####: 1686:  return EqFailure(lhs_expression,
+    $$$$$: 1686-block  0
+branch  0 never executed
+branch  1 never executed
     $$$$$: 1686-block  1
     $$$$$: 1686-block  2
-        1: 1687:                   rhs_expression,
-        1: 1688:                   StringStreamToString(&lhs_ss),
-        1: 1688-block  0
-branch  0 taken 1
-branch  1 taken 0
-        1: 1689:                   StringStreamToString(&rhs_ss),
-        1: 1689-block  0
-branch  0 taken 1
-branch  1 taken 0
+    #####: 1687:                   rhs_expression,
+    #####: 1688:                   StringStreamToString(&lhs_ss),
+    $$$$$: 1688-block  0
+branch  0 never executed
+branch  1 never executed
+    #####: 1689:                   StringStreamToString(&rhs_ss),
+    $$$$$: 1689-block  0
+branch  0 never executed
+branch  1 never executed
         -: 1690:                   false);
         2: 1691:}
-        1: 1691-block  0
+    $$$$$: 1691-block  0
     $$$$$: 1691-block  1
     $$$$$: 1691-block  2
     $$$$$: 1691-block  3

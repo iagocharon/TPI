@@ -1,6 +1,6 @@
         -:    0:Source:/Users/IAGO/Desktop/TPI/lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
-        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.gcno
-        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.gcda
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/flotaTEST.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/flotaTEST.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// Copyright 2005, Google Inc.
@@ -474,21 +474,33 @@ function _ZN7testing8internal15TestFactoryBaseC2Ev called 0 returned 0% blocks e
         -:  461:// This class provides implementation of TeastFactoryBase interface.
         -:  462:// It is used in TEST and TEST_F macros.
         -:  463:template <class TestClass>
-function _ZN7testing8internal15TestFactoryImplI36corregirViajeTEST_faltaElUltimo_TestEC1Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI36corregirViajeTEST_faltaElUltimo_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI36corregirViajeTEST_faltaElUltimo_TestED1Ev called 0 returned 0% blocks executed 0%
-function _ZN7testing8internal15TestFactoryImplI36corregirViajeTEST_faltaElUltimo_TestED0Ev called 0 returned 0% blocks executed 0%
-function _ZN7testing8internal15TestFactoryImplI36corregirViajeTEST_faltaElUltimo_TestED2Ev called 0 returned 0% blocks executed 0%
+function _ZN7testing8internal15TestFactoryImplI38flotaTotalTEST_todosAntesDeFranja_TestEC1Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI34flotaTotalTEST_AlgunosAdentro_TestEC1Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI38flotaTotalTEST_todosAntesDeFranja_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI38flotaTotalTEST_todosAntesDeFranja_TestED1Ev called 0 returned 0% blocks executed 0%
+function _ZN7testing8internal15TestFactoryImplI38flotaTotalTEST_todosAntesDeFranja_TestED0Ev called 0 returned 0% blocks executed 0%
+function _ZN7testing8internal15TestFactoryImplI38flotaTotalTEST_todosAntesDeFranja_TestED2Ev called 0 returned 0% blocks executed 0%
+function _ZN7testing8internal15TestFactoryImplI34flotaTotalTEST_AlgunosAdentro_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI34flotaTotalTEST_AlgunosAdentro_TestED1Ev called 0 returned 0% blocks executed 0%
+function _ZN7testing8internal15TestFactoryImplI34flotaTotalTEST_AlgunosAdentro_TestED0Ev called 0 returned 0% blocks executed 0%
+function _ZN7testing8internal15TestFactoryImplI34flotaTotalTEST_AlgunosAdentro_TestED2Ev called 0 returned 0% blocks executed 0%
         -:  464:class TestFactoryImpl : public TestFactoryBase {
         -:  465: public:
-function _ZN7testing8internal15TestFactoryImplI36corregirViajeTEST_faltaElUltimo_TestE10CreateTestEv called 1 returned 100% blocks executed 50%
-        1:  466:  virtual Test* CreateTest() { return new TestClass; }
+function _ZN7testing8internal15TestFactoryImplI38flotaTotalTEST_todosAntesDeFranja_TestE10CreateTestEv called 1 returned 100% blocks executed 50%
+function _ZN7testing8internal15TestFactoryImplI34flotaTotalTEST_AlgunosAdentro_TestE10CreateTestEv called 1 returned 100% blocks executed 50%
+        2:  466:  virtual Test* CreateTest() { return new TestClass; }
         1:  466-block  0
 branch  0 taken 1
 branch  1 taken 0
         1:  466-block  1
     $$$$$:  466-block  2
     $$$$$:  466-block  3
+        1:  466-block  4
+branch  2 taken 1
+branch  3 taken 0
+        1:  466-block  5
+    $$$$$:  466-block  6
+    $$$$$:  466-block  7
         -:  467:};
         -:  468:
         -:  469:#if GTEST_OS_WINDOWS

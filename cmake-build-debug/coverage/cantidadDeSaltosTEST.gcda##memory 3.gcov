@@ -766,14 +766,14 @@
         -:  761:        (__is_default_allocator<_Alloc>::value || !__has_construct<_Alloc, _Dest*, _Source&>::value)
         -:  762:    >::type>
         -:  763:_LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEEKS4_S4_S4_S4_vEEvRT_PT0_SA_RPT1_ called 11 returned 100% blocks executed 100%
+function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEEKS4_S4_S4_S4_vEEvRT_PT0_SA_RPT1_ called 13 returned 100% blocks executed 100%
 function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJNS2_IJddEEES3_NS2_IJiiEEEEEEEES5_S5_S5_S5_vEEvRT_PT0_SA_RPT1_ called 0 returned 0% blocks executed 0%
 function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEES4_S4_S4_S4_vEEvRT_PT0_S9_RPT1_ called 0 returned 0% blocks executed 0%
-       11:  764:void __construct_range_forward(_Alloc&, _Source* __begin1, _Source* __end1, _Dest*& __begin2) {
-       11:  765:    ptrdiff_t _Np = __end1 - __begin1;
-       11:  766:    if (_Np > 0) {
-       11:  766-block  0
-branch  0 taken 11
+       13:  764:void __construct_range_forward(_Alloc&, _Source* __begin1, _Source* __end1, _Dest*& __begin2) {
+       13:  765:    ptrdiff_t _Np = __end1 - __begin1;
+       13:  766:    if (_Np > 0) {
+       13:  766-block  0
+branch  0 taken 13
 branch  1 taken 0
     $$$$$:  766-block  1
 branch  2 never executed
@@ -781,14 +781,14 @@ branch  3 never executed
     $$$$$:  766-block  2
 branch  4 never executed
 branch  5 never executed
-       11:  767:        _VSTD::memcpy(const_cast<_RawDest*>(__begin2), __begin1, _Np * sizeof(_Dest));
-       11:  768:        __begin2 += _Np;
-       11:  769:    }
-       11:  769-block  0
+       13:  767:        _VSTD::memcpy(const_cast<_RawDest*>(__begin2), __begin1, _Np * sizeof(_Dest));
+       13:  768:        __begin2 += _Np;
+       13:  769:    }
+       13:  769-block  0
     $$$$$:  769-block  1
     $$$$$:  769-block  2
-       11:  770:}
-       11:  770-block  0
+       13:  770:}
+       13:  770-block  0
     $$$$$:  770-block  1
     $$$$$:  770-block  2
         -:  771:

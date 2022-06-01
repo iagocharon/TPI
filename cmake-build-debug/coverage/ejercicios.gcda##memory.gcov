@@ -766,31 +766,31 @@
         -:  761:        (__is_default_allocator<_Alloc>::value || !__has_construct<_Alloc, _Dest*, _Source&>::value)
         -:  762:    >::type>
         -:  763:_LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEES4_S4_S4_S4_vEEvRT_PT0_S9_RPT1_ called 85 returned 100% blocks executed 100%
+function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEES4_S4_S4_S4_vEEvRT_PT0_S9_RPT1_ called 82 returned 100% blocks executed 100%
 function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJNS2_IJddEEES3_NS2_IJiiEEEEEEEES5_S5_S5_S5_vEEvRT_PT0_SA_RPT1_ called 7 returned 100% blocks executed 100%
-function _ZNSt3__1L25__construct_range_forwardINS_9allocatorIdEEddddvEEvRT_PT0_S6_RPT1_ called 62 returned 100% blocks executed 100%
-      154:  764:void __construct_range_forward(_Alloc&, _Source* __begin1, _Source* __end1, _Dest*& __begin2) {
-      154:  765:    ptrdiff_t _Np = __end1 - __begin1;
-      154:  766:    if (_Np > 0) {
-       85:  766-block  0
-branch  0 taken 85
+function _ZNSt3__1L25__construct_range_forwardINS_9allocatorIdEEddddvEEvRT_PT0_S6_RPT1_ called 94 returned 100% blocks executed 100%
+      183:  764:void __construct_range_forward(_Alloc&, _Source* __begin1, _Source* __end1, _Dest*& __begin2) {
+      183:  765:    ptrdiff_t _Np = __end1 - __begin1;
+      183:  766:    if (_Np > 0) {
+       82:  766-block  0
+branch  0 taken 82
 branch  1 taken 0
         7:  766-block  1
 branch  2 taken 7
 branch  3 taken 0
-       62:  766-block  2
-branch  4 taken 62
+       94:  766-block  2
+branch  4 taken 94
 branch  5 taken 0
-      154:  767:        _VSTD::memcpy(const_cast<_RawDest*>(__begin2), __begin1, _Np * sizeof(_Dest));
-      154:  768:        __begin2 += _Np;
-      154:  769:    }
-       85:  769-block  0
+      183:  767:        _VSTD::memcpy(const_cast<_RawDest*>(__begin2), __begin1, _Np * sizeof(_Dest));
+      183:  768:        __begin2 += _Np;
+      183:  769:    }
+       82:  769-block  0
         7:  769-block  1
-       62:  769-block  2
-      154:  770:}
-       85:  770-block  0
+       94:  769-block  2
+      183:  770:}
+       82:  770-block  0
         7:  770-block  1
-       62:  770-block  2
+       94:  770-block  2
         -:  771:
         -:  772:template <class _Alloc, class _Ptr>
         -:  773:_LIBCPP_INLINE_VISIBILITY

@@ -15,28 +15,28 @@
         -:   10:const double pi = 3.14;
         -:   11:double radioTierra = 6378;
         -:   12:
-function _Z14obtenerLatitudNSt3__15tupleIJddEEE called 422 returned 100% blocks executed 100%
-      422:   13:double obtenerLatitud(gps posicion) {
-      422:   14:    return get<0>(posicion);
-      422:   14-block  0
+function _Z14obtenerLatitudNSt3__15tupleIJddEEE called 424 returned 100% blocks executed 100%
+      424:   13:double obtenerLatitud(gps posicion) {
+      424:   14:    return get<0>(posicion);
+      424:   14-block  0
         -:   15:}
         -:   16:
-function _Z15obtenerLongitudNSt3__15tupleIJddEEE called 278 returned 100% blocks executed 100%
-      278:   17:double obtenerLongitud(gps posicion) {
-      278:   18:    return get<1>(posicion);
-      278:   18-block  0
+function _Z15obtenerLongitudNSt3__15tupleIJddEEE called 280 returned 100% blocks executed 100%
+      280:   17:double obtenerLongitud(gps posicion) {
+      280:   18:    return get<1>(posicion);
+      280:   18-block  0
         -:   19:}
         -:   20:
-function _Z15obtenerPosicionNSt3__15tupleIJdNS0_IJddEEEEEE called 144 returned 100% blocks executed 100%
-      144:   21:gps obtenerPosicion(tuple<tiempo, gps> medicion) {
-      144:   22:    return get<1>(medicion);
-      144:   22-block  0
+function _Z15obtenerPosicionNSt3__15tupleIJdNS0_IJddEEEEEE called 148 returned 100% blocks executed 100%
+      148:   21:gps obtenerPosicion(tuple<tiempo, gps> medicion) {
+      148:   22:    return get<1>(medicion);
+      148:   22-block  0
         -:   23:}
         -:   24:
-function _Z13obtenerTiempoNSt3__15tupleIJdNS0_IJddEEEEEE called 813 returned 100% blocks executed 100%
-      813:   25:tiempo obtenerTiempo(tuple<tiempo, gps> medicion) {
-      813:   26:    return get<0>(medicion);
-      813:   26-block  0
+function _Z13obtenerTiempoNSt3__15tupleIJdNS0_IJddEEEEEE called 771 returned 100% blocks executed 100%
+      771:   25:tiempo obtenerTiempo(tuple<tiempo, gps> medicion) {
+      771:   26:    return get<0>(medicion);
+      771:   26-block  0
         -:   27:}
 function _Z11obtenerEsq1NSt3__15tupleIJNS0_IJddEEES1_NS0_IJiiEEEEEE called 56 returned 100% blocks executed 100%
        56:   28:gps obtenerEsq1(celda celda) {

@@ -236,9 +236,9 @@
         -:  231:
         -:  232:protected:
         -:  233:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEEC2Ev called 2 returned 100% blocks executed 100%
-        2:  234:    basic_ostream() {}  // extension, intentially does not initialize
-        2:  234-block  0
+function _ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEEC2Ev called 0 returned 0% blocks executed 0%
+    #####:  234:    basic_ostream() {}  // extension, intentially does not initialize
+    $$$$$:  234-block  0
         -:  235:};
         -:  236:
         -:  237:template <class _CharT, class _Traits>

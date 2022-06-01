@@ -211,11 +211,11 @@
         -:  206:    int __n_;
         -:  207:public:
         -:  208:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__18__iom_t5C1Ei called 2 returned 100% blocks executed 100%
-function _ZNSt3__18__iom_t5C2Ei called 2 returned 100% blocks executed 100%
-        4:  209:    explicit __iom_t5(int __n) : __n_(__n) {}
-        2:  209-block  0
-        2:  209-block  1
+function _ZNSt3__18__iom_t5C1Ei called 0 returned 0% blocks executed 0%
+function _ZNSt3__18__iom_t5C2Ei called 0 returned 0% blocks executed 0%
+    #####:  209:    explicit __iom_t5(int __n) : __n_(__n) {}
+    $$$$$:  209-block  0
+    $$$$$:  209-block  1
         -:  210:
         -:  211:    template <class _CharT, class _Traits>
         -:  212:    friend
@@ -231,22 +231,22 @@ function _ZNSt3__18__iom_t5C2Ei called 2 returned 100% blocks executed 100%
         -:  222:    friend
         -:  223:    _LIBCPP_INLINE_VISIBILITY
         -:  224:    basic_ostream<_CharT, _Traits>&
-function _ZNSt3__1lsIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_RKNS_8__iom_t5E called 2 returned 100% blocks executed 100%
-        2:  225:    operator<<(basic_ostream<_CharT, _Traits>& __os, const __iom_t5& __x)
+function _ZNSt3__1lsIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_RKNS_8__iom_t5E called 0 returned 0% blocks executed 0%
+    #####:  225:    operator<<(basic_ostream<_CharT, _Traits>& __os, const __iom_t5& __x)
         -:  226:    {
-        2:  227:        __os.precision(__x.__n_);
-        2:  228:        return __os;
-        2:  228-block  0
+    #####:  227:        __os.precision(__x.__n_);
+    #####:  228:        return __os;
+    $$$$$:  228-block  0
         -:  229:    }
         -:  230:};
         -:  231:
         -:  232:inline _LIBCPP_INLINE_VISIBILITY
         -:  233:__iom_t5
-function _ZNSt3__1L12setprecisionEi called 2 returned 100% blocks executed 100%
-        2:  234:setprecision(int __n)
+function _ZNSt3__1L12setprecisionEi called 0 returned 0% blocks executed 0%
+    #####:  234:setprecision(int __n)
         -:  235:{
-        2:  236:    return __iom_t5(__n);
-        2:  236-block  0
+    #####:  236:    return __iom_t5(__n);
+    $$$$$:  236-block  0
         -:  237:}
         -:  238:
         -:  239:// setw

@@ -193,11 +193,11 @@
         -:  188:
         -:  189:    // 27.7.1.1.1 Constructor/destructor:
         -:  190:    inline _LIBCPP_HIDE_FROM_ABI_AFTER_V1
-function _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEEC2EPNS_15basic_streambufIcS2_EE called 2 returned 100% blocks executed 100%
-        4:  191:    explicit basic_istream(basic_streambuf<char_type, traits_type>* __sb) : __gc_(0)
-        4:  192:    { this->init(__sb); }
-        2:  192-block  0
-        2:  192-block  1
+function _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEEC2EPNS_15basic_streambufIcS2_EE called 0 returned 0% blocks executed 0%
+    #####:  191:    explicit basic_istream(basic_streambuf<char_type, traits_type>* __sb) : __gc_(0)
+    #####:  192:    { this->init(__sb); }
+    $$$$$:  192-block  0
+    $$$$$:  192-block  1
         -:  193:    virtual ~basic_istream();
         -:  194:protected:
         -:  195:    inline _LIBCPP_INLINE_VISIBILITY
@@ -1410,17 +1410,17 @@ function _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEEC2EPNS_15basic_streambuf
         -: 1402:
         -: 1403:    // constructor/destructor
         -: 1404:    inline _LIBCPP_HIDE_FROM_ABI_AFTER_V1
-function _ZNSt3__114basic_iostreamIcNS_11char_traitsIcEEEC2EPNS_15basic_streambufIcS2_EE called 2 returned 100% blocks executed 50%
-        4: 1405:    explicit basic_iostream(basic_streambuf<char_type, traits_type>* __sb)
-        2: 1405-block  0
-branch  0 taken 2
-branch  1 taken 0
-        2: 1405-block  1
-branch  2 taken 2
-branch  3 taken 0
-        2: 1406:      : basic_istream<_CharT, _Traits>(__sb)
-        4: 1407:    {}
-        2: 1407-block  0
+function _ZNSt3__114basic_iostreamIcNS_11char_traitsIcEEEC2EPNS_15basic_streambufIcS2_EE called 0 returned 0% blocks executed 0%
+    #####: 1405:    explicit basic_iostream(basic_streambuf<char_type, traits_type>* __sb)
+    $$$$$: 1405-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$: 1405-block  1
+branch  2 never executed
+branch  3 never executed
+    #####: 1406:      : basic_istream<_CharT, _Traits>(__sb)
+    #####: 1407:    {}
+    $$$$$: 1407-block  0
     $$$$$: 1407-block  1
     $$$$$: 1407-block  2
         -: 1408:

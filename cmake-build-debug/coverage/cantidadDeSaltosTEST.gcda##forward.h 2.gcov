@@ -1,6 +1,6 @@
         -:    0:Source:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/forward.h
-        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcno
-        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcda
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// -*- C++ -*-
@@ -29,14 +29,16 @@
         -:   24:
         -:   25:template <class _Tp>
         -:   26:_LIBCPP_NODISCARD_EXT inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR _Tp&&
-function _ZNSt3__1L7forwardIRdEEOT_RNS_16remove_referenceIS2_E4typeE called 1032 returned 100% blocks executed 100%
-function _ZNSt3__1L7forwardIRNS_5tupleIJddEEEEEOT_RNS_16remove_referenceIS4_E4typeE called 320 returned 100% blocks executed 100%
-function _ZNSt3__1L7forwardINS_18__default_init_tagEEEOT_RNS_16remove_referenceIS2_E4typeE called 0 returned 0% blocks executed 0%
-     1352:   27:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT {
-     1352:   28:  return static_cast<_Tp&&>(__t);
-     1032:   28-block  0
-      320:   28-block  1
+function _ZNSt3__1L7forwardINS_18__default_init_tagEEEOT_RNS_16remove_referenceIS2_E4typeE called 5 returned 100% blocks executed 100%
+function _ZNSt3__1L7forwardIDnEEOT_RNS_16remove_referenceIS1_E4typeE called 2 returned 100% blocks executed 100%
+function _ZNSt3__1L7forwardINS_9allocatorINS_5tupleIJNS2_IJddEEES3_NS2_IJiiEEEEEEEEEEOT_RNS_16remove_referenceIS7_E4typeE called 0 returned 0% blocks executed 0%
+function _ZNSt3__1L7forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEEEEOT_RNS_16remove_referenceIS6_E4typeE called 0 returned 0% blocks executed 0%
+        7:   27:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT {
+        7:   28:  return static_cast<_Tp&&>(__t);
+        5:   28-block  0
+        2:   28-block  1
     $$$$$:   28-block  2
+    $$$$$:   28-block  3
         -:   29:}
         -:   30:
         -:   31:template <class _Tp>

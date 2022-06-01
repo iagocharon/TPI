@@ -1,0 +1,62 @@
+        -:    0:Source:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/swap.h
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://===----------------------------------------------------------------------===//
+        -:    2://
+        -:    3:// Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
+        -:    4:// See https://llvm.org/LICENSE.txt for license information.
+        -:    5:// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+        -:    6://
+        -:    7://===----------------------------------------------------------------------===//
+        -:    8:
+        -:    9:#ifndef _LIBCPP___UTILITY_SWAP_H
+        -:   10:#define _LIBCPP___UTILITY_SWAP_H
+        -:   11:
+        -:   12:#include <__config>
+        -:   13:#include <__utility/declval.h>
+        -:   14:#include <__utility/move.h>
+        -:   15:#include <type_traits>
+        -:   16:#include <cstddef>
+        -:   17:
+        -:   18:#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
+        -:   19:#pragma GCC system_header
+        -:   20:#endif
+        -:   21:
+        -:   22:_LIBCPP_PUSH_MACROS
+        -:   23:#include <__undef_macros>
+        -:   24:
+        -:   25:_LIBCPP_BEGIN_NAMESPACE_STD
+        -:   26:
+        -:   27:#ifndef _LIBCPP_CXX03_LANG
+        -:   28:template <class _Tp>
+        -:   29:using __swap_result_t = typename enable_if<is_move_constructible<_Tp>::value && is_move_assignable<_Tp>::value>::type;
+        -:   30:#else
+        -:   31:template <class>
+        -:   32:using __swap_result_t = void;
+        -:   33:#endif
+        -:   34:
+        -:   35:template <class _Tp>
+function _ZNSt3__1L4swapIPNS_5tupleIJdNS1_IJddEEEEEEEENS_9enable_ifIXaasr21is_move_constructibleIT_EE5valuesr18is_move_assignableIS6_EE5valueEvE4typeERS6_S9_ called 30 returned 100% blocks executed 100%
+       30:   36:inline _LIBCPP_INLINE_VISIBILITY __swap_result_t<_Tp> _LIBCPP_CONSTEXPR_AFTER_CXX17 swap(_Tp& __x, _Tp& __y)
+        -:   37:    _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value&& is_nothrow_move_assignable<_Tp>::value) {
+       30:   38:  _Tp __t(_VSTD::move(__x));
+       30:   39:  __x = _VSTD::move(__y);
+       30:   40:  __y = _VSTD::move(__t);
+       30:   41:}
+       30:   41-block  0
+        -:   42:
+        -:   43:template <class _Tp, size_t _Np>
+        -:   44:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX17 typename enable_if<__is_swappable<_Tp>::value>::type
+        -:   45:swap(_Tp (&__a)[_Np], _Tp (&__b)[_Np]) _NOEXCEPT_(__is_nothrow_swappable<_Tp>::value) {
+        -:   46:  for (size_t __i = 0; __i != _Np; ++__i) {
+        -:   47:    swap(__a[__i], __b[__i]);
+        -:   48:  }
+        -:   49:}
+        -:   50:
+        -:   51:_LIBCPP_END_NAMESPACE_STD
+        -:   52:
+        -:   53:_LIBCPP_POP_MACROS
+        -:   54:
+        -:   55:#endif // _LIBCPP___UTILITY_SWAP_H

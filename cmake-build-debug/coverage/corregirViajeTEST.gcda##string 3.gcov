@@ -842,17 +842,17 @@
         -:  837:
         -:  838:    template <class = _EnableIf<__is_allocator<_Allocator>::value, nullptr_t> >
         -:  839:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc called 1 returned 100% blocks executed 100%
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2IDnEEPKc called 1 returned 100% blocks executed 100%
-        2:  840:    basic_string(const _CharT* __s) : __r_(__default_init_tag(), __default_init_tag()) {
+function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc called 2 returned 100% blocks executed 100%
+function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2IDnEEPKc called 2 returned 100% blocks executed 100%
+        4:  840:    basic_string(const _CharT* __s) : __r_(__default_init_tag(), __default_init_tag()) {
         -:  841:      _LIBCPP_ASSERT(__s != nullptr, "basic_string(const char*) detected nullptr");
-        1:  842:      __init(__s, traits_type::length(__s));
+        2:  842:      __init(__s, traits_type::length(__s));
         -:  843:#   if _LIBCPP_DEBUG_LEVEL == 2
         -:  844:      __get_db()->__insert_c(this);
         -:  845:#   endif
-        2:  846:    }
-        1:  846-block  0
-        1:  846-block  1
+        4:  846:    }
+        2:  846-block  0
+        2:  846-block  1
         -:  847:
         -:  848:    template <class = _EnableIf<__is_allocator<_Allocator>::value, nullptr_t> >
         -:  849:        _LIBCPP_INLINE_VISIBILITY

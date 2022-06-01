@@ -1269,13 +1269,13 @@ function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2IDnEEP
         -: 1260:#endif
         -: 1261:
         -: 1262:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv called 6 returned 100% blocks executed 100%
-        6: 1263:    const value_type* c_str() const _NOEXCEPT {return data();}
-        6: 1263-block  0
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv called 1 returned 100% blocks executed 100%
+        1: 1263:    const value_type* c_str() const _NOEXCEPT {return data();}
+        1: 1263-block  0
         -: 1264:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE4dataEv called 6 returned 100% blocks executed 100%
-        6: 1265:    const value_type* data() const _NOEXCEPT  {return _VSTD::__to_address(__get_pointer());}
-        6: 1265-block  0
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE4dataEv called 1 returned 100% blocks executed 100%
+        1: 1265:    const value_type* data() const _NOEXCEPT  {return _VSTD::__to_address(__get_pointer());}
+        1: 1265-block  0
         -: 1266:#if _LIBCPP_STD_VER > 14 || defined(_LIBCPP_BUILDING_LIBRARY)
         -: 1267:    _LIBCPP_INLINE_VISIBILITY
         -: 1268:    value_type* data()             _NOEXCEPT  {return _VSTD::__to_address(__get_pointer());}
@@ -1468,10 +1468,10 @@ function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE4dataEv
         -: 1455:    _LIBCPP_INLINE_VISIBILITY void __shrink_or_extend(size_type __target_capacity);
         -: 1456:
         -: 1457:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE9__is_longEv called 6 returned 100% blocks executed 100%
-        6: 1458:    bool __is_long() const _NOEXCEPT
-        6: 1459:        {return bool(__r_.first().__s.__size_ & __short_mask);}
-        6: 1459-block  0
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE9__is_longEv called 1 returned 100% blocks executed 100%
+        1: 1458:    bool __is_long() const _NOEXCEPT
+        1: 1459:        {return bool(__r_.first().__s.__size_ & __short_mask);}
+        1: 1459-block  0
         -: 1460:
         -: 1461:#if _LIBCPP_DEBUG_LEVEL == 2
         -: 1462:
@@ -1552,10 +1552,10 @@ function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE9__is_l
         -: 1537:    pointer __get_long_pointer() _NOEXCEPT
         -: 1538:        {return __r_.first().__l.__data_;}
         -: 1539:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE18__get_long_pointerEv called 6 returned 100% blocks executed 100%
-        6: 1540:    const_pointer __get_long_pointer() const _NOEXCEPT
-        6: 1541:        {return __r_.first().__l.__data_;}
-        6: 1541-block  0
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE18__get_long_pointerEv called 1 returned 100% blocks executed 100%
+        1: 1540:    const_pointer __get_long_pointer() const _NOEXCEPT
+        1: 1541:        {return __r_.first().__l.__data_;}
+        1: 1541-block  0
         -: 1542:    _LIBCPP_INLINE_VISIBILITY
         -: 1543:    pointer __get_short_pointer() _NOEXCEPT
         -: 1544:        {return pointer_traits<pointer>::pointer_to(__r_.first().__s.__data_[0]);}
@@ -1568,15 +1568,15 @@ function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE19__get
         -: 1549:    pointer __get_pointer() _NOEXCEPT
         -: 1550:        {return __is_long() ? __get_long_pointer() : __get_short_pointer();}
         -: 1551:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE13__get_pointerEv called 6 returned 100% blocks executed 75%
-        6: 1552:    const_pointer __get_pointer() const _NOEXCEPT
-        6: 1553:        {return __is_long() ? __get_long_pointer() : __get_short_pointer();}
-        6: 1553-block  0
-branch  0 taken 6
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE13__get_pointerEv called 1 returned 100% blocks executed 75%
+        1: 1552:    const_pointer __get_pointer() const _NOEXCEPT
+        1: 1553:        {return __is_long() ? __get_long_pointer() : __get_short_pointer();}
+        1: 1553-block  0
+branch  0 taken 1
 branch  1 taken 0
-        6: 1553-block  1
+        1: 1553-block  1
     $$$$$: 1553-block  2
-        6: 1553-block  3
+        1: 1553-block  3
         -: 1554:
         -: 1555:    _LIBCPP_INLINE_VISIBILITY
 function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__zeroEv called 1 returned 100% blocks executed 100%

@@ -1,6 +1,6 @@
         -:    0:Source:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string
-        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.gcno
-        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.gcda
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// -*- C++ -*-
@@ -842,17 +842,13 @@
         -:  837:
         -:  838:    template <class = _EnableIf<__is_allocator<_Allocator>::value, nullptr_t> >
         -:  839:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc called 2 returned 100% blocks executed 100%
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2IDnEEPKc called 2 returned 100% blocks executed 100%
-        4:  840:    basic_string(const _CharT* __s) : __r_(__default_init_tag(), __default_init_tag()) {
+        -:  840:    basic_string(const _CharT* __s) : __r_(__default_init_tag(), __default_init_tag()) {
         -:  841:      _LIBCPP_ASSERT(__s != nullptr, "basic_string(const char*) detected nullptr");
-        2:  842:      __init(__s, traits_type::length(__s));
+        -:  842:      __init(__s, traits_type::length(__s));
         -:  843:#   if _LIBCPP_DEBUG_LEVEL == 2
         -:  844:      __get_db()->__insert_c(this);
         -:  845:#   endif
-        4:  846:    }
-        2:  846-block  0
-        2:  846-block  1
+        -:  846:    }
         -:  847:
         -:  848:    template <class = _EnableIf<__is_allocator<_Allocator>::value, nullptr_t> >
         -:  849:        _LIBCPP_INLINE_VISIBILITY
@@ -1269,9 +1265,7 @@ function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2IDnEEP
         -: 1260:#endif
         -: 1261:
         -: 1262:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv called 0 returned 0% blocks executed 0%
-    #####: 1263:    const value_type* c_str() const _NOEXCEPT {return data();}
-    $$$$$: 1263-block  0
+        -: 1263:    const value_type* c_str() const _NOEXCEPT {return data();}
         -: 1264:    _LIBCPP_INLINE_VISIBILITY
 function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE4dataEv called 0 returned 0% blocks executed 0%
     #####: 1265:    const value_type* data() const _NOEXCEPT  {return _VSTD::__to_address(__get_pointer());}
@@ -1579,20 +1573,12 @@ branch  1 never executed
     $$$$$: 1553-block  3
         -: 1554:
         -: 1555:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__zeroEv called 2 returned 100% blocks executed 100%
-        2: 1556:    void __zero() _NOEXCEPT
+        -: 1556:    void __zero() _NOEXCEPT
         -: 1557:        {
-        2: 1558:            size_type (&__a)[__n_words] = __r_.first().__r.__words;
-        8: 1559:            for (unsigned __i = 0; __i < __n_words; ++__i)
-        2: 1559-block  0
-        8: 1559-block  1
-branch  0 taken 6
-branch  1 taken 2
-        6: 1559-block  2
-        6: 1560:                __a[__i] = 0;
-        6: 1560-block  0
-        2: 1561:        }
-        2: 1561-block  0
+        -: 1558:            size_type (&__a)[__n_words] = __r_.first().__r.__words;
+        -: 1559:            for (unsigned __i = 0; __i < __n_words; ++__i)
+        -: 1560:                __a[__i] = 0;
+        -: 1561:        }
         -: 1562:
         -: 1563:    template <size_type __a> static
         -: 1564:        _LIBCPP_INLINE_VISIBILITY
@@ -1860,23 +1846,15 @@ branch  1 taken 2
         -: 1826:
         -: 1827:template <class _CharT, class _Traits, class _Allocator>
         -: 1828:inline
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev called 2 returned 100% blocks executed 100%
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2Ev called 2 returned 100% blocks executed 66%
-        4: 1829:basic_string<_CharT, _Traits, _Allocator>::basic_string()
+        -: 1829:basic_string<_CharT, _Traits, _Allocator>::basic_string()
         -: 1830:    _NOEXCEPT_(is_nothrow_default_constructible<allocator_type>::value)
-        2: 1831:     : __r_(__default_init_tag(), __default_init_tag())
-        2: 1831-block  0
-branch  0 taken 2
-branch  1 taken 0
-    $$$$$: 1831-block  1
-        4: 1832:{
+        -: 1831:     : __r_(__default_init_tag(), __default_init_tag())
+        -: 1832:{
         -: 1833:#if _LIBCPP_DEBUG_LEVEL == 2
         -: 1834:    __get_db()->__insert_c(this);
         -: 1835:#endif
-        2: 1836:    __zero();
-        4: 1837:}
-        2: 1837-block  0
-        2: 1837-block  1
+        -: 1836:    __zero();
+        -: 1837:}
         -: 1838:
         -: 1839:template <class _CharT, class _Traits, class _Allocator>
         -: 1840:inline
@@ -2095,14 +2073,18 @@ branch  1 taken 0
         -: 2053:
         -: 2054:template <class _CharT, class _Traits, class _Allocator>
         -: 2055:inline
-        -: 2056:basic_string<_CharT, _Traits, _Allocator>::basic_string(size_type __n, _CharT __c)
-        -: 2057:     : __r_(__default_init_tag(), __default_init_tag())
-        -: 2058:{
-        -: 2059:    __init(__n, __c);
+function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Emc called 0 returned 0% blocks executed 0%
+function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2Emc called 0 returned 0% blocks executed 0%
+    #####: 2056:basic_string<_CharT, _Traits, _Allocator>::basic_string(size_type __n, _CharT __c)
+    #####: 2057:     : __r_(__default_init_tag(), __default_init_tag())
+    #####: 2058:{
+    #####: 2059:    __init(__n, __c);
         -: 2060:#if _LIBCPP_DEBUG_LEVEL == 2
         -: 2061:    __get_db()->__insert_c(this);
         -: 2062:#endif
-        -: 2063:}
+    #####: 2063:}
+    $$$$$: 2063-block  0
+    $$$$$: 2063-block  1
         -: 2064:
         -: 2065:template <class _CharT, class _Traits, class _Allocator>
         -: 2066:template <class>

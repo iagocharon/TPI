@@ -1186,11 +1186,11 @@
         -: 1181: public:
         -: 1182:  typedef T element_type;
         -: 1183:
-function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEC1EPS8_ called 45 returned 100% blocks executed 100%
-function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEC2EPS8_ called 45 returned 100% blocks executed 100%
-       90: 1184:  explicit scoped_ptr(T* p = NULL) : ptr_(p) {}
-       45: 1184-block  0
-       45: 1184-block  1
+function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEC1EPS8_ called 77 returned 100% blocks executed 100%
+function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEC2EPS8_ called 77 returned 100% blocks executed 100%
+      154: 1184:  explicit scoped_ptr(T* p = NULL) : ptr_(p) {}
+       77: 1184-block  0
+       77: 1184-block  1
 function _ZN7testing8internal10scoped_ptrINSt3__118basic_stringstreamIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED1Ev called 0 returned 0% blocks executed 0%
 function _ZN7testing8internal10scoped_ptrINSt3__118basic_stringstreamIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED2Ev called 0 returned 0% blocks executed 0%
 function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED1Ev called 0 returned 0% blocks executed 0%

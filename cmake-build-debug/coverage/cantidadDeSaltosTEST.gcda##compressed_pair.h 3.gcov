@@ -81,11 +81,11 @@ function _ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIc
     $$$$$:   65-block  1
         1:   65-block  2
         -:   66:  _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv called 4 returned 100% blocks executed 100%
+function _ZNKSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv called 6 returned 100% blocks executed 100%
 function _ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEELi0ELb0EE5__getEv called 4 returned 100% blocks executed 100%
 function _ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJdNS1_IJddEEEEEELi0ELb0EE5__getEv called 4 returned 100% blocks executed 100%
-       12:   67:  const_reference __get() const _NOEXCEPT { return __value_; }
-        4:   67-block  0
+       14:   67:  const_reference __get() const _NOEXCEPT { return __value_; }
+        6:   67-block  0
         4:   67-block  1
         4:   67-block  2
         -:   68:
@@ -134,10 +134,10 @@ function _ZNSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJdNS2_IJddEEE
         -:  101:#endif
         -:  102:
 function _ZNSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJNS2_IJddEEES3_NS2_IJiiEEEEEEEELi1ELb1EE5__getEv called 0 returned 0% blocks executed 0%
-function _ZNSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEELi1ELb1EE5__getEv called 11 returned 100% blocks executed 100%
-       11:  103:  _LIBCPP_INLINE_VISIBILITY reference __get() _NOEXCEPT { return *this; }
+function _ZNSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEELi1ELb1EE5__getEv called 13 returned 100% blocks executed 100%
+       13:  103:  _LIBCPP_INLINE_VISIBILITY reference __get() _NOEXCEPT { return *this; }
     $$$$$:  103-block  0
-       11:  103-block  1
+       13:  103-block  1
         -:  104:  _LIBCPP_INLINE_VISIBILITY
 function _ZNKSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEELi1ELb1EE5__getEv called 0 returned 0% blocks executed 0%
 function _ZNKSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJNS2_IJddEEES3_NS2_IJiiEEEEEEEELi1ELb1EE5__getEv called 0 returned 0% blocks executed 0%
@@ -215,23 +215,23 @@ function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_
         -:  152:  }
         -:  153:
         -:  154:  _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E5firstEv called 4 returned 100% blocks executed 100%
+function _ZNKSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E5firstEv called 6 returned 100% blocks executed 100%
 function _ZNKSt3__117__compressed_pairIPNS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE5firstEv called 4 returned 100% blocks executed 100%
 function _ZNKSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE5firstEv called 4 returned 100% blocks executed 100%
-       12:  155:  typename _Base1::const_reference first() const _NOEXCEPT {
-       12:  156:    return static_cast<_Base1 const&>(*this).__get();
-        4:  156-block  0
+       14:  155:  typename _Base1::const_reference first() const _NOEXCEPT {
+       14:  156:    return static_cast<_Base1 const&>(*this).__get();
+        6:  156-block  0
         4:  156-block  1
         4:  156-block  2
         -:  157:  }
         -:  158:
         -:  159:  _LIBCPP_INLINE_VISIBILITY
 function _ZNSt3__117__compressed_pairIPNS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE6secondEv called 0 returned 0% blocks executed 0%
-function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE6secondEv called 11 returned 100% blocks executed 100%
-       11:  160:  typename _Base2::reference second() _NOEXCEPT {
-       11:  161:    return static_cast<_Base2&>(*this).__get();
+function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE6secondEv called 13 returned 100% blocks executed 100%
+       13:  160:  typename _Base2::reference second() _NOEXCEPT {
+       13:  161:    return static_cast<_Base2&>(*this).__get();
     $$$$$:  161-block  0
-       11:  161-block  1
+       13:  161-block  1
         -:  162:  }
         -:  163:
         -:  164:  _LIBCPP_INLINE_VISIBILITY

@@ -81,11 +81,11 @@ function _ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIc
     $$$$$:   65-block  1
         1:   65-block  2
         -:   66:  _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv called 12 returned 100% blocks executed 100%
+function _ZNKSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv called 2 returned 100% blocks executed 100%
 function _ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEELi0ELb0EE5__getEv called 4 returned 100% blocks executed 100%
 function _ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJdNS1_IJddEEEEEELi0ELb0EE5__getEv called 4 returned 100% blocks executed 100%
-       20:   67:  const_reference __get() const _NOEXCEPT { return __value_; }
-       12:   67-block  0
+       10:   67:  const_reference __get() const _NOEXCEPT { return __value_; }
+        2:   67-block  0
         4:   67-block  1
         4:   67-block  2
         -:   68:
@@ -215,12 +215,12 @@ function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_
         -:  152:  }
         -:  153:
         -:  154:  _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E5firstEv called 12 returned 100% blocks executed 100%
+function _ZNKSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E5firstEv called 2 returned 100% blocks executed 100%
 function _ZNKSt3__117__compressed_pairIPNS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE5firstEv called 4 returned 100% blocks executed 100%
 function _ZNKSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE5firstEv called 4 returned 100% blocks executed 100%
-       20:  155:  typename _Base1::const_reference first() const _NOEXCEPT {
-       20:  156:    return static_cast<_Base1 const&>(*this).__get();
-       12:  156-block  0
+       10:  155:  typename _Base1::const_reference first() const _NOEXCEPT {
+       10:  156:    return static_cast<_Base1 const&>(*this).__get();
+        2:  156-block  0
         4:  156-block  1
         4:  156-block  2
         -:  157:  }

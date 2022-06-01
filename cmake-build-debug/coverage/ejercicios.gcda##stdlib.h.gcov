@@ -124,10 +124,10 @@
         -:  119:  return __builtin_fabsf(__lcpp_x); // Use builtins to prevent needing math.h
         -:  120:}
         -:  121:
-function _ZL3absd called 226 returned 100% blocks executed 100%
-      226:  122:inline _LIBCPP_INLINE_VISIBILITY double abs(double __lcpp_x) _NOEXCEPT {
-      226:  123:  return __builtin_fabs(__lcpp_x);
-      226:  123-block  0
+function _ZL3absd called 160 returned 100% blocks executed 100%
+      160:  122:inline _LIBCPP_INLINE_VISIBILITY double abs(double __lcpp_x) _NOEXCEPT {
+      160:  123:  return __builtin_fabs(__lcpp_x);
+      160:  123-block  0
         -:  124:}
         -:  125:
         -:  126:inline _LIBCPP_INLINE_VISIBILITY long double

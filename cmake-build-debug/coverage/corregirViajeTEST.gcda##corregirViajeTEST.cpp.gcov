@@ -304,7 +304,7 @@ branch 17 never executed
     $$$$$:   41-block 14
     $$$$$:   41-block 15
         -:   42:
-function _ZN45corregirViajeTEST_elMasCercanoTieneError_Test8TestBodyEv called 1 returned 100% blocks executed 63%
+function _ZN45corregirViajeTEST_elMasCercanoTieneError_Test8TestBodyEv called 1 returned 100% blocks executed 53%
 function _ZN45corregirViajeTEST_elMasCercanoTieneError_TestD1Ev called 1 returned 100% blocks executed 100%
 function _ZN45corregirViajeTEST_elMasCercanoTieneError_TestD0Ev called 1 returned 100% blocks executed 100%
 function _ZN45corregirViajeTEST_elMasCercanoTieneError_TestC1Ev called 1 returned 100% blocks executed 100%
@@ -338,7 +338,7 @@ branch  9 taken 0
        10:   44:    viaje v = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
         1:   45:               medicion(T0+30, puntoGps(-34.591586, -58.401064)),
         1:   46:               medicion(T0+494, puntoGps(-34.563746, -58.436637)),
-        1:   47:               medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   47:               medicion(T0+999, puntoGps(0, 0)),
         1:   48:               medicion(T0+92, puntoGps(-34.594553, -58.402426)),
         1:   49:               medicion(T0+65, puntoGps(-34.590787, -58.402222)),
         1:   50:               medicion(T0+230, puntoGps(-34.584572, -58.416942)),
@@ -370,7 +370,7 @@ branch  1 taken 0
         1:   57-block  1
 branch  2 taken 1
 branch  3 taken 0
-        1:   58:                 medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   58:                 medicion(T0+999, puntoGps(-34.546696, -58.429166)),
         1:   58-block  0
 branch  0 taken 1
 branch  1 taken 0
@@ -412,14 +412,14 @@ branch  1 taken 0
         1:   63-block  1
 branch  2 taken 1
 branch  3 taken 0
-        1:   64:                 medicion(T0+1051, puntoGps(-34.545704, -58.441383))};
+        1:   64:                 medicion(T0+1051, puntoGps(-34.541521, -58.429855))};
         1:   64-block  0
 branch  0 taken 1
 branch  1 taken 0
         1:   64-block  1
 branch  2 taken 1
 branch  3 taken 0
-        1:   65:    vector<tiempo> errores = {T0+1051, T0+999};
+        1:   65:    vector<tiempo> errores = {T0+999, T0+1051};
         1:   65-block  0
 branch  0 taken 1
 branch  1 taken 0
@@ -486,22 +486,22 @@ branch  9 taken 0
 branch 10 taken 10
 branch 11 taken 0
        10:   71-block  6
-branch 12 taken 2
-branch 13 taken 8
-        8:   71-block  7
-        2:   71-block  8
-branch 14 taken 2
-branch 15 taken 0
-        2:   71-block  9
-branch 16 taken 2
-branch 17 taken 0
-        2:   71-block 10
-branch 18 taken 2
-branch 19 taken 0
-        2:   71-block 11
-branch 20 taken 2
-branch 21 taken 0
-        2:   71-block 12
+branch 12 taken 0
+branch 13 taken 10
+       10:   71-block  7
+    $$$$$:   71-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   71-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:   71-block 10
+branch 18 never executed
+branch 19 never executed
+    $$$$$:   71-block 11
+branch 20 never executed
+branch 21 never executed
+    $$$$$:   71-block 12
     $$$$$:   71-block 13
     $$$$$:   71-block 14
     $$$$$:   71-block 15
@@ -526,22 +526,22 @@ branch  9 taken 0
 branch 10 taken 10
 branch 11 taken 0
        10:   73-block  6
-branch 12 taken 2
-branch 13 taken 8
-        8:   73-block  7
-        2:   73-block  8
-branch 14 taken 2
-branch 15 taken 0
-        2:   73-block  9
-branch 16 taken 2
-branch 17 taken 0
-        2:   73-block 10
-branch 18 taken 2
-branch 19 taken 0
-        2:   73-block 11
-branch 20 taken 2
-branch 21 taken 0
-        2:   73-block 12
+branch 12 taken 0
+branch 13 taken 10
+       10:   73-block  7
+    $$$$$:   73-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   73-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:   73-block 10
+branch 18 never executed
+branch 19 never executed
+    $$$$$:   73-block 11
+branch 20 never executed
+branch 21 never executed
+    $$$$$:   73-block 12
     $$$$$:   73-block 13
     $$$$$:   73-block 14
     $$$$$:   73-block 15

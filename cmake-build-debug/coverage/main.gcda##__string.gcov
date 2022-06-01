@@ -344,9 +344,9 @@
         -:  339:    static _LIBCPP_CONSTEXPR_AFTER_CXX14
         -:  340:    int compare(const char_type* __s1, const char_type* __s2, size_t __n) _NOEXCEPT;
         -:  341:    static inline size_t _LIBCPP_CONSTEXPR_AFTER_CXX14
-function _ZNSt3__111char_traitsIcE6lengthEPKc called 330 returned 100% blocks executed 100%
-      330:  342:    length(const char_type* __s)  _NOEXCEPT {return __builtin_strlen(__s);}
-      330:  342-block  0
+function _ZNSt3__111char_traitsIcE6lengthEPKc called 205 returned 100% blocks executed 100%
+      205:  342:    length(const char_type* __s)  _NOEXCEPT {return __builtin_strlen(__s);}
+      205:  342-block  0
         -:  343:    static _LIBCPP_CONSTEXPR_AFTER_CXX14
         -:  344:    const char_type* find(const char_type* __s, size_t __n, const char_type& __a) _NOEXCEPT;
         -:  345:    static inline _LIBCPP_CONSTEXPR_AFTER_CXX17
@@ -378,14 +378,14 @@ function _ZNSt3__111char_traitsIcE6lengthEPKc called 330 returned 100% blocks ex
         -:  371:        {return char_type(__c);}
         -:  372:    static inline _LIBCPP_CONSTEXPR int_type to_int_type(char_type __c) _NOEXCEPT
         -:  373:        {return int_type((unsigned char)__c);}
-function _ZNSt3__111char_traitsIcE11eq_int_typeEii called 477 returned 100% blocks executed 100%
-      477:  374:    static inline _LIBCPP_CONSTEXPR bool eq_int_type(int_type __c1, int_type __c2) _NOEXCEPT
-      477:  375:        {return __c1 == __c2;}
-      477:  375-block  0
-function _ZNSt3__111char_traitsIcE3eofEv called 681 returned 100% blocks executed 100%
-      681:  376:    static inline _LIBCPP_CONSTEXPR int_type  eof() _NOEXCEPT
-      681:  377:        {return int_type(EOF);}
-      681:  377-block  0
+function _ZNSt3__111char_traitsIcE11eq_int_typeEii called 376 returned 100% blocks executed 100%
+      376:  374:    static inline _LIBCPP_CONSTEXPR bool eq_int_type(int_type __c1, int_type __c2) _NOEXCEPT
+      376:  375:        {return __c1 == __c2;}
+      376:  375-block  0
+function _ZNSt3__111char_traitsIcE3eofEv called 472 returned 100% blocks executed 100%
+      472:  376:    static inline _LIBCPP_CONSTEXPR int_type  eof() _NOEXCEPT
+      472:  377:        {return int_type(EOF);}
+      472:  377-block  0
         -:  378:};
         -:  379:
         -:  380:inline _LIBCPP_CONSTEXPR_AFTER_CXX14

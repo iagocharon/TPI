@@ -254,11 +254,11 @@
         -:  249:template <class _Facet>
         -:  250:inline _LIBCPP_INLINE_VISIBILITY
         -:  251:const _Facet&
-function _ZNSt3__1L9use_facetINS_5ctypeIcEEEERKT_RKNS_6localeE called 128 returned 100% blocks executed 100%
-      128:  252:use_facet(const locale& __l)
+function _ZNSt3__1L9use_facetINS_5ctypeIcEEEERKT_RKNS_6localeE called 50 returned 100% blocks executed 100%
+       50:  252:use_facet(const locale& __l)
         -:  253:{
-      128:  254:    return static_cast<const _Facet&>(*__l.use_facet(_Facet::id));
-      128:  254-block  0
+       50:  254:    return static_cast<const _Facet&>(*__l.use_facet(_Facet::id));
+       50:  254-block  0
         -:  255:}
         -:  256:
         -:  257:// template <class _CharT> class collate;
@@ -701,11 +701,11 @@ function _ZNSt3__1L9use_facetINS_5ctypeIcEEEERKT_RKNS_6localeE called 128 return
         -:  694:    }
         -:  695:
         -:  696:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__15ctypeIcE5widenEc called 128 returned 100% blocks executed 100%
-      128:  697:    char_type widen(char __c) const
+function _ZNKSt3__15ctypeIcE5widenEc called 50 returned 100% blocks executed 100%
+       50:  697:    char_type widen(char __c) const
         -:  698:    {
-      128:  699:        return do_widen(__c);
-      128:  699-block  0
+       50:  699:        return do_widen(__c);
+       50:  699-block  0
         -:  700:    }
         -:  701:
         -:  702:    _LIBCPP_INLINE_VISIBILITY

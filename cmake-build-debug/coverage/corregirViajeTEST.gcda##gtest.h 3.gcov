@@ -1471,30 +1471,30 @@ branch  3 never executed
         -: 1423:
         -: 1424:// The helper function for {ASSERT|EXPECT}_EQ.
         -: 1425:template <typename T1, typename T2>
-function _ZN7testing8internal11CmpHelperEQImmEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal11CmpHelperEQIddEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 10 returned 100% blocks executed 75%
-       11: 1426:AssertionResult CmpHelperEQ(const char* lhs_expression,
+function _ZN7testing8internal11CmpHelperEQImmEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal11CmpHelperEQIddEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 20 returned 100% blocks executed 75%
+       22: 1426:AssertionResult CmpHelperEQ(const char* lhs_expression,
         -: 1427:                            const char* rhs_expression,
         -: 1428:                            const T1& lhs,
         -: 1429:                            const T2& rhs) {
-       11: 1430:  if (lhs == rhs) {
-        1: 1430-block  0
-branch  0 taken 1
+       22: 1430:  if (lhs == rhs) {
+        2: 1430-block  0
+branch  0 taken 2
 branch  1 taken 0
-       10: 1430-block  1
-branch  2 taken 10
+       20: 1430-block  1
+branch  2 taken 20
 branch  3 taken 0
-       11: 1431:    return AssertionSuccess();
-        1: 1431-block  0
-       10: 1431-block  1
+       22: 1431:    return AssertionSuccess();
+        2: 1431-block  0
+       20: 1431-block  1
         -: 1432:  }
         -: 1433:
     #####: 1434:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
     $$$$$: 1434-block  0
     $$$$$: 1434-block  1
-       11: 1435:}
-        1: 1435-block  0
-       10: 1435-block  1
+       22: 1435:}
+        2: 1435-block  0
+       20: 1435-block  1
         -: 1436:
         -: 1437:// With this overloaded version, we allow anonymous enums to be used
         -: 1438:// in {ASSERT|EXPECT}_EQ when compiled with gcc 4, as anonymous enums
@@ -1513,15 +1513,15 @@ branch  3 taken 0
         -: 1451: public:
         -: 1452:  // This templatized version is for the general case.
         -: 1453:  template <typename T1, typename T2>
-function _ZN7testing8internal8EqHelperILb0EE7CompareImmEENS_15AssertionResultEPKcS6_RKT_RKT0_ called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal8EqHelperILb0EE7CompareIddEENS_15AssertionResultEPKcS6_RKT_RKT0_ called 10 returned 100% blocks executed 100%
-       11: 1454:  static AssertionResult Compare(const char* lhs_expression,
+function _ZN7testing8internal8EqHelperILb0EE7CompareImmEENS_15AssertionResultEPKcS6_RKT_RKT0_ called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal8EqHelperILb0EE7CompareIddEENS_15AssertionResultEPKcS6_RKT_RKT0_ called 20 returned 100% blocks executed 100%
+       22: 1454:  static AssertionResult Compare(const char* lhs_expression,
         -: 1455:                                 const char* rhs_expression,
         -: 1456:                                 const T1& lhs,
         -: 1457:                                 const T2& rhs) {
-       11: 1458:    return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);
-        1: 1458-block  0
-       10: 1458-block  1
+       22: 1458:    return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);
+        2: 1458-block  0
+       20: 1458-block  1
         -: 1459:  }
         -: 1460:
         -: 1461:  // With this overloaded version, we allow anonymous enums to be used

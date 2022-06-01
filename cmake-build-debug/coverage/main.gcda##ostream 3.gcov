@@ -255,9 +255,9 @@ function _ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEPFRS3_S4_E called 1 r
         -:  248:    ~sentry();
         -:  249:
         -:  250:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__113basic_ostreamIcNS_11char_traitsIcEEE6sentrycvbEv called 389 returned 100% blocks executed 100%
-      389:  251:    explicit operator bool() const {return __ok_;}
-      389:  251-block  0
+function _ZNKSt3__113basic_ostreamIcNS_11char_traitsIcEEE6sentrycvbEv called 419 returned 100% blocks executed 100%
+      419:  251:    explicit operator bool() const {return __ok_;}
+      419:  251-block  0
         -:  252:};
         -:  253:
         -:  254:template <class _CharT, class _Traits>
@@ -713,66 +713,66 @@ function _ZNKSt3__113basic_ostreamIcNS_11char_traitsIcEEE6sentrycvbEv called 389
         -:  704:
         -:  705:template<class _CharT, class _Traits>
         -:  706:basic_ostream<_CharT, _Traits>&
-function _ZNSt3__124__put_character_sequenceIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_PKS4_m called 389 returned 100% blocks executed 52%
-      389:  707:__put_character_sequence(basic_ostream<_CharT, _Traits>& __os,
+function _ZNSt3__124__put_character_sequenceIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_PKS4_m called 419 returned 100% blocks executed 52%
+      419:  707:__put_character_sequence(basic_ostream<_CharT, _Traits>& __os,
         -:  708:                          const _CharT* __str, size_t __len)
         -:  709:{
         -:  710:#ifndef _LIBCPP_NO_EXCEPTIONS
         -:  711:    try
         -:  712:    {
         -:  713:#endif // _LIBCPP_NO_EXCEPTIONS
-      389:  714:        typename basic_ostream<_CharT, _Traits>::sentry __s(__os);
-      389:  714-block  0
-branch  0 taken 389
+      419:  714:        typename basic_ostream<_CharT, _Traits>::sentry __s(__os);
+      419:  714-block  0
+branch  0 taken 419
 branch  1 taken 0
-      389:  715:        if (__s)
-      389:  715-block  0
-branch  0 taken 389
+      419:  715:        if (__s)
+      419:  715-block  0
+branch  0 taken 419
 branch  1 taken 0
-      389:  715-block  1
-branch  2 taken 389
+      419:  715-block  1
+branch  2 taken 419
 branch  3 taken 0
         -:  716:        {
         -:  717:            typedef ostreambuf_iterator<_CharT, _Traits> _Ip;
-      778:  718:            if (__pad_and_output(_Ip(__os),
-      389:  718-block  0
-branch  0 taken 389
+      838:  718:            if (__pad_and_output(_Ip(__os),
+      419:  718-block  0
+branch  0 taken 419
 branch  1 taken 0
-      389:  718-block  1
+      419:  718-block  1
 branch  2 taken 0
-branch  3 taken 389
-      389:  718-block  2
+branch  3 taken 419
+      419:  718-block  2
 branch  4 taken 0
-branch  5 taken 389
-      389:  719:                                 __str,
-      389:  720:                                 (__os.flags() & ios_base::adjustfield) == ios_base::left ?
-      389:  720-block  0
-branch  0 taken 389
+branch  5 taken 419
+      419:  719:                                 __str,
+      419:  720:                                 (__os.flags() & ios_base::adjustfield) == ios_base::left ?
+      419:  720-block  0
+branch  0 taken 419
 branch  1 taken 0
-      389:  720-block  1
+      419:  720-block  1
 branch  2 taken 0
-branch  3 taken 389
+branch  3 taken 419
     $$$$$:  720-block  2
-      389:  720-block  3
+      419:  720-block  3
     #####:  721:                                     __str + __len :
-      389:  722:                                     __str,
-      389:  723:                                 __str + __len,
-      389:  724:                                 __os,
-      778:  725:                                 __os.fill()).failed())
-      389:  725-block  0
-branch  0 taken 389
+      419:  722:                                     __str,
+      419:  723:                                 __str + __len,
+      419:  724:                                 __os,
+      838:  725:                                 __os.fill()).failed())
+      419:  725-block  0
+branch  0 taken 419
 branch  1 taken 0
     #####:  726:                __os.setstate(ios_base::badbit | ios_base::failbit);
     $$$$$:  726-block  0
 branch  0 never executed
 branch  1 never executed
     $$$$$:  726-block  1
-      389:  727:        }
-      389:  727-block  0
+      419:  727:        }
+      419:  727-block  0
         -:  728:#ifndef _LIBCPP_NO_EXCEPTIONS
-      389:  729:    }
+      419:  729:    }
     $$$$$:  729-block  0
-      389:  729-block  1
+      419:  729-block  1
         -:  730:    catch (...)
         -:  731:    {
     #####:  732:        __os.__set_badbit_and_consider_rethrow();
@@ -788,8 +788,8 @@ branch  1 never executed
     $$$$$:  733-block  3
     $$$$$:  733-block  4
         -:  734:#endif // _LIBCPP_NO_EXCEPTIONS
-      389:  735:    return __os;
-      389:  735-block  0
+      419:  735:    return __os;
+      419:  735-block  0
     #####:  736:}
     $$$$$:  736-block  0
         -:  737:
@@ -910,11 +910,11 @@ branch  1 never executed
         -:  852:
         -:  853:template<class _Traits>
         -:  854:basic_ostream<char, _Traits>&
-function _ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc called 68 returned 100% blocks executed 100%
-       68:  855:operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
+function _ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc called 99 returned 100% blocks executed 100%
+       99:  855:operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
         -:  856:{
-       68:  857:    return _VSTD::__put_character_sequence(__os, __str, _Traits::length(__str));
-       68:  857-block  0
+       99:  857:    return _VSTD::__put_character_sequence(__os, __str, _Traits::length(__str));
+       99:  857-block  0
         -:  858:}
         -:  859:
         -:  860:template<class _Traits>
@@ -1049,13 +1049,13 @@ function _ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc calle
         -:  989:template <class _CharT, class _Traits>
         -:  990:inline
         -:  991:basic_ostream<_CharT, _Traits>&
-function _ZNSt3__14endlIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_ called 1 returned 100% blocks executed 100%
-        1:  992:endl(basic_ostream<_CharT, _Traits>& __os)
+function _ZNSt3__14endlIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_ called 2 returned 100% blocks executed 100%
+        2:  992:endl(basic_ostream<_CharT, _Traits>& __os)
         -:  993:{
-        1:  994:    __os.put(__os.widen('\n'));
-        1:  995:    __os.flush();
-        1:  996:    return __os;
-        1:  996-block  0
+        2:  994:    __os.put(__os.widen('\n'));
+        2:  995:    __os.flush();
+        2:  996:    return __os;
+        2:  996-block  0
         -:  997:}
         -:  998:
         -:  999:template <class _CharT, class _Traits>

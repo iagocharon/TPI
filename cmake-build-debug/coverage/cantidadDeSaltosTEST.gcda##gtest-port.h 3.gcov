@@ -1187,31 +1187,31 @@
         -: 1182:  typedef T element_type;
         -: 1183:
         -: 1184:  explicit scoped_ptr(T* p = NULL) : ptr_(p) {}
-function _ZN7testing8internal10scoped_ptrINSt3__118basic_stringstreamIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED1Ev called 99 returned 100% blocks executed 100%
-function _ZN7testing8internal10scoped_ptrINSt3__118basic_stringstreamIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED2Ev called 99 returned 100% blocks executed 66%
-function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED1Ev called 45 returned 100% blocks executed 100%
-function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED2Ev called 45 returned 100% blocks executed 66%
-      288: 1185:  ~scoped_ptr() { reset(); }
-       99: 1185-block  0
-       99: 1185-block  1
-branch  0 taken 99
+function _ZN7testing8internal10scoped_ptrINSt3__118basic_stringstreamIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED1Ev called 144 returned 100% blocks executed 100%
+function _ZN7testing8internal10scoped_ptrINSt3__118basic_stringstreamIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED2Ev called 144 returned 100% blocks executed 66%
+function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED1Ev called 77 returned 100% blocks executed 100%
+function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEED2Ev called 77 returned 100% blocks executed 66%
+      442: 1185:  ~scoped_ptr() { reset(); }
+      144: 1185-block  0
+      144: 1185-block  1
+branch  0 taken 144
 branch  1 taken 0
-       99: 1185-block  2
+      144: 1185-block  2
     $$$$$: 1185-block  3
-       45: 1185-block  4
-       45: 1185-block  5
-branch  2 taken 45
+       77: 1185-block  4
+       77: 1185-block  5
+branch  2 taken 77
 branch  3 taken 0
-       45: 1185-block  6
+       77: 1185-block  6
     $$$$$: 1185-block  7
         -: 1186:
         -: 1187:  T& operator*() const { return *ptr_; }
-function _ZNK7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEptEv called 4 returned 100% blocks executed 100%
-        4: 1188:  T* operator->() const { return ptr_; }
-        4: 1188-block  0
-function _ZNK7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEE3getEv called 7 returned 100% blocks executed 100%
-        7: 1189:  T* get() const { return ptr_; }
-        7: 1189-block  0
+function _ZNK7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEptEv called 46 returned 100% blocks executed 100%
+       46: 1188:  T* operator->() const { return ptr_; }
+       46: 1188-block  0
+function _ZNK7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEE3getEv called 50 returned 100% blocks executed 100%
+       50: 1189:  T* get() const { return ptr_; }
+       50: 1189-block  0
         -: 1190:
         -: 1191:  T* release() {
         -: 1192:    T* const ptr = ptr_;
@@ -1219,42 +1219,42 @@ function _ZNK7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_tra
         -: 1194:    return ptr;
         -: 1195:  }
         -: 1196:
-function _ZN7testing8internal10scoped_ptrINSt3__118basic_stringstreamIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEE5resetEPS8_ called 99 returned 100% blocks executed 100%
-function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEE5resetEPS8_ called 47 returned 100% blocks executed 100%
-      146: 1197:  void reset(T* p = NULL) {
-      146: 1198:    if (p != ptr_) {
-       99: 1198-block  0
+function _ZN7testing8internal10scoped_ptrINSt3__118basic_stringstreamIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEE5resetEPS8_ called 144 returned 100% blocks executed 100%
+function _ZN7testing8internal10scoped_ptrINSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEE5resetEPS8_ called 80 returned 100% blocks executed 100%
+      224: 1197:  void reset(T* p = NULL) {
+      224: 1198:    if (p != ptr_) {
+      144: 1198-block  0
 branch  0 taken 0
-branch  1 taken 99
-       47: 1198-block  1
-branch  2 taken 41
-branch  3 taken 6
-      105: 1199:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
-       99: 1199-block  0
+branch  1 taken 144
+       80: 1198-block  1
+branch  2 taken 71
+branch  3 taken 9
+      153: 1199:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
+      144: 1199-block  0
 branch  0 taken 0
-branch  1 taken 99
-        6: 1199-block  1
+branch  1 taken 144
+        9: 1199-block  1
 branch  2 taken 0
-branch  3 taken 6
-      105: 1200:        delete ptr_;
-       99: 1200-block  0
-branch  0 taken 99
+branch  3 taken 9
+      153: 1200:        delete ptr_;
+      144: 1200-block  0
+branch  0 taken 144
 branch  1 taken 0
-       99: 1200-block  1
-        6: 1200-block  2
-branch  2 taken 4
-branch  3 taken 2
-        4: 1200-block  3
-      105: 1201:      }
-       99: 1201-block  0
-        6: 1201-block  1
-      105: 1202:      ptr_ = p;
-      105: 1203:    }
-       99: 1203-block  0
-        6: 1203-block  1
-      146: 1204:  }
-       99: 1204-block  0
-       47: 1204-block  1
+      144: 1200-block  1
+        9: 1200-block  2
+branch  2 taken 6
+branch  3 taken 3
+        6: 1200-block  3
+      153: 1201:      }
+      144: 1201-block  0
+        9: 1201-block  1
+      153: 1202:      ptr_ = p;
+      153: 1203:    }
+      144: 1203-block  0
+        9: 1203-block  1
+      224: 1204:  }
+      144: 1204-block  0
+       80: 1204-block  1
         -: 1205:
         -: 1206:  friend void swap(scoped_ptr& a, scoped_ptr& b) {
         -: 1207:    using std::swap;

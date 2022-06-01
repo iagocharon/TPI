@@ -29,12 +29,12 @@
         -:   24:
         -:   25:template <class _Tp>
         -:   26:_LIBCPP_NODISCARD_EXT inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR _Tp&&
-function _ZNSt3__1L7forwardINS_18__default_init_tagEEEOT_RNS_16remove_referenceIS2_E4typeE called 10 returned 100% blocks executed 100%
+function _ZNSt3__1L7forwardINS_18__default_init_tagEEEOT_RNS_16remove_referenceIS2_E4typeE called 6 returned 100% blocks executed 100%
 function _ZNSt3__1L7forwardIDnEEOT_RNS_16remove_referenceIS1_E4typeE called 4 returned 100% blocks executed 100%
 function _ZNSt3__1L7forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEEEEOT_RNS_16remove_referenceIS6_E4typeE called 0 returned 0% blocks executed 0%
-       14:   27:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT {
-       14:   28:  return static_cast<_Tp&&>(__t);
-       10:   28-block  0
+       10:   27:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT {
+       10:   28:  return static_cast<_Tp&&>(__t);
+        6:   28-block  0
         4:   28-block  1
     $$$$$:   28-block  2
         -:   29:}

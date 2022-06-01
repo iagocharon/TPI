@@ -443,29 +443,29 @@ branch  5 taken 2
         -:  168:/************************************* EJERCICIO corregirViaje
         -:  169: * ******************************/
         -:  170:
-function _Z7esErrorNSt3__15tupleIJdNS0_IJddEEEEEENS_6vectorIdNS_9allocatorIdEEEE called 54 returned 100% blocks executed 100%
-       54:  171:bool esError(puntoViaje p, vector<tiempo> errores) {
-      136:  172:    for (int i = 0; i < errores.size(); i++) {
-       54:  172-block  0
-      136:  172-block  1
-branch  0 taken 90
-branch  1 taken 46
-       82:  172-block  2
-       90:  173:        if (obtenerTiempo(p) == errores[i]) {
-       90:  173-block  0
-branch  0 taken 8
-branch  1 taken 82
-        8:  174:            return true;
-        8:  174-block  0
+function _Z7esErrorNSt3__15tupleIJdNS0_IJddEEEEEENS_6vectorIdNS_9allocatorIdEEEE called 86 returned 100% blocks executed 100%
+       86:  171:bool esError(puntoViaje p, vector<tiempo> errores) {
+      198:  172:    for (int i = 0; i < errores.size(); i++) {
+       86:  172-block  0
+      198:  172-block  1
+branch  0 taken 135
+branch  1 taken 63
+      112:  172-block  2
+      135:  173:        if (obtenerTiempo(p) == errores[i]) {
+      135:  173-block  0
+branch  0 taken 23
+branch  1 taken 112
+       23:  174:            return true;
+       23:  174-block  0
         -:  175:        }
-       82:  176:    }
-       82:  176-block  0
-       46:  177:    return false;
-       46:  177-block  0
-       54:  178:}
-       54:  178-block  0
+      112:  176:    }
+      112:  176-block  0
+       63:  177:    return false;
+       63:  177-block  0
+       86:  178:}
+       86:  178-block  0
         -:  179:
-function _Z14puntosCercanosdNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS0_IdNS4_IdEEEE called 6 returned 100% blocks executed 72%
+function _Z14puntosCercanosdNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS0_IdNS4_IdEEEE called 6 returned 100% blocks executed 71%
         6:  180:tuple<puntoViaje, puntoViaje> puntosCercanos(tiempo error, viaje v, vector<tiempo> errores) {
         6:  181:    puntoViaje puntoCercano1;
         6:  182:    puntoViaje puntoCercano2;
@@ -493,9 +493,9 @@ branch  1 taken 6
 branch  0 taken 30
 branch  1 taken 30
        60:  185-block  1
-branch  2 taken 36
-branch  3 taken 24
-       24:  185-block  2
+branch  2 taken 30
+branch  3 taken 30
+       30:  185-block  2
        60:  185-block  3
 branch  4 taken 40
 branch  5 taken 20
@@ -504,14 +504,11 @@ branch  6 never executed
 branch  7 never executed
     $$$$$:  185-block  5
     $$$$$:  185-block  6
-       30:  186:            (abs(obtenerTiempo(v[i]) - error) != 0) && (!esError(v[i], errores))) {
+       30:  186:            (!esError(v[i], errores))) {
        30:  186-block  0
-branch  0 taken 6
-branch  1 taken 24
-       24:  186-block  1
-branch  2 taken 24
-branch  3 taken 0
-       24:  186-block  2
+branch  0 taken 30
+branch  1 taken 0
+       30:  186-block  1
        20:  187:            minimo = abs(obtenerTiempo(v[i]) - error);
        20:  188:            puntoCercano1 = v[i];
        20:  189:        }
@@ -539,12 +536,12 @@ branch  1 taken 60
        60:  193-block  2
        96:  194:        if ((abs(obtenerTiempo(v[i]) - error) < minimo) &&
        60:  194-block  0
-branch  0 taken 36
-branch  1 taken 24
+branch  0 taken 24
+branch  1 taken 36
        60:  194-block  1
-branch  2 taken 30
-branch  3 taken 30
-       30:  194-block  2
+branch  2 taken 24
+branch  3 taken 36
+       36:  194-block  2
        60:  194-block  3
 branch  4 taken 40
 branch  5 taken 20
@@ -553,138 +550,149 @@ branch  6 never executed
 branch  7 never executed
     $$$$$:  194-block  5
     $$$$$:  194-block  6
-       36:  195:            (abs(obtenerTiempo(v[i]) - error) != 0) && (!esError(v[i], errores)) &&
+       36:  195:            (!esError(v[i], errores)) && (v[i] != puntoCercano1)) {
        36:  195-block  0
-branch  0 taken 6
-branch  1 taken 30
-       30:  195-block  1
-branch  2 taken 30
-branch  3 taken 0
-       30:  195-block  2
-branch  4 taken 26
-branch  5 taken 4
-       26:  196:            (v[i] != puntoCercano1)) {
-       26:  196-block  0
-branch  0 taken 26
+branch  0 taken 36
 branch  1 taken 0
-       20:  197:            minimo = abs(obtenerTiempo(v[i]) - error);
-       20:  198:            puntoCercano2 = v[i];
-       20:  199:        }
-       20:  199-block  0
-       60:  200:    }
-       60:  200-block  0
-        -:  201:
-        6:  202:    if (obtenerTiempo(puntoCercano1) > obtenerTiempo(puntoCercano2)) {
-        6:  202-block  0
+       36:  195-block  1
+branch  2 taken 26
+branch  3 taken 10
+       26:  195-block  2
+branch  4 taken 26
+branch  5 taken 0
+       20:  196:            minimo = abs(obtenerTiempo(v[i]) - error);
+       20:  197:            puntoCercano2 = v[i];
+       20:  198:        }
+       20:  198-block  0
+       60:  199:    }
+       60:  199-block  0
+        -:  200:
+        6:  201:    if (obtenerTiempo(puntoCercano1) > obtenerTiempo(puntoCercano2)) {
+        6:  201-block  0
 branch  0 taken 0
 branch  1 taken 6
-        6:  203:        puntoViaje aux = puntoCercano1;
-        6:  204:        puntoCercano1 = puntoCercano2;
-        6:  205:        puntoCercano2 = aux;
-        6:  206:    }
+        6:  202:        puntoViaje aux = puntoCercano1;
+        6:  203:        puntoCercano1 = puntoCercano2;
+        6:  204:        puntoCercano2 = aux;
+        6:  205:    }
+        6:  205-block  0
+        6:  206:    return {puntoCercano1, puntoCercano2};
         6:  206-block  0
-        6:  207:    return {puntoCercano1, puntoCercano2};
-        6:  207-block  0
-    #####:  208:}
-    $$$$$:  208-block  0
-    $$$$$:  208-block  1
-        -:  209:
-function _Z14getIndiceViajeNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEEd called 6 returned 100% blocks executed 100%
-        6:  210:int getIndiceViaje(viaje v, tiempo t) {
-       48:  211:    for (int i = 0; i < v.size(); i++) {
-        6:  211-block  0
-       48:  211-block  1
+    #####:  207:}
+    $$$$$:  207-block  0
+    $$$$$:  207-block  1
+        -:  208:
+function _Z14getIndiceViajeNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEEd called 3 returned 100% blocks executed 100%
+        3:  209:int getIndiceViaje(viaje v, tiempo t) {
+       24:  210:    for (int i = 0; i < v.size(); i++) {
+        3:  210-block  0
+       24:  210-block  1
 branch  0 taken 0
-branch  1 taken 48
-       42:  211-block  2
-       48:  212:        if (obtenerTiempo(v[i]) == t) {
-       48:  212-block  0
-branch  0 taken 6
-branch  1 taken 42
-        6:  213:            return i;
-        6:  213-block  0
-        -:  214:        }
-       42:  215:    }
-       42:  215-block  0
-        6:  216:}
-        6:  216-block  0
-        -:  217:
+branch  1 taken 24
+       21:  210-block  2
+       24:  211:        if (obtenerTiempo(v[i]) == t) {
+       24:  211-block  0
+branch  0 taken 3
+branch  1 taken 21
+        3:  212:            return i;
+        3:  212-block  0
+        -:  213:        }
+       21:  214:    }
+       21:  214-block  0
+        3:  215:}
+        3:  215-block  0
+        -:  216:
 function _Z14puntoCorregidoNSt3__15tupleIJdNS0_IJddEEEEEES2_S2_ called 3 returned 100% blocks executed 100%
-        3:  218:puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
-        -:  219:                          puntoViaje puntoCercano2) {
-        3:  220:    double velocidadMediaPuntosCercanos = velocidadMedia(puntoCercano1, puntoCercano2);
-        3:  221:    tiempo tiempoHastaError = obtenerTiempo(error) - obtenerTiempo(puntoCercano1);
-        3:  222:    distancia distanciaHastaError = velocidadMediaPuntosCercanos * tiempoHastaError;
-        3:  223:    double factorRecorrido = (distanciaHastaError / distEnKM(obtenerPosicion(puntoCercano1), obtenerPosicion(puntoCercano2)));
-        -:  224:
-        3:  225:    distancia distanciaHorizontalRecorrida =
-        6:  226:        (obtenerLatitud(obtenerPosicion(puntoCercano2)) -
-        6:  227:         obtenerLatitud(obtenerPosicion(puntoCercano1))) *
-        3:  228:        factorRecorrido;
-        3:  229:    distancia distanciaVerticalRecorrida =
-        6:  230:        (obtenerLongitud(obtenerPosicion(puntoCercano2)) -
-        6:  231:         obtenerLongitud(obtenerPosicion(puntoCercano1))) *
-        3:  232:        factorRecorrido;
-        -:  233:
-        3:  234:    puntoViaje aux = error;
-        -:  235:
-        3:  236:    double auxLatitud =
-        6:  237:        obtenerLatitud(obtenerPosicion(puntoCercano1)) +
-        3:  238:        distanciaHorizontalRecorrida;
+        3:  217:puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
+        -:  218:                          puntoViaje puntoCercano2) {
+        3:  219:    double velocidadMediaPuntosCercanos = velocidadMedia(puntoCercano1, puntoCercano2);
+        3:  220:    tiempo tiempoHastaError = obtenerTiempo(error) - obtenerTiempo(puntoCercano1);
+        3:  221:    distancia distanciaHastaError = velocidadMediaPuntosCercanos * tiempoHastaError;
+        3:  222:    double factorRecorrido = (distanciaHastaError / distEnKM(obtenerPosicion(puntoCercano1), obtenerPosicion(puntoCercano2)));
+        -:  223:
+        3:  224:    distancia distanciaHorizontalRecorrida =
+        6:  225:        (obtenerLatitud(obtenerPosicion(puntoCercano2)) -
+        6:  226:         obtenerLatitud(obtenerPosicion(puntoCercano1))) *
+        3:  227:        factorRecorrido;
+        3:  228:    distancia distanciaVerticalRecorrida =
+        6:  229:        (obtenerLongitud(obtenerPosicion(puntoCercano2)) -
+        6:  230:         obtenerLongitud(obtenerPosicion(puntoCercano1))) *
+        3:  231:        factorRecorrido;
+        -:  232:
+        3:  233:    double auxLatitud =
+        6:  234:        obtenerLatitud(obtenerPosicion(puntoCercano1)) +
+        3:  235:        distanciaHorizontalRecorrida;
+        -:  236:
+        3:  237:    double auxLongitud =
+        3:  238:        obtenerLongitud(obtenerPosicion(puntoCercano1)) + distanciaVerticalRecorrida;
         -:  239:
-        3:  240:    double auxLongitud =
-        3:  241:        obtenerLongitud(obtenerPosicion(puntoCercano1)) + distanciaVerticalRecorrida;
+        3:  240:    return {obtenerTiempo(error), {auxLatitud, auxLongitud}};
+        3:  240-block  0
+        -:  241:}
         -:  242:
-        3:  243:    return {obtenerTiempo(error), {auxLatitud, auxLongitud}};
-        3:  243-block  0
-        -:  244:}
-        -:  245:
-function _Z13corregirViajeRNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS0_IdNS4_IdEEEE called 2 returned 100% blocks executed 56%
-        2:  246:void corregirViaje(viaje &v, vector<tiempo> errores) {
-        5:  247:    for (int i = 0; i < errores.size(); i++) {
-        2:  247-block  0
-        5:  247-block  1
+function _Z13corregirViajeRNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS0_IdNS4_IdEEEE called 2 returned 100% blocks executed 68%
+        2:  243:void corregirViaje(viaje &v, vector<tiempo> errores) {
+        5:  244:    for (int i = 0; i < errores.size(); i++) {
+        2:  244-block  0
+        5:  244-block  1
 branch  0 taken 3
 branch  1 taken 2
-        3:  247-block  2
-        3:  248:        puntoViaje puntoCercano1 = get<0>(puntosCercanos(errores[i], v, errores));
-        3:  248-block  0
-branch  0 taken 0
-branch  1 taken 3
-        3:  248-block  1
-branch  2 taken 0
-branch  3 taken 3
-    $$$$$:  248-block  2
-    $$$$$:  248-block  3
-    $$$$$:  248-block  4
-        3:  249:        puntoViaje puntoCercano2 = get<1>(puntosCercanos(errores[i], v, errores));
-        3:  249-block  0
-branch  0 taken 0
-branch  1 taken 3
-        3:  249-block  1
-branch  2 taken 0
-branch  3 taken 3
-    $$$$$:  249-block  2
-    $$$$$:  249-block  3
-        3:  250:        v[getIndiceViaje(v, errores[i])] = puntoCorregido(v[getIndiceViaje(v, errores[i])], puntoCercano1, puntoCercano2);
-        3:  250-block  0
+        3:  244-block  2
+        3:  245:        puntoViaje puntoCercano1 = get<0>(puntosCercanos(errores[i], v, errores));
+        3:  245-block  0
 branch  0 taken 3
 branch  1 taken 0
-        3:  250-block  1
+        3:  245-block  1
+branch  2 taken 0
+branch  3 taken 3
+    $$$$$:  245-block  2
+    $$$$$:  245-block  3
+    $$$$$:  245-block  4
+        3:  246:        puntoViaje puntoCercano2 = get<1>(puntosCercanos(errores[i], v, errores));
+        3:  246-block  0
+branch  0 taken 0
+branch  1 taken 3
+        3:  246-block  1
+branch  2 taken 0
+branch  3 taken 3
+    $$$$$:  246-block  2
+    $$$$$:  246-block  3
+        3:  247:        int indiceError = getIndiceViaje(v, errores[i]);
+        3:  247-block  0
+branch  0 taken 0
+branch  1 taken 3
+    $$$$$:  247-block  1
+        3:  248:        v[indiceError] = puntoCorregido(v[indiceError], puntoCercano1, puntoCercano2);
+        3:  249:    }
+        3:  249-block  0
+        -:  250:
+       22:  251:    for (int i = 0; i < v.size(); ++i) {
+        2:  251-block  0
+       22:  251-block  1
+branch  0 taken 20
+branch  1 taken 2
+       20:  251-block  2
+       20:  252:        if (esError(v[i], errores) && obtenerTiempo(v[i]) == T0+1051) {
+       20:  252-block  0
+branch  0 taken 20
+branch  1 taken 0
+       20:  252-block  1
 branch  2 taken 3
-branch  3 taken 0
-        3:  250-block  2
+branch  3 taken 17
+        3:  252-block  2
 branch  4 taken 3
 branch  5 taken 0
-        3:  250-block  3
-branch  6 taken 0
-branch  7 taken 3
-    $$$$$:  250-block  4
-    $$$$$:  250-block  5
-        3:  251:    }
-        3:  251-block  0
-        2:  252:}
-    $$$$$:  252-block  0
-    $$$$$:  252-block  1
-    $$$$$:  252-block  2
-        2:  252-block  3
+        3:  252-block  3
+       20:  252-block  4
+branch  6 taken 18
+branch  7 taken 2
+    $$$$$:  252-block  5
+        2:  253:            cout << fixed << setprecision(6) << obtenerLatitud(obtenerPosicion(v[i])) << "  -  " <<  obtenerLongitud(obtenerPosicion(v[i])) << endl;
+        2:  254:        }
+        2:  254-block  0
+       20:  255:    }
+       20:  255-block  0
+        2:  256:}
+    $$$$$:  256-block  0
+    $$$$$:  256-block  1
+        2:  256-block  2

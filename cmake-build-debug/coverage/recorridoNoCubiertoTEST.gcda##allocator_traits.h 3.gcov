@@ -352,13 +352,13 @@ function _ZNSt3__116allocator_traitsINS_9allocatorIiEEE7destroyIivEEvRS2_PT_ cal
         -:  325:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX17
 function _ZNSt3__116allocator_traitsINS_9allocatorINS_5tupleIJddEEEEEE8max_sizeIS4_vEEmRKS4_ called 5 returned 100% blocks executed 100%
 function _ZNSt3__116allocator_traitsINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEEE8max_sizeIS5_vEEmRKS5_ called 10 returned 100% blocks executed 100%
-function _ZNSt3__116allocator_traitsINS_9allocatorIiEEE8max_sizeIS2_vEEmRKS2_ called 18 returned 100% blocks executed 100%
-       33:  326:    static size_type max_size(const allocator_type& __a) _NOEXCEPT {
+function _ZNSt3__116allocator_traitsINS_9allocatorIiEEE8max_sizeIS2_vEEmRKS2_ called 19 returned 100% blocks executed 100%
+       34:  326:    static size_type max_size(const allocator_type& __a) _NOEXCEPT {
         -:  327:        _LIBCPP_SUPPRESS_DEPRECATED_PUSH
-       33:  328:        return __a.max_size();
+       34:  328:        return __a.max_size();
         5:  328-block  0
        10:  328-block  1
-       18:  328-block  2
+       19:  328-block  2
         -:  329:        _LIBCPP_SUPPRESS_DEPRECATED_POP
         -:  330:    }
         -:  331:    template <class _Ap = _Alloc, class = void, class =

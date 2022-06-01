@@ -55,15 +55,15 @@
         -:   50:private:
         -:   51:    streambuf_type* __sbuf_;
         -:   52:public:
-function _ZNSt3__119ostreambuf_iteratorIcNS_11char_traitsIcEEEC1ERNS_13basic_ostreamIcS2_EE called 477 returned 100% blocks executed 100%
-function _ZNSt3__119ostreambuf_iteratorIcNS_11char_traitsIcEEEC2ERNS_13basic_ostreamIcS2_EE called 477 returned 100% blocks executed 66%
-      954:   53:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator(ostream_type& __s) _NOEXCEPT
-      954:   54:        : __sbuf_(__s.rdbuf()) {}
-      477:   54-block  0
-      477:   54-block  1
-branch  0 taken 477
+function _ZNSt3__119ostreambuf_iteratorIcNS_11char_traitsIcEEEC1ERNS_13basic_ostreamIcS2_EE called 376 returned 100% blocks executed 100%
+function _ZNSt3__119ostreambuf_iteratorIcNS_11char_traitsIcEEEC2ERNS_13basic_ostreamIcS2_EE called 376 returned 100% blocks executed 66%
+      752:   53:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator(ostream_type& __s) _NOEXCEPT
+      752:   54:        : __sbuf_(__s.rdbuf()) {}
+      376:   54-block  0
+      376:   54-block  1
+branch  0 taken 376
 branch  1 taken 0
-      477:   54-block  2
+      376:   54-block  2
     $$$$$:   54-block  3
         -:   55:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator(streambuf_type* __s) _NOEXCEPT
         -:   56:        : __sbuf_(__s) {}
@@ -76,9 +76,9 @@ branch  1 taken 0
         -:   63:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator& operator*()     {return *this;}
         -:   64:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator& operator++()    {return *this;}
         -:   65:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator& operator++(int) {return *this;}
-function _ZNKSt3__119ostreambuf_iteratorIcNS_11char_traitsIcEEE6failedEv called 477 returned 100% blocks executed 100%
-      477:   66:    _LIBCPP_INLINE_VISIBILITY bool failed() const _NOEXCEPT {return __sbuf_ == nullptr;}
-      477:   66-block  0
+function _ZNKSt3__119ostreambuf_iteratorIcNS_11char_traitsIcEEE6failedEv called 376 returned 100% blocks executed 100%
+      376:   66:    _LIBCPP_INLINE_VISIBILITY bool failed() const _NOEXCEPT {return __sbuf_ == nullptr;}
+      376:   66-block  0
         -:   67:
         -:   68:    template <class _Ch, class _Tr>
         -:   69:    friend

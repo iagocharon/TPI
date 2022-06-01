@@ -229,14 +229,14 @@
         -:  224:        : __hm_(nullptr), __mode_(ios_base::in | ios_base::out) {}
         -:  225:
         -:  226:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ej called 2 returned 100% blocks executed 100%
-function _ZNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEC2Ej called 2 returned 100% blocks executed 100%
-        8:  227:    explicit basic_stringbuf(ios_base::openmode __wch)
-        8:  228:        : __hm_(nullptr), __mode_(__wch) {}
-        2:  228-block  0
-        2:  228-block  1
-        2:  228-block  2
-        2:  228-block  3
+function _ZNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ej called 0 returned 0% blocks executed 0%
+function _ZNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEC2Ej called 0 returned 0% blocks executed 0%
+    #####:  227:    explicit basic_stringbuf(ios_base::openmode __wch)
+    #####:  228:        : __hm_(nullptr), __mode_(__wch) {}
+    $$$$$:  228-block  0
+    $$$$$:  228-block  1
+    $$$$$:  228-block  2
+    $$$$$:  228-block  3
         -:  229:
         -:  230:    _LIBCPP_INLINE_VISIBILITY
         -:  231:    explicit basic_stringbuf(const string_type& __s,
@@ -810,19 +810,19 @@ function _ZNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEC2Ej 
         -:  799:public:
         -:  800:    // 30.8.5.1 [stringstream.cons], constructors
         -:  801:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev called 2 returned 100% blocks executed 42%
-        4:  802:    basic_stringstream()
-        4:  803:        : basic_iostream<_CharT, _Traits>(&__sb_), __sb_(ios_base::in | ios_base::out) {}
-        2:  803-block  0
-branch  0 taken 2
-branch  1 taken 0
-        2:  803-block  1
-branch  2 taken 2
-branch  3 taken 0
-        2:  803-block  2
-branch  4 taken 0
-branch  5 taken 2
-        2:  803-block  3
+function _ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev called 0 returned 0% blocks executed 0%
+    #####:  802:    basic_stringstream()
+    #####:  803:        : basic_iostream<_CharT, _Traits>(&__sb_), __sb_(ios_base::in | ios_base::out) {}
+    $$$$$:  803-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:  803-block  1
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  803-block  2
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  803-block  3
     $$$$$:  803-block  4
     $$$$$:  803-block  5
     $$$$$:  803-block  6
