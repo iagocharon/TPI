@@ -4,6 +4,7 @@
     "tuple": "cpp",
     "__tuple": "cpp",
     "algorithm": "cpp",
-    "__locale": "cpp"
+    "__locale": "cpp",
+    "iostream": "cpp"
   }
 }

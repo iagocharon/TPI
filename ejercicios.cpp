@@ -12,20 +12,20 @@ using namespace std;
 /******++++**************************** EJERCICIO tiempoTotal
  * ***********+++***********************/
 tiempo tiempoMinimo(viaje v) {
-    tiempo aux = get<0>(v[0]);
+    tiempo aux = obtenerTiempo(v[0]);
     for (int i = 1; i < v.size(); i++) {
-        if (get<0>(v[i]) < aux) {
-            aux = get<0>(v[i]);
+        if (obtenerTiempo(v[i]) < aux) {
+            aux = obtenerTiempo(v[i]);
         }
     }
     return aux;
 }
 
 tiempo tiempoMaximo(viaje v) {
-    tiempo aux = get<0>(v[0]);
+    tiempo aux = obtenerTiempo(v[0]);
     for (int i = 1; i < v.size(); i++) {
-        if (get<0>(v[i]) > aux) {
-            aux = get<0>(v[i]);
+        if (obtenerTiempo(v[i]) > aux) {
+            aux = obtenerTiempo(v[i]);
         }
     }
     return aux;
@@ -37,35 +37,35 @@ tiempo tiempoTotal(viaje v) { return tiempoMaximo(v) - tiempoMinimo(v); }
  * ************++*********************/
 viaje viajeOrdenado(viaje v) {
     viaje auxViaje = v;
-    for (int i = 0; i < auxViaje.size(); i++) {
-        for (int j = 0; j < auxViaje.size() - i; j++) {
-            if (get<0>(auxViaje[j]) > get<0>(auxViaje[j + 1])) {
-                puntoViaje auxPunto = auxViaje[j];
-                auxViaje[j] = auxViaje[j + 1];
-                auxViaje[j + 1] = auxPunto;
+    for (int i = 0; i < auxViaje.size(); ++i) {
+        for (int j = 0; j < auxViaje.size(); ++j) {
+            if (obtenerTiempo(auxViaje[j]) < obtenerTiempo(auxViaje[i])) {
+                puntoViaje auxPunto = auxViaje[i];
+                auxViaje[i] = auxViaje[j];
+                auxViaje[j] = auxPunto;
             }
         }
     }
-    return auxViaje;
-}
 
-distancia distanciaEntre(gps a, gps b) {
-    return sqrt(pow(get<0>(a) - get<0>(b), 2) + pow(get<1>(a) - get<1>(b), 2));
+    return auxViaje;
 }
 
 distancia distanciaTotal(viaje v) {
     distancia d = 0;
     viaje aux = viajeOrdenado(v);
     for (int i = 0; i < aux.size(); i++) {
-        d += distanciaEntre(get<1>(aux[i - 1]), get<1>(aux[i]));
+        d += distEnKM(obtenerPosicion(aux[i - 1]), obtenerPosicion(aux[i]));
     }
+    cout << d << endl;
     return d;
 }
 
 /*****************************+***** EJERCICIO excesoDeVelocidad
  * **********************************/
 bool hayExceso(puntoViaje a, puntoViaje b) {
-    return distanciaEntre(get<1>(a), get<1>(b)) / (get<0>(b) - get<0>(a)) > 80;
+    return distEnKM(obtenerPosicion(a), get<1>(b)) /
+               (obtenerTiempo(b) - obtenerTiempo(a)) >
+           80;
 }
 
 bool excesoDeVelocidad(viaje v) {
@@ -81,7 +81,7 @@ bool excesoDeVelocidad(viaje v) {
  * ***************************************/
 bool estabaEnViaje(viaje v, tiempo t0, tiempo tf) {
     for (int i = 0; i < v.size(); i++) {
-        if (get<0>(v[i]) >= t0 && get<0>(v[i]) <= tf) {
+        if (obtenerTiempo(v[i]) >= t0 && obtenerTiempo(v[i]) <= tf) {
             return true;
         }
     }
@@ -102,7 +102,7 @@ int flota(vector<viaje> f, tiempo t0, tiempo tf) {
  * *******************************/
 bool estaCubierto(gps p, viaje v, distancia u) {
     for (int i = 0; i < v.size(); i++) {
-        if (distanciaEntre(p, get<1>(v[i])) <= u) {
+        if (distEnKM(p, obtenerPosicion(v[i])) <= u) {
             return true;
         }
     }
@@ -122,16 +122,16 @@ vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
 /************************************** EJERCICIO construirGrilla
  * *******************************/
 grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
-    int ladoHorizontal = (get<0>(esq2) - get<0>(esq1)) / n;
-    int ladoVertical = (get<1>(esq2) - get<1>(esq1)) / m;
+    int ladoHorizontal = (obtenerLatitud(esq2) - obtenerLatitud(esq1)) / n;
+    int ladoVertical = (obtenerLongitud(esq2) - obtenerLongitud(esq1)) / m;
     grilla resp = {};
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            gps auxEsq1 = {get<0>(esq1) + i * ladoHorizontal,
-                           get<1>(esq1) + j * ladoVertical};
-            gps auxEsq2 = {get<0>(esq1) + (i + 1) * ladoHorizontal,
-                           get<1>(esq1) + (j + 1) * ladoVertical};
+            gps auxEsq1 = {obtenerLatitud(esq1) + i * ladoHorizontal,
+                           obtenerLongitud(esq1) + j * ladoVertical};
+            gps auxEsq2 = {obtenerLatitud(esq1) + (i + 1) * ladoHorizontal,
+                           obtenerLongitud(esq1) + (j + 1) * ladoVertical};
             resp.push_back({auxEsq1, auxEsq2, {i, j}});
         }
     }
@@ -192,7 +192,7 @@ void setPuntosCercanos(tiempo error, viaje v, vector<tiempo> errores,
         }
     }
 
-    tiempo minimo = (tiempoMaximo(v) - tiempoMinimo(v));
+    minimo = (tiempoMaximo(v) - tiempoMinimo(v));
     for (int i = 0; i < v.size(); i++) {
         if ((abs(get<0>(v[i]) - error) < minimo) &&
             (abs(get<0>(v[i]) - error) != 0) && (!esError(v[i], errores)) &&
@@ -213,7 +213,7 @@ int getIndiceViaje(viaje v, tiempo t) {
 }
 
 double velocidadMedia(puntoViaje p1, puntoViaje p2) {
-    return distanciaEntre(get<1>(p1), get<1>(p2)) / (get<0>(p2) - get<0>(p1));
+    return distEnKM(get<1>(p1), get<1>(p2)) / (get<0>(p2) - get<0>(p1));
 }
 
 puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
@@ -225,7 +225,7 @@ puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
         velocidadMediaPuntosCercanos * tiempoHastaError;
     double factorRecorrido =
         (distanciaHastaError /
-         distanciaEntre(get<1>(puntoCercano1), get<1>(puntoCercano2)));
+         distEnKM(get<1>(puntoCercano1), get<1>(puntoCercano2)));
 
     distancia distanciaHorizontalRecorrida =
         (get<0>(get<1>(puntoCercano2)) - get<0>(get<1>(puntoCercano1))) *
@@ -245,7 +245,7 @@ puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
     return aux;
 }
 
-void corregirViaje(viaje& v, vector<tiempo> errores) {
+void corregirViaje(viaje &v, vector<tiempo> errores) {
     for (int i = 0; i < errores.size(); i++) {
         puntoViaje puntoCercano1, puntoCercano2;
         v[i] = puntoCorregido(v[i], puntoCercano1, puntoCercano2);
