@@ -11,27 +11,22 @@ using namespace std;
 
 /******++++**************************** EJERCICIO tiempoTotal
  * ***********+++***********************/
-tiempo tiempoMinimo(viaje v) {
-    tiempo aux = obtenerTiempo(v[0]);
+
+tuple<tiempo, tiempo> tiemposMaximoYMinimo (viaje v) {
+    tiempo max = obtenerTiempo(v[0]);
+    tiempo min = obtenerTiempo(v[0]);
     for (int i = 1; i < v.size(); i++) {
-        if (obtenerTiempo(v[i]) < aux) {
-            aux = obtenerTiempo(v[i]);
+        if (obtenerTiempo(v[i]) > max) {
+            max = obtenerTiempo(v[i]);
+        }
+        if (obtenerTiempo(v[i]) < min) {
+            min = obtenerTiempo(v[i]);
         }
     }
-    return aux;
+    return {max, min};
 }
 
-tiempo tiempoMaximo(viaje v) {
-    tiempo aux = obtenerTiempo(v[0]);
-    for (int i = 1; i < v.size(); i++) {
-        if (obtenerTiempo(v[i]) > aux) {
-            aux = obtenerTiempo(v[i]);
-        }
-    }
-    return aux;
-}
-
-tiempo tiempoTotal(viaje v) { return tiempoMaximo(v) - tiempoMinimo(v); }
+tiempo tiempoTotal(viaje v) { return get<0>(tiemposMaximoYMinimo(v)) - get<1>(tiemposMaximoYMinimo(v)); }
 
 /************++*********************** EJERCICIO distanciaTotal
  * ************++*********************/
@@ -46,7 +41,6 @@ viaje viajeOrdenado(viaje v) {
             }
         }
     }
-
     return auxViaje;
 }
 
@@ -89,8 +83,7 @@ int flota(vector<viaje> f, tiempo t0, tiempo tf) {
             resp++;
         }
     }
-    return resp;
-}
+    return resp;}
 
 /************************************ EJERCICIO recorridoCubierto
  * *******************************/
@@ -153,17 +146,27 @@ int distanciaEnCeldas(gps p1, gps p2, grilla g) {
            abs(obtenerColumna(n1) - obtenerColumna(n2));
 }
 
-int cantidadDeSaltos(grilla g, viaje v) {
-    int resp = 0;
-    for (int i = 0; i < v.size() - 1; i++) {
-        if (distanciaEnCeldas(obtenerPosicion(v[i]), obtenerPosicion(v[i + 1]),
-                              g) >= 2) {
-            resp++;
+int siguienteEnGrilla(grilla g, viaje v, int index) {
+    nombre noExiste = {-1, -1};
+    int posSiguiente = -1;
+    for (int i = index + 1; i < v.size(); i++) {
+        if (getNombreCelda(obtenerPosicion(v[i]), g) != noExiste) {
+            return i;
         }
     }
-
-    return resp;
+    return -1;
 }
+
+int cantidadDeSaltos(grilla g, viaje v) {
+    int resp = 0;
+    for (int i = 0; i < v.size(); i++) {
+        if (siguienteEnGrilla(g, v, i) != -1) {
+            if (distanciaEnCeldas(obtenerPosicion(v[i]), obtenerPosicion(v[siguienteEnGrilla(g, v, i)]), g) >= 2) {
+                resp++;
+            }
+        }
+    }
+    return resp;}
 
 /************************************* EJERCICIO corregirViaje
  * ******************************/
@@ -180,7 +183,7 @@ bool esError(puntoViaje p, vector<tiempo> errores) {
 tuple<puntoViaje, puntoViaje> puntosCercanos(tiempo error, viaje v, vector<tiempo> errores) {
     puntoViaje puntoCercano1;
     puntoViaje puntoCercano2;
-    tiempo minimo = (tiempoMaximo(v) - tiempoMinimo(v));
+    tiempo minimo = (get<0>(tiemposMaximoYMinimo(v)) - get<1>(tiemposMaximoYMinimo(v)));
     for (int i = 0; i < v.size(); i++) {
         if ((abs(obtenerTiempo(v[i]) - error) < minimo) &&
             (!esError(v[i], errores))) {
@@ -189,7 +192,7 @@ tuple<puntoViaje, puntoViaje> puntosCercanos(tiempo error, viaje v, vector<tiemp
         }
     }
 
-    minimo = (tiempoMaximo(v) - tiempoMinimo(v));
+    minimo = (get<0>(tiemposMaximoYMinimo(v)) - get<1>(tiemposMaximoYMinimo(v)));
     for (int i = 0; i < v.size(); i++) {
         if ((abs(obtenerTiempo(v[i]) - error) < minimo) &&
             (!esError(v[i], errores)) && (v[i] != puntoCercano1)) {
@@ -203,8 +206,7 @@ tuple<puntoViaje, puntoViaje> puntosCercanos(tiempo error, viaje v, vector<tiemp
         puntoCercano1 = puntoCercano2;
         puntoCercano2 = aux;
     }
-    return {puntoCercano1, puntoCercano2};
-}
+    return {puntoCercano1, puntoCercano2};}
 
 int getIndiceViaje(viaje v, tiempo t) {
     for (int i = 0; i < v.size(); i++) {

@@ -766,31 +766,31 @@
         -:  761:        (__is_default_allocator<_Alloc>::value || !__has_construct<_Alloc, _Dest*, _Source&>::value)
         -:  762:    >::type>
         -:  763:_LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEES4_S4_S4_S4_vEEvRT_PT0_S9_RPT1_ called 82 returned 100% blocks executed 100%
-function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJNS2_IJddEEES3_NS2_IJiiEEEEEEEES5_S5_S5_S5_vEEvRT_PT0_SA_RPT1_ called 7 returned 100% blocks executed 100%
-function _ZNSt3__1L25__construct_range_forwardINS_9allocatorIdEEddddvEEvRT_PT0_S6_RPT1_ called 94 returned 100% blocks executed 100%
-      183:  764:void __construct_range_forward(_Alloc&, _Source* __begin1, _Source* __end1, _Dest*& __begin2) {
-      183:  765:    ptrdiff_t _Np = __end1 - __begin1;
-      183:  766:    if (_Np > 0) {
-       82:  766-block  0
-branch  0 taken 82
+function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEES4_S4_S4_S4_vEEvRT_PT0_S9_RPT1_ called 87 returned 100% blocks executed 100%
+function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJNS2_IJddEEES3_NS2_IJiiEEEEEEEES5_S5_S5_S5_vEEvRT_PT0_SA_RPT1_ called 16 returned 100% blocks executed 100%
+function _ZNSt3__1L25__construct_range_forwardINS_9allocatorIdEEddddvEEvRT_PT0_S6_RPT1_ called 74 returned 100% blocks executed 100%
+      177:  764:void __construct_range_forward(_Alloc&, _Source* __begin1, _Source* __end1, _Dest*& __begin2) {
+      177:  765:    ptrdiff_t _Np = __end1 - __begin1;
+      177:  766:    if (_Np > 0) {
+       87:  766-block  0
+branch  0 taken 87
 branch  1 taken 0
-        7:  766-block  1
-branch  2 taken 7
+       16:  766-block  1
+branch  2 taken 16
 branch  3 taken 0
-       94:  766-block  2
-branch  4 taken 94
+       74:  766-block  2
+branch  4 taken 74
 branch  5 taken 0
-      183:  767:        _VSTD::memcpy(const_cast<_RawDest*>(__begin2), __begin1, _Np * sizeof(_Dest));
-      183:  768:        __begin2 += _Np;
-      183:  769:    }
-       82:  769-block  0
-        7:  769-block  1
-       94:  769-block  2
-      183:  770:}
-       82:  770-block  0
-        7:  770-block  1
-       94:  770-block  2
+      177:  767:        _VSTD::memcpy(const_cast<_RawDest*>(__begin2), __begin1, _Np * sizeof(_Dest));
+      177:  768:        __begin2 += _Np;
+      177:  769:    }
+       87:  769-block  0
+       16:  769-block  1
+       74:  769-block  2
+      177:  770:}
+       87:  770-block  0
+       16:  770-block  1
+       74:  770-block  2
         -:  771:
         -:  772:template <class _Alloc, class _Ptr>
         -:  773:_LIBCPP_INLINE_VISIBILITY
@@ -815,23 +815,23 @@ branch  5 taken 0
         -:  792:    is_trivially_move_constructible<_Tp>::value
         -:  793:>::type>
         -:  794:_LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__1L46__construct_backward_with_exception_guaranteesINS_9allocatorINS_5tupleIJddEEEEES3_vEEvRT_PT0_S8_RS8_ called 0 returned 0% blocks executed 0%
+function _ZNSt3__1L46__construct_backward_with_exception_guaranteesINS_9allocatorINS_5tupleIJddEEEEES3_vEEvRT_PT0_S8_RS8_ called 3 returned 100% blocks executed 100%
 function _ZNSt3__1L46__construct_backward_with_exception_guaranteesINS_9allocatorINS_5tupleIJNS2_IJddEEES3_NS2_IJiiEEEEEEEES5_vEEvRT_PT0_SA_RSA_ called 11 returned 100% blocks executed 100%
-       11:  795:void __construct_backward_with_exception_guarantees(_Alloc&, _Tp* __begin1, _Tp* __end1, _Tp*& __end2) {
-       11:  796:    ptrdiff_t _Np = __end1 - __begin1;
-       11:  797:    __end2 -= _Np;
-       11:  798:    if (_Np > 0)
-    $$$$$:  798-block  0
-branch  0 never executed
-branch  1 never executed
+       14:  795:void __construct_backward_with_exception_guarantees(_Alloc&, _Tp* __begin1, _Tp* __end1, _Tp*& __end2) {
+       14:  796:    ptrdiff_t _Np = __end1 - __begin1;
+       14:  797:    __end2 -= _Np;
+       14:  798:    if (_Np > 0)
+        3:  798-block  0
+branch  0 taken 2
+branch  1 taken 1
        11:  798-block  1
 branch  2 taken 9
 branch  3 taken 2
-        9:  799:        _VSTD::memcpy(static_cast<void*>(__end2), static_cast<void const*>(__begin1), _Np * sizeof(_Tp));
-    $$$$$:  799-block  0
+       11:  799:        _VSTD::memcpy(static_cast<void*>(__end2), static_cast<void const*>(__begin1), _Np * sizeof(_Tp));
+        2:  799-block  0
         9:  799-block  1
-       11:  800:}
-    $$$$$:  800-block  0
+       14:  800:}
+        3:  800-block  0
        11:  800-block  1
         -:  801:
         -:  802:struct __destruct_n

@@ -270,8 +270,8 @@
         -:  265://   Expected: Foo() is even
         -:  266://     Actual: it's 5
         -:  267://
-function _ZN7testing15AssertionResultD1Ev called 75 returned 100% blocks executed 100%
-function _ZN7testing15AssertionResultD2Ev called 75 returned 100% blocks executed 100%
+function _ZN7testing15AssertionResultD1Ev called 76 returned 100% blocks executed 100%
+function _ZN7testing15AssertionResultD2Ev called 76 returned 100% blocks executed 100%
         -:  268:class GTEST_API_ AssertionResult {
         -:  269: public:
         -:  270:  // Copy constructor.
@@ -308,9 +308,9 @@ function _ZN7testing15AssertionResultD2Ev called 75 returned 100% blocks execute
         -:  301:  }
         -:  302:
         -:  303:  // Returns true iff the assertion succeeded.
-function _ZNK7testing15AssertionResultcvbEv called 74 returned 100% blocks executed 100%
-       74:  304:  operator bool() const { return success_; }  // NOLINT
-       74:  304-block  0
+function _ZNK7testing15AssertionResultcvbEv called 76 returned 100% blocks executed 100%
+       76:  304:  operator bool() const { return success_; }  // NOLINT
+       76:  304-block  0
         -:  305:
         -:  306:  // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.
         -:  307:  AssertionResult operator!() const;
@@ -319,21 +319,21 @@ function _ZNK7testing15AssertionResultcvbEv called 74 returned 100% blocks execu
         -:  310:  // use it when they fail (i.e., the predicate's outcome doesn't match the
         -:  311:  // assertion's expectation). When nothing has been streamed into the
         -:  312:  // object, returns an empty string.
-function _ZNK7testing15AssertionResult7messageEv called 2 returned 100% blocks executed 100%
-        2:  313:  const char* message() const {
-        2:  314:    return message_.get() != NULL ?  message_->c_str() : "";
-        2:  314-block  0
-branch  0 taken 1
-branch  1 taken 1
-        1:  314-block  1
-        1:  314-block  2
-        2:  314-block  3
+function _ZNK7testing15AssertionResult7messageEv called 0 returned 0% blocks executed 0%
+    #####:  313:  const char* message() const {
+    #####:  314:    return message_.get() != NULL ?  message_->c_str() : "";
+    $$$$$:  314-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:  314-block  1
+    $$$$$:  314-block  2
+    $$$$$:  314-block  3
         -:  315:  }
         -:  316:  // TODO(vladl@google.com): Remove this after making sure no clients use it.
         -:  317:  // Deprecated; please use message() instead.
-function _ZNK7testing15AssertionResult15failure_messageEv called 1 returned 100% blocks executed 100%
-        1:  318:  const char* failure_message() const { return message(); }
-        1:  318-block  0
+function _ZNK7testing15AssertionResult15failure_messageEv called 0 returned 0% blocks executed 0%
+    #####:  318:  const char* failure_message() const { return message(); }
+    $$$$$:  318-block  0
         -:  319:
         -:  320:  // Streams a custom failure message into this object.
         -:  321:  template <typename T> AssertionResult& operator<<(const T& value) {

@@ -119,14 +119,14 @@ function _ZNSt3__19allocatorIiEC2Ev called 1 returned 100% blocks executed 100%
         -:   98:    allocator(const allocator<_Up>&) _NOEXCEPT { }
         -:   99:
         -:  100:    _LIBCPP_NODISCARD_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX17
-function _ZNSt3__19allocatorINS_5tupleIJddEEEE8allocateEm called 5 returned 100% blocks executed 66%
+function _ZNSt3__19allocatorINS_5tupleIJddEEEE8allocateEm called 9 returned 100% blocks executed 66%
 function _ZNSt3__19allocatorINS_5tupleIJdNS1_IJddEEEEEEE8allocateEm called 10 returned 100% blocks executed 66%
 function _ZNSt3__19allocatorIiE8allocateEm called 1 returned 100% blocks executed 66%
-       16:  101:    _Tp* allocate(size_t __n) {
-       16:  102:        if (__n > allocator_traits<allocator>::max_size(*this))
-        5:  102-block  0
+       20:  101:    _Tp* allocate(size_t __n) {
+       20:  102:        if (__n > allocator_traits<allocator>::max_size(*this))
+        9:  102-block  0
 branch  0 taken 0
-branch  1 taken 5
+branch  1 taken 9
        10:  102-block  1
 branch  2 taken 0
 branch  3 taken 10
@@ -141,8 +141,8 @@ branch  5 taken 1
         -:  105:        if (__libcpp_is_constant_evaluated()) {
         -:  106:            return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
         -:  107:        } else {
-       16:  108:            return static_cast<_Tp*>(_VSTD::__libcpp_allocate(__n * sizeof(_Tp), _LIBCPP_ALIGNOF(_Tp)));
-        5:  108-block  0
+       20:  108:            return static_cast<_Tp*>(_VSTD::__libcpp_allocate(__n * sizeof(_Tp), _LIBCPP_ALIGNOF(_Tp)));
+        9:  108-block  0
        10:  108-block  1
         1:  108-block  2
         -:  109:        }
@@ -201,12 +201,12 @@ branch  5 taken 0
         -:  144:        return allocate(__n);
         -:  145:    }
         -:  146:
-function _ZNKSt3__19allocatorINS_5tupleIJddEEEE8max_sizeEv called 5 returned 100% blocks executed 100%
+function _ZNKSt3__19allocatorINS_5tupleIJddEEEE8max_sizeEv called 9 returned 100% blocks executed 100%
 function _ZNKSt3__19allocatorINS_5tupleIJdNS1_IJddEEEEEEE8max_sizeEv called 10 returned 100% blocks executed 100%
 function _ZNKSt3__19allocatorIiE8max_sizeEv called 19 returned 100% blocks executed 100%
-       34:  147:    _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_INLINE_VISIBILITY size_type max_size() const _NOEXCEPT {
-       34:  148:        return size_type(~0) / sizeof(_Tp);
-        5:  148-block  0
+       38:  147:    _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_INLINE_VISIBILITY size_type max_size() const _NOEXCEPT {
+       38:  148:        return size_type(~0) / sizeof(_Tp);
+        9:  148-block  0
        10:  148-block  1
        19:  148-block  2
         -:  149:    }

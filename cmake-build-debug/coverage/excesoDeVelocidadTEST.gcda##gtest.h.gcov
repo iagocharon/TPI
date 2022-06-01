@@ -290,17 +290,17 @@ function _ZN7testing15AssertionResultD2Ev called 0 returned 0% blocks executed 0
         -:  283:  // the argument is implicitly convertible to AssertionResult. In that case
         -:  284:  // we want AssertionResult's copy constructor to be used.
         -:  285:  template <typename T>
-function _ZN7testing15AssertionResultC1IbEERKT_PNS_8internal8EnableIfIXntsr8internal21ImplicitlyConvertibleIS2_S0_EE5valueEE4typeE called 74 returned 100% blocks executed 100%
-function _ZN7testing15AssertionResultC2IbEERKT_PNS_8internal8EnableIfIXntsr8internal21ImplicitlyConvertibleIS2_S0_EE5valueEE4typeE called 74 returned 100% blocks executed 100%
-      222:  286:  explicit AssertionResult(
+function _ZN7testing15AssertionResultC1IbEERKT_PNS_8internal8EnableIfIXntsr8internal21ImplicitlyConvertibleIS2_S0_EE5valueEE4typeE called 76 returned 100% blocks executed 100%
+function _ZN7testing15AssertionResultC2IbEERKT_PNS_8internal8EnableIfIXntsr8internal21ImplicitlyConvertibleIS2_S0_EE5valueEE4typeE called 76 returned 100% blocks executed 100%
+      228:  286:  explicit AssertionResult(
         -:  287:      const T& success,
         -:  288:      typename internal::EnableIf<
         -:  289:          !internal::ImplicitlyConvertible<T, AssertionResult>::value>::type*
         -:  290:          /*enabler*/ = NULL)
-      222:  291:      : success_(success) {}
-       74:  291-block  0
-       74:  291-block  1
-       74:  291-block  2
+      228:  291:      : success_(success) {}
+       76:  291-block  0
+       76:  291-block  1
+       76:  291-block  2
         -:  292:
         -:  293:#if defined(_MSC_VER) && _MSC_VER < 1910
         -:  294:  GTEST_DISABLE_MSC_WARNINGS_POP_()

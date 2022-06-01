@@ -32,14 +32,14 @@
 function _ZNSt3__1L4moveIRNS_5tupleIJdNS1_IJddEEEEEEEEONS_16remove_referenceIT_E4typeEOS6_ called 20 returned 100% blocks executed 100%
 function _ZNSt3__1L4moveIRPNS_5tupleIJdNS1_IJddEEEEEEEEONS_16remove_referenceIT_E4typeEOS7_ called 90 returned 100% blocks executed 100%
 function _ZNSt3__1L4moveIRNS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEEEEONS_16remove_referenceIT_E4typeEOS8_ called 0 returned 0% blocks executed 0%
-function _ZNSt3__1L4moveIRNS_9allocatorINS_5tupleIJddEEEEEEEONS_16remove_referenceIT_E4typeEOS7_ called 4 returned 100% blocks executed 100%
-      114:   27:move(_Tp&& __t) _NOEXCEPT {
+function _ZNSt3__1L4moveIRNS_9allocatorINS_5tupleIJddEEEEEEEONS_16remove_referenceIT_E4typeEOS7_ called 6 returned 100% blocks executed 100%
+      116:   27:move(_Tp&& __t) _NOEXCEPT {
         -:   28:  typedef _LIBCPP_NODEBUG_TYPE typename remove_reference<_Tp>::type _Up;
-      114:   29:  return static_cast<_Up&&>(__t);
+      116:   29:  return static_cast<_Up&&>(__t);
        20:   29-block  0
        90:   29-block  1
     $$$$$:   29-block  2
-        4:   29-block  3
+        6:   29-block  3
         -:   30:}
         -:   31:
         -:   32:#ifndef _LIBCPP_CXX03_LANG

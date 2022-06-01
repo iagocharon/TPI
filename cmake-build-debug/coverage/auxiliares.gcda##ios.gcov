@@ -492,23 +492,23 @@ function _ZNKSt3__18ios_base5flagsEv called 0 returned 0% blocks executed 0%
         -:  481:
         -:  482:inline _LIBCPP_INLINE_VISIBILITY
         -:  483:void
-function _ZNSt3__18ios_base6unsetfEj called 2 returned 100% blocks executed 100%
-        2:  484:ios_base::unsetf(fmtflags __mask)
+function _ZNSt3__18ios_base6unsetfEj called 0 returned 0% blocks executed 0%
+    #####:  484:ios_base::unsetf(fmtflags __mask)
         -:  485:{
-        2:  486:    __fmtflags_ &= ~__mask;
-        2:  487:}
-        2:  487-block  0
+    #####:  486:    __fmtflags_ &= ~__mask;
+    #####:  487:}
+    $$$$$:  487-block  0
         -:  488:
         -:  489:inline _LIBCPP_INLINE_VISIBILITY
         -:  490:ios_base::fmtflags
-function _ZNSt3__18ios_base4setfEjj called 2 returned 100% blocks executed 100%
-        2:  491:ios_base::setf(fmtflags __fmtfl, fmtflags __mask)
+function _ZNSt3__18ios_base4setfEjj called 0 returned 0% blocks executed 0%
+    #####:  491:ios_base::setf(fmtflags __fmtfl, fmtflags __mask)
         -:  492:{
-        2:  493:    fmtflags __r = __fmtflags_;
-        2:  494:    unsetf(__mask);
-        2:  495:    __fmtflags_ |= __fmtfl & __mask;
-        2:  496:    return __r;
-        2:  496-block  0
+    #####:  493:    fmtflags __r = __fmtflags_;
+    #####:  494:    unsetf(__mask);
+    #####:  495:    __fmtflags_ |= __fmtfl & __mask;
+    #####:  496:    return __r;
+    $$$$$:  496-block  0
         -:  497:}
         -:  498:
         -:  499:// precision
@@ -1040,12 +1040,12 @@ branch  1 never executed
         -:  993:
         -:  994:inline
         -:  995:ios_base&
-function _ZNSt3__15fixedERNS_8ios_baseE called 2 returned 100% blocks executed 100%
-        2:  996:fixed(ios_base& __str)
+function _ZNSt3__15fixedERNS_8ios_baseE called 0 returned 0% blocks executed 0%
+    #####:  996:fixed(ios_base& __str)
         -:  997:{
-        2:  998:    __str.setf(ios_base::fixed, ios_base::floatfield);
-        2:  999:    return __str;
-        2:  999-block  0
+    #####:  998:    __str.setf(ios_base::fixed, ios_base::floatfield);
+    #####:  999:    return __str;
+    $$$$$:  999-block  0
         -: 1000:}
         -: 1001:
         -: 1002:inline

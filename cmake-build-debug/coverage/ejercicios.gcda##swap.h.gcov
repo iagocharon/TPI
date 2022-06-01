@@ -38,15 +38,15 @@
         -:   33:#endif
         -:   34:
         -:   35:template <class _Tp>
-function _ZNSt3__1L4swapIPNS_5tupleIJddEEEEENS_9enable_ifIXaasr21is_move_constructibleIT_EE5valuesr18is_move_assignableIS5_EE5valueEvE4typeERS5_S8_ called 0 returned 0% blocks executed 0%
+function _ZNSt3__1L4swapIPNS_5tupleIJddEEEEENS_9enable_ifIXaasr21is_move_constructibleIT_EE5valuesr18is_move_assignableIS5_EE5valueEvE4typeERS5_S8_ called 9 returned 100% blocks executed 100%
 function _ZNSt3__1L4swapIPNS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEEEENS_9enable_ifIXaasr21is_move_constructibleIT_EE5valuesr18is_move_assignableIS7_EE5valueEvE4typeERS7_SA_ called 33 returned 100% blocks executed 100%
-       33:   36:inline _LIBCPP_INLINE_VISIBILITY __swap_result_t<_Tp> _LIBCPP_CONSTEXPR_AFTER_CXX17 swap(_Tp& __x, _Tp& __y)
+       42:   36:inline _LIBCPP_INLINE_VISIBILITY __swap_result_t<_Tp> _LIBCPP_CONSTEXPR_AFTER_CXX17 swap(_Tp& __x, _Tp& __y)
         -:   37:    _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value&& is_nothrow_move_assignable<_Tp>::value) {
-       33:   38:  _Tp __t(_VSTD::move(__x));
-       33:   39:  __x = _VSTD::move(__y);
-       33:   40:  __y = _VSTD::move(__t);
-       33:   41:}
-    $$$$$:   41-block  0
+       42:   38:  _Tp __t(_VSTD::move(__x));
+       42:   39:  __x = _VSTD::move(__y);
+       42:   40:  __y = _VSTD::move(__t);
+       42:   41:}
+        9:   41-block  0
        33:   41-block  1
         -:   42:
         -:   43:template <class _Tp, size_t _Np>

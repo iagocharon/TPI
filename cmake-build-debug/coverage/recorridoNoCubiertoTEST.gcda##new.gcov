@@ -235,11 +235,11 @@
         -:  230:
         -:  231:template <class ..._Args>
         -:  232:_LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__1L21__libcpp_operator_newIJmEEEPvDpT_ called 16 returned 100% blocks executed 100%
-       16:  233:void* __libcpp_operator_new(_Args ...__args) {
+function _ZNSt3__1L21__libcpp_operator_newIJmEEEPvDpT_ called 20 returned 100% blocks executed 100%
+       20:  233:void* __libcpp_operator_new(_Args ...__args) {
         -:  234:#if __has_builtin(__builtin_operator_new) && __has_builtin(__builtin_operator_delete)
-       16:  235:  return __builtin_operator_new(__args...);
-       16:  235-block  0
+       20:  235:  return __builtin_operator_new(__args...);
+       20:  235-block  0
         -:  236:#else
         -:  237:  return ::operator new(__args...);
         -:  238:#endif
@@ -258,8 +258,8 @@ function _ZNSt3__1L24__libcpp_operator_deleteIJPvEEEvDpT_ called 9 returned 100%
         9:  249-block  0
         -:  250:
         -:  251:inline _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__1L17__libcpp_allocateEmm called 16 returned 100% blocks executed 100%
-       16:  252:void *__libcpp_allocate(size_t __size, size_t __align) {
+function _ZNSt3__1L17__libcpp_allocateEmm called 20 returned 100% blocks executed 100%
+       20:  252:void *__libcpp_allocate(size_t __size, size_t __align) {
         -:  253:#ifndef _LIBCPP_HAS_NO_ALIGNED_ALLOCATION
         -:  254:  if (__is_overaligned_for_new(__align)) {
         -:  255:    const align_val_t __align_val = static_cast<align_val_t>(__align);
@@ -268,8 +268,8 @@ function _ZNSt3__1L17__libcpp_allocateEmm called 16 returned 100% blocks execute
         -:  258:#endif
         -:  259:
         -:  260:  (void)__align;
-       16:  261:  return __libcpp_operator_new(__size);
-       16:  261-block  0
+       20:  261:  return __libcpp_operator_new(__size);
+       20:  261-block  0
         -:  262:}
         -:  263:
         -:  264:template <class ..._Args>

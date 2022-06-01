@@ -78,9 +78,9 @@
         -:   73:struct __less<_T1, _T1>
         -:   74:{
         -:   75:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
-function _ZNKSt3__16__lessImmEclERKmS3_ called 240 returned 100% blocks executed 100%
-      240:   76:    bool operator()(const _T1& __x, const _T1& __y) const {return __x < __y;}
-      240:   76-block  0
+function _ZNKSt3__16__lessImmEclERKmS3_ called 238 returned 100% blocks executed 100%
+      238:   76:    bool operator()(const _T1& __x, const _T1& __y) const {return __x < __y;}
+      238:   76-block  0
         -:   77:};
         -:   78:
         -:   79:template <class _T1>

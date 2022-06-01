@@ -154,11 +154,9 @@
         -:  149:    struct __nat {};
         -:  150:public:
         -:  151:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX17
-function _ZNSt3__114pointer_traitsIPKcE10pointer_toERS1_ called 0 returned 0% blocks executed 0%
-    #####:  152:    static pointer pointer_to(typename conditional<is_void<element_type>::value,
+        -:  152:    static pointer pointer_to(typename conditional<is_void<element_type>::value,
         -:  153:                                      __nat, element_type>::type& __r) _NOEXCEPT
-    #####:  154:        {return _VSTD::addressof(__r);}
-    $$$$$:  154-block  0
+        -:  154:        {return _VSTD::addressof(__r);}
         -:  155:};
         -:  156:
         -:  157:template <class _From, class _To>
@@ -177,19 +175,17 @@ function _ZNSt3__114pointer_traitsIPKcE10pointer_toERS1_ called 0 returned 0% bl
         -:  170:
         -:  171:template <class _Tp>
         -:  172:_LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
-function _ZNSt3__1L12__to_addressINS_5tupleIJdNS1_IJddEEEEEEEEPT_S5_ called 1401 returned 100% blocks executed 100%
-function _ZNSt3__1L12__to_addressINS_5tupleIJddEEEEEPT_S4_ called 23 returned 100% blocks executed 100%
-function _ZNSt3__1L12__to_addressINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEEEEPT_S6_ called 556 returned 100% blocks executed 100%
-function _ZNSt3__1L12__to_addressIdEEPT_S2_ called 912 returned 100% blocks executed 100%
-function _ZNSt3__1L12__to_addressIKcEEPT_S3_ called 0 returned 0% blocks executed 0%
-     2892:  173:_Tp* __to_address(_Tp* __p) _NOEXCEPT {
+function _ZNSt3__1L12__to_addressINS_5tupleIJdNS1_IJddEEEEEEEEPT_S5_ called 1456 returned 100% blocks executed 100%
+function _ZNSt3__1L12__to_addressINS_5tupleIJddEEEEEPT_S4_ called 68 returned 100% blocks executed 100%
+function _ZNSt3__1L12__to_addressINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEEEEPT_S6_ called 952 returned 100% blocks executed 100%
+function _ZNSt3__1L12__to_addressIdEEPT_S2_ called 722 returned 100% blocks executed 100%
+     3198:  173:_Tp* __to_address(_Tp* __p) _NOEXCEPT {
         -:  174:    static_assert(!is_function<_Tp>::value, "_Tp is a function type");
-     2892:  175:    return __p;
-     1401:  175-block  0
-       23:  175-block  1
-      556:  175-block  2
-      912:  175-block  3
-    $$$$$:  175-block  4
+     3198:  175:    return __p;
+     1456:  175-block  0
+       68:  175-block  1
+      952:  175-block  2
+      722:  175-block  3
         -:  176:}
         -:  177:
         -:  178:// enable_if is needed here to avoid instantiating checks for fancy pointers on raw pointers

@@ -1440,45 +1440,45 @@ function _ZN7testing4Test5SetupEv called 0 returned 0% blocks executed 0%
         -: 1411:// frame size of CmpHelperEQ. This helps reduce the overhead of some sanitizers
         -: 1412:// when calling EXPECT_* in a tight loop.
         -: 1413:template <typename T1, typename T2>
-function _ZN7testing8internal18CmpHelperEQFailureImiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 1 returned 100% blocks executed 42%
-        1: 1414:AssertionResult CmpHelperEQFailure(const char* lhs_expression,
+function _ZN7testing8internal18CmpHelperEQFailureImiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####: 1414:AssertionResult CmpHelperEQFailure(const char* lhs_expression,
         -: 1415:                                   const char* rhs_expression,
         -: 1416:                                   const T1& lhs, const T2& rhs) {
-        1: 1417:  return EqFailure(lhs_expression,
-        1: 1417-block  0
-branch  0 taken 0
-branch  1 taken 1
-        1: 1417-block  1
+    #####: 1417:  return EqFailure(lhs_expression,
+    $$$$$: 1417-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$: 1417-block  1
     $$$$$: 1417-block  2
     $$$$$: 1417-block  3
     $$$$$: 1417-block  4
-        1: 1418:                   rhs_expression,
-        1: 1419:                   FormatForComparisonFailureMessage(lhs, rhs),
-        1: 1420:                   FormatForComparisonFailureMessage(rhs, lhs),
-        1: 1420-block  0
-branch  0 taken 1
-branch  1 taken 0
+    #####: 1418:                   rhs_expression,
+    #####: 1419:                   FormatForComparisonFailureMessage(lhs, rhs),
+    #####: 1420:                   FormatForComparisonFailureMessage(rhs, lhs),
+    $$$$$: 1420-block  0
+branch  0 never executed
+branch  1 never executed
         -: 1421:                   false);
     #####: 1422:}
     $$$$$: 1422-block  0
         -: 1423:
         -: 1424:// The helper function for {ASSERT|EXPECT}_EQ.
         -: 1425:template <typename T1, typename T2>
-function _ZN7testing8internal11CmpHelperEQImiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal11CmpHelperEQImiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 2 returned 100% blocks executed 75%
         2: 1426:AssertionResult CmpHelperEQ(const char* lhs_expression,
         -: 1427:                            const char* rhs_expression,
         -: 1428:                            const T1& lhs,
         -: 1429:                            const T2& rhs) {
         2: 1430:  if (lhs == rhs) {
         2: 1430-block  0
-branch  0 taken 1
-branch  1 taken 1
-        1: 1431:    return AssertionSuccess();
-        1: 1431-block  0
+branch  0 taken 2
+branch  1 taken 0
+        2: 1431:    return AssertionSuccess();
+        2: 1431-block  0
         -: 1432:  }
         -: 1433:
-        1: 1434:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
-        1: 1434-block  0
+    #####: 1434:  return CmpHelperEQFailure(lhs_expression, rhs_expression, lhs, rhs);
+    $$$$$: 1434-block  0
         2: 1435:}
         2: 1435-block  0
         -: 1436:

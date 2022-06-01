@@ -76,10 +76,10 @@
         -:   71:template <class _Unique>
         -:   72:struct __non_trivial_if<true, _Unique> {
         -:   73:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__116__non_trivial_ifILb1ENS_9allocatorIcEEEC2Ev called 2 returned 100% blocks executed 100%
+function _ZNSt3__116__non_trivial_ifILb1ENS_9allocatorIcEEEC2Ev called 1 returned 100% blocks executed 100%
 function _ZNSt3__116__non_trivial_ifILb1ENS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEEEC2Ev called 1 returned 100% blocks executed 100%
-        3:   74:    _LIBCPP_CONSTEXPR __non_trivial_if() _NOEXCEPT { }
-        2:   74-block  0
+        2:   74:    _LIBCPP_CONSTEXPR __non_trivial_if() _NOEXCEPT { }
+        1:   74-block  0
         1:   74-block  1
         -:   75:};
         -:   76:
@@ -100,10 +100,10 @@ function _ZNSt3__116__non_trivial_ifILb1ENS_9allocatorINS_5tupleIJdNS2_IJddEEEEE
         -:   91:    typedef true_type   is_always_equal;
         -:   92:
         -:   93:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX17
-function _ZNSt3__19allocatorIcEC2Ev called 2 returned 100% blocks executed 100%
+function _ZNSt3__19allocatorIcEC2Ev called 1 returned 100% blocks executed 100%
 function _ZNSt3__19allocatorINS_5tupleIJdNS1_IJddEEEEEEEC2Ev called 1 returned 100% blocks executed 100%
-        3:   94:    allocator() _NOEXCEPT _LIBCPP_DEFAULT
-        2:   94-block  0
+        2:   94:    allocator() _NOEXCEPT _LIBCPP_DEFAULT
+        1:   94-block  0
         1:   94-block  1
         -:   95:
         -:   96:    template <class _Up>

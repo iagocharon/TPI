@@ -230,10 +230,10 @@
         -:  225:    }
         -:  226:
         -:  227:    inline _LIBCPP_HIDE_FROM_ABI_AFTER_V1
-function _ZNSt3__115basic_streambufIcNS_11char_traitsIcEEE5sputnEPKcl called 376 returned 100% blocks executed 100%
-      376:  228:    streamsize sputn(const char_type* __s, streamsize __n)
-      376:  229:    { return xsputn(__s, __n); }
-      376:  229-block  0
+function _ZNSt3__115basic_streambufIcNS_11char_traitsIcEEE5sputnEPKcl called 350 returned 100% blocks executed 100%
+      350:  228:    streamsize sputn(const char_type* __s, streamsize __n)
+      350:  229:    { return xsputn(__s, __n); }
+      350:  229-block  0
         -:  230:
         -:  231:protected:
         -:  232:    basic_streambuf();

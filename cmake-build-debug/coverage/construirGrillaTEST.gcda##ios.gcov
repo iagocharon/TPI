@@ -346,10 +346,10 @@
         -:  341:
         -:  342:protected:
         -:  343:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__18ios_baseC2Ev called 1 returned 100% blocks executed 100%
-        1:  344:    ios_base() {// purposefully does no initialization
-        1:  345:               }
-        1:  345-block  0
+function _ZNSt3__18ios_baseC2Ev called 0 returned 0% blocks executed 0%
+    #####:  344:    ios_base() {// purposefully does no initialization
+    #####:  345:               }
+    $$$$$:  345-block  0
         -:  346:
         -:  347:    void init(void* __sb);
         -:  348:    _LIBCPP_INLINE_VISIBILITY void* rdbuf() const {return __rdbuf_;}
@@ -669,10 +669,10 @@ function _ZNSt3__18ios_baseC2Ev called 1 returned 100% blocks executed 100%
         -:  662:
         -:  663:protected:
         -:  664:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__19basic_iosIcNS_11char_traitsIcEEEC2Ev called 1 returned 100% blocks executed 100%
-        1:  665:    basic_ios() {// purposefully does no initialization
-        1:  666:                }
-        1:  666-block  0
+function _ZNSt3__19basic_iosIcNS_11char_traitsIcEEEC2Ev called 0 returned 0% blocks executed 0%
+    #####:  665:    basic_ios() {// purposefully does no initialization
+    #####:  666:                }
+    $$$$$:  666-block  0
         -:  667:    _LIBCPP_INLINE_VISIBILITY
         -:  668:    void init(basic_streambuf<char_type, traits_type>* __sb);
         -:  669:
@@ -704,14 +704,14 @@ function _ZNSt3__19basic_iosIcNS_11char_traitsIcEEEC2Ev called 1 returned 100% b
         -:  695:template <class _CharT, class _Traits>
         -:  696:inline _LIBCPP_INLINE_VISIBILITY
         -:  697:void
-function _ZNSt3__19basic_iosIcNS_11char_traitsIcEEE4initEPNS_15basic_streambufIcS2_EE called 1 returned 100% blocks executed 100%
-        1:  698:basic_ios<_CharT, _Traits>::init(basic_streambuf<char_type, traits_type>* __sb)
+function _ZNSt3__19basic_iosIcNS_11char_traitsIcEEE4initEPNS_15basic_streambufIcS2_EE called 0 returned 0% blocks executed 0%
+    #####:  698:basic_ios<_CharT, _Traits>::init(basic_streambuf<char_type, traits_type>* __sb)
         -:  699:{
-        1:  700:    ios_base::init(__sb);
-        1:  701:    __tie_ = nullptr;
-        1:  702:    __fill_ = traits_type::eof();
-        1:  703:}
-        1:  703-block  0
+    #####:  700:    ios_base::init(__sb);
+    #####:  701:    __tie_ = nullptr;
+    #####:  702:    __fill_ = traits_type::eof();
+    #####:  703:}
+    $$$$$:  703-block  0
         -:  704:
         -:  705:template <class _CharT, class _Traits>
         -:  706:inline _LIBCPP_INLINE_VISIBILITY

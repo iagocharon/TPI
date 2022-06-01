@@ -281,11 +281,11 @@
         -:  276:    }
         -:  277:
         -:  278:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11       _Hp& get()       _NOEXCEPT {return __value_;}
-function _ZNKSt3__112__tuple_leafILm0EdLb0EE3getEv called 0 returned 0% blocks executed 0%
-function _ZNKSt3__112__tuple_leafILm1EdLb0EE3getEv called 0 returned 0% blocks executed 0%
-    #####:  279:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11 const _Hp& get() const _NOEXCEPT {return __value_;}
-    $$$$$:  279-block  0
-    $$$$$:  279-block  1
+function _ZNKSt3__112__tuple_leafILm0EdLb0EE3getEv called 12 returned 100% blocks executed 100%
+function _ZNKSt3__112__tuple_leafILm1EdLb0EE3getEv called 6 returned 100% blocks executed 100%
+       18:  279:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11 const _Hp& get() const _NOEXCEPT {return __value_;}
+       12:  279-block  0
+        6:  279-block  1
         -:  280:};
         -:  281:
         -:  282:template <size_t _Ip, class _Hp>
@@ -1144,14 +1144,14 @@ function _ZNKSt3__112__tuple_leafILm1EdLb0EE3getEv called 0 returned 0% blocks e
         -: 1135:template <size_t _Ip, class ..._Tp>
         -: 1136:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -: 1137:const typename tuple_element<_Ip, tuple<_Tp...> >::type&
-function _ZNSt3__1L3getILm1EJddEEERKNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERKS5_ called 0 returned 0% blocks executed 0%
-function _ZNSt3__1L3getILm0EJddEEERKNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERKS5_ called 0 returned 0% blocks executed 0%
-    #####: 1138:get(const tuple<_Tp...>& __t) _NOEXCEPT
+function _ZNSt3__1L3getILm1EJddEEERKNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERKS5_ called 6 returned 100% blocks executed 100%
+function _ZNSt3__1L3getILm0EJddEEERKNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERKS5_ called 12 returned 100% blocks executed 100%
+       18: 1138:get(const tuple<_Tp...>& __t) _NOEXCEPT
         -: 1139:{
         -: 1140:    typedef _LIBCPP_NODEBUG_TYPE typename tuple_element<_Ip, tuple<_Tp...> >::type type;
-    #####: 1141:    return static_cast<const __tuple_leaf<_Ip, type>&>(__t.__base_).get();
-    $$$$$: 1141-block  0
-    $$$$$: 1141-block  1
+       18: 1141:    return static_cast<const __tuple_leaf<_Ip, type>&>(__t.__base_).get();
+        6: 1141-block  0
+       12: 1141-block  1
         -: 1142:}
         -: 1143:
         -: 1144:template <size_t _Ip, class ..._Tp>
@@ -1287,21 +1287,21 @@ function _ZNSt3__1L3getILm0EJddEEERKNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4
         -: 1274:{
         -: 1275:    template <class _Tp, class _Up>
         -: 1276:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
-function _ZNSt3__113__tuple_equalILm2EEclINS_5tupleIJddEEES4_EEbRKT_RKT0_ called 0 returned 0% blocks executed 0%
-function _ZNSt3__113__tuple_equalILm1EEclINS_5tupleIJddEEES4_EEbRKT_RKT0_ called 0 returned 0% blocks executed 0%
-    #####: 1277:    bool operator()(const _Tp& __x, const _Up& __y)
+function _ZNSt3__113__tuple_equalILm2EEclINS_5tupleIJddEEES4_EEbRKT_RKT0_ called 6 returned 100% blocks executed 100%
+function _ZNSt3__113__tuple_equalILm1EEclINS_5tupleIJddEEES4_EEbRKT_RKT0_ called 6 returned 100% blocks executed 100%
+       12: 1277:    bool operator()(const _Tp& __x, const _Up& __y)
         -: 1278:    {
-    #####: 1279:        return __tuple_equal<_Ip - 1>()(__x, __y) && _VSTD::get<_Ip-1>(__x) == _VSTD::get<_Ip-1>(__y);
-    $$$$$: 1279-block  0
-branch  0 never executed
-branch  1 never executed
-    $$$$$: 1279-block  1
-    $$$$$: 1279-block  2
-    $$$$$: 1279-block  3
-branch  2 never executed
-branch  3 never executed
-    $$$$$: 1279-block  4
-    $$$$$: 1279-block  5
+       12: 1279:        return __tuple_equal<_Ip - 1>()(__x, __y) && _VSTD::get<_Ip-1>(__x) == _VSTD::get<_Ip-1>(__y);
+        6: 1279-block  0
+branch  0 taken 3
+branch  1 taken 3
+        3: 1279-block  1
+        6: 1279-block  2
+        6: 1279-block  3
+branch  2 taken 0
+branch  3 taken 6
+        6: 1279-block  4
+        6: 1279-block  5
         -: 1280:    }
         -: 1281:};
         -: 1282:
@@ -1310,23 +1310,23 @@ branch  3 never executed
         -: 1285:{
         -: 1286:    template <class _Tp, class _Up>
         -: 1287:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
-function _ZNSt3__113__tuple_equalILm0EEclINS_5tupleIJddEEES4_EEbRKT_RKT0_ called 0 returned 0% blocks executed 0%
-    #####: 1288:    bool operator()(const _Tp&, const _Up&)
+function _ZNSt3__113__tuple_equalILm0EEclINS_5tupleIJddEEES4_EEbRKT_RKT0_ called 6 returned 100% blocks executed 100%
+        6: 1288:    bool operator()(const _Tp&, const _Up&)
         -: 1289:    {
-    #####: 1290:        return true;
-    $$$$$: 1290-block  0
+        6: 1290:        return true;
+        6: 1290-block  0
         -: 1291:    }
         -: 1292:};
         -: 1293:
         -: 1294:template <class ..._Tp, class ..._Up>
         -: 1295:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -: 1296:bool
-function _ZNSt3__1eqIJddEJddEEEbRKNS_5tupleIJDpT_EEERKNS1_IJDpT0_EEE called 0 returned 0% blocks executed 0%
-    #####: 1297:operator==(const tuple<_Tp...>& __x, const tuple<_Up...>& __y)
+function _ZNSt3__1eqIJddEJddEEEbRKNS_5tupleIJDpT_EEERKNS1_IJDpT0_EEE called 6 returned 100% blocks executed 100%
+        6: 1297:operator==(const tuple<_Tp...>& __x, const tuple<_Up...>& __y)
         -: 1298:{
         -: 1299:    static_assert (sizeof...(_Tp) == sizeof...(_Up), "Can't compare tuples of different sizes");
-    #####: 1300:    return __tuple_equal<sizeof...(_Tp)>()(__x, __y);
-    $$$$$: 1300-block  0
+        6: 1300:    return __tuple_equal<sizeof...(_Tp)>()(__x, __y);
+        6: 1300-block  0
         -: 1301:}
         -: 1302:
         -: 1303:template <class ..._Tp, class ..._Up>

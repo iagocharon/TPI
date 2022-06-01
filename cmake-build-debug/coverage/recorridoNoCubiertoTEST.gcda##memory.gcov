@@ -768,29 +768,29 @@
         -:  763:_LIBCPP_INLINE_VISIBILITY
 function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJddEEEEEKS3_S3_S3_S3_vEEvRT_PT0_S9_RPT1_ called 3 returned 100% blocks executed 100%
 function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEES4_S4_S4_S4_vEEvRT_PT0_S9_RPT1_ called 0 returned 0% blocks executed 0%
-function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJddEEEEES3_S3_S3_S3_vEEvRT_PT0_S8_RPT1_ called 2 returned 100% blocks executed 100%
-        5:  764:void __construct_range_forward(_Alloc&, _Source* __begin1, _Source* __end1, _Dest*& __begin2) {
-        5:  765:    ptrdiff_t _Np = __end1 - __begin1;
-        5:  766:    if (_Np > 0) {
+function _ZNSt3__1L25__construct_range_forwardINS_9allocatorINS_5tupleIJddEEEEES3_S3_S3_S3_vEEvRT_PT0_S8_RPT1_ called 6 returned 100% blocks executed 100%
+        9:  764:void __construct_range_forward(_Alloc&, _Source* __begin1, _Source* __end1, _Dest*& __begin2) {
+        9:  765:    ptrdiff_t _Np = __end1 - __begin1;
+        9:  766:    if (_Np > 0) {
         3:  766-block  0
 branch  0 taken 3
 branch  1 taken 0
     $$$$$:  766-block  1
 branch  2 never executed
 branch  3 never executed
-        2:  766-block  2
-branch  4 taken 2
+        6:  766-block  2
+branch  4 taken 6
 branch  5 taken 0
-        5:  767:        _VSTD::memcpy(const_cast<_RawDest*>(__begin2), __begin1, _Np * sizeof(_Dest));
-        5:  768:        __begin2 += _Np;
-        5:  769:    }
+        9:  767:        _VSTD::memcpy(const_cast<_RawDest*>(__begin2), __begin1, _Np * sizeof(_Dest));
+        9:  768:        __begin2 += _Np;
+        9:  769:    }
         3:  769-block  0
     $$$$$:  769-block  1
-        2:  769-block  2
-        5:  770:}
+        6:  769-block  2
+        9:  770:}
         3:  770-block  0
     $$$$$:  770-block  1
-        2:  770-block  2
+        6:  770-block  2
         -:  771:
         -:  772:template <class _Alloc, class _Ptr>
         -:  773:_LIBCPP_INLINE_VISIBILITY

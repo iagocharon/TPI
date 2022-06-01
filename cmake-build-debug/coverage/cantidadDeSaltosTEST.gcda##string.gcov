@@ -1269,13 +1269,13 @@ function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2IDnEEP
         -: 1260:#endif
         -: 1261:
         -: 1262:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv called 1 returned 100% blocks executed 100%
-        1: 1263:    const value_type* c_str() const _NOEXCEPT {return data();}
-        1: 1263-block  0
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv called 0 returned 0% blocks executed 0%
+    #####: 1263:    const value_type* c_str() const _NOEXCEPT {return data();}
+    $$$$$: 1263-block  0
         -: 1264:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE4dataEv called 1 returned 100% blocks executed 100%
-        1: 1265:    const value_type* data() const _NOEXCEPT  {return _VSTD::__to_address(__get_pointer());}
-        1: 1265-block  0
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE4dataEv called 0 returned 0% blocks executed 0%
+    #####: 1265:    const value_type* data() const _NOEXCEPT  {return _VSTD::__to_address(__get_pointer());}
+    $$$$$: 1265-block  0
         -: 1266:#if _LIBCPP_STD_VER > 14 || defined(_LIBCPP_BUILDING_LIBRARY)
         -: 1267:    _LIBCPP_INLINE_VISIBILITY
         -: 1268:    value_type* data()             _NOEXCEPT  {return _VSTD::__to_address(__get_pointer());}
@@ -1468,10 +1468,10 @@ function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE4dataEv
         -: 1455:    _LIBCPP_INLINE_VISIBILITY void __shrink_or_extend(size_type __target_capacity);
         -: 1456:
         -: 1457:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE9__is_longEv called 1 returned 100% blocks executed 100%
-        1: 1458:    bool __is_long() const _NOEXCEPT
-        1: 1459:        {return bool(__r_.first().__s.__size_ & __short_mask);}
-        1: 1459-block  0
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE9__is_longEv called 0 returned 0% blocks executed 0%
+    #####: 1458:    bool __is_long() const _NOEXCEPT
+    #####: 1459:        {return bool(__r_.first().__s.__size_ & __short_mask);}
+    $$$$$: 1459-block  0
         -: 1460:
         -: 1461:#if _LIBCPP_DEBUG_LEVEL == 2
         -: 1462:
@@ -1552,10 +1552,10 @@ function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE9__is_l
         -: 1537:    pointer __get_long_pointer() _NOEXCEPT
         -: 1538:        {return __r_.first().__l.__data_;}
         -: 1539:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE18__get_long_pointerEv called 1 returned 100% blocks executed 100%
-        1: 1540:    const_pointer __get_long_pointer() const _NOEXCEPT
-        1: 1541:        {return __r_.first().__l.__data_;}
-        1: 1541-block  0
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE18__get_long_pointerEv called 0 returned 0% blocks executed 0%
+    #####: 1540:    const_pointer __get_long_pointer() const _NOEXCEPT
+    #####: 1541:        {return __r_.first().__l.__data_;}
+    $$$$$: 1541-block  0
         -: 1542:    _LIBCPP_INLINE_VISIBILITY
         -: 1543:    pointer __get_short_pointer() _NOEXCEPT
         -: 1544:        {return pointer_traits<pointer>::pointer_to(__r_.first().__s.__data_[0]);}
@@ -1568,31 +1568,31 @@ function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE19__get
         -: 1549:    pointer __get_pointer() _NOEXCEPT
         -: 1550:        {return __is_long() ? __get_long_pointer() : __get_short_pointer();}
         -: 1551:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE13__get_pointerEv called 1 returned 100% blocks executed 75%
-        1: 1552:    const_pointer __get_pointer() const _NOEXCEPT
-        1: 1553:        {return __is_long() ? __get_long_pointer() : __get_short_pointer();}
-        1: 1553-block  0
-branch  0 taken 1
-branch  1 taken 0
-        1: 1553-block  1
+function _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE13__get_pointerEv called 0 returned 0% blocks executed 0%
+    #####: 1552:    const_pointer __get_pointer() const _NOEXCEPT
+    #####: 1553:        {return __is_long() ? __get_long_pointer() : __get_short_pointer();}
+    $$$$$: 1553-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$: 1553-block  1
     $$$$$: 1553-block  2
-        1: 1553-block  3
+    $$$$$: 1553-block  3
         -: 1554:
         -: 1555:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__zeroEv called 1 returned 100% blocks executed 100%
-        1: 1556:    void __zero() _NOEXCEPT
+function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__zeroEv called 0 returned 0% blocks executed 0%
+    #####: 1556:    void __zero() _NOEXCEPT
         -: 1557:        {
-        1: 1558:            size_type (&__a)[__n_words] = __r_.first().__r.__words;
-        4: 1559:            for (unsigned __i = 0; __i < __n_words; ++__i)
-        1: 1559-block  0
-        4: 1559-block  1
-branch  0 taken 3
-branch  1 taken 1
-        3: 1559-block  2
-        3: 1560:                __a[__i] = 0;
-        3: 1560-block  0
-        1: 1561:        }
-        1: 1561-block  0
+    #####: 1558:            size_type (&__a)[__n_words] = __r_.first().__r.__words;
+    #####: 1559:            for (unsigned __i = 0; __i < __n_words; ++__i)
+    $$$$$: 1559-block  0
+    $$$$$: 1559-block  1
+branch  0 never executed
+branch  1 never executed
+    $$$$$: 1559-block  2
+    #####: 1560:                __a[__i] = 0;
+    $$$$$: 1560-block  0
+    #####: 1561:        }
+    $$$$$: 1561-block  0
         -: 1562:
         -: 1563:    template <size_type __a> static
         -: 1564:        _LIBCPP_INLINE_VISIBILITY
@@ -1860,23 +1860,23 @@ branch  1 taken 1
         -: 1826:
         -: 1827:template <class _CharT, class _Traits, class _Allocator>
         -: 1828:inline
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev called 1 returned 100% blocks executed 100%
-function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2Ev called 1 returned 100% blocks executed 66%
-        2: 1829:basic_string<_CharT, _Traits, _Allocator>::basic_string()
+function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev called 0 returned 0% blocks executed 0%
+function _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2Ev called 0 returned 0% blocks executed 0%
+    #####: 1829:basic_string<_CharT, _Traits, _Allocator>::basic_string()
         -: 1830:    _NOEXCEPT_(is_nothrow_default_constructible<allocator_type>::value)
-        1: 1831:     : __r_(__default_init_tag(), __default_init_tag())
-        1: 1831-block  0
-branch  0 taken 1
-branch  1 taken 0
+    #####: 1831:     : __r_(__default_init_tag(), __default_init_tag())
+    $$$$$: 1831-block  0
+branch  0 never executed
+branch  1 never executed
     $$$$$: 1831-block  1
-        2: 1832:{
+    #####: 1832:{
         -: 1833:#if _LIBCPP_DEBUG_LEVEL == 2
         -: 1834:    __get_db()->__insert_c(this);
         -: 1835:#endif
-        1: 1836:    __zero();
-        2: 1837:}
-        1: 1837-block  0
-        1: 1837-block  1
+    #####: 1836:    __zero();
+    #####: 1837:}
+    $$$$$: 1837-block  0
+    $$$$$: 1837-block  1
         -: 1838:
         -: 1839:template <class _CharT, class _Traits, class _Allocator>
         -: 1840:inline

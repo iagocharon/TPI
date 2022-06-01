@@ -310,9 +310,9 @@
         -:  305:class _LIBCPP_TEMPLATE_VIS __vector_base_common
         -:  306:{
         -:  307:protected:
-function _ZNSt3__120__vector_base_commonILb1EEC2Ev called 187 returned 100% blocks executed 100%
-      187:  308:    _LIBCPP_INLINE_VISIBILITY __vector_base_common() {}
-      187:  308-block  0
+function _ZNSt3__120__vector_base_commonILb1EEC2Ev called 181 returned 100% blocks executed 100%
+      181:  308:    _LIBCPP_INLINE_VISIBILITY __vector_base_common() {}
+      181:  308-block  0
         -:  309:    _LIBCPP_NORETURN void __throw_length_error() const;
         -:  310:    _LIBCPP_NORETURN void __throw_out_of_range() const;
         -:  311:};
@@ -356,84 +356,84 @@ function _ZNSt3__120__vector_base_commonILb1EEC2Ev called 187 returned 100% bloc
         -:  349:    __compressed_pair<pointer, allocator_type> __end_cap_;
         -:  350:
         -:  351:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE7__allocEv called 1032 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE7__allocEv called 26 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE7__allocEv called 378 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEE7__allocEv called 446 returned 100% blocks executed 100%
-     1882:  352:    allocator_type& __alloc() _NOEXCEPT
-     1882:  353:        {return __end_cap_.second();}
-     1032:  353-block  0
-       26:  353-block  1
-      378:  353-block  2
-      446:  353-block  3
+function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE7__allocEv called 1062 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE7__allocEv called 52 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE7__allocEv called 729 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEE7__allocEv called 356 returned 100% blocks executed 100%
+     2199:  352:    allocator_type& __alloc() _NOEXCEPT
+     2199:  353:        {return __end_cap_.second();}
+     1062:  353-block  0
+       52:  353-block  1
+      729:  353-block  2
+      356:  353-block  3
         -:  354:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE7__allocEv called 187 returned 100% blocks executed 100%
-function _ZNKSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE7__allocEv called 5 returned 100% blocks executed 100%
-function _ZNKSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE7__allocEv called 26 returned 100% blocks executed 100%
-function _ZNKSt3__113__vector_baseIdNS_9allocatorIdEEE7__allocEv called 190 returned 100% blocks executed 100%
-      408:  355:    const allocator_type& __alloc() const _NOEXCEPT
-      408:  356:        {return __end_cap_.second();}
-      187:  356-block  0
-        5:  356-block  1
-       26:  356-block  2
-      190:  356-block  3
+function _ZNKSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE7__allocEv called 197 returned 100% blocks executed 100%
+function _ZNKSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE7__allocEv called 12 returned 100% blocks executed 100%
+function _ZNKSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE7__allocEv called 44 returned 100% blocks executed 100%
+function _ZNKSt3__113__vector_baseIdNS_9allocatorIdEEE7__allocEv called 150 returned 100% blocks executed 100%
+      403:  355:    const allocator_type& __alloc() const _NOEXCEPT
+      403:  356:        {return __end_cap_.second();}
+      197:  356-block  0
+       12:  356-block  1
+       44:  356-block  2
+      150:  356-block  3
         -:  357:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE9__end_capEv called 95 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE9__end_capEv called 0 returned 0% blocks executed 0%
-function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE9__end_capEv called 61 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEE9__end_capEv called 96 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE9__end_capEv called 100 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE9__end_capEv called 6 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE9__end_capEv called 70 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEE9__end_capEv called 76 returned 100% blocks executed 100%
       252:  358:    pointer& __end_cap() _NOEXCEPT
       252:  359:        {return __end_cap_.first();}
-       95:  359-block  0
-    $$$$$:  359-block  1
-       61:  359-block  2
-       96:  359-block  3
+      100:  359-block  0
+        6:  359-block  1
+       70:  359-block  2
+       76:  359-block  3
         -:  360:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE9__end_capEv called 414 returned 100% blocks executed 100%
-function _ZNKSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE9__end_capEv called 3 returned 100% blocks executed 100%
-function _ZNKSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE9__end_capEv called 93 returned 100% blocks executed 100%
-function _ZNKSt3__113__vector_baseIdNS_9allocatorIdEEE9__end_capEv called 472 returned 100% blocks executed 100%
-      982:  361:    const pointer& __end_cap() const _NOEXCEPT
-      982:  362:        {return __end_cap_.first();}
-      414:  362-block  0
-        3:  362-block  1
-       93:  362-block  2
-      472:  362-block  3
+function _ZNKSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE9__end_capEv called 439 returned 100% blocks executed 100%
+function _ZNKSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE9__end_capEv called 23 returned 100% blocks executed 100%
+function _ZNKSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE9__end_capEv called 138 returned 100% blocks executed 100%
+function _ZNKSt3__113__vector_baseIdNS_9allocatorIdEEE9__end_capEv called 372 returned 100% blocks executed 100%
+      972:  361:    const pointer& __end_cap() const _NOEXCEPT
+      972:  362:        {return __end_cap_.first();}
+      439:  362-block  0
+       23:  362-block  1
+      138:  362-block  2
+      372:  362-block  3
         -:  363:
         -:  364:    _LIBCPP_INLINE_VISIBILITY
         4:  365:    __vector_base()
         -:  366:        _NOEXCEPT_(is_nothrow_default_constructible<allocator_type>::value);
         -:  367:    _LIBCPP_INLINE_VISIBILITY __vector_base(const allocator_type& __a);
         -:  368:#ifndef _LIBCPP_CXX03_LANG
-      183:  369:    _LIBCPP_INLINE_VISIBILITY __vector_base(allocator_type&& __a) _NOEXCEPT;
-       82:  369-block  0
-branch  0 taken 82
+      177:  369:    _LIBCPP_INLINE_VISIBILITY __vector_base(allocator_type&& __a) _NOEXCEPT;
+       87:  369-block  0
+branch  0 taken 87
 branch  1 taken 0
     $$$$$:  369-block  1
         -:  370:#endif
         -:  371:    ~__vector_base();
         -:  372:
         -:  373:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE5clearEv called 94 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE5clearEv called 3 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE5clearEv called 10 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEE5clearEv called 96 returned 100% blocks executed 100%
-      203:  374:    void clear() _NOEXCEPT {__destruct_at_end(__begin_);}
-       94:  374-block  0
-        3:  374-block  1
-       10:  374-block  2
-       96:  374-block  3
+function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE5clearEv called 99 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE5clearEv called 8 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE5clearEv called 19 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEE5clearEv called 76 returned 100% blocks executed 100%
+      202:  374:    void clear() _NOEXCEPT {__destruct_at_end(__begin_);}
+       99:  374-block  0
+        8:  374-block  1
+       19:  374-block  2
+       76:  374-block  3
         -:  375:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE8capacityEv called 414 returned 100% blocks executed 100%
-function _ZNKSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE8capacityEv called 3 returned 100% blocks executed 100%
-function _ZNKSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE8capacityEv called 93 returned 100% blocks executed 100%
-function _ZNKSt3__113__vector_baseIdNS_9allocatorIdEEE8capacityEv called 472 returned 100% blocks executed 100%
-      982:  376:    size_type capacity() const _NOEXCEPT
-      982:  377:        {return static_cast<size_type>(__end_cap() - __begin_);}
-      414:  377-block  0
-        3:  377-block  1
-       93:  377-block  2
-      472:  377-block  3
+function _ZNKSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE8capacityEv called 439 returned 100% blocks executed 100%
+function _ZNKSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE8capacityEv called 23 returned 100% blocks executed 100%
+function _ZNKSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE8capacityEv called 138 returned 100% blocks executed 100%
+function _ZNKSt3__113__vector_baseIdNS_9allocatorIdEEE8capacityEv called 372 returned 100% blocks executed 100%
+      972:  376:    size_type capacity() const _NOEXCEPT
+      972:  377:        {return static_cast<size_type>(__end_cap() - __begin_);}
+      439:  377-block  0
+       23:  377-block  1
+      138:  377-block  2
+      372:  377-block  3
         -:  378:
         -:  379:    _LIBCPP_INLINE_VISIBILITY
         -:  380:    void __destruct_at_end(pointer __new_last) _NOEXCEPT;
@@ -510,57 +510,57 @@ function _ZNKSt3__113__vector_baseIdNS_9allocatorIdEEE20__throw_length_errorEv c
         -:  443:template <class _Tp, class _Allocator>
         -:  444:inline _LIBCPP_INLINE_VISIBILITY
         -:  445:void
-function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE17__destruct_at_endEPS3_ called 94 returned 100% blocks executed 83%
-function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE17__destruct_at_endEPS2_ called 3 returned 100% blocks executed 83%
-function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE17__destruct_at_endEPS4_ called 10 returned 100% blocks executed 83%
-function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEE17__destruct_at_endEPd called 96 returned 100% blocks executed 83%
-      203:  446:__vector_base<_Tp, _Allocator>::__destruct_at_end(pointer __new_last) _NOEXCEPT
+function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE17__destruct_at_endEPS3_ called 99 returned 100% blocks executed 83%
+function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEE17__destruct_at_endEPS2_ called 8 returned 100% blocks executed 83%
+function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE17__destruct_at_endEPS4_ called 19 returned 100% blocks executed 83%
+function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEE17__destruct_at_endEPd called 76 returned 100% blocks executed 83%
+      202:  446:__vector_base<_Tp, _Allocator>::__destruct_at_end(pointer __new_last) _NOEXCEPT
         -:  447:{
-      203:  448:    pointer __soon_to_be_end = __end_;
-     1447:  449:    while (__new_last != __soon_to_be_end)
-       94:  449-block  0
-      855:  449-block  1
-branch  0 taken 761
-branch  1 taken 94
-      761:  449-block  2
-        3:  449-block  3
-       26:  449-block  4
-branch  2 taken 23
-branch  3 taken 3
-       23:  449-block  5
-       10:  449-block  6
-      310:  449-block  7
-branch  4 taken 300
-branch  5 taken 10
-      300:  449-block  8
-       96:  449-block  9
-      256:  449-block 10
-branch  6 taken 160
-branch  7 taken 96
-      160:  449-block 11
-     1244:  450:        __alloc_traits::destroy(__alloc(), _VSTD::__to_address(--__soon_to_be_end));
-      761:  450-block  0
-branch  0 taken 761
+      202:  448:    pointer __soon_to_be_end = __end_;
+     1770:  449:    while (__new_last != __soon_to_be_end)
+       99:  449-block  0
+      875:  449-block  1
+branch  0 taken 776
+branch  1 taken 99
+      776:  449-block  2
+        8:  449-block  3
+       46:  449-block  4
+branch  2 taken 38
+branch  3 taken 8
+       38:  449-block  5
+       19:  449-block  6
+      643:  449-block  7
+branch  4 taken 624
+branch  5 taken 19
+      624:  449-block  8
+       76:  449-block  9
+      206:  449-block 10
+branch  6 taken 130
+branch  7 taken 76
+      130:  449-block 11
+     1568:  450:        __alloc_traits::destroy(__alloc(), _VSTD::__to_address(--__soon_to_be_end));
+      776:  450-block  0
+branch  0 taken 776
 branch  1 taken 0
     $$$$$:  450-block  1
-       23:  450-block  2
-branch  2 taken 23
+       38:  450-block  2
+branch  2 taken 38
 branch  3 taken 0
     $$$$$:  450-block  3
-      300:  450-block  4
-branch  4 taken 300
+      624:  450-block  4
+branch  4 taken 624
 branch  5 taken 0
     $$$$$:  450-block  5
-      160:  450-block  6
-branch  6 taken 160
+      130:  450-block  6
+branch  6 taken 130
 branch  7 taken 0
     $$$$$:  450-block  7
-      203:  451:    __end_ = __new_last;
-      203:  452:}
-       94:  452-block  0
-        3:  452-block  1
-       10:  452-block  2
-       96:  452-block  3
+      202:  451:    __end_ = __new_last;
+      202:  452:}
+       99:  452-block  0
+        8:  452-block  1
+       19:  452-block  2
+       76:  452-block  3
         -:  453:
         -:  454:template <class _Tp, class _Allocator>
         -:  455:inline _LIBCPP_INLINE_VISIBILITY
@@ -596,68 +596,68 @@ branch  3 taken 0
         -:  473:#ifndef _LIBCPP_CXX03_LANG
         -:  474:template <class _Tp, class _Allocator>
         -:  475:inline _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC2EOS5_ called 82 returned 100% blocks executed 75%
-function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEEC2EOS6_ called 7 returned 100% blocks executed 66%
-function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEEC2EOS2_ called 94 returned 100% blocks executed 66%
-      183:  476:__vector_base<_Tp, _Allocator>::__vector_base(allocator_type&& __a) _NOEXCEPT
-      183:  477:    : __begin_(nullptr),
-      183:  478:      __end_(nullptr),
-      284:  479:      __end_cap_(nullptr, _VSTD::move(__a)) {}
-       82:  479-block  0
-branch  0 taken 82
+function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC2EOS5_ called 87 returned 100% blocks executed 75%
+function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEEC2EOS6_ called 16 returned 100% blocks executed 66%
+function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEEC2EOS2_ called 74 returned 100% blocks executed 66%
+      177:  476:__vector_base<_Tp, _Allocator>::__vector_base(allocator_type&& __a) _NOEXCEPT
+      177:  477:    : __begin_(nullptr),
+      177:  478:      __end_(nullptr),
+      267:  479:      __end_cap_(nullptr, _VSTD::move(__a)) {}
+       87:  479-block  0
+branch  0 taken 87
 branch  1 taken 0
-       82:  479-block  1
-        7:  479-block  2
-branch  2 taken 7
+       87:  479-block  1
+       16:  479-block  2
+branch  2 taken 16
 branch  3 taken 0
-        7:  479-block  3
-branch  4 taken 7
+       16:  479-block  3
+branch  4 taken 16
 branch  5 taken 0
-        7:  479-block  4
+       16:  479-block  4
     $$$$$:  479-block  5
-       94:  479-block  6
-branch  6 taken 94
+       74:  479-block  6
+branch  6 taken 74
 branch  7 taken 0
-       94:  479-block  7
-branch  8 taken 94
+       74:  479-block  7
+branch  8 taken 74
 branch  9 taken 0
-       94:  479-block  8
+       74:  479-block  8
     $$$$$:  479-block  9
         -:  480:#endif
         -:  481:
         -:  482:template <class _Tp, class _Allocator>
-function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEED2Ev called 94 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEED2Ev called 7 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEED2Ev called 10 returned 100% blocks executed 100%
-function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEED2Ev called 96 returned 100% blocks executed 100%
-      207:  483:__vector_base<_Tp, _Allocator>::~__vector_base()
+function _ZNSt3__113__vector_baseINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEED2Ev called 99 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseINS_5tupleIJddEEENS_9allocatorIS2_EEED2Ev called 9 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEED2Ev called 19 returned 100% blocks executed 100%
+function _ZNSt3__113__vector_baseIdNS_9allocatorIdEEED2Ev called 76 returned 100% blocks executed 100%
+      203:  483:__vector_base<_Tp, _Allocator>::~__vector_base()
         -:  484:{
-      207:  485:    if (__begin_ != nullptr)
-       94:  485-block  0
-branch  0 taken 94
+      203:  485:    if (__begin_ != nullptr)
+       99:  485-block  0
+branch  0 taken 99
 branch  1 taken 0
-        7:  485-block  1
-branch  2 taken 3
-branch  3 taken 4
-       10:  485-block  2
-branch  4 taken 10
+        9:  485-block  1
+branch  2 taken 8
+branch  3 taken 1
+       19:  485-block  2
+branch  4 taken 19
 branch  5 taken 0
-       96:  485-block  3
-branch  6 taken 96
+       76:  485-block  3
+branch  6 taken 76
 branch  7 taken 0
         -:  486:    {
-      203:  487:        clear();
-      203:  488:        __alloc_traits::deallocate(__alloc(), __begin_, capacity());
-      203:  489:    }
-       94:  489-block  0
-        3:  489-block  1
-       10:  489-block  2
-       96:  489-block  3
-      207:  490:}
-       94:  490-block  0
-        7:  490-block  1
-       10:  490-block  2
-       96:  490-block  3
+      202:  487:        clear();
+      202:  488:        __alloc_traits::deallocate(__alloc(), __begin_, capacity());
+      202:  489:    }
+       99:  489-block  0
+        8:  489-block  1
+       19:  489-block  2
+       76:  489-block  3
+      203:  490:}
+       99:  490-block  0
+        9:  490-block  1
+       19:  490-block  2
+       76:  490-block  3
         -:  491:
         -:  492:template <class _Tp, class _Allocator /* = allocator<_Tp> */>
         -:  493:class _LIBCPP_TEMPLATE_VIS vector
@@ -748,29 +748,29 @@ function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS
         -:  570:                                    typename iterator_traits<_ForwardIterator>::reference>::value>::type* = 0);
         -:  571:
         -:  572:    _LIBCPP_INLINE_VISIBILITY
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEED1Ev called 65 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEED1Ev called 70 returned 100% blocks executed 100%
 function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEED1Ev called 0 returned 0% blocks executed 0%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEED1Ev called 6 returned 100% blocks executed 100%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEED1Ev called 92 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEED2Ev called 65 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEED1Ev called 15 returned 100% blocks executed 100%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEED1Ev called 72 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEED2Ev called 70 returned 100% blocks executed 100%
 function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEED2Ev called 0 returned 0% blocks executed 0%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEED2Ev called 6 returned 100% blocks executed 100%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEED2Ev called 92 returned 100% blocks executed 100%
-      326:  573:    ~vector()
-      163:  574:    {
-      163:  575:        __annotate_delete();
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEED2Ev called 15 returned 100% blocks executed 100%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEED2Ev called 72 returned 100% blocks executed 100%
+      314:  573:    ~vector()
+      157:  574:    {
+      157:  575:        __annotate_delete();
         -:  576:#if _LIBCPP_DEBUG_LEVEL == 2
         -:  577:        __get_db()->__erase_c(this);
         -:  578:#endif
-      326:  579:    }
-       65:  579-block  0
+      314:  579:    }
+       70:  579-block  0
     $$$$$:  579-block  1
-        6:  579-block  2
-       92:  579-block  3
-       65:  579-block  4
+       15:  579-block  2
+       72:  579-block  3
+       70:  579-block  4
     $$$$$:  579-block  5
-        6:  579-block  6
-       92:  579-block  7
+       15:  579-block  6
+       72:  579-block  7
         -:  580:
         -:  581:    vector(const vector& __x);
         -:  582:    vector(const vector& __x, const __identity_t<allocator_type>& __a);
@@ -870,29 +870,29 @@ function _ZNSt3__16vectorIdNS_9allocatorIdEEED2Ev called 92 returned 100% blocks
         -:  676:        {return rend();}
         -:  677:
         -:  678:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE4sizeEv called 669 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE4sizeEv called 733 returned 100% blocks executed 100%
 function _ZNKSt3__16vectorINS0_INS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS4_IS6_EEE4sizeEv called 8 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE4sizeEv called 22 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE4sizeEv called 103 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorIdNS_9allocatorIdEEE4sizeEv called 389 returned 100% blocks executed 100%
-     1191:  679:    size_type size() const _NOEXCEPT
-     1191:  680:        {return static_cast<size_type>(this->__end_ - this->__begin_);}
-      669:  680-block  0
+function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE4sizeEv called 34 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE4sizeEv called 167 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorIdNS_9allocatorIdEEE4sizeEv called 303 returned 100% blocks executed 100%
+     1245:  679:    size_type size() const _NOEXCEPT
+     1245:  680:        {return static_cast<size_type>(this->__end_ - this->__begin_);}
+      733:  680-block  0
         8:  680-block  1
-       22:  680-block  2
-      103:  680-block  3
-      389:  680-block  4
+       34:  680-block  2
+      167:  680-block  3
+      303:  680-block  4
         -:  681:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE8capacityEv called 320 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE8capacityEv called 0 returned 0% blocks executed 0%
-function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE8capacityEv called 83 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorIdNS_9allocatorIdEEE8capacityEv called 376 returned 100% blocks executed 100%
-      779:  682:    size_type capacity() const _NOEXCEPT
-      779:  683:        {return __base::capacity();}
-      320:  683-block  0
-    $$$$$:  683-block  1
-       83:  683-block  2
-      376:  683-block  3
+function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE8capacityEv called 340 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE8capacityEv called 15 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE8capacityEv called 119 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorIdNS_9allocatorIdEEE8capacityEv called 296 returned 100% blocks executed 100%
+      770:  682:    size_type capacity() const _NOEXCEPT
+      770:  683:        {return __base::capacity();}
+      340:  683-block  0
+       15:  683-block  1
+      119:  683-block  2
+      296:  683-block  3
         -:  684:    _LIBCPP_NODISCARD_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY
         -:  685:    bool empty() const _NOEXCEPT
         -:  686:        {return this->__begin_ == this->__end_;}
@@ -930,16 +930,16 @@ function _ZNKSt3__16vectorIdNS_9allocatorIdEEE8capacityEv called 376 returned 10
         -:  718:    value_type*       data() _NOEXCEPT
         -:  719:        {return _VSTD::__to_address(this->__begin_);}
         -:  720:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE4dataEv called 640 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE4dataEv called 0 returned 0% blocks executed 0%
-function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE4dataEv called 144 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorIdNS_9allocatorIdEEE4dataEv called 752 returned 100% blocks executed 100%
-     1536:  721:    const value_type* data() const _NOEXCEPT
-     1536:  722:        {return _VSTD::__to_address(this->__begin_);}
-      640:  722-block  0
-    $$$$$:  722-block  1
-      144:  722-block  2
-      752:  722-block  3
+function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE4dataEv called 680 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE4dataEv called 24 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE4dataEv called 216 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorIdNS_9allocatorIdEEE4dataEv called 592 returned 100% blocks executed 100%
+     1512:  721:    const value_type* data() const _NOEXCEPT
+     1512:  722:        {return _VSTD::__to_address(this->__begin_);}
+      680:  722-block  0
+       24:  722-block  1
+      216:  722-block  2
+      592:  722-block  3
         -:  723:
         -:  724:#ifdef _LIBCPP_CXX03_LANG
         -:  725:    _LIBCPP_INLINE_VISIBILITY
@@ -1107,44 +1107,44 @@ function _ZNKSt3__16vectorIdNS_9allocatorIdEEE4dataEv called 752 returned 100% b
         -:  887:    }
         -:  888:#else
         -:  889:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE31__annotate_contiguous_containerEPKvS8_S8_S8_ called 160 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE31__annotate_contiguous_containerEPKvS7_S7_S7_ called 0 returned 0% blocks executed 0%
-function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE31__annotate_contiguous_containerEPKvS9_S9_S9_ called 36 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorIdNS_9allocatorIdEEE31__annotate_contiguous_containerEPKvS5_S5_S5_ called 188 returned 100% blocks executed 100%
-      384:  890:    void __annotate_contiguous_container(const void*, const void*, const void*,
-      384:  891:                                         const void*) const _NOEXCEPT {}
-      160:  891-block  0
-    $$$$$:  891-block  1
-       36:  891-block  2
-      188:  891-block  3
+function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE31__annotate_contiguous_containerEPKvS8_S8_S8_ called 170 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE31__annotate_contiguous_containerEPKvS7_S7_S7_ called 6 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE31__annotate_contiguous_containerEPKvS9_S9_S9_ called 54 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorIdNS_9allocatorIdEEE31__annotate_contiguous_containerEPKvS5_S5_S5_ called 148 returned 100% blocks executed 100%
+      378:  890:    void __annotate_contiguous_container(const void*, const void*, const void*,
+      378:  891:                                         const void*) const _NOEXCEPT {}
+      170:  891-block  0
+        6:  891-block  1
+       54:  891-block  2
+      148:  891-block  3
         -:  892:#endif
         -:  893:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE14__annotate_newEm called 95 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE14__annotate_newEm called 0 returned 0% blocks executed 0%
-function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE14__annotate_newEm called 19 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorIdNS_9allocatorIdEEE14__annotate_newEm called 96 returned 100% blocks executed 100%
-      210:  894:    void __annotate_new(size_type __current_size) const _NOEXCEPT {
-      420:  895:      __annotate_contiguous_container(data(), data() + capacity(),
-      210:  896:                                      data() + capacity(), data() + __current_size);
-      210:  897:    }
-       95:  897-block  0
-    $$$$$:  897-block  1
-       19:  897-block  2
-       96:  897-block  3
+function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE14__annotate_newEm called 100 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE14__annotate_newEm called 3 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE14__annotate_newEm called 28 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorIdNS_9allocatorIdEEE14__annotate_newEm called 76 returned 100% blocks executed 100%
+      207:  894:    void __annotate_new(size_type __current_size) const _NOEXCEPT {
+      414:  895:      __annotate_contiguous_container(data(), data() + capacity(),
+      207:  896:                                      data() + capacity(), data() + __current_size);
+      207:  897:    }
+      100:  897-block  0
+        3:  897-block  1
+       28:  897-block  2
+       76:  897-block  3
         -:  898:
         -:  899:    _LIBCPP_INLINE_VISIBILITY
-function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE17__annotate_deleteEv called 65 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE17__annotate_deleteEv called 0 returned 0% blocks executed 0%
-function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE17__annotate_deleteEv called 17 returned 100% blocks executed 100%
-function _ZNKSt3__16vectorIdNS_9allocatorIdEEE17__annotate_deleteEv called 92 returned 100% blocks executed 100%
-      174:  900:    void __annotate_delete() const _NOEXCEPT {
-      348:  901:      __annotate_contiguous_container(data(), data() + capacity(),
-      174:  902:                                      data() + size(), data() + capacity());
-      174:  903:    }
-       65:  903-block  0
-    $$$$$:  903-block  1
-       17:  903-block  2
-       92:  903-block  3
+function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE17__annotate_deleteEv called 70 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE17__annotate_deleteEv called 3 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE17__annotate_deleteEv called 26 returned 100% blocks executed 100%
+function _ZNKSt3__16vectorIdNS_9allocatorIdEEE17__annotate_deleteEv called 72 returned 100% blocks executed 100%
+      171:  900:    void __annotate_delete() const _NOEXCEPT {
+      342:  901:      __annotate_contiguous_container(data(), data() + capacity(),
+      171:  902:                                      data() + size(), data() + capacity());
+      171:  903:    }
+       70:  903-block  0
+        3:  903-block  1
+       26:  903-block  2
+       72:  903-block  3
         -:  904:
         -:  905:    _LIBCPP_INLINE_VISIBILITY
         -:  906:    void __annotate_increase(size_type __n) const _NOEXCEPT
@@ -1161,52 +1161,52 @@ function _ZNKSt3__16vectorIdNS_9allocatorIdEEE17__annotate_deleteEv called 92 re
         -:  917:    }
         -:  918:
         -:  919:  struct _ConstructTransaction {
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE21_ConstructTransactionC1ERS6_m called 105 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE21_ConstructTransactionC2ERS6_m called 105 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21_ConstructTransactionC1ERS5_m called 5 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21_ConstructTransactionC2ERS5_m called 5 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE21_ConstructTransactionC1ERS7_m called 39 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE21_ConstructTransactionC2ERS7_m called 39 returned 100% blocks executed 100%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEE21_ConstructTransactionC1ERS3_m called 96 returned 100% blocks executed 100%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEE21_ConstructTransactionC2ERS3_m called 96 returned 100% blocks executed 100%
-      490:  920:    explicit _ConstructTransaction(vector &__v, size_type __n)
-      490:  921:      : __v_(__v),  __pos_(__v.__end_), __new_end_(__v.__end_ + __n) {
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE21_ConstructTransactionC1ERS6_m called 110 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE21_ConstructTransactionC2ERS6_m called 110 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21_ConstructTransactionC1ERS5_m called 9 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21_ConstructTransactionC2ERS5_m called 9 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE21_ConstructTransactionC1ERS7_m called 48 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE21_ConstructTransactionC2ERS7_m called 48 returned 100% blocks executed 100%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEE21_ConstructTransactionC1ERS3_m called 76 returned 100% blocks executed 100%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEE21_ConstructTransactionC2ERS3_m called 76 returned 100% blocks executed 100%
+      486:  920:    explicit _ConstructTransaction(vector &__v, size_type __n)
+      486:  921:      : __v_(__v),  __pos_(__v.__end_), __new_end_(__v.__end_ + __n) {
         -:  922:#ifndef _LIBCPP_HAS_NO_ASAN
         -:  923:      __v_.__annotate_increase(__n);
         -:  924:#endif
-      490:  925:    }
-      105:  925-block  0
-      105:  925-block  1
-        5:  925-block  2
-        5:  925-block  3
-       39:  925-block  4
-       39:  925-block  5
-       96:  925-block  6
-       96:  925-block  7
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE21_ConstructTransactionD1Ev called 105 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE21_ConstructTransactionD2Ev called 105 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21_ConstructTransactionD1Ev called 5 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21_ConstructTransactionD2Ev called 5 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE21_ConstructTransactionD1Ev called 39 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE21_ConstructTransactionD2Ev called 39 returned 100% blocks executed 100%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEE21_ConstructTransactionD1Ev called 96 returned 100% blocks executed 100%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEE21_ConstructTransactionD2Ev called 96 returned 100% blocks executed 100%
-      490:  926:    ~_ConstructTransaction() {
-      245:  927:      __v_.__end_ = __pos_;
+      486:  925:    }
+      110:  925-block  0
+      110:  925-block  1
+        9:  925-block  2
+        9:  925-block  3
+       48:  925-block  4
+       48:  925-block  5
+       76:  925-block  6
+       76:  925-block  7
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE21_ConstructTransactionD1Ev called 110 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE21_ConstructTransactionD2Ev called 110 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21_ConstructTransactionD1Ev called 9 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21_ConstructTransactionD2Ev called 9 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE21_ConstructTransactionD1Ev called 48 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE21_ConstructTransactionD2Ev called 48 returned 100% blocks executed 100%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEE21_ConstructTransactionD1Ev called 76 returned 100% blocks executed 100%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEE21_ConstructTransactionD2Ev called 76 returned 100% blocks executed 100%
+      486:  926:    ~_ConstructTransaction() {
+      243:  927:      __v_.__end_ = __pos_;
         -:  928:#ifndef _LIBCPP_HAS_NO_ASAN
         -:  929:      if (__pos_ != __new_end_) {
         -:  930:        __v_.__annotate_shrink(__new_end_ - __v_.__begin_);
         -:  931:      }
         -:  932:#endif
-      490:  933:    }
-      105:  933-block  0
-      105:  933-block  1
-        5:  933-block  2
-        5:  933-block  3
-       39:  933-block  4
-       39:  933-block  5
-       96:  933-block  6
-       96:  933-block  7
+      486:  933:    }
+      110:  933-block  0
+      110:  933-block  1
+        9:  933-block  2
+        9:  933-block  3
+       48:  933-block  4
+       48:  933-block  5
+       76:  933-block  6
+       76:  933-block  7
         -:  934:
         -:  935:    vector &__v_;
         -:  936:    pointer __pos_;
@@ -1265,21 +1265,21 @@ branch  7 taken 0
         -:  969:
         -:  970:template <class _Tp, class _Allocator>
         -:  971:void
-function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS2_RS4_EE called 0 returned 0% blocks executed 0%
+function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS2_RS4_EE called 3 returned 100% blocks executed 100%
 function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS4_RS6_EE called 11 returned 100% blocks executed 100%
-       11:  972:vector<_Tp, _Allocator>::__swap_out_circular_buffer(__split_buffer<value_type, allocator_type&>& __v)
+       14:  972:vector<_Tp, _Allocator>::__swap_out_circular_buffer(__split_buffer<value_type, allocator_type&>& __v)
         -:  973:{
         -:  974:
-       11:  975:    __annotate_delete();
-       11:  976:    _VSTD::__construct_backward_with_exception_guarantees(this->__alloc(), this->__begin_, this->__end_, __v.__begin_);
-       11:  977:    _VSTD::swap(this->__begin_, __v.__begin_);
-       11:  978:    _VSTD::swap(this->__end_, __v.__end_);
-       11:  979:    _VSTD::swap(this->__end_cap(), __v.__end_cap());
-       11:  980:    __v.__first_ = __v.__begin_;
-       11:  981:    __annotate_new(size());
-       11:  982:    __invalidate_all_iterators();
-       11:  983:}
-    $$$$$:  983-block  0
+       14:  975:    __annotate_delete();
+       14:  976:    _VSTD::__construct_backward_with_exception_guarantees(this->__alloc(), this->__begin_, this->__end_, __v.__begin_);
+       14:  977:    _VSTD::swap(this->__begin_, __v.__begin_);
+       14:  978:    _VSTD::swap(this->__end_, __v.__end_);
+       14:  979:    _VSTD::swap(this->__end_cap(), __v.__end_cap());
+       14:  980:    __v.__first_ = __v.__begin_;
+       14:  981:    __annotate_new(size());
+       14:  982:    __invalidate_all_iterators();
+       14:  983:}
+        3:  983-block  0
        11:  983-block  1
         -:  984:
         -:  985:template <class _Tp, class _Allocator>
@@ -1308,32 +1308,32 @@ function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS
         -: 1008://  Postcondition:  size() == 0
         -: 1009:template <class _Tp, class _Allocator>
         -: 1010:void
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE11__vallocateEm called 95 returned 100% blocks executed 66%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE11__vallocateEm called 8 returned 100% blocks executed 66%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEE11__vallocateEm called 96 returned 100% blocks executed 66%
-      199: 1011:vector<_Tp, _Allocator>::__vallocate(size_type __n)
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE11__vallocateEm called 100 returned 100% blocks executed 66%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE11__vallocateEm called 17 returned 100% blocks executed 66%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEE11__vallocateEm called 76 returned 100% blocks executed 66%
+      193: 1011:vector<_Tp, _Allocator>::__vallocate(size_type __n)
         -: 1012:{
-      199: 1013:    if (__n > max_size())
-       95: 1013-block  0
+      193: 1013:    if (__n > max_size())
+      100: 1013-block  0
 branch  0 taken 0
-branch  1 taken 95
-        8: 1013-block  1
+branch  1 taken 100
+       17: 1013-block  1
 branch  2 taken 0
-branch  3 taken 8
-       96: 1013-block  2
+branch  3 taken 17
+       76: 1013-block  2
 branch  4 taken 0
-branch  5 taken 96
+branch  5 taken 76
     #####: 1014:        this->__throw_length_error();
     $$$$$: 1014-block  0
     $$$$$: 1014-block  1
     $$$$$: 1014-block  2
-      199: 1015:    this->__begin_ = this->__end_ = __alloc_traits::allocate(this->__alloc(), __n);
-      199: 1016:    this->__end_cap() = this->__begin_ + __n;
-      199: 1017:    __annotate_new(0);
-      199: 1018:}
-       95: 1018-block  0
-        8: 1018-block  1
-       96: 1018-block  2
+      193: 1015:    this->__begin_ = this->__end_ = __alloc_traits::allocate(this->__alloc(), __n);
+      193: 1016:    this->__end_cap() = this->__begin_ + __n;
+      193: 1017:    __annotate_new(0);
+      193: 1018:}
+      100: 1018-block  0
+       17: 1018-block  1
+       76: 1018-block  2
         -: 1019:
         -: 1020:template <class _Tp, class _Allocator>
         -: 1021:void
@@ -1349,83 +1349,83 @@ branch  5 taken 96
         -: 1031:
         -: 1032:template <class _Tp, class _Allocator>
         -: 1033:typename vector<_Tp, _Allocator>::size_type
-function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE8max_sizeEv called 105 returned 100% blocks executed 66%
-function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE8max_sizeEv called 5 returned 100% blocks executed 66%
-function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE8max_sizeEv called 19 returned 100% blocks executed 66%
-function _ZNKSt3__16vectorIdNS_9allocatorIdEEE8max_sizeEv called 96 returned 100% blocks executed 66%
-      225: 1034:vector<_Tp, _Allocator>::max_size() const _NOEXCEPT
+function _ZNKSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE8max_sizeEv called 110 returned 100% blocks executed 66%
+function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE8max_sizeEv called 12 returned 100% blocks executed 66%
+function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE8max_sizeEv called 28 returned 100% blocks executed 66%
+function _ZNKSt3__16vectorIdNS_9allocatorIdEEE8max_sizeEv called 76 returned 100% blocks executed 66%
+      226: 1034:vector<_Tp, _Allocator>::max_size() const _NOEXCEPT
         -: 1035:{
-      450: 1036:    return _VSTD::min<size_type>(__alloc_traits::max_size(this->__alloc()),
-      105: 1036-block  0
-branch  0 taken 105
+      452: 1036:    return _VSTD::min<size_type>(__alloc_traits::max_size(this->__alloc()),
+      110: 1036-block  0
+branch  0 taken 110
 branch  1 taken 0
-      105: 1036-block  1
-branch  2 taken 105
+      110: 1036-block  1
+branch  2 taken 110
 branch  3 taken 0
-      105: 1036-block  2
+      110: 1036-block  2
     $$$$$: 1036-block  3
-        5: 1036-block  4
-branch  4 taken 5
+       12: 1036-block  4
+branch  4 taken 12
 branch  5 taken 0
-        5: 1036-block  5
-branch  6 taken 5
+       12: 1036-block  5
+branch  6 taken 12
 branch  7 taken 0
-        5: 1036-block  6
+       12: 1036-block  6
     $$$$$: 1036-block  7
-       19: 1036-block  8
-branch  8 taken 19
+       28: 1036-block  8
+branch  8 taken 28
 branch  9 taken 0
-       19: 1036-block  9
-branch 10 taken 19
+       28: 1036-block  9
+branch 10 taken 28
 branch 11 taken 0
-       19: 1036-block 10
+       28: 1036-block 10
     $$$$$: 1036-block 11
-       96: 1036-block 12
-branch 12 taken 96
+       76: 1036-block 12
+branch 12 taken 76
 branch 13 taken 0
-       96: 1036-block 13
-branch 14 taken 96
+       76: 1036-block 13
+branch 14 taken 76
 branch 15 taken 0
-       96: 1036-block 14
+       76: 1036-block 14
     $$$$$: 1036-block 15
-      225: 1037:                                 numeric_limits<difference_type>::max());
+      226: 1037:                                 numeric_limits<difference_type>::max());
         -: 1038:}
         -: 1039:
         -: 1040://  Precondition:  __new_size > capacity()
         -: 1041:template <class _Tp, class _Allocator>
         -: 1042:inline _LIBCPP_INLINE_VISIBILITY
         -: 1043:typename vector<_Tp, _Allocator>::size_type
-function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE11__recommendEm called 0 returned 0% blocks executed 0%
+function _ZNKSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE11__recommendEm called 3 returned 100% blocks executed 66%
 function _ZNKSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE11__recommendEm called 11 returned 100% blocks executed 66%
-       11: 1044:vector<_Tp, _Allocator>::__recommend(size_type __new_size) const
+       14: 1044:vector<_Tp, _Allocator>::__recommend(size_type __new_size) const
         -: 1045:{
-       11: 1046:    const size_type __ms = max_size();
-       11: 1047:    if (__new_size > __ms)
-    $$$$$: 1047-block  0
-branch  0 never executed
-branch  1 never executed
+       14: 1046:    const size_type __ms = max_size();
+       14: 1047:    if (__new_size > __ms)
+        3: 1047-block  0
+branch  0 taken 0
+branch  1 taken 3
        11: 1047-block  1
 branch  2 taken 0
 branch  3 taken 11
     #####: 1048:        this->__throw_length_error();
     $$$$$: 1048-block  0
     $$$$$: 1048-block  1
-       11: 1049:    const size_type __cap = capacity();
-       11: 1050:    if (__cap >= __ms / 2)
-    $$$$$: 1050-block  0
-branch  0 never executed
-branch  1 never executed
+       14: 1049:    const size_type __cap = capacity();
+       14: 1050:    if (__cap >= __ms / 2)
+        3: 1050-block  0
+branch  0 taken 0
+branch  1 taken 3
        11: 1050-block  1
 branch  2 taken 0
 branch  3 taken 11
     #####: 1051:        return __ms;
     $$$$$: 1051-block  0
     $$$$$: 1051-block  1
-       11: 1052:    return _VSTD::max<size_type>(2 * __cap, __new_size);
-    $$$$$: 1052-block  0
+       14: 1052:    return _VSTD::max<size_type>(2 * __cap, __new_size);
+        3: 1052-block  0
        11: 1052-block  1
-       11: 1053:}
-    $$$$$: 1053-block  0
+       14: 1053:}
+        3: 1053-block  0
        11: 1053-block  1
         -: 1054:
         -: 1055://  Default constructs __n objects starting at __end_
@@ -1469,30 +1469,30 @@ branch  3 taken 11
         -: 1093:    __is_cpp17_forward_iterator<_ForwardIterator>::value,
         -: 1094:    void
         -: 1095:>::type
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE18__construct_at_endIPS3_EENS_9enable_ifIXsr27__is_cpp17_forward_iteratorIT_EE5valueEvE4typeESA_SA_m called 82 returned 100% blocks executed 50%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE18__construct_at_endIPS4_EENS_9enable_ifIXsr27__is_cpp17_forward_iteratorIT_EE5valueEvE4typeESB_SB_m called 7 returned 100% blocks executed 50%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEE18__construct_at_endIPdEENS_9enable_ifIXsr27__is_cpp17_forward_iteratorIT_EE5valueEvE4typeES7_S7_m called 94 returned 100% blocks executed 50%
-      183: 1096:vector<_Tp, _Allocator>::__construct_at_end(_ForwardIterator __first, _ForwardIterator __last, size_type __n)
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE18__construct_at_endIPS3_EENS_9enable_ifIXsr27__is_cpp17_forward_iteratorIT_EE5valueEvE4typeESA_SA_m called 87 returned 100% blocks executed 50%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE18__construct_at_endIPS4_EENS_9enable_ifIXsr27__is_cpp17_forward_iteratorIT_EE5valueEvE4typeESB_SB_m called 16 returned 100% blocks executed 50%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEE18__construct_at_endIPdEENS_9enable_ifIXsr27__is_cpp17_forward_iteratorIT_EE5valueEvE4typeES7_S7_m called 74 returned 100% blocks executed 50%
+      177: 1096:vector<_Tp, _Allocator>::__construct_at_end(_ForwardIterator __first, _ForwardIterator __last, size_type __n)
         -: 1097:{
-      183: 1098:    _ConstructTransaction __tx(*this, __n);
-      183: 1099:    _VSTD::__construct_range_forward(this->__alloc(), __first, __last, __tx.__pos_);
-       82: 1099-block  0
-branch  0 taken 82
+      177: 1098:    _ConstructTransaction __tx(*this, __n);
+      177: 1099:    _VSTD::__construct_range_forward(this->__alloc(), __first, __last, __tx.__pos_);
+       87: 1099-block  0
+branch  0 taken 87
 branch  1 taken 0
-        7: 1099-block  1
-branch  2 taken 7
+       16: 1099-block  1
+branch  2 taken 16
 branch  3 taken 0
-       94: 1099-block  2
-branch  4 taken 94
+       74: 1099-block  2
+branch  4 taken 74
 branch  5 taken 0
-      183: 1100:}
-       82: 1100-block  0
+      177: 1100:}
+       87: 1100-block  0
     $$$$$: 1100-block  1
     $$$$$: 1100-block  2
-        7: 1100-block  3
+       16: 1100-block  3
     $$$$$: 1100-block  4
     $$$$$: 1100-block  5
-       94: 1100-block  6
+       74: 1100-block  6
     $$$$$: 1100-block  7
     $$$$$: 1100-block  8
         -: 1101:
@@ -1665,66 +1665,66 @@ branch  5 taken 0
         -: 1268:}
         -: 1269:
         -: 1270:template <class _Tp, class _Allocator>
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC1ERKS6_ called 82 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEEC1ERKS7_ called 7 returned 100% blocks executed 100%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEEC1ERKS3_ called 94 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC2ERKS6_ called 82 returned 100% blocks executed 71%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEEC2ERKS7_ called 7 returned 100% blocks executed 71%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEEC2ERKS3_ called 94 returned 100% blocks executed 71%
-      366: 1271:vector<_Tp, _Allocator>::vector(const vector& __x)
-      183: 1272:    : __base(__alloc_traits::select_on_container_copy_construction(__x.__alloc()))
-      366: 1273:{
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC1ERKS6_ called 87 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEEC1ERKS7_ called 16 returned 100% blocks executed 100%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEEC1ERKS3_ called 74 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC2ERKS6_ called 87 returned 100% blocks executed 71%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEEC2ERKS7_ called 16 returned 100% blocks executed 71%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEEC2ERKS3_ called 74 returned 100% blocks executed 71%
+      354: 1271:vector<_Tp, _Allocator>::vector(const vector& __x)
+      177: 1272:    : __base(__alloc_traits::select_on_container_copy_construction(__x.__alloc()))
+      354: 1273:{
         -: 1274:#if _LIBCPP_DEBUG_LEVEL == 2
         -: 1275:    __get_db()->__insert_c(this);
         -: 1276:#endif
-      183: 1277:    size_type __n = __x.size();
-      183: 1278:    if (__n > 0)
-       82: 1278-block  0
+      177: 1277:    size_type __n = __x.size();
+      177: 1278:    if (__n > 0)
+       87: 1278-block  0
 branch  0 taken 0
-branch  1 taken 82
-        7: 1278-block  1
+branch  1 taken 87
+       16: 1278-block  1
 branch  2 taken 0
-branch  3 taken 7
-       94: 1278-block  2
+branch  3 taken 16
+       74: 1278-block  2
 branch  4 taken 0
-branch  5 taken 94
+branch  5 taken 74
         -: 1279:    {
-      183: 1280:        __vallocate(__n);
-       82: 1280-block  0
-branch  0 taken 82
+      177: 1280:        __vallocate(__n);
+       87: 1280-block  0
+branch  0 taken 87
 branch  1 taken 0
-        7: 1280-block  1
-branch  2 taken 7
+       16: 1280-block  1
+branch  2 taken 16
 branch  3 taken 0
-       94: 1280-block  2
-branch  4 taken 94
+       74: 1280-block  2
+branch  4 taken 74
 branch  5 taken 0
-      183: 1281:        __construct_at_end(__x.__begin_, __x.__end_, __n);
-       82: 1281-block  0
-branch  0 taken 82
+      177: 1281:        __construct_at_end(__x.__begin_, __x.__end_, __n);
+       87: 1281-block  0
+branch  0 taken 87
 branch  1 taken 0
-        7: 1281-block  1
-branch  2 taken 7
+       16: 1281-block  1
+branch  2 taken 16
 branch  3 taken 0
-       94: 1281-block  2
-branch  4 taken 94
+       74: 1281-block  2
+branch  4 taken 74
 branch  5 taken 0
-      183: 1282:    }
-       82: 1282-block  0
-        7: 1282-block  1
-       94: 1282-block  2
-      366: 1283:}
-       82: 1283-block  0
-        7: 1283-block  1
-       94: 1283-block  2
+      177: 1282:    }
+       87: 1282-block  0
+       16: 1282-block  1
+       74: 1282-block  2
+      354: 1283:}
+       87: 1283-block  0
+       16: 1283-block  1
+       74: 1283-block  2
     $$$$$: 1283-block  3
-       82: 1283-block  4
+       87: 1283-block  4
     $$$$$: 1283-block  5
     $$$$$: 1283-block  6
-        7: 1283-block  7
+       16: 1283-block  7
     $$$$$: 1283-block  8
     $$$$$: 1283-block  9
-       94: 1283-block 10
+       74: 1283-block 10
     $$$$$: 1283-block 11
         -: 1284:
         -: 1285:template <class _Tp, class _Allocator>
@@ -2011,20 +2011,20 @@ branch  5 taken 0
         -: 1566:template <class _Tp, class _Allocator>
         -: 1567:inline _LIBCPP_INLINE_VISIBILITY
         -: 1568:typename vector<_Tp, _Allocator>::reference
-function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEixEm called 771 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEixEm called 1155 returned 100% blocks executed 100%
 function _ZNSt3__16vectorINS0_INS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS4_IS6_EEEixEm called 6 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEEixEm called 20 returned 100% blocks executed 100%
-function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEEixEm called 116 returned 100% blocks executed 100%
-function _ZNSt3__16vectorIdNS_9allocatorIdEEEixEm called 144 returned 100% blocks executed 100%
-     1057: 1569:vector<_Tp, _Allocator>::operator[](size_type __n) _NOEXCEPT
+function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEEixEm called 23 returned 100% blocks executed 100%
+function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEEixEm called 232 returned 100% blocks executed 100%
+function _ZNSt3__16vectorIdNS_9allocatorIdEEEixEm called 115 returned 100% blocks executed 100%
+     1531: 1569:vector<_Tp, _Allocator>::operator[](size_type __n) _NOEXCEPT
         -: 1570:{
         -: 1571:    _LIBCPP_ASSERT(__n < size(), "vector[] index out of bounds");
-     1057: 1572:    return this->__begin_[__n];
-      771: 1572-block  0
+     1531: 1572:    return this->__begin_[__n];
+     1155: 1572-block  0
         6: 1572-block  1
-       20: 1572-block  2
-      116: 1572-block  3
-      144: 1572-block  4
+       23: 1572-block  2
+      232: 1572-block  3
+      115: 1572-block  4
         -: 1573:}
         -: 1574:
         -: 1575:template <class _Tp, class _Allocator>
@@ -2092,33 +2092,33 @@ function _ZNSt3__16vectorIdNS_9allocatorIdEEEixEm called 144 returned 100% block
         -: 1637:template <class _Up>
         -: 1638:void
         -: 1639:#ifndef _LIBCPP_CXX03_LANG
-function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21__push_back_slow_pathIRKS2_EEvOT_ called 0 returned 0% blocks executed 0%
+function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE21__push_back_slow_pathIRKS2_EEvOT_ called 3 returned 100% blocks executed 60%
 function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE21__push_back_slow_pathIS4_EEvOT_ called 11 returned 100% blocks executed 60%
-       11: 1640:vector<_Tp, _Allocator>::__push_back_slow_path(_Up&& __x)
+       14: 1640:vector<_Tp, _Allocator>::__push_back_slow_path(_Up&& __x)
         -: 1641:#else
         -: 1642:vector<_Tp, _Allocator>::__push_back_slow_path(_Up& __x)
         -: 1643:#endif
         -: 1644:{
-       11: 1645:    allocator_type& __a = this->__alloc();
-       11: 1646:    __split_buffer<value_type, allocator_type&> __v(__recommend(size() + 1), size(), __a);
+       14: 1645:    allocator_type& __a = this->__alloc();
+       14: 1646:    __split_buffer<value_type, allocator_type&> __v(__recommend(size() + 1), size(), __a);
         -: 1647:    // __v.push_back(_VSTD::forward<_Up>(__x));
-       11: 1648:    __alloc_traits::construct(__a, _VSTD::__to_address(__v.__end_), _VSTD::forward<_Up>(__x));
-    $$$$$: 1648-block  0
-branch  0 never executed
-branch  1 never executed
+       14: 1648:    __alloc_traits::construct(__a, _VSTD::__to_address(__v.__end_), _VSTD::forward<_Up>(__x));
+        3: 1648-block  0
+branch  0 taken 3
+branch  1 taken 0
        11: 1648-block  1
 branch  2 taken 11
 branch  3 taken 0
-       11: 1649:    __v.__end_++;
-       11: 1650:    __swap_out_circular_buffer(__v);
-    $$$$$: 1650-block  0
-branch  0 never executed
-branch  1 never executed
+       14: 1649:    __v.__end_++;
+       14: 1650:    __swap_out_circular_buffer(__v);
+        3: 1650-block  0
+branch  0 taken 3
+branch  1 taken 0
        11: 1650-block  1
 branch  2 taken 11
 branch  3 taken 0
-       11: 1651:}
-    $$$$$: 1651-block  0
+       14: 1651:}
+        3: 1651-block  0
     $$$$$: 1651-block  1
     $$$$$: 1651-block  2
        11: 1651-block  3
@@ -2128,22 +2128,22 @@ branch  3 taken 0
         -: 1653:template <class _Tp, class _Allocator>
         -: 1654:inline _LIBCPP_INLINE_VISIBILITY
         -: 1655:void
-function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE9push_backERKS2_ called 0 returned 0% blocks executed 0%
-    #####: 1656:vector<_Tp, _Allocator>::push_back(const_reference __x)
+function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE9push_backERKS2_ called 3 returned 100% blocks executed 75%
+        3: 1656:vector<_Tp, _Allocator>::push_back(const_reference __x)
         -: 1657:{
-    #####: 1658:    if (this->__end_ != this->__end_cap())
-    $$$$$: 1658-block  0
-branch  0 never executed
-branch  1 never executed
+        3: 1658:    if (this->__end_ != this->__end_cap())
+        3: 1658-block  0
+branch  0 taken 0
+branch  1 taken 3
         -: 1659:    {
     #####: 1660:        __construct_one_at_end(__x);
     #####: 1661:    }
     $$$$$: 1661-block  0
         -: 1662:    else
-    #####: 1663:        __push_back_slow_path(__x);
-    $$$$$: 1663-block  0
-    #####: 1664:}
-    $$$$$: 1664-block  0
+        3: 1663:        __push_back_slow_path(__x);
+        3: 1663-block  0
+        3: 1664:}
+        3: 1664-block  0
         -: 1665:
         -: 1666:#ifndef _LIBCPP_CXX03_LANG
         -: 1667:
@@ -2630,15 +2630,15 @@ branch  1 taken 11
         -: 2141:template <class _Tp, class _Allocator>
         -: 2142:inline _LIBCPP_INLINE_VISIBILITY
         -: 2143:void
-function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE26__invalidate_all_iteratorsEv called 0 returned 0% blocks executed 0%
+function _ZNSt3__16vectorINS_5tupleIJddEEENS_9allocatorIS2_EEE26__invalidate_all_iteratorsEv called 3 returned 100% blocks executed 100%
 function _ZNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEE26__invalidate_all_iteratorsEv called 11 returned 100% blocks executed 100%
-       11: 2144:vector<_Tp, _Allocator>::__invalidate_all_iterators()
+       14: 2144:vector<_Tp, _Allocator>::__invalidate_all_iterators()
         -: 2145:{
         -: 2146:#if _LIBCPP_DEBUG_LEVEL == 2
         -: 2147:    __get_db()->__invalidate_all(this);
         -: 2148:#endif
-       11: 2149:}
-    $$$$$: 2149-block  0
+       14: 2149:}
+        3: 2149-block  0
        11: 2149-block  1
         -: 2150:
         -: 2151:

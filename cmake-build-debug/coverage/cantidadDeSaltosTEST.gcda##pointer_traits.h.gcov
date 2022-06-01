@@ -177,13 +177,13 @@ function _ZNSt3__114pointer_traitsIPKcE10pointer_toERS1_ called 0 returned 0% bl
         -:  170:
         -:  171:template <class _Tp>
         -:  172:_LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
-function _ZNSt3__1L12__to_addressIKcEEPT_S3_ called 1 returned 100% blocks executed 100%
+function _ZNSt3__1L12__to_addressIKcEEPT_S3_ called 0 returned 0% blocks executed 0%
 function _ZNSt3__1L12__to_addressINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEEEEPT_S6_ called 8 returned 100% blocks executed 100%
 function _ZNSt3__1L12__to_addressINS_5tupleIJdNS1_IJddEEEEEEEEPT_S5_ called 8 returned 100% blocks executed 100%
-       17:  173:_Tp* __to_address(_Tp* __p) _NOEXCEPT {
+       16:  173:_Tp* __to_address(_Tp* __p) _NOEXCEPT {
         -:  174:    static_assert(!is_function<_Tp>::value, "_Tp is a function type");
-       17:  175:    return __p;
-        1:  175-block  0
+       16:  175:    return __p;
+    $$$$$:  175-block  0
         8:  175-block  1
         8:  175-block  2
         -:  176:}
