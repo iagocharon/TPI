@@ -25,6 +25,21 @@ gps obtenerPosicion(tuple<tiempo, gps> medicion) {
 tiempo obtenerTiempo(tuple<tiempo, gps> medicion) {
     return get<0>(medicion);
 }
+gps obtenerEsq1(celda celda) {
+    return get<0>(celda);
+}
+gps obtenerEsq2(celda celda) {
+    return get<1>(celda);
+}
+nombre obtenerNombre(celda celda) {
+    return get<2>(celda);
+}
+int obtenerFila(nombre nombre) {
+    return get<0>(nombre);
+}
+int obtenerColumna(nombre nombre) {
+    return get<1>(nombre);
+}
 double distEnKM(gps posicion1, gps posicion2) {
     double latitud1 = obtenerLatitud(posicion1);
     double latitud2 = obtenerLatitud(posicion2);
@@ -46,6 +61,10 @@ double distEnKM(gps posicion1, gps posicion2) {
 
     double c = 2 * asin(sqrt(a));
     return radioTierra * c;
+}
+
+double velocidadMedia(puntoViaje p1, puntoViaje p2) {
+    return (distEnKM(obtenerPosicion(p1), obtenerPosicion(p2))) / (obtenerTiempo(p2) - obtenerTiempo(p1));
 }
 
 gps desviarPunto(gps p, double desvioMtsLatitud, double desvioMtsLongitud){
