@@ -1,0 +1,690 @@
+        -:    0:Source:/Users/IAGO/Desktop/TPI/ejercicios.cpp
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "ejercicios.h"
+        -:    2:
+        -:    3:#include <algorithm>
+        -:    4:#include <fstream>
+        -:    5:#include <iomanip>
+        -:    6:#include <iostream>
+        -:    7:
+        -:    8:#include "auxiliares.h"
+        -:    9:
+        -:   10:using namespace std;
+        -:   11:
+        -:   12:/******++++**************************** EJERCICIO tiempoTotal
+        -:   13: * ***********+++***********************/
+function _Z12tiempoMinimoNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEE called 6 returned 100% blocks executed 100%
+        6:   14:tiempo tiempoMinimo(viaje v) {
+        6:   15:    tiempo aux = obtenerTiempo(v[0]);
+       59:   16:    for (int i = 1; i < v.size(); i++) {
+        6:   16-block  0
+       59:   16-block  1
+branch  0 taken 53
+branch  1 taken 6
+       53:   16-block  2
+       53:   17:        if (obtenerTiempo(v[i]) < aux) {
+       53:   17-block  0
+branch  0 taken 52
+branch  1 taken 1
+        1:   18:            aux = obtenerTiempo(v[i]);
+        1:   19:        }
+        1:   19-block  0
+       53:   20:    }
+       53:   20-block  0
+        6:   21:    return aux;
+        6:   21-block  0
+        -:   22:}
+        -:   23:
+function _Z12tiempoMaximoNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEE called 6 returned 100% blocks executed 100%
+        6:   24:tiempo tiempoMaximo(viaje v) {
+        6:   25:    tiempo aux = obtenerTiempo(v[0]);
+       59:   26:    for (int i = 1; i < v.size(); i++) {
+        6:   26-block  0
+       59:   26-block  1
+branch  0 taken 53
+branch  1 taken 6
+       53:   26-block  2
+       53:   27:        if (obtenerTiempo(v[i]) > aux) {
+       53:   27-block  0
+branch  0 taken 24
+branch  1 taken 29
+       29:   28:            aux = obtenerTiempo(v[i]);
+       29:   29:        }
+       29:   29-block  0
+       53:   30:    }
+       53:   30-block  0
+        6:   31:    return aux;
+        6:   31-block  0
+        -:   32:}
+        -:   33:
+function _Z11tiempoTotalNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEE called 2 returned 100% blocks executed 50%
+        2:   34:tiempo tiempoTotal(viaje v) { return tiempoMaximo(v) - tiempoMinimo(v); }
+        2:   34-block  0
+branch  0 taken 2
+branch  1 taken 0
+        2:   34-block  1
+branch  2 taken 2
+branch  3 taken 0
+        2:   34-block  2
+branch  4 taken 0
+branch  5 taken 2
+        2:   34-block  3
+    $$$$$:   34-block  4
+    $$$$$:   34-block  5
+    $$$$$:   34-block  6
+    $$$$$:   34-block  7
+        -:   35:
+        -:   36:/************++*********************** EJERCICIO distanciaTotal
+        -:   37: * ************++*********************/
+function _Z13viajeOrdenadoNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEE called 1 returned 100% blocks executed 82%
+        1:   38:viaje viajeOrdenado(viaje v) {
+        1:   39:    viaje auxViaje = v;
+        4:   40:    for (int i = 0; i < auxViaje.size(); ++i) {
+        1:   40-block  0
+        4:   40-block  1
+branch  0 taken 1
+branch  1 taken 3
+        3:   40-block  2
+       12:   41:        for (int j = 0; j < auxViaje.size(); ++j) {
+        3:   41-block  0
+       12:   41-block  1
+branch  0 taken 9
+branch  1 taken 3
+        9:   41-block  2
+        9:   42:            if (obtenerTiempo(auxViaje[j]) > obtenerTiempo(auxViaje[i])) {
+        9:   42-block  0
+branch  0 taken 9
+branch  1 taken 0
+        9:   42-block  1
+branch  2 taken 9
+branch  3 taken 0
+        9:   42-block  2
+branch  4 taken 6
+branch  5 taken 3
+        3:   43:                puntoViaje auxPunto = auxViaje[i];
+        3:   44:                auxViaje[i] = auxViaje[j];
+        3:   45:                auxViaje[j] = auxPunto;
+        3:   46:            }
+        3:   46-block  0
+        9:   47:        }
+        9:   47-block  0
+        3:   48:    }
+        3:   48-block  0
+        -:   49:
+        1:   50:    return auxViaje;
+        1:   51:}
+    $$$$$:   51-block  0
+        1:   51-block  1
+branch  0 taken 1
+branch  1 taken 0
+    $$$$$:   51-block  2
+        1:   51-block  3
+    $$$$$:   51-block  4
+        -:   52:
+function _Z14distanciaTotalNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEE called 1 returned 100% blocks executed 75%
+        1:   53:distancia distanciaTotal(viaje v) {
+        1:   54:    distancia d = 0;
+        1:   55:    viaje aux = viajeOrdenado(v);
+        1:   55-block  0
+branch  0 taken 1
+branch  1 taken 0
+    $$$$$:   55-block  1
+    $$$$$:   55-block  2
+        -:   56:
+        3:   57:    for (int i = 0; i < aux.size() - 1; i++) {
+        1:   57-block  0
+        3:   57-block  1
+branch  0 taken 2
+branch  1 taken 1
+        2:   57-block  2
+        2:   58:        d += distEnKM(obtenerPosicion(aux[i]), obtenerPosicion(aux[i + 1]));
+        2:   58-block  0
+branch  0 taken 2
+branch  1 taken 0
+        2:   58-block  1
+branch  2 taken 2
+branch  3 taken 0
+        2:   58-block  2
+branch  4 taken 2
+branch  5 taken 0
+        2:   59:    }
+        2:   59-block  0
+        1:   60:    return d;
+        1:   61:}
+    $$$$$:   61-block  0
+        1:   61-block  1
+        -:   62:
+        -:   63:/*****************************+***** EJERCICIO excesoDeVelocidad
+        -:   64: * **********************************/
+function _Z17excesoDeVelocidadNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEE called 2 returned 100% blocks executed 100%
+        2:   65:bool excesoDeVelocidad(viaje v) {
+        4:   66:    for (int i = 0; i < v.size() - 1; i++) {
+        2:   66-block  0
+        4:   66-block  1
+branch  0 taken 3
+branch  1 taken 1
+        2:   66-block  2
+        3:   67:        if (velocidadMedia(v[i], v[i + 1])*3600 > 80) {
+        3:   67-block  0
+branch  0 taken 1
+branch  1 taken 2
+        1:   68:            return true;
+        1:   68-block  0
+        -:   69:        }
+        2:   70:    }
+        2:   70-block  0
+        1:   71:    return false;
+        1:   71-block  0
+        2:   72:}
+        2:   72-block  0
+        -:   73:
+        -:   74:/***************************************** EJERCICIO flota
+        -:   75: * ***************************************/
+function _Z13estabaEnViajeNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEEdd called 6 returned 100% blocks executed 100%
+        6:   76:bool estabaEnViaje(viaje v, tiempo t0, tiempo tf) {
+       20:   77:    for (int i = 0; i < v.size(); i++) {
+        6:   77-block  0
+       20:   77-block  1
+branch  0 taken 16
+branch  1 taken 4
+       14:   77-block  2
+       16:   78:        if (obtenerTiempo(v[i]) >= t0 && obtenerTiempo(v[i]) <= tf) {
+       16:   78-block  0
+branch  0 taken 2
+branch  1 taken 14
+        2:   78-block  1
+branch  2 taken 2
+branch  3 taken 0
+        2:   79:            return true;
+        2:   79-block  0
+        -:   80:        }
+       14:   81:    }
+       14:   81-block  0
+        4:   82:    return false;
+        4:   82-block  0
+        6:   83:}
+        6:   83-block  0
+        -:   84:
+function _Z5flotaNSt3__16vectorINS0_INS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS4_IS6_EEEEdd called 2 returned 100% blocks executed 80%
+        2:   85:int flota(vector<viaje> f, tiempo t0, tiempo tf) {
+        2:   86:    int resp = 0;
+        8:   87:    for (int i = 0; i < f.size(); i++) {
+        2:   87-block  0
+        8:   87-block  1
+branch  0 taken 6
+branch  1 taken 2
+        6:   87-block  2
+        6:   88:        if (estabaEnViaje(f[i], t0, tf)) {
+        6:   88-block  0
+branch  0 taken 6
+branch  1 taken 0
+        6:   88-block  1
+branch  2 taken 4
+branch  3 taken 2
+    $$$$$:   88-block  2
+    $$$$$:   88-block  3
+        2:   89:            resp++;
+        2:   90:        }
+        2:   90-block  0
+        6:   91:    }
+        6:   91-block  0
+        2:   92:    return resp;
+        2:   92-block  0
+    #####:   93:}
+        -:   94:
+        -:   95:/************************************ EJERCICIO recorridoCubierto
+        -:   96: * *******************************/
+function _Z12estaCubiertoNSt3__15tupleIJddEEENS_6vectorINS0_IJdS1_EEENS_9allocatorIS3_EEEEd called 20 returned 100% blocks executed 62%
+       20:   97:bool estaCubierto(gps p, viaje v, distancia u) {
+       20:   98:    for (int i = 0; i < v.size(); i++) {
+       20:   98-block  0
+       20:   98-block  1
+branch  0 taken 20
+branch  1 taken 0
+    $$$$$:   98-block  2
+       20:   99:        if (distEnKM(p, obtenerPosicion(v[i])) < u) {
+       20:   99-block  0
+branch  0 taken 20
+branch  1 taken 0
+       20:  100:            return true;
+       20:  100-block  0
+        -:  101:        }
+    #####:  102:    }
+    $$$$$:  102-block  0
+    #####:  103:    return false;
+    $$$$$:  103-block  0
+       20:  104:}
+       20:  104-block  0
+        -:  105:
+function _Z19recorridoNoCubiertoNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS0_IS2_NS4_IS2_EEEEd called 2 returned 100% blocks executed 56%
+        2:  106:vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
+        2:  107:    vector<gps> resp;
+       22:  108:    for (int i = 0; i < r.size(); i++) {
+        2:  108-block  0
+       22:  108-block  1
+branch  0 taken 2
+branch  1 taken 20
+       20:  108-block  2
+       20:  109:        if (!estaCubierto(r[i], v, u)) {
+       20:  109-block  0
+branch  0 taken 20
+branch  1 taken 0
+       20:  109-block  1
+branch  2 taken 20
+branch  3 taken 0
+       20:  109-block  2
+branch  4 taken 0
+branch  5 taken 20
+    $$$$$:  109-block  3
+    #####:  110:            resp.push_back(r[i]);
+    $$$$$:  110-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  111:        }
+    $$$$$:  111-block  0
+       20:  112:    }
+       20:  112-block  0
+        2:  113:    return resp;
+        2:  114:}
+    $$$$$:  114-block  0
+        2:  114-block  1
+branch  0 taken 2
+branch  1 taken 0
+    $$$$$:  114-block  2
+        2:  114-block  3
+    $$$$$:  114-block  4
+    $$$$$:  114-block  5
+        -:  115:
+        -:  116:/************************************** EJERCICIO construirGrilla
+        -:  117: * *******************************/
+function _Z15construirGrillaNSt3__15tupleIJddEEES1_ii called 2 returned 100% blocks executed 83%
+        2:  118:grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
+        2:  119:    distancia ladoHorizontal = (obtenerLongitud(esq2) - obtenerLongitud(esq1)) / n;
+        2:  120:    distancia ladoVertical = (obtenerLatitud(esq2) - obtenerLatitud(esq1)) / m;
+        2:  121:    grilla resp = {};
+        -:  122:
+       10:  123:    for (int i = 0; i < n; i++) {
+        2:  123-block  0
+       10:  123-block  1
+branch  0 taken 2
+branch  1 taken 8
+        8:  123-block  2
+       50:  124:        for (int j = 0; j < m; j++) {
+        8:  124-block  0
+       50:  124-block  1
+branch  0 taken 42
+branch  1 taken 8
+       42:  124-block  2
+       42:  125:            gps auxEsq1 = {obtenerLongitud(esq1) + i * ladoHorizontal,
+       42:  125-block  0
+branch  0 taken 42
+branch  1 taken 0
+       42:  126:                           obtenerLatitud(esq1) + j * ladoVertical};
+       42:  126-block  0
+branch  0 taken 42
+branch  1 taken 0
+       42:  127:            gps auxEsq2 = {obtenerLongitud(esq1) + (i + 1) * ladoHorizontal,
+       42:  127-block  0
+branch  0 taken 42
+branch  1 taken 0
+       42:  128:                           obtenerLatitud(esq1) + (j + 1) * ladoVertical};
+       42:  128-block  0
+branch  0 taken 42
+branch  1 taken 0
+       42:  129:            resp.push_back({auxEsq1, auxEsq2, {i + 1, j + 1}});
+       42:  129-block  0
+branch  0 taken 42
+branch  1 taken 0
+       42:  130:        }
+       42:  130-block  0
+        8:  131:    }
+        8:  131-block  0
+        2:  132:    return resp;
+        2:  133:}
+    $$$$$:  133-block  0
+        2:  133-block  1
+branch  0 taken 2
+branch  1 taken 0
+    $$$$$:  133-block  2
+        2:  133-block  3
+    $$$$$:  133-block  4
+        -:  134:
+        -:  135:/************************************* EJERCICIO cantidadDeSaltos
+        -:  136: * ******************************/
+function _Z14getNombreCeldaNSt3__15tupleIJddEEENS_6vectorINS0_IJS1_S1_NS0_IJiiEEEEEENS_9allocatorIS4_EEEE called 4 returned 100% blocks executed 91%
+        4:  137:nombre getNombreCelda(gps p, grilla g) {
+       46:  138:    for (int i = 0; i < g.size(); i++) {
+        4:  138-block  0
+       46:  138-block  1
+branch  0 taken 46
+branch  1 taken 0
+       42:  138-block  2
+       92:  139:        if ((obtenerLatitud(p) >= obtenerLatitud(obtenerEsq1(g[i]))) &&
+       46:  139-block  0
+branch  0 taken 46
+branch  1 taken 0
+       46:  139-block  1
+branch  2 taken 4
+branch  3 taken 42
+       46:  140:            (obtenerLatitud(p) <= obtenerLatitud(obtenerEsq2(g[i]))) &&
+       46:  140-block  0
+branch  0 taken 10
+branch  1 taken 36
+       10:  141:            (obtenerLongitud(p) >= obtenerLongitud(obtenerEsq1(g[i]))) &&
+       10:  141-block  0
+branch  0 taken 0
+branch  1 taken 10
+       10:  142:            (obtenerLongitud(p) <= obtenerLongitud(obtenerEsq2(g[i])))) {
+       10:  142-block  0
+        4:  143:            return obtenerNombre(g[i]);
+        4:  143-block  0
+        -:  144:        }
+       42:  145:    }
+       42:  145-block  0
+    #####:  146:    return {-1, -1};
+    $$$$$:  146-block  0
+        4:  147:}
+        4:  147-block  0
+        -:  148:
+function _Z17distanciaEnCeldasNSt3__15tupleIJddEEES1_NS_6vectorINS0_IJS1_S1_NS0_IJiiEEEEEENS_9allocatorIS4_EEEE called 2 returned 100% blocks executed 50%
+        2:  149:int distanciaEnCeldas(gps p1, gps p2, grilla g) {
+        2:  150:    nombre n1 = getNombreCelda(p1, g);
+        2:  150-block  0
+branch  0 taken 2
+branch  1 taken 0
+    $$$$$:  150-block  1
+    $$$$$:  150-block  2
+        2:  151:    nombre n2 = getNombreCelda(p2, g);
+        2:  151-block  0
+branch  0 taken 0
+branch  1 taken 2
+    $$$$$:  151-block  1
+        4:  152:    return abs(obtenerFila(n1) - obtenerFila(n2)) +
+        2:  152-block  0
+        2:  152-block  1
+        2:  153:           abs(obtenerColumna(n1) - obtenerColumna(n2));
+    #####:  154:}
+        -:  155:
+function _Z16cantidadDeSaltosNSt3__16vectorINS_5tupleIJNS1_IJddEEES2_NS1_IJiiEEEEEENS_9allocatorIS4_EEEENS0_INS1_IJdS2_EEENS5_IS8_EEEE called 1 returned 100% blocks executed 80%
+        1:  156:int cantidadDeSaltos(grilla g, viaje v) {
+        1:  157:    int resp = 0;
+        3:  158:    for (int i = 0; i < v.size() - 1; i++) {
+        1:  158-block  0
+        3:  158-block  1
+branch  0 taken 2
+branch  1 taken 1
+        2:  158-block  2
+        4:  159:        if (distanciaEnCeldas(obtenerPosicion(v[i]), obtenerPosicion(v[i + 1]),
+        2:  159-block  0
+branch  0 taken 2
+branch  1 taken 0
+        2:  159-block  1
+branch  2 taken 2
+branch  3 taken 0
+        2:  159-block  2
+branch  4 taken 0
+branch  5 taken 2
+    $$$$$:  159-block  3
+    $$$$$:  159-block  4
+        2:  160:                              g) >= 2) {
+        2:  161:            resp++;
+        2:  162:        }
+        2:  162-block  0
+        2:  163:    }
+        2:  163-block  0
+        -:  164:
+        1:  165:    return resp;
+        1:  165-block  0
+    #####:  166:}
+        -:  167:
+        -:  168:/************************************* EJERCICIO corregirViaje
+        -:  169: * ******************************/
+        -:  170:
+function _Z7esErrorNSt3__15tupleIJdNS0_IJddEEEEEENS_6vectorIdNS_9allocatorIdEEEE called 14 returned 100% blocks executed 87%
+       14:  171:bool esError(puntoViaje p, vector<tiempo> errores) {
+       28:  172:    for (int i = 0; i < errores.size(); i++) {
+       14:  172-block  0
+       28:  172-block  1
+branch  0 taken 14
+branch  1 taken 14
+       14:  172-block  2
+       14:  173:        if (obtenerTiempo(p) == errores[i]) {
+       14:  173-block  0
+branch  0 taken 0
+branch  1 taken 14
+    #####:  174:            return true;
+    $$$$$:  174-block  0
+        -:  175:        }
+       14:  176:    }
+       14:  176-block  0
+       14:  177:    return false;
+       14:  177-block  0
+       14:  178:}
+       14:  178-block  0
+        -:  179:
+function _Z14puntosCercanosdNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS0_IdNS4_IdEEEE called 2 returned 100% blocks executed 72%
+        2:  180:tuple<puntoViaje, puntoViaje> puntosCercanos(tiempo error, viaje v, vector<tiempo> errores) {
+        2:  181:    puntoViaje puntoCercano1;
+        2:  182:    puntoViaje puntoCercano2;
+        2:  183:    tiempo minimo = (tiempoMaximo(v) - tiempoMinimo(v));
+        2:  183-block  0
+branch  0 taken 2
+branch  1 taken 0
+        2:  183-block  1
+branch  2 taken 2
+branch  3 taken 0
+        2:  183-block  2
+branch  4 taken 2
+branch  5 taken 0
+    $$$$$:  183-block  3
+    $$$$$:  183-block  4
+    $$$$$:  183-block  5
+       22:  184:    for (int i = 0; i < v.size(); i++) {
+        2:  184-block  0
+       22:  184-block  1
+branch  0 taken 20
+branch  1 taken 2
+       20:  184-block  2
+       28:  185:        if ((abs(obtenerTiempo(v[i]) - error) < minimo) &&
+       20:  185-block  0
+branch  0 taken 8
+branch  1 taken 12
+       20:  185-block  1
+branch  2 taken 14
+branch  3 taken 6
+        6:  185-block  2
+       20:  185-block  3
+branch  4 taken 14
+branch  5 taken 6
+    $$$$$:  185-block  4
+branch  6 never executed
+branch  7 never executed
+    $$$$$:  185-block  5
+    $$$$$:  185-block  6
+        8:  186:            (abs(obtenerTiempo(v[i]) - error) != 0) && (!esError(v[i], errores))) {
+        8:  186-block  0
+branch  0 taken 2
+branch  1 taken 6
+        6:  186-block  1
+branch  2 taken 6
+branch  3 taken 0
+        6:  186-block  2
+        6:  187:            minimo = abs(obtenerTiempo(v[i]) - error);
+        6:  188:            puntoCercano1 = v[i];
+        6:  189:        }
+        6:  189-block  0
+       20:  190:    }
+       20:  190-block  0
+        -:  191:
+        2:  192:    minimo = (tiempoMaximo(v) - tiempoMinimo(v));
+        2:  192-block  0
+branch  0 taken 2
+branch  1 taken 0
+        2:  192-block  1
+branch  2 taken 2
+branch  3 taken 0
+        2:  192-block  2
+branch  4 taken 0
+branch  5 taken 2
+    $$$$$:  192-block  3
+    $$$$$:  192-block  4
+       22:  193:    for (int i = 0; i < v.size(); i++) {
+        2:  193-block  0
+       22:  193-block  1
+branch  0 taken 2
+branch  1 taken 20
+       20:  193-block  2
+       30:  194:        if ((abs(obtenerTiempo(v[i]) - error) < minimo) &&
+       20:  194-block  0
+branch  0 taken 10
+branch  1 taken 10
+       20:  194-block  1
+branch  2 taken 12
+branch  3 taken 8
+        8:  194-block  2
+       20:  194-block  3
+branch  4 taken 14
+branch  5 taken 6
+    $$$$$:  194-block  4
+branch  6 never executed
+branch  7 never executed
+    $$$$$:  194-block  5
+    $$$$$:  194-block  6
+       10:  195:            (abs(obtenerTiempo(v[i]) - error) != 0) && (!esError(v[i], errores)) &&
+       10:  195-block  0
+branch  0 taken 2
+branch  1 taken 8
+        8:  195-block  1
+branch  2 taken 8
+branch  3 taken 0
+        8:  195-block  2
+branch  4 taken 8
+branch  5 taken 0
+        8:  196:            (v[i] != puntoCercano1)) {
+        8:  196-block  0
+branch  0 taken 8
+branch  1 taken 0
+        6:  197:            minimo = abs(obtenerTiempo(v[i]) - error);
+        6:  198:            puntoCercano2 = v[i];
+        6:  199:        }
+        6:  199-block  0
+       20:  200:    }
+       20:  200-block  0
+        -:  201:
+        2:  202:    if (obtenerTiempo(puntoCercano1) > obtenerTiempo(puntoCercano2)) {
+        2:  202-block  0
+branch  0 taken 0
+branch  1 taken 2
+        2:  203:        puntoViaje aux = puntoCercano1;
+        2:  204:        puntoCercano1 = puntoCercano2;
+        2:  205:        puntoCercano2 = aux;
+        2:  206:    }
+        2:  206-block  0
+        2:  207:    return {puntoCercano1, puntoCercano2};
+        2:  207-block  0
+    #####:  208:}
+    $$$$$:  208-block  0
+    $$$$$:  208-block  1
+        -:  209:
+function _Z14getIndiceViajeNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEEd called 2 returned 100% blocks executed 100%
+        2:  210:int getIndiceViaje(viaje v, tiempo t) {
+       20:  211:    for (int i = 0; i < v.size(); i++) {
+        2:  211-block  0
+       20:  211-block  1
+branch  0 taken 0
+branch  1 taken 20
+       18:  211-block  2
+       20:  212:        if (obtenerTiempo(v[i]) == t) {
+       20:  212-block  0
+branch  0 taken 2
+branch  1 taken 18
+        2:  213:            return i;
+        2:  213-block  0
+        -:  214:        }
+       18:  215:    }
+       18:  215-block  0
+        2:  216:}
+        2:  216-block  0
+        -:  217:
+function _Z14puntoCorregidoNSt3__15tupleIJdNS0_IJddEEEEEES2_S2_ called 1 returned 100% blocks executed 100%
+        1:  218:puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
+        -:  219:                          puntoViaje puntoCercano2) {
+        1:  220:    double velocidadMediaPuntosCercanos = velocidadMedia(puntoCercano1, puntoCercano2);
+        1:  221:    tiempo tiempoHastaError = obtenerTiempo(error) - obtenerTiempo(puntoCercano1);
+        1:  222:    distancia distanciaHastaError = velocidadMediaPuntosCercanos * tiempoHastaError;
+        1:  223:    double factorRecorrido = (distanciaHastaError / distEnKM(obtenerPosicion(puntoCercano1), obtenerPosicion(puntoCercano2)));
+        -:  224:
+        1:  225:    distancia distanciaHorizontalRecorrida =
+        2:  226:        (obtenerLatitud(obtenerPosicion(puntoCercano2)) -
+        2:  227:         obtenerLatitud(obtenerPosicion(puntoCercano1))) *
+        1:  228:        factorRecorrido;
+        1:  229:    distancia distanciaVerticalRecorrida =
+        2:  230:        (obtenerLongitud(obtenerPosicion(puntoCercano2)) -
+        2:  231:         obtenerLongitud(obtenerPosicion(puntoCercano1))) *
+        1:  232:        factorRecorrido;
+        -:  233:
+        1:  234:    puntoViaje aux = error;
+        -:  235:
+        1:  236:    double auxLatitud =
+        2:  237:        obtenerLatitud(obtenerPosicion(puntoCercano1)) +
+        1:  238:        distanciaHorizontalRecorrida;
+        -:  239:
+        1:  240:    double auxLongitud =
+        1:  241:        obtenerLongitud(obtenerPosicion(puntoCercano1)) + distanciaVerticalRecorrida;
+        -:  242:
+        1:  243:    return {obtenerTiempo(error), {auxLatitud, auxLongitud}};
+        1:  243-block  0
+        -:  244:}
+        -:  245:
+function _Z13corregirViajeRNSt3__16vectorINS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEENS0_IdNS4_IdEEEE called 1 returned 100% blocks executed 56%
+        1:  246:void corregirViaje(viaje &v, vector<tiempo> errores) {
+        2:  247:    for (int i = 0; i < errores.size(); i++) {
+        1:  247-block  0
+        2:  247-block  1
+branch  0 taken 1
+branch  1 taken 1
+        1:  247-block  2
+        1:  248:        puntoViaje puntoCercano1 = get<0>(puntosCercanos(errores[i], v, errores));
+        1:  248-block  0
+branch  0 taken 0
+branch  1 taken 1
+        1:  248-block  1
+branch  2 taken 0
+branch  3 taken 1
+    $$$$$:  248-block  2
+    $$$$$:  248-block  3
+    $$$$$:  248-block  4
+        1:  249:        puntoViaje puntoCercano2 = get<1>(puntosCercanos(errores[i], v, errores));
+        1:  249-block  0
+branch  0 taken 0
+branch  1 taken 1
+        1:  249-block  1
+branch  2 taken 0
+branch  3 taken 1
+    $$$$$:  249-block  2
+    $$$$$:  249-block  3
+        1:  250:        v[getIndiceViaje(v, errores[i])] = puntoCorregido(v[getIndiceViaje(v, errores[i])], puntoCercano1, puntoCercano2);
+        1:  250-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:  250-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:  250-block  2
+branch  4 taken 1
+branch  5 taken 0
+        1:  250-block  3
+branch  6 taken 0
+branch  7 taken 1
+    $$$$$:  250-block  4
+    $$$$$:  250-block  5
+        1:  251:    }
+        1:  251-block  0
+        1:  252:}
+    $$$$$:  252-block  0
+    $$$$$:  252-block  1
+    $$$$$:  252-block  2
+        1:  252-block  3

@@ -1,0 +1,174 @@
+        -:    0:Source:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdlib.h
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:// -*- C++ -*-
+        -:    2://===--------------------------- stdlib.h ---------------------------------===//
+        -:    3://
+        -:    4:// Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
+        -:    5:// See https://llvm.org/LICENSE.txt for license information.
+        -:    6:// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+        -:    7://
+        -:    8://===----------------------------------------------------------------------===//
+        -:    9:
+        -:   10:#if defined(__need_malloc_and_calloc)
+        -:   11:
+        -:   12:#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
+        -:   13:#pragma GCC system_header
+        -:   14:#endif
+        -:   15:
+        -:   16:#include_next <stdlib.h>
+        -:   17:
+        -:   18:#elif !defined(_LIBCPP_STDLIB_H)
+        -:   19:#define _LIBCPP_STDLIB_H
+        -:   20:
+        -:   21:/*
+        -:   22:    stdlib.h synopsis
+        -:   23:
+        -:   24:Macros:
+        -:   25:
+        -:   26:    EXIT_FAILURE
+        -:   27:    EXIT_SUCCESS
+        -:   28:    MB_CUR_MAX
+        -:   29:    NULL
+        -:   30:    RAND_MAX
+        -:   31:
+        -:   32:Types:
+        -:   33:
+        -:   34:    size_t
+        -:   35:    div_t
+        -:   36:    ldiv_t
+        -:   37:    lldiv_t                                                               // C99
+        -:   38:
+        -:   39:double    atof (const char* nptr);
+        -:   40:int       atoi (const char* nptr);
+        -:   41:long      atol (const char* nptr);
+        -:   42:long long atoll(const char* nptr);                                        // C99
+        -:   43:double             strtod  (const char* restrict nptr, char** restrict endptr);
+        -:   44:float              strtof  (const char* restrict nptr, char** restrict endptr); // C99
+        -:   45:long double        strtold (const char* restrict nptr, char** restrict endptr); // C99
+        -:   46:long               strtol  (const char* restrict nptr, char** restrict endptr, int base);
+        -:   47:long long          strtoll (const char* restrict nptr, char** restrict endptr, int base); // C99
+        -:   48:unsigned long      strtoul (const char* restrict nptr, char** restrict endptr, int base);
+        -:   49:unsigned long long strtoull(const char* restrict nptr, char** restrict endptr, int base); // C99
+        -:   50:int rand(void);
+        -:   51:void srand(unsigned int seed);
+        -:   52:void* calloc(size_t nmemb, size_t size);
+        -:   53:void free(void* ptr);
+        -:   54:void* malloc(size_t size);
+        -:   55:void* realloc(void* ptr, size_t size);
+        -:   56:void abort(void);
+        -:   57:int atexit(void (*func)(void));
+        -:   58:void exit(int status);
+        -:   59:void _Exit(int status);
+        -:   60:char* getenv(const char* name);
+        -:   61:int system(const char* string);
+        -:   62:void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
+        -:   63:              int (*compar)(const void *, const void *));
+        -:   64:void qsort(void* base, size_t nmemb, size_t size,
+        -:   65:           int (*compar)(const void *, const void *));
+        -:   66:int         abs(      int j);
+        -:   67:long        abs(     long j);
+        -:   68:long long   abs(long long j);                                             // C++0X
+        -:   69:long       labs(     long j);
+        -:   70:long long llabs(long long j);                                             // C99
+        -:   71:div_t     div(      int numer,       int denom);
+        -:   72:ldiv_t    div(     long numer,      long denom);
+        -:   73:lldiv_t   div(long long numer, long long denom);                          // C++0X
+        -:   74:ldiv_t   ldiv(     long numer,      long denom);
+        -:   75:lldiv_t lldiv(long long numer, long long denom);                          // C99
+        -:   76:int mblen(const char* s, size_t n);
+        -:   77:int mbtowc(wchar_t* restrict pwc, const char* restrict s, size_t n);
+        -:   78:int wctomb(char* s, wchar_t wchar);
+        -:   79:size_t mbstowcs(wchar_t* restrict pwcs, const char* restrict s, size_t n);
+        -:   80:size_t wcstombs(char* restrict s, const wchar_t* restrict pwcs, size_t n);
+        -:   81:int at_quick_exit(void (*func)(void))                                     // C++11
+        -:   82:void quick_exit(int status);                                              // C++11
+        -:   83:void *aligned_alloc(size_t alignment, size_t size);                       // C11
+        -:   84:
+        -:   85:*/
+        -:   86:
+        -:   87:#include <__config>
+        -:   88:
+        -:   89:#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
+        -:   90:#pragma GCC system_header
+        -:   91:#endif
+        -:   92:
+        -:   93:#include_next <stdlib.h>
+        -:   94:
+        -:   95:#ifdef __cplusplus
+        -:   96:extern "C++" {
+        -:   97:// abs
+        -:   98:
+        -:   99:#undef abs
+        -:  100:#undef labs
+        -:  101:#ifndef _LIBCPP_HAS_NO_LONG_LONG
+        -:  102:#undef llabs
+        -:  103:#endif
+        -:  104:
+        -:  105:// MSVCRT already has the correct prototype in <stdlib.h> if __cplusplus is defined
+        -:  106:#if !defined(_LIBCPP_MSVCRT) && !defined(__sun__)
+        -:  107:inline _LIBCPP_INLINE_VISIBILITY long abs(long __x) _NOEXCEPT {
+        -:  108:  return __builtin_labs(__x);
+        -:  109:}
+        -:  110:#ifndef _LIBCPP_HAS_NO_LONG_LONG
+        -:  111:inline _LIBCPP_INLINE_VISIBILITY long long abs(long long __x) _NOEXCEPT {
+        -:  112:  return __builtin_llabs(__x);
+        -:  113:}
+        -:  114:#endif // _LIBCPP_HAS_NO_LONG_LONG
+        -:  115:#endif // !defined(_LIBCPP_MSVCRT) && !defined(__sun__)
+        -:  116:
+        -:  117:#if !defined(__sun__)
+        -:  118:inline _LIBCPP_INLINE_VISIBILITY float abs(float __lcpp_x) _NOEXCEPT {
+        -:  119:  return __builtin_fabsf(__lcpp_x); // Use builtins to prevent needing math.h
+        -:  120:}
+        -:  121:
+function _ZL3absd called 226 returned 100% blocks executed 100%
+      226:  122:inline _LIBCPP_INLINE_VISIBILITY double abs(double __lcpp_x) _NOEXCEPT {
+      226:  123:  return __builtin_fabs(__lcpp_x);
+      226:  123-block  0
+        -:  124:}
+        -:  125:
+        -:  126:inline _LIBCPP_INLINE_VISIBILITY long double
+        -:  127:abs(long double __lcpp_x) _NOEXCEPT {
+        -:  128:  return __builtin_fabsl(__lcpp_x);
+        -:  129:}
+        -:  130:#endif // !defined(__sun__)
+        -:  131:
+        -:  132:// div
+        -:  133:
+        -:  134:#undef div
+        -:  135:#undef ldiv
+        -:  136:#ifndef _LIBCPP_HAS_NO_LONG_LONG
+        -:  137:#undef lldiv
+        -:  138:#endif
+        -:  139:
+        -:  140:// MSVCRT already has the correct prototype in <stdlib.h> if __cplusplus is defined
+        -:  141:#if !defined(_LIBCPP_MSVCRT) && !defined(__sun__) && !defined(_LIBCPP_ON_RTKIT)
+        -:  142:inline _LIBCPP_INLINE_VISIBILITY ldiv_t div(long __x, long __y) _NOEXCEPT {
+        -:  143:  return ::ldiv(__x, __y);
+        -:  144:}
+        -:  145:#ifndef _LIBCPP_HAS_NO_LONG_LONG
+        -:  146:inline _LIBCPP_INLINE_VISIBILITY lldiv_t div(long long __x,
+        -:  147:                                             long long __y) _NOEXCEPT {
+        -:  148:  return ::lldiv(__x, __y);
+        -:  149:}
+        -:  150:#endif // _LIBCPP_HAS_NO_LONG_LONG
+        -:  151:#endif // _LIBCPP_MSVCRT / __sun__
+        -:  152:} // extern "C++"
+        -:  153:#endif // __cplusplus
+        -:  154:
+        -:  155:#if defined(_LIBCPP_DRIVERKIT)
+        -:  156:# define EXIT_FAILURE 1
+        -:  157:# define EXIT_SUCCESS 0
+        -:  158:#endif
+        -:  159:
+        -:  160:// TODO: Remove this once DriverKit provides allocation functions in <stdlib.h>. rdar://84311130
+        -:  161:#if defined(_LIBCPP_DRIVERKIT)
+        -:  162:extern "C" void free(void *);
+        -:  163:extern "C" void* aligned_alloc(size_t, size_t);
+        -:  164:extern "C" int posix_memalign(void **, size_t, size_t);
+        -:  165:#endif
+        -:  166:
+        -:  167:#endif // _LIBCPP_STDLIB_H

@@ -1,0 +1,277 @@
+        -:    0:Source:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/compressed_pair.h
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:// -*- C++ -*-
+        -:    2://===----------------------------------------------------------------------===//
+        -:    3://
+        -:    4:// Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
+        -:    5:// See https://llvm.org/LICENSE.txt for license information.
+        -:    6:// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+        -:    7://
+        -:    8://===----------------------------------------------------------------------===//
+        -:    9:
+        -:   10:#ifndef _LIBCPP___MEMORY_COMPRESSED_PAIR_H
+        -:   11:#define _LIBCPP___MEMORY_COMPRESSED_PAIR_H
+        -:   12:
+        -:   13:#include <__config>
+        -:   14:#include <__utility/forward.h>
+        -:   15:#include <tuple> // needed in c++03 for some constructors
+        -:   16:#include <type_traits>
+        -:   17:#include <utility>
+        -:   18:
+        -:   19:#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
+        -:   20:#pragma GCC system_header
+        -:   21:#endif
+        -:   22:
+        -:   23:_LIBCPP_PUSH_MACROS
+        -:   24:#include <__undef_macros>
+        -:   25:
+        -:   26:_LIBCPP_BEGIN_NAMESPACE_STD
+        -:   27:
+        -:   28:// Tag used to default initialize one or both of the pair's elements.
+        -:   29:struct __default_init_tag {};
+        -:   30:struct __value_init_tag {};
+        -:   31:
+        -:   32:template <class _Tp, int _Idx,
+        -:   33:          bool _CanBeEmptyBase =
+        -:   34:              is_empty<_Tp>::value && !__libcpp_is_final<_Tp>::value>
+        -:   35:struct __compressed_pair_elem {
+        -:   36:  typedef _Tp _ParamT;
+        -:   37:  typedef _Tp& reference;
+        -:   38:  typedef const _Tp& const_reference;
+        -:   39:
+        -:   40:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
+function _ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2ENS_18__default_init_tagE called 1 returned 100% blocks executed 100%
+        1:   41:  __compressed_pair_elem(__default_init_tag) {}
+        1:   41-block  0
+        -:   42:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
+        -:   43:  __compressed_pair_elem(__value_init_tag) : __value_() {}
+        -:   44:
+        -:   45:  template <class _Up, class = typename enable_if<
+        -:   46:      !is_same<__compressed_pair_elem, typename decay<_Up>::type>::value
+        -:   47:  >::type>
+        -:   48:  _LIBCPP_INLINE_VISIBILITY
+        -:   49:  _LIBCPP_CONSTEXPR explicit
+function _ZNSt3__122__compressed_pair_elemIPNS_5tupleIJdNS1_IJddEEEEEELi0ELb0EEC2IDnvEEOT_ called 2 returned 100% blocks executed 100%
+function _ZNSt3__122__compressed_pair_elemIPdLi0ELb0EEC2IDnvEEOT_ called 1 returned 100% blocks executed 100%
+        3:   50:  __compressed_pair_elem(_Up&& __u)
+        3:   51:      : __value_(_VSTD::forward<_Up>(__u))
+        -:   52:    {
+        3:   53:    }
+        2:   53-block  0
+        1:   53-block  1
+        -:   54:
+        -:   55:
+        -:   56:#ifndef _LIBCPP_CXX03_LANG
+        -:   57:  template <class... _Args, size_t... _Indexes>
+        -:   58:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX14
+        -:   59:  __compressed_pair_elem(piecewise_construct_t, tuple<_Args...> __args,
+        -:   60:                         __tuple_indices<_Indexes...>)
+        -:   61:      : __value_(_VSTD::forward<_Args>(_VSTD::get<_Indexes>(__args))...) {}
+        -:   62:#endif
+        -:   63:
+        -:   64:
+function _ZNSt3__122__compressed_pair_elemIPNS_5tupleIJdNS1_IJddEEEEEELi0ELb0EE5__getEv called 0 returned 0% blocks executed 0%
+function _ZNSt3__122__compressed_pair_elemIPdLi0ELb0EE5__getEv called 0 returned 0% blocks executed 0%
+function _ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv called 0 returned 0% blocks executed 0%
+    #####:   65:  _LIBCPP_INLINE_VISIBILITY reference __get() _NOEXCEPT { return __value_; }
+    $$$$$:   65-block  0
+    $$$$$:   65-block  1
+    $$$$$:   65-block  2
+        -:   66:  _LIBCPP_INLINE_VISIBILITY
+function _ZNKSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv called 0 returned 0% blocks executed 0%
+function _ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJdNS1_IJddEEEEEELi0ELb0EE5__getEv called 4 returned 100% blocks executed 100%
+function _ZNKSt3__122__compressed_pair_elemIPdLi0ELb0EE5__getEv called 4 returned 100% blocks executed 100%
+        8:   67:  const_reference __get() const _NOEXCEPT { return __value_; }
+    $$$$$:   67-block  0
+        4:   67-block  1
+        4:   67-block  2
+        -:   68:
+        -:   69:private:
+        -:   70:  _Tp __value_;
+        -:   71:};
+        -:   72:
+        -:   73:template <class _Tp, int _Idx>
+        -:   74:struct __compressed_pair_elem<_Tp, _Idx, true> : private _Tp {
+        -:   75:  typedef _Tp _ParamT;
+        -:   76:  typedef _Tp& reference;
+        -:   77:  typedef const _Tp& const_reference;
+        -:   78:  typedef _Tp __value_type;
+        -:   79:
+        -:   80:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR __compressed_pair_elem() = default;
+        -:   81:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
+function _ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2ENS_18__default_init_tagE called 1 returned 100% blocks executed 100%
+function _ZNSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEELi1ELb1EEC2ENS_18__default_init_tagE called 2 returned 100% blocks executed 100%
+function _ZNSt3__122__compressed_pair_elemINS_9allocatorIdEELi1ELb1EEC2ENS_18__default_init_tagE called 1 returned 100% blocks executed 100%
+        4:   82:  __compressed_pair_elem(__default_init_tag) {}
+        1:   82-block  0
+        2:   82-block  1
+        1:   82-block  2
+        -:   83:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
+        -:   84:  __compressed_pair_elem(__value_init_tag) : __value_type() {}
+        -:   85:
+        -:   86:  template <class _Up, class = typename enable_if<
+        -:   87:        !is_same<__compressed_pair_elem, typename decay<_Up>::type>::value
+        -:   88:  >::type>
+        -:   89:  _LIBCPP_INLINE_VISIBILITY
+        -:   90:  _LIBCPP_CONSTEXPR explicit
+function _ZNSt3__122__compressed_pair_elemINS_9allocatorIdEELi1ELb1EEC2IS2_vEEOT_ called 0 returned 0% blocks executed 0%
+    #####:   91:  __compressed_pair_elem(_Up&& __u)
+    #####:   92:      : __value_type(_VSTD::forward<_Up>(__u))
+    #####:   93:  {}
+    $$$$$:   93-block  0
+    $$$$$:   93-block  1
+        -:   94:
+        -:   95:#ifndef _LIBCPP_CXX03_LANG
+        -:   96:  template <class... _Args, size_t... _Indexes>
+        -:   97:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX14
+        -:   98:  __compressed_pair_elem(piecewise_construct_t, tuple<_Args...> __args,
+        -:   99:                         __tuple_indices<_Indexes...>)
+        -:  100:      : __value_type(_VSTD::forward<_Args>(_VSTD::get<_Indexes>(__args))...) {}
+        -:  101:#endif
+        -:  102:
+function _ZNSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEELi1ELb1EE5__getEv called 0 returned 0% blocks executed 0%
+function _ZNSt3__122__compressed_pair_elemINS_9allocatorIdEELi1ELb1EE5__getEv called 1 returned 100% blocks executed 100%
+        1:  103:  _LIBCPP_INLINE_VISIBILITY reference __get() _NOEXCEPT { return *this; }
+    $$$$$:  103-block  0
+        1:  103-block  1
+        -:  104:  _LIBCPP_INLINE_VISIBILITY
+function _ZNKSt3__122__compressed_pair_elemINS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEELi1ELb1EE5__getEv called 0 returned 0% blocks executed 0%
+function _ZNKSt3__122__compressed_pair_elemINS_9allocatorIdEELi1ELb1EE5__getEv called 0 returned 0% blocks executed 0%
+    #####:  105:  const_reference __get() const _NOEXCEPT { return *this; }
+    $$$$$:  105-block  0
+    $$$$$:  105-block  1
+        -:  106:};
+        -:  107:
+        -:  108:template <class _T1, class _T2>
+        -:  109:class __compressed_pair : private __compressed_pair_elem<_T1, 0>,
+        -:  110:                          private __compressed_pair_elem<_T2, 1> {
+        -:  111:public:
+        -:  112:  // NOTE: This static assert should never fire because __compressed_pair
+        -:  113:  // is *almost never* used in a scenario where it's possible for T1 == T2.
+        -:  114:  // (The exception is std::function where it is possible that the function
+        -:  115:  //  object and the allocator have the same type).
+        -:  116:  static_assert((!is_same<_T1, _T2>::value),
+        -:  117:    "__compressed_pair cannot be instantiated when T1 and T2 are the same type; "
+        -:  118:    "The current implementation is NOT ABI-compatible with the previous "
+        -:  119:    "implementation for this configuration");
+        -:  120:
+        -:  121:    typedef _LIBCPP_NODEBUG_TYPE __compressed_pair_elem<_T1, 0> _Base1;
+        -:  122:    typedef _LIBCPP_NODEBUG_TYPE __compressed_pair_elem<_T2, 1> _Base2;
+        -:  123:
+        -:  124:    template <bool _Dummy = true,
+        -:  125:      class = typename enable_if<
+        -:  126:          __dependent_type<is_default_constructible<_T1>, _Dummy>::value &&
+        -:  127:          __dependent_type<is_default_constructible<_T2>, _Dummy>::value
+        -:  128:      >::type
+        -:  129:  >
+        -:  130:  _LIBCPP_INLINE_VISIBILITY
+        -:  131:  _LIBCPP_CONSTEXPR __compressed_pair() : _Base1(__value_init_tag()), _Base2(__value_init_tag()) {}
+        -:  132:
+        -:  133:  template <class _U1, class _U2>
+        -:  134:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
+function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_EC1INS_18__default_init_tagESA_EEOT_OT0_ called 1 returned 100% blocks executed 100%
+function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_EC2INS_18__default_init_tagESA_EEOT_OT0_ called 1 returned 100% blocks executed 100%
+function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC1IDnNS_18__default_init_tagEEEOT_OT0_ called 2 returned 100% blocks executed 100%
+function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEEC2IDnNS_18__default_init_tagEEEOT_OT0_ called 2 returned 100% blocks executed 100%
+function _ZNSt3__117__compressed_pairIPdNS_9allocatorIdEEEC1IDnNS_18__default_init_tagEEEOT_OT0_ called 1 returned 100% blocks executed 100%
+function _ZNSt3__117__compressed_pairIPdNS_9allocatorIdEEEC2IDnNS_18__default_init_tagEEEOT_OT0_ called 1 returned 100% blocks executed 100%
+function _ZNSt3__117__compressed_pairIPdNS_9allocatorIdEEEC1IDnS3_EEOT_OT0_ called 0 returned 0% blocks executed 0%
+function _ZNSt3__117__compressed_pairIPdNS_9allocatorIdEEEC2IDnS3_EEOT_OT0_ called 0 returned 0% blocks executed 0%
+        8:  135:  __compressed_pair(_U1&& __t1, _U2&& __t2)
+        8:  136:      : _Base1(_VSTD::forward<_U1>(__t1)), _Base2(_VSTD::forward<_U2>(__t2)) {}
+        1:  136-block  0
+        1:  136-block  1
+        2:  136-block  2
+        2:  136-block  3
+        1:  136-block  4
+        1:  136-block  5
+    $$$$$:  136-block  6
+    $$$$$:  136-block  7
+        -:  137:
+        -:  138:#ifndef _LIBCPP_CXX03_LANG
+        -:  139:  template <class... _Args1, class... _Args2>
+        -:  140:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX14
+        -:  141:  __compressed_pair(piecewise_construct_t __pc, tuple<_Args1...> __first_args,
+        -:  142:                    tuple<_Args2...> __second_args)
+        -:  143:      : _Base1(__pc, _VSTD::move(__first_args),
+        -:  144:               typename __make_tuple_indices<sizeof...(_Args1)>::type()),
+        -:  145:        _Base2(__pc, _VSTD::move(__second_args),
+        -:  146:               typename __make_tuple_indices<sizeof...(_Args2)>::type()) {}
+        -:  147:#endif
+        -:  148:
+        -:  149:  _LIBCPP_INLINE_VISIBILITY
+function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE5firstEv called 0 returned 0% blocks executed 0%
+function _ZNSt3__117__compressed_pairIPdNS_9allocatorIdEEE5firstEv called 0 returned 0% blocks executed 0%
+function _ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E5firstEv called 0 returned 0% blocks executed 0%
+    #####:  150:  typename _Base1::reference first() _NOEXCEPT {
+    #####:  151:    return static_cast<_Base1&>(*this).__get();
+    $$$$$:  151-block  0
+    $$$$$:  151-block  1
+    $$$$$:  151-block  2
+        -:  152:  }
+        -:  153:
+        -:  154:  _LIBCPP_INLINE_VISIBILITY
+function _ZNKSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E5firstEv called 0 returned 0% blocks executed 0%
+function _ZNKSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE5firstEv called 4 returned 100% blocks executed 100%
+function _ZNKSt3__117__compressed_pairIPdNS_9allocatorIdEEE5firstEv called 4 returned 100% blocks executed 100%
+        8:  155:  typename _Base1::const_reference first() const _NOEXCEPT {
+        8:  156:    return static_cast<_Base1 const&>(*this).__get();
+    $$$$$:  156-block  0
+        4:  156-block  1
+        4:  156-block  2
+        -:  157:  }
+        -:  158:
+        -:  159:  _LIBCPP_INLINE_VISIBILITY
+function _ZNSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE6secondEv called 0 returned 0% blocks executed 0%
+function _ZNSt3__117__compressed_pairIPdNS_9allocatorIdEEE6secondEv called 1 returned 100% blocks executed 100%
+        1:  160:  typename _Base2::reference second() _NOEXCEPT {
+        1:  161:    return static_cast<_Base2&>(*this).__get();
+    $$$$$:  161-block  0
+        1:  161-block  1
+        -:  162:  }
+        -:  163:
+        -:  164:  _LIBCPP_INLINE_VISIBILITY
+function _ZNKSt3__117__compressed_pairIPNS_5tupleIJdNS1_IJddEEEEEENS_9allocatorIS3_EEE6secondEv called 0 returned 0% blocks executed 0%
+function _ZNKSt3__117__compressed_pairIPdNS_9allocatorIdEEE6secondEv called 0 returned 0% blocks executed 0%
+    #####:  165:  typename _Base2::const_reference second() const _NOEXCEPT {
+    #####:  166:    return static_cast<_Base2 const&>(*this).__get();
+    $$$$$:  166-block  0
+    $$$$$:  166-block  1
+        -:  167:  }
+        -:  168:
+        -:  169:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
+        -:  170:  static _Base1* __get_first_base(__compressed_pair* __pair) _NOEXCEPT {
+        -:  171:    return static_cast<_Base1*>(__pair);
+        -:  172:  }
+        -:  173:  _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
+        -:  174:  static _Base2* __get_second_base(__compressed_pair* __pair) _NOEXCEPT {
+        -:  175:    return static_cast<_Base2*>(__pair);
+        -:  176:  }
+        -:  177:
+        -:  178:  _LIBCPP_INLINE_VISIBILITY
+        -:  179:  void swap(__compressed_pair& __x)
+        -:  180:    _NOEXCEPT_(__is_nothrow_swappable<_T1>::value &&
+        -:  181:               __is_nothrow_swappable<_T2>::value)
+        -:  182:  {
+        -:  183:    using _VSTD::swap;
+        -:  184:    swap(first(), __x.first());
+        -:  185:    swap(second(), __x.second());
+        -:  186:  }
+        -:  187:};
+        -:  188:
+        -:  189:template <class _T1, class _T2>
+        -:  190:inline _LIBCPP_INLINE_VISIBILITY
+        -:  191:void swap(__compressed_pair<_T1, _T2>& __x, __compressed_pair<_T1, _T2>& __y)
+        -:  192:    _NOEXCEPT_(__is_nothrow_swappable<_T1>::value &&
+        -:  193:               __is_nothrow_swappable<_T2>::value) {
+        -:  194:  __x.swap(__y);
+        -:  195:}
+        -:  196:
+        -:  197:_LIBCPP_END_NAMESPACE_STD
+        -:  198:
+        -:  199:_LIBCPP_POP_MACROS
+        -:  200:
+        -:  201:#endif // _LIBCPP___MEMORY_COMPRESSED_PAIR_H

@@ -213,7 +213,6 @@ int getIndiceViaje(viaje v, tiempo t) {
             return i;
         }
     }
-    return -1;
 }
 
 puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,

@@ -1,0 +1,18 @@
+        -:    0:Source:/Users/IAGO/Desktop/TPI/main.cpp
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/main.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/main.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <iostream>
+        -:    2:#include "gtest/gtest.h"
+        -:    3:#include "ejercicios.h"
+        -:    4:#include "auxiliares.h"
+        -:    5:
+function main called 1 returned 100% blocks executed 100%
+        1:    6:int main(int argc, char **argv) {
+        1:    7:    std::cout << "Implementando TPI!!" << std::endl;
+        1:    8:    testing::InitGoogleTest(&argc, argv);
+        -:    9:
+        1:   10:    return RUN_ALL_TESTS();;
+        1:   10-block  0
+        -:   11:}

@@ -1,0 +1,65 @@
+        -:    0:Source:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/move.h
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:// -*- C++ -*-
+        -:    2://===----------------------------------------------------------------------===//
+        -:    3://
+        -:    4:// Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
+        -:    5:// See https://llvm.org/LICENSE.txt for license information.
+        -:    6:// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+        -:    7://
+        -:    8://===----------------------------------------------------------------------===//
+        -:    9:
+        -:   10:#ifndef _LIBCPP___UTILITY_MOVE_H
+        -:   11:#define _LIBCPP___UTILITY_MOVE_H
+        -:   12:
+        -:   13:#include <__config>
+        -:   14:#include <type_traits>
+        -:   15:
+        -:   16:#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
+        -:   17:#pragma GCC system_header
+        -:   18:#endif
+        -:   19:
+        -:   20:_LIBCPP_PUSH_MACROS
+        -:   21:#include <__undef_macros>
+        -:   22:
+        -:   23:_LIBCPP_BEGIN_NAMESPACE_STD
+        -:   24:
+        -:   25:template <class _Tp>
+        -:   26:_LIBCPP_NODISCARD_EXT inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR typename remove_reference<_Tp>::type&&
+function _ZNSt3__1L4moveIRNS_5tupleIJdNS1_IJddEEEEEEEEONS_16remove_referenceIT_E4typeEOS6_ called 20 returned 100% blocks executed 100%
+function _ZNSt3__1L4moveIRPNS_5tupleIJdNS1_IJddEEEEEEEEONS_16remove_referenceIT_E4typeEOS7_ called 90 returned 100% blocks executed 100%
+function _ZNSt3__1L4moveIRNS_9allocatorINS_5tupleIJdNS2_IJddEEEEEEEEEEONS_16remove_referenceIT_E4typeEOS8_ called 0 returned 0% blocks executed 0%
+function _ZNSt3__1L4moveIRNS_9allocatorINS_5tupleIJddEEEEEEEONS_16remove_referenceIT_E4typeEOS7_ called 4 returned 100% blocks executed 100%
+      114:   27:move(_Tp&& __t) _NOEXCEPT {
+        -:   28:  typedef _LIBCPP_NODEBUG_TYPE typename remove_reference<_Tp>::type _Up;
+      114:   29:  return static_cast<_Up&&>(__t);
+       20:   29-block  0
+       90:   29-block  1
+    $$$$$:   29-block  2
+        4:   29-block  3
+        -:   30:}
+        -:   31:
+        -:   32:#ifndef _LIBCPP_CXX03_LANG
+        -:   33:template <class _Tp>
+        -:   34:using __move_if_noexcept_result_t =
+        -:   35:    typename conditional<!is_nothrow_move_constructible<_Tp>::value && is_copy_constructible<_Tp>::value, const _Tp&,
+        -:   36:                         _Tp&&>::type;
+        -:   37:#else // _LIBCPP_CXX03_LANG
+        -:   38:template <class _Tp>
+        -:   39:using __move_if_noexcept_result_t = const _Tp&;
+        -:   40:#endif
+        -:   41:
+        -:   42:template <class _Tp>
+        -:   43:_LIBCPP_NODISCARD_EXT inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11 __move_if_noexcept_result_t<_Tp>
+        -:   44:move_if_noexcept(_Tp& __x) _NOEXCEPT {
+        -:   45:  return _VSTD::move(__x);
+        -:   46:}
+        -:   47:
+        -:   48:_LIBCPP_END_NAMESPACE_STD
+        -:   49:
+        -:   50:_LIBCPP_POP_MACROS
+        -:   51:
+        -:   52:#endif // _LIBCPP___UTILITY_MOVE_H

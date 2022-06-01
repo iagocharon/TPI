@@ -1,0 +1,1770 @@
+        -:    0:Source:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:// -*- C++ -*-
+        -:    2://===---------------------------- math.h ----------------------------------===//
+        -:    3://
+        -:    4:// Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
+        -:    5:// See https://llvm.org/LICENSE.txt for license information.
+        -:    6:// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+        -:    7://
+        -:    8://===----------------------------------------------------------------------===//
+        -:    9:
+        -:   10:#ifndef _LIBCPP_MATH_H
+        -:   11:#define _LIBCPP_MATH_H
+        -:   12:
+        -:   13:/*
+        -:   14:    math.h synopsis
+        -:   15:
+        -:   16:Macros:
+        -:   17:
+        -:   18:    HUGE_VAL
+        -:   19:    HUGE_VALF               // C99
+        -:   20:    HUGE_VALL               // C99
+        -:   21:    INFINITY                // C99
+        -:   22:    NAN                     // C99
+        -:   23:    FP_INFINITE             // C99
+        -:   24:    FP_NAN                  // C99
+        -:   25:    FP_NORMAL               // C99
+        -:   26:    FP_SUBNORMAL            // C99
+        -:   27:    FP_ZERO                 // C99
+        -:   28:    FP_FAST_FMA             // C99
+        -:   29:    FP_FAST_FMAF            // C99
+        -:   30:    FP_FAST_FMAL            // C99
+        -:   31:    FP_ILOGB0               // C99
+        -:   32:    FP_ILOGBNAN             // C99
+        -:   33:    MATH_ERRNO              // C99
+        -:   34:    MATH_ERREXCEPT          // C99
+        -:   35:    math_errhandling        // C99
+        -:   36:
+        -:   37:Types:
+        -:   38:
+        -:   39:    float_t                 // C99
+        -:   40:    double_t                // C99
+        -:   41:
+        -:   42:// C90
+        -:   43:
+        -:   44:floating_point abs(floating_point x);
+        -:   45:
+        -:   46:floating_point acos (arithmetic x);
+        -:   47:float          acosf(float x);
+        -:   48:long double    acosl(long double x);
+        -:   49:
+        -:   50:floating_point asin (arithmetic x);
+        -:   51:float          asinf(float x);
+        -:   52:long double    asinl(long double x);
+        -:   53:
+        -:   54:floating_point atan (arithmetic x);
+        -:   55:float          atanf(float x);
+        -:   56:long double    atanl(long double x);
+        -:   57:
+        -:   58:floating_point atan2 (arithmetic y, arithmetic x);
+        -:   59:float          atan2f(float y, float x);
+        -:   60:long double    atan2l(long double y, long double x);
+        -:   61:
+        -:   62:floating_point ceil (arithmetic x);
+        -:   63:float          ceilf(float x);
+        -:   64:long double    ceill(long double x);
+        -:   65:
+        -:   66:floating_point cos (arithmetic x);
+        -:   67:float          cosf(float x);
+        -:   68:long double    cosl(long double x);
+        -:   69:
+        -:   70:floating_point cosh (arithmetic x);
+        -:   71:float          coshf(float x);
+        -:   72:long double    coshl(long double x);
+        -:   73:
+        -:   74:floating_point exp (arithmetic x);
+        -:   75:float          expf(float x);
+        -:   76:long double    expl(long double x);
+        -:   77:
+        -:   78:floating_point fabs (arithmetic x);
+        -:   79:float          fabsf(float x);
+        -:   80:long double    fabsl(long double x);
+        -:   81:
+        -:   82:floating_point floor (arithmetic x);
+        -:   83:float          floorf(float x);
+        -:   84:long double    floorl(long double x);
+        -:   85:
+        -:   86:floating_point fmod (arithmetic x, arithmetic y);
+        -:   87:float          fmodf(float x, float y);
+        -:   88:long double    fmodl(long double x, long double y);
+        -:   89:
+        -:   90:floating_point frexp (arithmetic value, int* exp);
+        -:   91:float          frexpf(float value, int* exp);
+        -:   92:long double    frexpl(long double value, int* exp);
+        -:   93:
+        -:   94:floating_point ldexp (arithmetic value, int exp);
+        -:   95:float          ldexpf(float value, int exp);
+        -:   96:long double    ldexpl(long double value, int exp);
+        -:   97:
+        -:   98:floating_point log (arithmetic x);
+        -:   99:float          logf(float x);
+        -:  100:long double    logl(long double x);
+        -:  101:
+        -:  102:floating_point log10 (arithmetic x);
+        -:  103:float          log10f(float x);
+        -:  104:long double    log10l(long double x);
+        -:  105:
+        -:  106:floating_point modf (floating_point value, floating_point* iptr);
+        -:  107:float          modff(float value, float* iptr);
+        -:  108:long double    modfl(long double value, long double* iptr);
+        -:  109:
+        -:  110:floating_point pow (arithmetic x, arithmetic y);
+        -:  111:float          powf(float x, float y);
+        -:  112:long double    powl(long double x, long double y);
+        -:  113:
+        -:  114:floating_point sin (arithmetic x);
+        -:  115:float          sinf(float x);
+        -:  116:long double    sinl(long double x);
+        -:  117:
+        -:  118:floating_point sinh (arithmetic x);
+        -:  119:float          sinhf(float x);
+        -:  120:long double    sinhl(long double x);
+        -:  121:
+        -:  122:floating_point sqrt (arithmetic x);
+        -:  123:float          sqrtf(float x);
+        -:  124:long double    sqrtl(long double x);
+        -:  125:
+        -:  126:floating_point tan (arithmetic x);
+        -:  127:float          tanf(float x);
+        -:  128:long double    tanl(long double x);
+        -:  129:
+        -:  130:floating_point tanh (arithmetic x);
+        -:  131:float          tanhf(float x);
+        -:  132:long double    tanhl(long double x);
+        -:  133:
+        -:  134://  C99
+        -:  135:
+        -:  136:bool signbit(arithmetic x);
+        -:  137:
+        -:  138:int fpclassify(arithmetic x);
+        -:  139:
+        -:  140:bool isfinite(arithmetic x);
+        -:  141:bool isinf(arithmetic x);
+        -:  142:bool isnan(arithmetic x);
+        -:  143:bool isnormal(arithmetic x);
+        -:  144:
+        -:  145:bool isgreater(arithmetic x, arithmetic y);
+        -:  146:bool isgreaterequal(arithmetic x, arithmetic y);
+        -:  147:bool isless(arithmetic x, arithmetic y);
+        -:  148:bool islessequal(arithmetic x, arithmetic y);
+        -:  149:bool islessgreater(arithmetic x, arithmetic y);
+        -:  150:bool isunordered(arithmetic x, arithmetic y);
+        -:  151:
+        -:  152:floating_point acosh (arithmetic x);
+        -:  153:float          acoshf(float x);
+        -:  154:long double    acoshl(long double x);
+        -:  155:
+        -:  156:floating_point asinh (arithmetic x);
+        -:  157:float          asinhf(float x);
+        -:  158:long double    asinhl(long double x);
+        -:  159:
+        -:  160:floating_point atanh (arithmetic x);
+        -:  161:float          atanhf(float x);
+        -:  162:long double    atanhl(long double x);
+        -:  163:
+        -:  164:floating_point cbrt (arithmetic x);
+        -:  165:float          cbrtf(float x);
+        -:  166:long double    cbrtl(long double x);
+        -:  167:
+        -:  168:floating_point copysign (arithmetic x, arithmetic y);
+        -:  169:float          copysignf(float x, float y);
+        -:  170:long double    copysignl(long double x, long double y);
+        -:  171:
+        -:  172:floating_point erf (arithmetic x);
+        -:  173:float          erff(float x);
+        -:  174:long double    erfl(long double x);
+        -:  175:
+        -:  176:floating_point erfc (arithmetic x);
+        -:  177:float          erfcf(float x);
+        -:  178:long double    erfcl(long double x);
+        -:  179:
+        -:  180:floating_point exp2 (arithmetic x);
+        -:  181:float          exp2f(float x);
+        -:  182:long double    exp2l(long double x);
+        -:  183:
+        -:  184:floating_point expm1 (arithmetic x);
+        -:  185:float          expm1f(float x);
+        -:  186:long double    expm1l(long double x);
+        -:  187:
+        -:  188:floating_point fdim (arithmetic x, arithmetic y);
+        -:  189:float          fdimf(float x, float y);
+        -:  190:long double    fdiml(long double x, long double y);
+        -:  191:
+        -:  192:floating_point fma (arithmetic x, arithmetic y, arithmetic z);
+        -:  193:float          fmaf(float x, float y, float z);
+        -:  194:long double    fmal(long double x, long double y, long double z);
+        -:  195:
+        -:  196:floating_point fmax (arithmetic x, arithmetic y);
+        -:  197:float          fmaxf(float x, float y);
+        -:  198:long double    fmaxl(long double x, long double y);
+        -:  199:
+        -:  200:floating_point fmin (arithmetic x, arithmetic y);
+        -:  201:float          fminf(float x, float y);
+        -:  202:long double    fminl(long double x, long double y);
+        -:  203:
+        -:  204:floating_point hypot (arithmetic x, arithmetic y);
+        -:  205:float          hypotf(float x, float y);
+        -:  206:long double    hypotl(long double x, long double y);
+        -:  207:
+        -:  208:int ilogb (arithmetic x);
+        -:  209:int ilogbf(float x);
+        -:  210:int ilogbl(long double x);
+        -:  211:
+        -:  212:floating_point lgamma (arithmetic x);
+        -:  213:float          lgammaf(float x);
+        -:  214:long double    lgammal(long double x);
+        -:  215:
+        -:  216:long long llrint (arithmetic x);
+        -:  217:long long llrintf(float x);
+        -:  218:long long llrintl(long double x);
+        -:  219:
+        -:  220:long long llround (arithmetic x);
+        -:  221:long long llroundf(float x);
+        -:  222:long long llroundl(long double x);
+        -:  223:
+        -:  224:floating_point log1p (arithmetic x);
+        -:  225:float          log1pf(float x);
+        -:  226:long double    log1pl(long double x);
+        -:  227:
+        -:  228:floating_point log2 (arithmetic x);
+        -:  229:float          log2f(float x);
+        -:  230:long double    log2l(long double x);
+        -:  231:
+        -:  232:floating_point logb (arithmetic x);
+        -:  233:float          logbf(float x);
+        -:  234:long double    logbl(long double x);
+        -:  235:
+        -:  236:long lrint (arithmetic x);
+        -:  237:long lrintf(float x);
+        -:  238:long lrintl(long double x);
+        -:  239:
+        -:  240:long lround (arithmetic x);
+        -:  241:long lroundf(float x);
+        -:  242:long lroundl(long double x);
+        -:  243:
+        -:  244:double      nan (const char* str);
+        -:  245:float       nanf(const char* str);
+        -:  246:long double nanl(const char* str);
+        -:  247:
+        -:  248:floating_point nearbyint (arithmetic x);
+        -:  249:float          nearbyintf(float x);
+        -:  250:long double    nearbyintl(long double x);
+        -:  251:
+        -:  252:floating_point nextafter (arithmetic x, arithmetic y);
+        -:  253:float          nextafterf(float x, float y);
+        -:  254:long double    nextafterl(long double x, long double y);
+        -:  255:
+        -:  256:floating_point nexttoward (arithmetic x, long double y);
+        -:  257:float          nexttowardf(float x, long double y);
+        -:  258:long double    nexttowardl(long double x, long double y);
+        -:  259:
+        -:  260:floating_point remainder (arithmetic x, arithmetic y);
+        -:  261:float          remainderf(float x, float y);
+        -:  262:long double    remainderl(long double x, long double y);
+        -:  263:
+        -:  264:floating_point remquo (arithmetic x, arithmetic y, int* pquo);
+        -:  265:float          remquof(float x, float y, int* pquo);
+        -:  266:long double    remquol(long double x, long double y, int* pquo);
+        -:  267:
+        -:  268:floating_point rint (arithmetic x);
+        -:  269:float          rintf(float x);
+        -:  270:long double    rintl(long double x);
+        -:  271:
+        -:  272:floating_point round (arithmetic x);
+        -:  273:float          roundf(float x);
+        -:  274:long double    roundl(long double x);
+        -:  275:
+        -:  276:floating_point scalbln (arithmetic x, long ex);
+        -:  277:float          scalblnf(float x, long ex);
+        -:  278:long double    scalblnl(long double x, long ex);
+        -:  279:
+        -:  280:floating_point scalbn (arithmetic x, int ex);
+        -:  281:float          scalbnf(float x, int ex);
+        -:  282:long double    scalbnl(long double x, int ex);
+        -:  283:
+        -:  284:floating_point tgamma (arithmetic x);
+        -:  285:float          tgammaf(float x);
+        -:  286:long double    tgammal(long double x);
+        -:  287:
+        -:  288:floating_point trunc (arithmetic x);
+        -:  289:float          truncf(float x);
+        -:  290:long double    truncl(long double x);
+        -:  291:
+        -:  292:*/
+        -:  293:
+        -:  294:#include <__config>
+        -:  295:
+        -:  296:#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
+        -:  297:#pragma GCC system_header
+        -:  298:#endif
+        -:  299:
+        -:  300:#include_next <math.h>
+        -:  301:
+        -:  302:#ifdef __cplusplus
+        -:  303:
+        -:  304:// We support including .h headers inside 'extern "C"' contexts, so switch
+        -:  305:// back to C++ linkage before including these C++ headers.
+        -:  306:extern "C++" {
+        -:  307:
+        -:  308:#include <stdlib.h>
+        -:  309:#include <type_traits>
+        -:  310:#include <limits>
+        -:  311:
+        -:  312:// signbit
+        -:  313:
+        -:  314:#ifdef signbit
+        -:  315:
+        -:  316:template <class _A1>
+        -:  317:_LIBCPP_INLINE_VISIBILITY
+        -:  318:bool
+        -:  319:__libcpp_signbit(_A1 __lcpp_x) _NOEXCEPT
+        -:  320:{
+        -:  321:#if __has_builtin(__builtin_signbit)
+        -:  322:    return __builtin_signbit(__lcpp_x);
+        -:  323:#else
+        -:  324:    return signbit(__lcpp_x);
+        -:  325:#endif
+        -:  326:}
+        -:  327:
+        -:  328:#undef signbit
+        -:  329:
+        -:  330:template <class _A1>
+        -:  331:inline _LIBCPP_INLINE_VISIBILITY
+        -:  332:typename std::enable_if<std::is_floating_point<_A1>::value, bool>::type
+        -:  333:signbit(_A1 __lcpp_x) _NOEXCEPT
+        -:  334:{
+        -:  335:    return __libcpp_signbit((typename std::__promote<_A1>::type)__lcpp_x);
+        -:  336:}
+        -:  337:
+        -:  338:template <class _A1>
+        -:  339:inline _LIBCPP_INLINE_VISIBILITY
+        -:  340:typename std::enable_if<
+        -:  341:    std::is_integral<_A1>::value && std::is_signed<_A1>::value, bool>::type
+        -:  342:signbit(_A1 __lcpp_x) _NOEXCEPT
+        -:  343:{ return __lcpp_x < 0; }
+        -:  344:
+        -:  345:template <class _A1>
+        -:  346:inline _LIBCPP_INLINE_VISIBILITY
+        -:  347:typename std::enable_if<
+        -:  348:    std::is_integral<_A1>::value && !std::is_signed<_A1>::value, bool>::type
+        -:  349:signbit(_A1) _NOEXCEPT
+        -:  350:{ return false; }
+        -:  351:
+        -:  352:#elif defined(_LIBCPP_MSVCRT)
+        -:  353:
+        -:  354:template <typename _A1>
+        -:  355:inline _LIBCPP_INLINE_VISIBILITY
+        -:  356:typename std::enable_if<std::is_floating_point<_A1>::value, bool>::type
+        -:  357:signbit(_A1 __lcpp_x) _NOEXCEPT
+        -:  358:{
+        -:  359:  return ::signbit(static_cast<typename std::__promote<_A1>::type>(__lcpp_x));
+        -:  360:}
+        -:  361:
+        -:  362:template <class _A1>
+        -:  363:inline _LIBCPP_INLINE_VISIBILITY
+        -:  364:typename std::enable_if<
+        -:  365:    std::is_integral<_A1>::value && std::is_signed<_A1>::value, bool>::type
+        -:  366:signbit(_A1 __lcpp_x) _NOEXCEPT
+        -:  367:{ return __lcpp_x < 0; }
+        -:  368:
+        -:  369:template <class _A1>
+        -:  370:inline _LIBCPP_INLINE_VISIBILITY
+        -:  371:typename std::enable_if<
+        -:  372:    std::is_integral<_A1>::value && !std::is_signed<_A1>::value, bool>::type
+        -:  373:signbit(_A1) _NOEXCEPT
+        -:  374:{ return false; }
+        -:  375:
+        -:  376:#endif // signbit
+        -:  377:
+        -:  378:// fpclassify
+        -:  379:
+        -:  380:#ifdef fpclassify
+        -:  381:
+        -:  382:template <class _A1>
+        -:  383:_LIBCPP_INLINE_VISIBILITY
+        -:  384:int
+        -:  385:__libcpp_fpclassify(_A1 __lcpp_x) _NOEXCEPT
+        -:  386:{
+        -:  387:#if __has_builtin(__builtin_fpclassify)
+        -:  388:  return __builtin_fpclassify(FP_NAN, FP_INFINITE, FP_NORMAL, FP_SUBNORMAL,
+        -:  389:                                FP_ZERO, __lcpp_x);
+        -:  390:#else
+        -:  391:    return fpclassify(__lcpp_x);
+        -:  392:#endif
+        -:  393:}
+        -:  394:
+        -:  395:#undef fpclassify
+        -:  396:
+        -:  397:template <class _A1>
+        -:  398:inline _LIBCPP_INLINE_VISIBILITY
+        -:  399:typename std::enable_if<std::is_floating_point<_A1>::value, int>::type
+        -:  400:fpclassify(_A1 __lcpp_x) _NOEXCEPT
+        -:  401:{
+        -:  402:    return __libcpp_fpclassify((typename std::__promote<_A1>::type)__lcpp_x);
+        -:  403:}
+        -:  404:
+        -:  405:template <class _A1>
+        -:  406:inline _LIBCPP_INLINE_VISIBILITY
+        -:  407:typename std::enable_if<std::is_integral<_A1>::value, int>::type
+        -:  408:fpclassify(_A1 __lcpp_x) _NOEXCEPT
+        -:  409:{ return __lcpp_x == 0 ? FP_ZERO : FP_NORMAL; }
+        -:  410:
+        -:  411:#elif defined(_LIBCPP_MSVCRT)
+        -:  412:
+        -:  413:template <typename _A1>
+        -:  414:inline _LIBCPP_INLINE_VISIBILITY
+        -:  415:typename std::enable_if<std::is_floating_point<_A1>::value, bool>::type
+        -:  416:fpclassify(_A1 __lcpp_x) _NOEXCEPT
+        -:  417:{
+        -:  418:  return ::fpclassify(static_cast<typename std::__promote<_A1>::type>(__lcpp_x));
+        -:  419:}
+        -:  420:
+        -:  421:template <class _A1>
+        -:  422:inline _LIBCPP_INLINE_VISIBILITY
+        -:  423:typename std::enable_if<std::is_integral<_A1>::value, int>::type
+        -:  424:fpclassify(_A1 __lcpp_x) _NOEXCEPT
+        -:  425:{ return __lcpp_x == 0 ? FP_ZERO : FP_NORMAL; }
+        -:  426:
+        -:  427:#endif // fpclassify
+        -:  428:
+        -:  429:// isfinite
+        -:  430:
+        -:  431:#ifdef isfinite
+        -:  432:
+        -:  433:template <class _A1>
+        -:  434:_LIBCPP_INLINE_VISIBILITY
+        -:  435:bool
+        -:  436:__libcpp_isfinite(_A1 __lcpp_x) _NOEXCEPT
+        -:  437:{
+        -:  438:#if __has_builtin(__builtin_isfinite)
+        -:  439:    return __builtin_isfinite(__lcpp_x);
+        -:  440:#else
+        -:  441:    return isfinite(__lcpp_x);
+        -:  442:#endif
+        -:  443:}
+        -:  444:
+        -:  445:#undef isfinite
+        -:  446:
+        -:  447:template <class _A1>
+        -:  448:inline _LIBCPP_INLINE_VISIBILITY
+        -:  449:typename std::enable_if<
+        -:  450:    std::is_arithmetic<_A1>::value && std::numeric_limits<_A1>::has_infinity,
+        -:  451:    bool>::type
+        -:  452:isfinite(_A1 __lcpp_x) _NOEXCEPT
+        -:  453:{
+        -:  454:    return __libcpp_isfinite((typename std::__promote<_A1>::type)__lcpp_x);
+        -:  455:}
+        -:  456:
+        -:  457:template <class _A1>
+        -:  458:inline _LIBCPP_INLINE_VISIBILITY
+        -:  459:typename std::enable_if<
+        -:  460:    std::is_arithmetic<_A1>::value && !std::numeric_limits<_A1>::has_infinity,
+        -:  461:    bool>::type
+        -:  462:isfinite(_A1) _NOEXCEPT
+        -:  463:{ return true; }
+        -:  464:
+        -:  465:#endif // isfinite
+        -:  466:
+        -:  467:// isinf
+        -:  468:
+        -:  469:#ifdef isinf
+        -:  470:
+        -:  471:template <class _A1>
+        -:  472:_LIBCPP_INLINE_VISIBILITY
+        -:  473:bool
+        -:  474:__libcpp_isinf(_A1 __lcpp_x) _NOEXCEPT
+        -:  475:{
+        -:  476:#if __has_builtin(__builtin_isinf)
+        -:  477:    return __builtin_isinf(__lcpp_x);
+        -:  478:#else
+        -:  479:    return isinf(__lcpp_x);
+        -:  480:#endif
+        -:  481:}
+        -:  482:
+        -:  483:#undef isinf
+        -:  484:
+        -:  485:template <class _A1>
+        -:  486:inline _LIBCPP_INLINE_VISIBILITY
+        -:  487:typename std::enable_if<
+        -:  488:    std::is_arithmetic<_A1>::value && std::numeric_limits<_A1>::has_infinity,
+        -:  489:    bool>::type
+        -:  490:isinf(_A1 __lcpp_x) _NOEXCEPT
+        -:  491:{
+        -:  492:    return __libcpp_isinf((typename std::__promote<_A1>::type)__lcpp_x);
+        -:  493:}
+        -:  494:
+        -:  495:template <class _A1>
+        -:  496:inline _LIBCPP_INLINE_VISIBILITY
+        -:  497:typename std::enable_if<
+        -:  498:    std::is_arithmetic<_A1>::value && !std::numeric_limits<_A1>::has_infinity,
+        -:  499:    bool>::type
+        -:  500:isinf(_A1) _NOEXCEPT
+        -:  501:{ return false; }
+        -:  502:
+        -:  503:#ifdef _LIBCPP_PREFERRED_OVERLOAD
+        -:  504:inline _LIBCPP_INLINE_VISIBILITY
+        -:  505:bool
+        -:  506:isinf(float __lcpp_x) _NOEXCEPT { return __libcpp_isinf(__lcpp_x); }
+        -:  507:
+        -:  508:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_PREFERRED_OVERLOAD
+        -:  509:bool
+        -:  510:isinf(double __lcpp_x) _NOEXCEPT { return __libcpp_isinf(__lcpp_x); }
+        -:  511:
+        -:  512:inline _LIBCPP_INLINE_VISIBILITY
+        -:  513:bool
+        -:  514:isinf(long double __lcpp_x) _NOEXCEPT { return __libcpp_isinf(__lcpp_x); }
+        -:  515:#endif
+        -:  516:
+        -:  517:#endif // isinf
+        -:  518:
+        -:  519:// isnan
+        -:  520:
+        -:  521:#ifdef isnan
+        -:  522:
+        -:  523:template <class _A1>
+        -:  524:_LIBCPP_INLINE_VISIBILITY
+        -:  525:bool
+        -:  526:__libcpp_isnan(_A1 __lcpp_x) _NOEXCEPT
+        -:  527:{
+        -:  528:#if __has_builtin(__builtin_isnan)
+        -:  529:    return __builtin_isnan(__lcpp_x);
+        -:  530:#else
+        -:  531:    return isnan(__lcpp_x);
+        -:  532:#endif
+        -:  533:}
+        -:  534:
+        -:  535:#undef isnan
+        -:  536:
+        -:  537:template <class _A1>
+        -:  538:inline _LIBCPP_INLINE_VISIBILITY
+        -:  539:typename std::enable_if<std::is_floating_point<_A1>::value, bool>::type
+        -:  540:isnan(_A1 __lcpp_x) _NOEXCEPT
+        -:  541:{
+        -:  542:    return __libcpp_isnan((typename std::__promote<_A1>::type)__lcpp_x);
+        -:  543:}
+        -:  544:
+        -:  545:template <class _A1>
+        -:  546:inline _LIBCPP_INLINE_VISIBILITY
+        -:  547:typename std::enable_if<std::is_integral<_A1>::value, bool>::type
+        -:  548:isnan(_A1) _NOEXCEPT
+        -:  549:{ return false; }
+        -:  550:
+        -:  551:#ifdef _LIBCPP_PREFERRED_OVERLOAD
+        -:  552:inline _LIBCPP_INLINE_VISIBILITY
+        -:  553:bool
+        -:  554:isnan(float __lcpp_x) _NOEXCEPT { return __libcpp_isnan(__lcpp_x); }
+        -:  555:
+        -:  556:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_PREFERRED_OVERLOAD
+        -:  557:bool
+        -:  558:isnan(double __lcpp_x) _NOEXCEPT { return __libcpp_isnan(__lcpp_x); }
+        -:  559:
+        -:  560:inline _LIBCPP_INLINE_VISIBILITY
+        -:  561:bool
+        -:  562:isnan(long double __lcpp_x) _NOEXCEPT { return __libcpp_isnan(__lcpp_x); }
+        -:  563:#endif
+        -:  564:
+        -:  565:#endif // isnan
+        -:  566:
+        -:  567:// isnormal
+        -:  568:
+        -:  569:#ifdef isnormal
+        -:  570:
+        -:  571:template <class _A1>
+        -:  572:_LIBCPP_INLINE_VISIBILITY
+        -:  573:bool
+        -:  574:__libcpp_isnormal(_A1 __lcpp_x) _NOEXCEPT
+        -:  575:{
+        -:  576:#if __has_builtin(__builtin_isnormal)
+        -:  577:    return __builtin_isnormal(__lcpp_x);
+        -:  578:#else
+        -:  579:    return isnormal(__lcpp_x);
+        -:  580:#endif
+        -:  581:}
+        -:  582:
+        -:  583:#undef isnormal
+        -:  584:
+        -:  585:template <class _A1>
+        -:  586:inline _LIBCPP_INLINE_VISIBILITY
+        -:  587:typename std::enable_if<std::is_floating_point<_A1>::value, bool>::type
+        -:  588:isnormal(_A1 __lcpp_x) _NOEXCEPT
+        -:  589:{
+        -:  590:    return __libcpp_isnormal((typename std::__promote<_A1>::type)__lcpp_x);
+        -:  591:}
+        -:  592:
+        -:  593:template <class _A1>
+        -:  594:inline _LIBCPP_INLINE_VISIBILITY
+        -:  595:typename std::enable_if<std::is_integral<_A1>::value, bool>::type
+        -:  596:isnormal(_A1 __lcpp_x) _NOEXCEPT
+        -:  597:{ return __lcpp_x != 0; }
+        -:  598:
+        -:  599:#endif // isnormal
+        -:  600:
+        -:  601:// isgreater
+        -:  602:
+        -:  603:#ifdef isgreater
+        -:  604:
+        -:  605:template <class _A1, class _A2>
+        -:  606:_LIBCPP_INLINE_VISIBILITY
+        -:  607:bool
+        -:  608:__libcpp_isgreater(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  609:{
+        -:  610:    return isgreater(__lcpp_x, __lcpp_y);
+        -:  611:}
+        -:  612:
+        -:  613:#undef isgreater
+        -:  614:
+        -:  615:template <class _A1, class _A2>
+        -:  616:inline _LIBCPP_INLINE_VISIBILITY
+        -:  617:typename std::enable_if
+        -:  618:<
+        -:  619:    std::is_arithmetic<_A1>::value &&
+        -:  620:    std::is_arithmetic<_A2>::value,
+        -:  621:    bool
+        -:  622:>::type
+        -:  623:isgreater(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  624:{
+        -:  625:    typedef typename std::__promote<_A1, _A2>::type type;
+        -:  626:    return __libcpp_isgreater((type)__lcpp_x, (type)__lcpp_y);
+        -:  627:}
+        -:  628:
+        -:  629:#endif // isgreater
+        -:  630:
+        -:  631:// isgreaterequal
+        -:  632:
+        -:  633:#ifdef isgreaterequal
+        -:  634:
+        -:  635:template <class _A1, class _A2>
+        -:  636:_LIBCPP_INLINE_VISIBILITY
+        -:  637:bool
+        -:  638:__libcpp_isgreaterequal(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  639:{
+        -:  640:    return isgreaterequal(__lcpp_x, __lcpp_y);
+        -:  641:}
+        -:  642:
+        -:  643:#undef isgreaterequal
+        -:  644:
+        -:  645:template <class _A1, class _A2>
+        -:  646:inline _LIBCPP_INLINE_VISIBILITY
+        -:  647:typename std::enable_if
+        -:  648:<
+        -:  649:    std::is_arithmetic<_A1>::value &&
+        -:  650:    std::is_arithmetic<_A2>::value,
+        -:  651:    bool
+        -:  652:>::type
+        -:  653:isgreaterequal(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  654:{
+        -:  655:    typedef typename std::__promote<_A1, _A2>::type type;
+        -:  656:    return __libcpp_isgreaterequal((type)__lcpp_x, (type)__lcpp_y);
+        -:  657:}
+        -:  658:
+        -:  659:#endif // isgreaterequal
+        -:  660:
+        -:  661:// isless
+        -:  662:
+        -:  663:#ifdef isless
+        -:  664:
+        -:  665:template <class _A1, class _A2>
+        -:  666:_LIBCPP_INLINE_VISIBILITY
+        -:  667:bool
+        -:  668:__libcpp_isless(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  669:{
+        -:  670:    return isless(__lcpp_x, __lcpp_y);
+        -:  671:}
+        -:  672:
+        -:  673:#undef isless
+        -:  674:
+        -:  675:template <class _A1, class _A2>
+        -:  676:inline _LIBCPP_INLINE_VISIBILITY
+        -:  677:typename std::enable_if
+        -:  678:<
+        -:  679:    std::is_arithmetic<_A1>::value &&
+        -:  680:    std::is_arithmetic<_A2>::value,
+        -:  681:    bool
+        -:  682:>::type
+        -:  683:isless(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  684:{
+        -:  685:    typedef typename std::__promote<_A1, _A2>::type type;
+        -:  686:    return __libcpp_isless((type)__lcpp_x, (type)__lcpp_y);
+        -:  687:}
+        -:  688:
+        -:  689:#endif // isless
+        -:  690:
+        -:  691:// islessequal
+        -:  692:
+        -:  693:#ifdef islessequal
+        -:  694:
+        -:  695:template <class _A1, class _A2>
+        -:  696:_LIBCPP_INLINE_VISIBILITY
+        -:  697:bool
+        -:  698:__libcpp_islessequal(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  699:{
+        -:  700:    return islessequal(__lcpp_x, __lcpp_y);
+        -:  701:}
+        -:  702:
+        -:  703:#undef islessequal
+        -:  704:
+        -:  705:template <class _A1, class _A2>
+        -:  706:inline _LIBCPP_INLINE_VISIBILITY
+        -:  707:typename std::enable_if
+        -:  708:<
+        -:  709:    std::is_arithmetic<_A1>::value &&
+        -:  710:    std::is_arithmetic<_A2>::value,
+        -:  711:    bool
+        -:  712:>::type
+        -:  713:islessequal(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  714:{
+        -:  715:    typedef typename std::__promote<_A1, _A2>::type type;
+        -:  716:    return __libcpp_islessequal((type)__lcpp_x, (type)__lcpp_y);
+        -:  717:}
+        -:  718:
+        -:  719:#endif // islessequal
+        -:  720:
+        -:  721:// islessgreater
+        -:  722:
+        -:  723:#ifdef islessgreater
+        -:  724:
+        -:  725:template <class _A1, class _A2>
+        -:  726:_LIBCPP_INLINE_VISIBILITY
+        -:  727:bool
+        -:  728:__libcpp_islessgreater(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  729:{
+        -:  730:    return islessgreater(__lcpp_x, __lcpp_y);
+        -:  731:}
+        -:  732:
+        -:  733:#undef islessgreater
+        -:  734:
+        -:  735:template <class _A1, class _A2>
+        -:  736:inline _LIBCPP_INLINE_VISIBILITY
+        -:  737:typename std::enable_if
+        -:  738:<
+        -:  739:    std::is_arithmetic<_A1>::value &&
+        -:  740:    std::is_arithmetic<_A2>::value,
+        -:  741:    bool
+        -:  742:>::type
+        -:  743:islessgreater(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  744:{
+        -:  745:    typedef typename std::__promote<_A1, _A2>::type type;
+        -:  746:    return __libcpp_islessgreater((type)__lcpp_x, (type)__lcpp_y);
+        -:  747:}
+        -:  748:
+        -:  749:#endif // islessgreater
+        -:  750:
+        -:  751:// isunordered
+        -:  752:
+        -:  753:#ifdef isunordered
+        -:  754:
+        -:  755:template <class _A1, class _A2>
+        -:  756:_LIBCPP_INLINE_VISIBILITY
+        -:  757:bool
+        -:  758:__libcpp_isunordered(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  759:{
+        -:  760:    return isunordered(__lcpp_x, __lcpp_y);
+        -:  761:}
+        -:  762:
+        -:  763:#undef isunordered
+        -:  764:
+        -:  765:template <class _A1, class _A2>
+        -:  766:inline _LIBCPP_INLINE_VISIBILITY
+        -:  767:typename std::enable_if
+        -:  768:<
+        -:  769:    std::is_arithmetic<_A1>::value &&
+        -:  770:    std::is_arithmetic<_A2>::value,
+        -:  771:    bool
+        -:  772:>::type
+        -:  773:isunordered(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  774:{
+        -:  775:    typedef typename std::__promote<_A1, _A2>::type type;
+        -:  776:    return __libcpp_isunordered((type)__lcpp_x, (type)__lcpp_y);
+        -:  777:}
+        -:  778:
+        -:  779:#endif // isunordered
+        -:  780:
+        -:  781:// abs
+        -:  782://
+        -:  783:// handled in stdlib.h
+        -:  784:
+        -:  785:// div
+        -:  786://
+        -:  787:// handled in stdlib.h
+        -:  788:
+        -:  789:// acos
+        -:  790:
+        -:  791:#if !(defined(_AIX) || defined(__sun__))
+        -:  792:inline _LIBCPP_INLINE_VISIBILITY float       acos(float __lcpp_x) _NOEXCEPT       {return ::acosf(__lcpp_x);}
+        -:  793:inline _LIBCPP_INLINE_VISIBILITY long double acos(long double __lcpp_x) _NOEXCEPT {return ::acosl(__lcpp_x);}
+        -:  794:#endif
+        -:  795:
+        -:  796:template <class _A1>
+        -:  797:inline _LIBCPP_INLINE_VISIBILITY
+        -:  798:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  799:acos(_A1 __lcpp_x) _NOEXCEPT {return ::acos((double)__lcpp_x);}
+        -:  800:
+        -:  801:// asin
+        -:  802:
+        -:  803:#if !(defined(_AIX) || defined(__sun__))
+        -:  804:inline _LIBCPP_INLINE_VISIBILITY float       asin(float __lcpp_x) _NOEXCEPT       {return ::asinf(__lcpp_x);}
+        -:  805:inline _LIBCPP_INLINE_VISIBILITY long double asin(long double __lcpp_x) _NOEXCEPT {return ::asinl(__lcpp_x);}
+        -:  806:#endif
+        -:  807:
+        -:  808:template <class _A1>
+        -:  809:inline _LIBCPP_INLINE_VISIBILITY
+        -:  810:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  811:asin(_A1 __lcpp_x) _NOEXCEPT {return ::asin((double)__lcpp_x);}
+        -:  812:
+        -:  813:// atan
+        -:  814:
+        -:  815:#if !(defined(_AIX) || defined(__sun__))
+        -:  816:inline _LIBCPP_INLINE_VISIBILITY float       atan(float __lcpp_x) _NOEXCEPT       {return ::atanf(__lcpp_x);}
+        -:  817:inline _LIBCPP_INLINE_VISIBILITY long double atan(long double __lcpp_x) _NOEXCEPT {return ::atanl(__lcpp_x);}
+        -:  818:#endif
+        -:  819:
+        -:  820:template <class _A1>
+        -:  821:inline _LIBCPP_INLINE_VISIBILITY
+        -:  822:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  823:atan(_A1 __lcpp_x) _NOEXCEPT {return ::atan((double)__lcpp_x);}
+        -:  824:
+        -:  825:// atan2
+        -:  826:
+        -:  827:#if !(defined(_AIX) || defined(__sun__))
+        -:  828:inline _LIBCPP_INLINE_VISIBILITY float       atan2(float __lcpp_y, float __lcpp_x) _NOEXCEPT             {return ::atan2f(__lcpp_y, __lcpp_x);}
+        -:  829:inline _LIBCPP_INLINE_VISIBILITY long double atan2(long double __lcpp_y, long double __lcpp_x) _NOEXCEPT {return ::atan2l(__lcpp_y, __lcpp_x);}
+        -:  830:#endif
+        -:  831:
+        -:  832:template <class _A1, class _A2>
+        -:  833:inline _LIBCPP_INLINE_VISIBILITY
+        -:  834:typename std::_EnableIf
+        -:  835:<
+        -:  836:    std::is_arithmetic<_A1>::value &&
+        -:  837:    std::is_arithmetic<_A2>::value,
+        -:  838:    std::__promote<_A1, _A2>
+        -:  839:>::type
+        -:  840:atan2(_A1 __lcpp_y, _A2 __lcpp_x) _NOEXCEPT
+        -:  841:{
+        -:  842:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -:  843:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -:  844:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -:  845:    return ::atan2((__result_type)__lcpp_y, (__result_type)__lcpp_x);
+        -:  846:}
+        -:  847:
+        -:  848:// ceil
+        -:  849:
+        -:  850:#if !(defined(_AIX) || defined(__sun__))
+        -:  851:inline _LIBCPP_INLINE_VISIBILITY float       ceil(float __lcpp_x) _NOEXCEPT       {return ::ceilf(__lcpp_x);}
+        -:  852:inline _LIBCPP_INLINE_VISIBILITY long double ceil(long double __lcpp_x) _NOEXCEPT {return ::ceill(__lcpp_x);}
+        -:  853:#endif
+        -:  854:
+        -:  855:template <class _A1>
+        -:  856:inline _LIBCPP_INLINE_VISIBILITY
+        -:  857:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  858:ceil(_A1 __lcpp_x) _NOEXCEPT {return ::ceil((double)__lcpp_x);}
+        -:  859:
+        -:  860:// cos
+        -:  861:
+        -:  862:#if !(defined(_AIX) || defined(__sun__))
+        -:  863:inline _LIBCPP_INLINE_VISIBILITY float       cos(float __lcpp_x) _NOEXCEPT       {return ::cosf(__lcpp_x);}
+        -:  864:inline _LIBCPP_INLINE_VISIBILITY long double cos(long double __lcpp_x) _NOEXCEPT {return ::cosl(__lcpp_x);}
+        -:  865:#endif
+        -:  866:
+        -:  867:template <class _A1>
+        -:  868:inline _LIBCPP_INLINE_VISIBILITY
+        -:  869:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  870:cos(_A1 __lcpp_x) _NOEXCEPT {return ::cos((double)__lcpp_x);}
+        -:  871:
+        -:  872:// cosh
+        -:  873:
+        -:  874:#if !(defined(_AIX) || defined(__sun__))
+        -:  875:inline _LIBCPP_INLINE_VISIBILITY float       cosh(float __lcpp_x) _NOEXCEPT       {return ::coshf(__lcpp_x);}
+        -:  876:inline _LIBCPP_INLINE_VISIBILITY long double cosh(long double __lcpp_x) _NOEXCEPT {return ::coshl(__lcpp_x);}
+        -:  877:#endif
+        -:  878:
+        -:  879:template <class _A1>
+        -:  880:inline _LIBCPP_INLINE_VISIBILITY
+        -:  881:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  882:cosh(_A1 __lcpp_x) _NOEXCEPT {return ::cosh((double)__lcpp_x);}
+        -:  883:
+        -:  884:// exp
+        -:  885:
+        -:  886:#if !(defined(_AIX) || defined(__sun__))
+        -:  887:inline _LIBCPP_INLINE_VISIBILITY float       exp(float __lcpp_x) _NOEXCEPT       {return ::expf(__lcpp_x);}
+        -:  888:inline _LIBCPP_INLINE_VISIBILITY long double exp(long double __lcpp_x) _NOEXCEPT {return ::expl(__lcpp_x);}
+        -:  889:#endif
+        -:  890:
+        -:  891:template <class _A1>
+        -:  892:inline _LIBCPP_INLINE_VISIBILITY
+        -:  893:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  894:exp(_A1 __lcpp_x) _NOEXCEPT {return ::exp((double)__lcpp_x);}
+        -:  895:
+        -:  896:// fabs
+        -:  897:
+        -:  898:#if !(defined(_AIX) || defined(__sun__))
+        -:  899:inline _LIBCPP_INLINE_VISIBILITY float       fabs(float __lcpp_x) _NOEXCEPT       {return ::fabsf(__lcpp_x);}
+        -:  900:inline _LIBCPP_INLINE_VISIBILITY long double fabs(long double __lcpp_x) _NOEXCEPT {return ::fabsl(__lcpp_x);}
+        -:  901:#endif
+        -:  902:
+        -:  903:template <class _A1>
+        -:  904:inline _LIBCPP_INLINE_VISIBILITY
+        -:  905:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  906:fabs(_A1 __lcpp_x) _NOEXCEPT {return ::fabs((double)__lcpp_x);}
+        -:  907:
+        -:  908:// floor
+        -:  909:
+        -:  910:#if !(defined(_AIX) || defined(__sun__))
+        -:  911:inline _LIBCPP_INLINE_VISIBILITY float       floor(float __lcpp_x) _NOEXCEPT       {return ::floorf(__lcpp_x);}
+        -:  912:inline _LIBCPP_INLINE_VISIBILITY long double floor(long double __lcpp_x) _NOEXCEPT {return ::floorl(__lcpp_x);}
+        -:  913:#endif
+        -:  914:
+        -:  915:template <class _A1>
+        -:  916:inline _LIBCPP_INLINE_VISIBILITY
+        -:  917:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  918:floor(_A1 __lcpp_x) _NOEXCEPT {return ::floor((double)__lcpp_x);}
+        -:  919:
+        -:  920:// fmod
+        -:  921:
+        -:  922:#if !(defined(_AIX) || defined(__sun__))
+        -:  923:inline _LIBCPP_INLINE_VISIBILITY float       fmod(float __lcpp_x, float __lcpp_y) _NOEXCEPT             {return ::fmodf(__lcpp_x, __lcpp_y);}
+        -:  924:inline _LIBCPP_INLINE_VISIBILITY long double fmod(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::fmodl(__lcpp_x, __lcpp_y);}
+        -:  925:#endif
+        -:  926:
+        -:  927:template <class _A1, class _A2>
+        -:  928:inline _LIBCPP_INLINE_VISIBILITY
+        -:  929:typename std::_EnableIf
+        -:  930:<
+        -:  931:    std::is_arithmetic<_A1>::value &&
+        -:  932:    std::is_arithmetic<_A2>::value,
+        -:  933:    std::__promote<_A1, _A2>
+        -:  934:>::type
+        -:  935:fmod(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -:  936:{
+        -:  937:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -:  938:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -:  939:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -:  940:    return ::fmod((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+        -:  941:}
+        -:  942:
+        -:  943:// frexp
+        -:  944:
+        -:  945:#if !(defined(_AIX) || defined(__sun__))
+        -:  946:inline _LIBCPP_INLINE_VISIBILITY float       frexp(float __lcpp_x, int* __lcpp_e) _NOEXCEPT       {return ::frexpf(__lcpp_x, __lcpp_e);}
+        -:  947:inline _LIBCPP_INLINE_VISIBILITY long double frexp(long double __lcpp_x, int* __lcpp_e) _NOEXCEPT {return ::frexpl(__lcpp_x, __lcpp_e);}
+        -:  948:#endif
+        -:  949:
+        -:  950:template <class _A1>
+        -:  951:inline _LIBCPP_INLINE_VISIBILITY
+        -:  952:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  953:frexp(_A1 __lcpp_x, int* __lcpp_e) _NOEXCEPT {return ::frexp((double)__lcpp_x, __lcpp_e);}
+        -:  954:
+        -:  955:// ldexp
+        -:  956:
+        -:  957:#if !(defined(_AIX) || defined(__sun__))
+        -:  958:inline _LIBCPP_INLINE_VISIBILITY float       ldexp(float __lcpp_x, int __lcpp_e) _NOEXCEPT       {return ::ldexpf(__lcpp_x, __lcpp_e);}
+        -:  959:inline _LIBCPP_INLINE_VISIBILITY long double ldexp(long double __lcpp_x, int __lcpp_e) _NOEXCEPT {return ::ldexpl(__lcpp_x, __lcpp_e);}
+        -:  960:#endif
+        -:  961:
+        -:  962:template <class _A1>
+        -:  963:inline _LIBCPP_INLINE_VISIBILITY
+        -:  964:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  965:ldexp(_A1 __lcpp_x, int __lcpp_e) _NOEXCEPT {return ::ldexp((double)__lcpp_x, __lcpp_e);}
+        -:  966:
+        -:  967:// log
+        -:  968:
+        -:  969:#if !(defined(_AIX) || defined(__sun__))
+        -:  970:inline _LIBCPP_INLINE_VISIBILITY float       log(float __lcpp_x) _NOEXCEPT       {return ::logf(__lcpp_x);}
+        -:  971:inline _LIBCPP_INLINE_VISIBILITY long double log(long double __lcpp_x) _NOEXCEPT {return ::logl(__lcpp_x);}
+        -:  972:#endif
+        -:  973:
+        -:  974:template <class _A1>
+        -:  975:inline _LIBCPP_INLINE_VISIBILITY
+        -:  976:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  977:log(_A1 __lcpp_x) _NOEXCEPT {return ::log((double)__lcpp_x);}
+        -:  978:
+        -:  979:// log10
+        -:  980:
+        -:  981:#if !(defined(_AIX) || defined(__sun__))
+        -:  982:inline _LIBCPP_INLINE_VISIBILITY float       log10(float __lcpp_x) _NOEXCEPT       {return ::log10f(__lcpp_x);}
+        -:  983:inline _LIBCPP_INLINE_VISIBILITY long double log10(long double __lcpp_x) _NOEXCEPT {return ::log10l(__lcpp_x);}
+        -:  984:#endif
+        -:  985:
+        -:  986:template <class _A1>
+        -:  987:inline _LIBCPP_INLINE_VISIBILITY
+        -:  988:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -:  989:log10(_A1 __lcpp_x) _NOEXCEPT {return ::log10((double)__lcpp_x);}
+        -:  990:
+        -:  991:// modf
+        -:  992:
+        -:  993:#if !(defined(_AIX) || defined(__sun__))
+        -:  994:inline _LIBCPP_INLINE_VISIBILITY float       modf(float __lcpp_x, float* __lcpp_y) _NOEXCEPT             {return ::modff(__lcpp_x, __lcpp_y);}
+        -:  995:inline _LIBCPP_INLINE_VISIBILITY long double modf(long double __lcpp_x, long double* __lcpp_y) _NOEXCEPT {return ::modfl(__lcpp_x, __lcpp_y);}
+        -:  996:#endif
+        -:  997:
+        -:  998:// pow
+        -:  999:
+        -: 1000:#if !(defined(_AIX) || defined(__sun__))
+        -: 1001:inline _LIBCPP_INLINE_VISIBILITY float       pow(float __lcpp_x, float __lcpp_y) _NOEXCEPT             {return ::powf(__lcpp_x, __lcpp_y);}
+        -: 1002:inline _LIBCPP_INLINE_VISIBILITY long double pow(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::powl(__lcpp_x, __lcpp_y);}
+        -: 1003:#endif
+        -: 1004:
+        -: 1005:template <class _A1, class _A2>
+        -: 1006:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1007:typename std::_EnableIf
+        -: 1008:<
+        -: 1009:    std::is_arithmetic<_A1>::value &&
+        -: 1010:    std::is_arithmetic<_A2>::value,
+        -: 1011:    std::__promote<_A1, _A2>
+        -: 1012:>::type
+function _ZL3powIdiENSt3__19_MetaBaseIXaasr3std13is_arithmeticIT_EE5valuesr3std13is_arithmeticIT0_EE5valueEE13_EnableIfImplINS0_9__promoteIS2_S3_vEEE4typeES2_S3_ called 62 returned 100% blocks executed 100%
+       62: 1013:pow(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -: 1014:{
+        -: 1015:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -: 1016:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1017:                     std::_IsSame<_A2, __result_type>::value)), "");
+       62: 1018:    return ::pow((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+       62: 1018-block  0
+        -: 1019:}
+        -: 1020:
+        -: 1021:// sin
+        -: 1022:
+        -: 1023:#if !(defined(_AIX) || defined(__sun__))
+        -: 1024:inline _LIBCPP_INLINE_VISIBILITY float       sin(float __lcpp_x) _NOEXCEPT       {return ::sinf(__lcpp_x);}
+        -: 1025:inline _LIBCPP_INLINE_VISIBILITY long double sin(long double __lcpp_x) _NOEXCEPT {return ::sinl(__lcpp_x);}
+        -: 1026:#endif
+        -: 1027:
+        -: 1028:template <class _A1>
+        -: 1029:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1030:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1031:sin(_A1 __lcpp_x) _NOEXCEPT {return ::sin((double)__lcpp_x);}
+        -: 1032:
+        -: 1033:// sinh
+        -: 1034:
+        -: 1035:#if !(defined(_AIX) || defined(__sun__))
+        -: 1036:inline _LIBCPP_INLINE_VISIBILITY float       sinh(float __lcpp_x) _NOEXCEPT       {return ::sinhf(__lcpp_x);}
+        -: 1037:inline _LIBCPP_INLINE_VISIBILITY long double sinh(long double __lcpp_x) _NOEXCEPT {return ::sinhl(__lcpp_x);}
+        -: 1038:#endif
+        -: 1039:
+        -: 1040:template <class _A1>
+        -: 1041:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1042:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1043:sinh(_A1 __lcpp_x) _NOEXCEPT {return ::sinh((double)__lcpp_x);}
+        -: 1044:
+        -: 1045:// sqrt
+        -: 1046:
+        -: 1047:#if !(defined(_AIX) || defined(__sun__))
+        -: 1048:inline _LIBCPP_INLINE_VISIBILITY float       sqrt(float __lcpp_x) _NOEXCEPT       {return ::sqrtf(__lcpp_x);}
+        -: 1049:inline _LIBCPP_INLINE_VISIBILITY long double sqrt(long double __lcpp_x) _NOEXCEPT {return ::sqrtl(__lcpp_x);}
+        -: 1050:#endif
+        -: 1051:
+        -: 1052:template <class _A1>
+        -: 1053:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1054:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1055:sqrt(_A1 __lcpp_x) _NOEXCEPT {return ::sqrt((double)__lcpp_x);}
+        -: 1056:
+        -: 1057:// tan
+        -: 1058:
+        -: 1059:#if !(defined(_AIX) || defined(__sun__))
+        -: 1060:inline _LIBCPP_INLINE_VISIBILITY float       tan(float __lcpp_x) _NOEXCEPT       {return ::tanf(__lcpp_x);}
+        -: 1061:inline _LIBCPP_INLINE_VISIBILITY long double tan(long double __lcpp_x) _NOEXCEPT {return ::tanl(__lcpp_x);}
+        -: 1062:#endif
+        -: 1063:
+        -: 1064:template <class _A1>
+        -: 1065:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1066:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1067:tan(_A1 __lcpp_x) _NOEXCEPT {return ::tan((double)__lcpp_x);}
+        -: 1068:
+        -: 1069:// tanh
+        -: 1070:
+        -: 1071:#if !(defined(_AIX) || defined(__sun__))
+        -: 1072:inline _LIBCPP_INLINE_VISIBILITY float       tanh(float __lcpp_x) _NOEXCEPT       {return ::tanhf(__lcpp_x);}
+        -: 1073:inline _LIBCPP_INLINE_VISIBILITY long double tanh(long double __lcpp_x) _NOEXCEPT {return ::tanhl(__lcpp_x);}
+        -: 1074:#endif
+        -: 1075:
+        -: 1076:template <class _A1>
+        -: 1077:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1078:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1079:tanh(_A1 __lcpp_x) _NOEXCEPT {return ::tanh((double)__lcpp_x);}
+        -: 1080:
+        -: 1081:// acosh
+        -: 1082:
+        -: 1083:inline _LIBCPP_INLINE_VISIBILITY float       acosh(float __lcpp_x) _NOEXCEPT       {return ::acoshf(__lcpp_x);}
+        -: 1084:inline _LIBCPP_INLINE_VISIBILITY long double acosh(long double __lcpp_x) _NOEXCEPT {return ::acoshl(__lcpp_x);}
+        -: 1085:
+        -: 1086:template <class _A1>
+        -: 1087:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1088:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1089:acosh(_A1 __lcpp_x) _NOEXCEPT {return ::acosh((double)__lcpp_x);}
+        -: 1090:
+        -: 1091:// asinh
+        -: 1092:
+        -: 1093:inline _LIBCPP_INLINE_VISIBILITY float       asinh(float __lcpp_x) _NOEXCEPT       {return ::asinhf(__lcpp_x);}
+        -: 1094:inline _LIBCPP_INLINE_VISIBILITY long double asinh(long double __lcpp_x) _NOEXCEPT {return ::asinhl(__lcpp_x);}
+        -: 1095:
+        -: 1096:template <class _A1>
+        -: 1097:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1098:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1099:asinh(_A1 __lcpp_x) _NOEXCEPT {return ::asinh((double)__lcpp_x);}
+        -: 1100:
+        -: 1101:// atanh
+        -: 1102:
+        -: 1103:inline _LIBCPP_INLINE_VISIBILITY float       atanh(float __lcpp_x) _NOEXCEPT       {return ::atanhf(__lcpp_x);}
+        -: 1104:inline _LIBCPP_INLINE_VISIBILITY long double atanh(long double __lcpp_x) _NOEXCEPT {return ::atanhl(__lcpp_x);}
+        -: 1105:
+        -: 1106:template <class _A1>
+        -: 1107:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1108:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1109:atanh(_A1 __lcpp_x) _NOEXCEPT {return ::atanh((double)__lcpp_x);}
+        -: 1110:
+        -: 1111:// cbrt
+        -: 1112:
+        -: 1113:inline _LIBCPP_INLINE_VISIBILITY float       cbrt(float __lcpp_x) _NOEXCEPT       {return ::cbrtf(__lcpp_x);}
+        -: 1114:inline _LIBCPP_INLINE_VISIBILITY long double cbrt(long double __lcpp_x) _NOEXCEPT {return ::cbrtl(__lcpp_x);}
+        -: 1115:
+        -: 1116:template <class _A1>
+        -: 1117:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1118:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1119:cbrt(_A1 __lcpp_x) _NOEXCEPT {return ::cbrt((double)__lcpp_x);}
+        -: 1120:
+        -: 1121:// copysign
+        -: 1122:
+        -: 1123:#if __has_builtin(__builtin_copysignf)
+        -: 1124:_LIBCPP_CONSTEXPR
+        -: 1125:#endif
+        -: 1126:inline _LIBCPP_INLINE_VISIBILITY float __libcpp_copysign(float __lcpp_x, float __lcpp_y) _NOEXCEPT {
+        -: 1127:#if __has_builtin(__builtin_copysignf)
+        -: 1128:  return __builtin_copysignf(__lcpp_x, __lcpp_y);
+        -: 1129:#else
+        -: 1130:  return ::copysignf(__lcpp_x, __lcpp_y);
+        -: 1131:#endif
+        -: 1132:}
+        -: 1133:
+        -: 1134:#if __has_builtin(__builtin_copysign)
+        -: 1135:_LIBCPP_CONSTEXPR
+        -: 1136:#endif
+        -: 1137:inline _LIBCPP_INLINE_VISIBILITY double __libcpp_copysign(double __lcpp_x, double __lcpp_y) _NOEXCEPT {
+        -: 1138:#if __has_builtin(__builtin_copysign)
+        -: 1139:  return __builtin_copysign(__lcpp_x, __lcpp_y);
+        -: 1140:#else
+        -: 1141:  return ::copysign(__lcpp_x, __lcpp_y);
+        -: 1142:#endif
+        -: 1143:}
+        -: 1144:
+        -: 1145:#if __has_builtin(__builtin_copysignl)
+        -: 1146:_LIBCPP_CONSTEXPR
+        -: 1147:#endif
+        -: 1148:inline _LIBCPP_INLINE_VISIBILITY long double __libcpp_copysign(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {
+        -: 1149:#if __has_builtin(__builtin_copysignl)
+        -: 1150:  return __builtin_copysignl(__lcpp_x, __lcpp_y);
+        -: 1151:#else
+        -: 1152:  return ::copysignl(__lcpp_x, __lcpp_y);
+        -: 1153:#endif
+        -: 1154:}
+        -: 1155:
+        -: 1156:template <class _A1, class _A2>
+        -: 1157:#if __has_builtin(__builtin_copysign)
+        -: 1158:_LIBCPP_CONSTEXPR
+        -: 1159:#endif
+        -: 1160:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1161:typename std::_EnableIf
+        -: 1162:<
+        -: 1163:    std::is_arithmetic<_A1>::value &&
+        -: 1164:    std::is_arithmetic<_A2>::value,
+        -: 1165:    std::__promote<_A1, _A2>
+        -: 1166:>::type
+        -: 1167:__libcpp_copysign(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT {
+        -: 1168:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -: 1169:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1170:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -: 1171:#if __has_builtin(__builtin_copysign)
+        -: 1172:    return __builtin_copysign((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+        -: 1173:#else
+        -: 1174:    return ::copysign((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+        -: 1175:#endif
+        -: 1176:}
+        -: 1177:
+        -: 1178:inline _LIBCPP_INLINE_VISIBILITY float copysign(float __lcpp_x, float __lcpp_y) _NOEXCEPT {
+        -: 1179:  return ::__libcpp_copysign(__lcpp_x, __lcpp_y);
+        -: 1180:}
+        -: 1181:
+        -: 1182:inline _LIBCPP_INLINE_VISIBILITY long double copysign(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {
+        -: 1183:  return ::__libcpp_copysign(__lcpp_x, __lcpp_y);
+        -: 1184:}
+        -: 1185:
+        -: 1186:template <class _A1, class _A2>
+        -: 1187:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1188:typename std::_EnableIf
+        -: 1189:<
+        -: 1190:    std::is_arithmetic<_A1>::value &&
+        -: 1191:    std::is_arithmetic<_A2>::value,
+        -: 1192:    std::__promote<_A1, _A2>
+        -: 1193:>::type
+        -: 1194:    copysign(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT {
+        -: 1195:  return ::__libcpp_copysign(__lcpp_x, __lcpp_y);
+        -: 1196:}
+        -: 1197:
+        -: 1198:// erf
+        -: 1199:
+        -: 1200:inline _LIBCPP_INLINE_VISIBILITY float       erf(float __lcpp_x) _NOEXCEPT       {return ::erff(__lcpp_x);}
+        -: 1201:inline _LIBCPP_INLINE_VISIBILITY long double erf(long double __lcpp_x) _NOEXCEPT {return ::erfl(__lcpp_x);}
+        -: 1202:
+        -: 1203:template <class _A1>
+        -: 1204:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1205:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1206:erf(_A1 __lcpp_x) _NOEXCEPT {return ::erf((double)__lcpp_x);}
+        -: 1207:
+        -: 1208:// erfc
+        -: 1209:
+        -: 1210:inline _LIBCPP_INLINE_VISIBILITY float       erfc(float __lcpp_x) _NOEXCEPT       {return ::erfcf(__lcpp_x);}
+        -: 1211:inline _LIBCPP_INLINE_VISIBILITY long double erfc(long double __lcpp_x) _NOEXCEPT {return ::erfcl(__lcpp_x);}
+        -: 1212:
+        -: 1213:template <class _A1>
+        -: 1214:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1215:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1216:erfc(_A1 __lcpp_x) _NOEXCEPT {return ::erfc((double)__lcpp_x);}
+        -: 1217:
+        -: 1218:// exp2
+        -: 1219:
+        -: 1220:inline _LIBCPP_INLINE_VISIBILITY float       exp2(float __lcpp_x) _NOEXCEPT       {return ::exp2f(__lcpp_x);}
+        -: 1221:inline _LIBCPP_INLINE_VISIBILITY long double exp2(long double __lcpp_x) _NOEXCEPT {return ::exp2l(__lcpp_x);}
+        -: 1222:
+        -: 1223:template <class _A1>
+        -: 1224:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1225:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1226:exp2(_A1 __lcpp_x) _NOEXCEPT {return ::exp2((double)__lcpp_x);}
+        -: 1227:
+        -: 1228:// expm1
+        -: 1229:
+        -: 1230:inline _LIBCPP_INLINE_VISIBILITY float       expm1(float __lcpp_x) _NOEXCEPT       {return ::expm1f(__lcpp_x);}
+        -: 1231:inline _LIBCPP_INLINE_VISIBILITY long double expm1(long double __lcpp_x) _NOEXCEPT {return ::expm1l(__lcpp_x);}
+        -: 1232:
+        -: 1233:template <class _A1>
+        -: 1234:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1235:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1236:expm1(_A1 __lcpp_x) _NOEXCEPT {return ::expm1((double)__lcpp_x);}
+        -: 1237:
+        -: 1238:// fdim
+        -: 1239:
+        -: 1240:inline _LIBCPP_INLINE_VISIBILITY float       fdim(float __lcpp_x, float __lcpp_y) _NOEXCEPT             {return ::fdimf(__lcpp_x, __lcpp_y);}
+        -: 1241:inline _LIBCPP_INLINE_VISIBILITY long double fdim(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::fdiml(__lcpp_x, __lcpp_y);}
+        -: 1242:
+        -: 1243:template <class _A1, class _A2>
+        -: 1244:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1245:typename std::_EnableIf
+        -: 1246:<
+        -: 1247:    std::is_arithmetic<_A1>::value &&
+        -: 1248:    std::is_arithmetic<_A2>::value,
+        -: 1249:    std::__promote<_A1, _A2>
+        -: 1250:>::type
+        -: 1251:fdim(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -: 1252:{
+        -: 1253:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -: 1254:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1255:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -: 1256:    return ::fdim((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+        -: 1257:}
+        -: 1258:
+        -: 1259:// fma
+        -: 1260:
+        -: 1261:inline _LIBCPP_INLINE_VISIBILITY float       fma(float __lcpp_x, float __lcpp_y, float __lcpp_z) _NOEXCEPT
+        -: 1262:{
+        -: 1263:#if __has_builtin(__builtin_fmaf)
+        -: 1264:    return __builtin_fmaf(__lcpp_x, __lcpp_y, __lcpp_z);
+        -: 1265:#else
+        -: 1266:    return ::fmaf(__lcpp_x, __lcpp_y, __lcpp_z);
+        -: 1267:#endif
+        -: 1268:}
+        -: 1269:inline _LIBCPP_INLINE_VISIBILITY long double fma(long double __lcpp_x, long double __lcpp_y, long double __lcpp_z) _NOEXCEPT
+        -: 1270:{
+        -: 1271:#if __has_builtin(__builtin_fmal)
+        -: 1272:    return __builtin_fmal(__lcpp_x, __lcpp_y, __lcpp_z);
+        -: 1273:#else
+        -: 1274:    return ::fmal(__lcpp_x, __lcpp_y, __lcpp_z);
+        -: 1275:#endif
+        -: 1276:}
+        -: 1277:
+        -: 1278:template <class _A1, class _A2, class _A3>
+        -: 1279:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1280:typename std::_EnableIf
+        -: 1281:<
+        -: 1282:    std::is_arithmetic<_A1>::value &&
+        -: 1283:    std::is_arithmetic<_A2>::value &&
+        -: 1284:    std::is_arithmetic<_A3>::value,
+        -: 1285:    std::__promote<_A1, _A2, _A3>
+        -: 1286:>::type
+        -: 1287:fma(_A1 __lcpp_x, _A2 __lcpp_y, _A3 __lcpp_z) _NOEXCEPT
+        -: 1288:{
+        -: 1289:    typedef typename std::__promote<_A1, _A2, _A3>::type __result_type;
+        -: 1290:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1291:                     std::_IsSame<_A2, __result_type>::value &&
+        -: 1292:                     std::_IsSame<_A3, __result_type>::value)), "");
+        -: 1293:#if __has_builtin(__builtin_fma)
+        -: 1294:    return __builtin_fma((__result_type)__lcpp_x, (__result_type)__lcpp_y, (__result_type)__lcpp_z);
+        -: 1295:#else
+        -: 1296:    return ::fma((__result_type)__lcpp_x, (__result_type)__lcpp_y, (__result_type)__lcpp_z);
+        -: 1297:#endif
+        -: 1298:}
+        -: 1299:
+        -: 1300:// fmax
+        -: 1301:
+        -: 1302:inline _LIBCPP_INLINE_VISIBILITY float       fmax(float __lcpp_x, float __lcpp_y) _NOEXCEPT             {return ::fmaxf(__lcpp_x, __lcpp_y);}
+        -: 1303:inline _LIBCPP_INLINE_VISIBILITY long double fmax(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::fmaxl(__lcpp_x, __lcpp_y);}
+        -: 1304:
+        -: 1305:template <class _A1, class _A2>
+        -: 1306:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1307:typename std::_EnableIf
+        -: 1308:<
+        -: 1309:    std::is_arithmetic<_A1>::value &&
+        -: 1310:    std::is_arithmetic<_A2>::value,
+        -: 1311:    std::__promote<_A1, _A2>
+        -: 1312:>::type
+        -: 1313:fmax(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -: 1314:{
+        -: 1315:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -: 1316:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1317:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -: 1318:    return ::fmax((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+        -: 1319:}
+        -: 1320:
+        -: 1321:// fmin
+        -: 1322:
+        -: 1323:inline _LIBCPP_INLINE_VISIBILITY float       fmin(float __lcpp_x, float __lcpp_y) _NOEXCEPT             {return ::fminf(__lcpp_x, __lcpp_y);}
+        -: 1324:inline _LIBCPP_INLINE_VISIBILITY long double fmin(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::fminl(__lcpp_x, __lcpp_y);}
+        -: 1325:
+        -: 1326:template <class _A1, class _A2>
+        -: 1327:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1328:typename std::_EnableIf
+        -: 1329:<
+        -: 1330:    std::is_arithmetic<_A1>::value &&
+        -: 1331:    std::is_arithmetic<_A2>::value,
+        -: 1332:    std::__promote<_A1, _A2>
+        -: 1333:>::type
+        -: 1334:fmin(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -: 1335:{
+        -: 1336:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -: 1337:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1338:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -: 1339:    return ::fmin((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+        -: 1340:}
+        -: 1341:
+        -: 1342:// hypot
+        -: 1343:
+        -: 1344:inline _LIBCPP_INLINE_VISIBILITY float       hypot(float __lcpp_x, float __lcpp_y) _NOEXCEPT             {return ::hypotf(__lcpp_x, __lcpp_y);}
+        -: 1345:inline _LIBCPP_INLINE_VISIBILITY long double hypot(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::hypotl(__lcpp_x, __lcpp_y);}
+        -: 1346:
+        -: 1347:template <class _A1, class _A2>
+        -: 1348:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1349:typename std::_EnableIf
+        -: 1350:<
+        -: 1351:    std::is_arithmetic<_A1>::value &&
+        -: 1352:    std::is_arithmetic<_A2>::value,
+        -: 1353:    std::__promote<_A1, _A2>
+        -: 1354:>::type
+        -: 1355:hypot(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -: 1356:{
+        -: 1357:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -: 1358:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1359:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -: 1360:    return ::hypot((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+        -: 1361:}
+        -: 1362:
+        -: 1363:// ilogb
+        -: 1364:
+        -: 1365:inline _LIBCPP_INLINE_VISIBILITY int ilogb(float __lcpp_x) _NOEXCEPT       {return ::ilogbf(__lcpp_x);}
+        -: 1366:inline _LIBCPP_INLINE_VISIBILITY int ilogb(long double __lcpp_x) _NOEXCEPT {return ::ilogbl(__lcpp_x);}
+        -: 1367:
+        -: 1368:template <class _A1>
+        -: 1369:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1370:typename std::enable_if<std::is_integral<_A1>::value, int>::type
+        -: 1371:ilogb(_A1 __lcpp_x) _NOEXCEPT {return ::ilogb((double)__lcpp_x);}
+        -: 1372:
+        -: 1373:// lgamma
+        -: 1374:
+        -: 1375:inline _LIBCPP_INLINE_VISIBILITY float       lgamma(float __lcpp_x) _NOEXCEPT       {return ::lgammaf(__lcpp_x);}
+        -: 1376:inline _LIBCPP_INLINE_VISIBILITY long double lgamma(long double __lcpp_x) _NOEXCEPT {return ::lgammal(__lcpp_x);}
+        -: 1377:
+        -: 1378:template <class _A1>
+        -: 1379:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1380:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1381:lgamma(_A1 __lcpp_x) _NOEXCEPT {return ::lgamma((double)__lcpp_x);}
+        -: 1382:
+        -: 1383:// llrint
+        -: 1384:
+        -: 1385:inline _LIBCPP_INLINE_VISIBILITY long long llrint(float __lcpp_x) _NOEXCEPT
+        -: 1386:{
+        -: 1387:#if __has_builtin(__builtin_llrintf)
+        -: 1388:    return __builtin_llrintf(__lcpp_x);
+        -: 1389:#else
+        -: 1390:    return ::llrintf(__lcpp_x);
+        -: 1391:#endif
+        -: 1392:}
+        -: 1393:inline _LIBCPP_INLINE_VISIBILITY long long llrint(long double __lcpp_x) _NOEXCEPT
+        -: 1394:{
+        -: 1395:#if __has_builtin(__builtin_llrintl)
+        -: 1396:    return __builtin_llrintl(__lcpp_x);
+        -: 1397:#else
+        -: 1398:    return ::llrintl(__lcpp_x);
+        -: 1399:#endif
+        -: 1400:}
+        -: 1401:
+        -: 1402:template <class _A1>
+        -: 1403:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1404:typename std::enable_if<std::is_integral<_A1>::value, long long>::type
+        -: 1405:llrint(_A1 __lcpp_x) _NOEXCEPT
+        -: 1406:{
+        -: 1407:#if __has_builtin(__builtin_llrint)
+        -: 1408:    return __builtin_llrint((double)__lcpp_x);
+        -: 1409:#else
+        -: 1410:    return ::llrint((double)__lcpp_x);
+        -: 1411:#endif
+        -: 1412:}
+        -: 1413:
+        -: 1414:// llround
+        -: 1415:
+        -: 1416:inline _LIBCPP_INLINE_VISIBILITY long long llround(float __lcpp_x) _NOEXCEPT
+        -: 1417:{
+        -: 1418:#if __has_builtin(__builtin_llroundf)
+        -: 1419:    return __builtin_llroundf(__lcpp_x);
+        -: 1420:#else
+        -: 1421:    return ::llroundf(__lcpp_x);
+        -: 1422:#endif
+        -: 1423:}
+        -: 1424:inline _LIBCPP_INLINE_VISIBILITY long long llround(long double __lcpp_x) _NOEXCEPT
+        -: 1425:{
+        -: 1426:#if __has_builtin(__builtin_llroundl)
+        -: 1427:    return __builtin_llroundl(__lcpp_x);
+        -: 1428:#else
+        -: 1429:    return ::llroundl(__lcpp_x);
+        -: 1430:#endif
+        -: 1431:}
+        -: 1432:
+        -: 1433:template <class _A1>
+        -: 1434:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1435:typename std::enable_if<std::is_integral<_A1>::value, long long>::type
+        -: 1436:llround(_A1 __lcpp_x) _NOEXCEPT
+        -: 1437:{
+        -: 1438:#if __has_builtin(__builtin_llround)
+        -: 1439:    return __builtin_llround((double)__lcpp_x);
+        -: 1440:#else
+        -: 1441:    return ::llround((double)__lcpp_x);
+        -: 1442:#endif
+        -: 1443:}
+        -: 1444:
+        -: 1445:// log1p
+        -: 1446:
+        -: 1447:inline _LIBCPP_INLINE_VISIBILITY float       log1p(float __lcpp_x) _NOEXCEPT       {return ::log1pf(__lcpp_x);}
+        -: 1448:inline _LIBCPP_INLINE_VISIBILITY long double log1p(long double __lcpp_x) _NOEXCEPT {return ::log1pl(__lcpp_x);}
+        -: 1449:
+        -: 1450:template <class _A1>
+        -: 1451:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1452:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1453:log1p(_A1 __lcpp_x) _NOEXCEPT {return ::log1p((double)__lcpp_x);}
+        -: 1454:
+        -: 1455:// log2
+        -: 1456:
+        -: 1457:inline _LIBCPP_INLINE_VISIBILITY float       log2(float __lcpp_x) _NOEXCEPT       {return ::log2f(__lcpp_x);}
+        -: 1458:inline _LIBCPP_INLINE_VISIBILITY long double log2(long double __lcpp_x) _NOEXCEPT {return ::log2l(__lcpp_x);}
+        -: 1459:
+        -: 1460:template <class _A1>
+        -: 1461:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1462:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1463:log2(_A1 __lcpp_x) _NOEXCEPT {return ::log2((double)__lcpp_x);}
+        -: 1464:
+        -: 1465:// logb
+        -: 1466:
+        -: 1467:inline _LIBCPP_INLINE_VISIBILITY float       logb(float __lcpp_x) _NOEXCEPT       {return ::logbf(__lcpp_x);}
+        -: 1468:inline _LIBCPP_INLINE_VISIBILITY long double logb(long double __lcpp_x) _NOEXCEPT {return ::logbl(__lcpp_x);}
+        -: 1469:
+        -: 1470:template <class _A1>
+        -: 1471:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1472:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1473:logb(_A1 __lcpp_x) _NOEXCEPT {return ::logb((double)__lcpp_x);}
+        -: 1474:
+        -: 1475:// lrint
+        -: 1476:
+        -: 1477:inline _LIBCPP_INLINE_VISIBILITY long lrint(float __lcpp_x) _NOEXCEPT
+        -: 1478:{
+        -: 1479:#if __has_builtin(__builtin_lrintf)
+        -: 1480:    return __builtin_lrintf(__lcpp_x);
+        -: 1481:#else
+        -: 1482:    return ::lrintf(__lcpp_x);
+        -: 1483:#endif
+        -: 1484:}
+        -: 1485:inline _LIBCPP_INLINE_VISIBILITY long lrint(long double __lcpp_x) _NOEXCEPT
+        -: 1486:{
+        -: 1487:#if __has_builtin(__builtin_lrintl)
+        -: 1488:    return __builtin_lrintl(__lcpp_x);
+        -: 1489:#else
+        -: 1490:    return ::lrintl(__lcpp_x);
+        -: 1491:#endif
+        -: 1492:}
+        -: 1493:
+        -: 1494:template <class _A1>
+        -: 1495:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1496:typename std::enable_if<std::is_integral<_A1>::value, long>::type
+        -: 1497:lrint(_A1 __lcpp_x) _NOEXCEPT
+        -: 1498:{
+        -: 1499:#if __has_builtin(__builtin_lrint)
+        -: 1500:    return __builtin_lrint((double)__lcpp_x);
+        -: 1501:#else
+        -: 1502:    return ::lrint((double)__lcpp_x);
+        -: 1503:#endif
+        -: 1504:}
+        -: 1505:
+        -: 1506:// lround
+        -: 1507:
+        -: 1508:inline _LIBCPP_INLINE_VISIBILITY long lround(float __lcpp_x) _NOEXCEPT
+        -: 1509:{
+        -: 1510:#if __has_builtin(__builtin_lroundf)
+        -: 1511:    return __builtin_lroundf(__lcpp_x);
+        -: 1512:#else
+        -: 1513:    return ::lroundf(__lcpp_x);
+        -: 1514:#endif
+        -: 1515:}
+        -: 1516:inline _LIBCPP_INLINE_VISIBILITY long lround(long double __lcpp_x) _NOEXCEPT
+        -: 1517:{
+        -: 1518:#if __has_builtin(__builtin_lroundl)
+        -: 1519:    return __builtin_lroundl(__lcpp_x);
+        -: 1520:#else
+        -: 1521:    return ::lroundl(__lcpp_x);
+        -: 1522:#endif
+        -: 1523:}
+        -: 1524:
+        -: 1525:template <class _A1>
+        -: 1526:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1527:typename std::enable_if<std::is_integral<_A1>::value, long>::type
+        -: 1528:lround(_A1 __lcpp_x) _NOEXCEPT
+        -: 1529:{
+        -: 1530:#if __has_builtin(__builtin_lround)
+        -: 1531:    return __builtin_lround((double)__lcpp_x);
+        -: 1532:#else
+        -: 1533:    return ::lround((double)__lcpp_x);
+        -: 1534:#endif
+        -: 1535:}
+        -: 1536:
+        -: 1537:// nan
+        -: 1538:
+        -: 1539:// nearbyint
+        -: 1540:
+        -: 1541:inline _LIBCPP_INLINE_VISIBILITY float       nearbyint(float __lcpp_x) _NOEXCEPT       {return ::nearbyintf(__lcpp_x);}
+        -: 1542:inline _LIBCPP_INLINE_VISIBILITY long double nearbyint(long double __lcpp_x) _NOEXCEPT {return ::nearbyintl(__lcpp_x);}
+        -: 1543:
+        -: 1544:template <class _A1>
+        -: 1545:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1546:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1547:nearbyint(_A1 __lcpp_x) _NOEXCEPT {return ::nearbyint((double)__lcpp_x);}
+        -: 1548:
+        -: 1549:// nextafter
+        -: 1550:
+        -: 1551:inline _LIBCPP_INLINE_VISIBILITY float       nextafter(float __lcpp_x, float __lcpp_y) _NOEXCEPT             {return ::nextafterf(__lcpp_x, __lcpp_y);}
+        -: 1552:inline _LIBCPP_INLINE_VISIBILITY long double nextafter(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::nextafterl(__lcpp_x, __lcpp_y);}
+        -: 1553:
+        -: 1554:template <class _A1, class _A2>
+        -: 1555:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1556:typename std::_EnableIf
+        -: 1557:<
+        -: 1558:    std::is_arithmetic<_A1>::value &&
+        -: 1559:    std::is_arithmetic<_A2>::value,
+        -: 1560:    std::__promote<_A1, _A2>
+        -: 1561:>::type
+        -: 1562:nextafter(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -: 1563:{
+        -: 1564:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -: 1565:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1566:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -: 1567:    return ::nextafter((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+        -: 1568:}
+        -: 1569:
+        -: 1570:// nexttoward
+        -: 1571:
+        -: 1572:inline _LIBCPP_INLINE_VISIBILITY float       nexttoward(float __lcpp_x, long double __lcpp_y) _NOEXCEPT       {return ::nexttowardf(__lcpp_x, __lcpp_y);}
+        -: 1573:inline _LIBCPP_INLINE_VISIBILITY long double nexttoward(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::nexttowardl(__lcpp_x, __lcpp_y);}
+        -: 1574:
+        -: 1575:template <class _A1>
+        -: 1576:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1577:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1578:nexttoward(_A1 __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::nexttoward((double)__lcpp_x, __lcpp_y);}
+        -: 1579:
+        -: 1580:// remainder
+        -: 1581:
+        -: 1582:inline _LIBCPP_INLINE_VISIBILITY float       remainder(float __lcpp_x, float __lcpp_y) _NOEXCEPT             {return ::remainderf(__lcpp_x, __lcpp_y);}
+        -: 1583:inline _LIBCPP_INLINE_VISIBILITY long double remainder(long double __lcpp_x, long double __lcpp_y) _NOEXCEPT {return ::remainderl(__lcpp_x, __lcpp_y);}
+        -: 1584:
+        -: 1585:template <class _A1, class _A2>
+        -: 1586:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1587:typename std::_EnableIf
+        -: 1588:<
+        -: 1589:    std::is_arithmetic<_A1>::value &&
+        -: 1590:    std::is_arithmetic<_A2>::value,
+        -: 1591:    std::__promote<_A1, _A2>
+        -: 1592:>::type
+        -: 1593:remainder(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+        -: 1594:{
+        -: 1595:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -: 1596:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1597:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -: 1598:    return ::remainder((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+        -: 1599:}
+        -: 1600:
+        -: 1601:// remquo
+        -: 1602:
+        -: 1603:inline _LIBCPP_INLINE_VISIBILITY float       remquo(float __lcpp_x, float __lcpp_y, int* __lcpp_z) _NOEXCEPT             {return ::remquof(__lcpp_x, __lcpp_y, __lcpp_z);}
+        -: 1604:inline _LIBCPP_INLINE_VISIBILITY long double remquo(long double __lcpp_x, long double __lcpp_y, int* __lcpp_z) _NOEXCEPT {return ::remquol(__lcpp_x, __lcpp_y, __lcpp_z);}
+        -: 1605:
+        -: 1606:template <class _A1, class _A2>
+        -: 1607:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1608:typename std::_EnableIf
+        -: 1609:<
+        -: 1610:    std::is_arithmetic<_A1>::value &&
+        -: 1611:    std::is_arithmetic<_A2>::value,
+        -: 1612:    std::__promote<_A1, _A2>
+        -: 1613:>::type
+        -: 1614:remquo(_A1 __lcpp_x, _A2 __lcpp_y, int* __lcpp_z) _NOEXCEPT
+        -: 1615:{
+        -: 1616:    typedef typename std::__promote<_A1, _A2>::type __result_type;
+        -: 1617:    static_assert((!(std::_IsSame<_A1, __result_type>::value &&
+        -: 1618:                     std::_IsSame<_A2, __result_type>::value)), "");
+        -: 1619:    return ::remquo((__result_type)__lcpp_x, (__result_type)__lcpp_y, __lcpp_z);
+        -: 1620:}
+        -: 1621:
+        -: 1622:// rint
+        -: 1623:
+        -: 1624:inline _LIBCPP_INLINE_VISIBILITY float       rint(float __lcpp_x) _NOEXCEPT
+        -: 1625:{
+        -: 1626:#if __has_builtin(__builtin_rintf)
+        -: 1627:    return __builtin_rintf(__lcpp_x);
+        -: 1628:#else
+        -: 1629:    return ::rintf(__lcpp_x);
+        -: 1630:#endif
+        -: 1631:}
+        -: 1632:inline _LIBCPP_INLINE_VISIBILITY long double rint(long double __lcpp_x) _NOEXCEPT
+        -: 1633:{
+        -: 1634:#if __has_builtin(__builtin_rintl)
+        -: 1635:    return __builtin_rintl(__lcpp_x);
+        -: 1636:#else
+        -: 1637:    return ::rintl(__lcpp_x);
+        -: 1638:#endif
+        -: 1639:}
+        -: 1640:
+        -: 1641:template <class _A1>
+        -: 1642:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1643:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1644:rint(_A1 __lcpp_x) _NOEXCEPT
+        -: 1645:{
+        -: 1646:#if __has_builtin(__builtin_rint)
+        -: 1647:    return __builtin_rint((double)__lcpp_x);
+        -: 1648:#else
+        -: 1649:    return ::rint((double)__lcpp_x);
+        -: 1650:#endif
+        -: 1651:}
+        -: 1652:
+        -: 1653:// round
+        -: 1654:
+        -: 1655:inline _LIBCPP_INLINE_VISIBILITY float       round(float __lcpp_x) _NOEXCEPT
+        -: 1656:{
+        -: 1657:#if __has_builtin(__builtin_round)
+        -: 1658:    return __builtin_round(__lcpp_x);
+        -: 1659:#else
+        -: 1660:    return ::round(__lcpp_x);
+        -: 1661:#endif
+        -: 1662:}
+        -: 1663:inline _LIBCPP_INLINE_VISIBILITY long double round(long double __lcpp_x) _NOEXCEPT
+        -: 1664:{
+        -: 1665:#if __has_builtin(__builtin_roundl)
+        -: 1666:    return __builtin_roundl(__lcpp_x);
+        -: 1667:#else
+        -: 1668:    return ::roundl(__lcpp_x);
+        -: 1669:#endif
+        -: 1670:}
+        -: 1671:
+        -: 1672:template <class _A1>
+        -: 1673:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1674:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1675:round(_A1 __lcpp_x) _NOEXCEPT
+        -: 1676:{
+        -: 1677:#if __has_builtin(__builtin_round)
+        -: 1678:    return __builtin_round((double)__lcpp_x);
+        -: 1679:#else
+        -: 1680:    return ::round((double)__lcpp_x);
+        -: 1681:#endif
+        -: 1682:}
+        -: 1683:
+        -: 1684:// scalbln
+        -: 1685:
+        -: 1686:inline _LIBCPP_INLINE_VISIBILITY float       scalbln(float __lcpp_x, long __lcpp_y) _NOEXCEPT       {return ::scalblnf(__lcpp_x, __lcpp_y);}
+        -: 1687:inline _LIBCPP_INLINE_VISIBILITY long double scalbln(long double __lcpp_x, long __lcpp_y) _NOEXCEPT {return ::scalblnl(__lcpp_x, __lcpp_y);}
+        -: 1688:
+        -: 1689:template <class _A1>
+        -: 1690:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1691:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1692:scalbln(_A1 __lcpp_x, long __lcpp_y) _NOEXCEPT {return ::scalbln((double)__lcpp_x, __lcpp_y);}
+        -: 1693:
+        -: 1694:// scalbn
+        -: 1695:
+        -: 1696:inline _LIBCPP_INLINE_VISIBILITY float       scalbn(float __lcpp_x, int __lcpp_y) _NOEXCEPT       {return ::scalbnf(__lcpp_x, __lcpp_y);}
+        -: 1697:inline _LIBCPP_INLINE_VISIBILITY long double scalbn(long double __lcpp_x, int __lcpp_y) _NOEXCEPT {return ::scalbnl(__lcpp_x, __lcpp_y);}
+        -: 1698:
+        -: 1699:template <class _A1>
+        -: 1700:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1701:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1702:scalbn(_A1 __lcpp_x, int __lcpp_y) _NOEXCEPT {return ::scalbn((double)__lcpp_x, __lcpp_y);}
+        -: 1703:
+        -: 1704:// tgamma
+        -: 1705:
+        -: 1706:inline _LIBCPP_INLINE_VISIBILITY float       tgamma(float __lcpp_x) _NOEXCEPT       {return ::tgammaf(__lcpp_x);}
+        -: 1707:inline _LIBCPP_INLINE_VISIBILITY long double tgamma(long double __lcpp_x) _NOEXCEPT {return ::tgammal(__lcpp_x);}
+        -: 1708:
+        -: 1709:template <class _A1>
+        -: 1710:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1711:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1712:tgamma(_A1 __lcpp_x) _NOEXCEPT {return ::tgamma((double)__lcpp_x);}
+        -: 1713:
+        -: 1714:// trunc
+        -: 1715:
+        -: 1716:inline _LIBCPP_INLINE_VISIBILITY float       trunc(float __lcpp_x) _NOEXCEPT
+        -: 1717:{
+        -: 1718:#if __has_builtin(__builtin_trunc)
+        -: 1719:    return __builtin_trunc(__lcpp_x);
+        -: 1720:#else
+        -: 1721:    return ::trunc(__lcpp_x);
+        -: 1722:#endif
+        -: 1723:}
+        -: 1724:inline _LIBCPP_INLINE_VISIBILITY long double trunc(long double __lcpp_x) _NOEXCEPT
+        -: 1725:{
+        -: 1726:#if __has_builtin(__builtin_truncl)
+        -: 1727:    return __builtin_truncl(__lcpp_x);
+        -: 1728:#else
+        -: 1729:    return ::truncl(__lcpp_x);
+        -: 1730:#endif
+        -: 1731:}
+        -: 1732:
+        -: 1733:template <class _A1>
+        -: 1734:inline _LIBCPP_INLINE_VISIBILITY
+        -: 1735:typename std::enable_if<std::is_integral<_A1>::value, double>::type
+        -: 1736:trunc(_A1 __lcpp_x) _NOEXCEPT
+        -: 1737:{
+        -: 1738:#if __has_builtin(__builtin_trunc)
+        -: 1739:    return __builtin_trunc((double)__lcpp_x);
+        -: 1740:#else
+        -: 1741:    return ::trunc((double)__lcpp_x);
+        -: 1742:#endif
+        -: 1743:}
+        -: 1744:
+        -: 1745:} // extern "C++"
+        -: 1746:
+        -: 1747:#endif // __cplusplus
+        -: 1748:
+        -: 1749:#else // _LIBCPP_MATH_H
+        -: 1750:
+        -: 1751:// This include lives outside the header guard in order to support an MSVC
+        -: 1752:// extension which allows users to do:
+        -: 1753://
+        -: 1754:// #define _USE_MATH_DEFINES
+        -: 1755:// #include <math.h>
+        -: 1756://
+        -: 1757:// and receive the definitions of mathematical constants, even if <math.h>
+        -: 1758:// has previously been included.
+        -: 1759:#if defined(_LIBCPP_MSVCRT) && defined(_USE_MATH_DEFINES)
+        -: 1760:#include_next <math.h>
+        -: 1761:#endif
+        -: 1762:
+        -: 1763:#endif // _LIBCPP_MATH_H

@@ -1,0 +1,601 @@
+        -:    0:Source:/Users/IAGO/Desktop/TPI/testEnunciado/corregirViajeTEST.cpp
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+function _ZN36corregirViajeTEST_faltaElUltimo_Test8TestBodyEv called 1 returned 100% blocks executed 53%
+function _ZN36corregirViajeTEST_faltaElUltimo_TestD1Ev called 1 returned 100% blocks executed 100%
+function _ZN36corregirViajeTEST_faltaElUltimo_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN36corregirViajeTEST_faltaElUltimo_TestC1Ev called 1 returned 100% blocks executed 100%
+function _ZN36corregirViajeTEST_faltaElUltimo_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN36corregirViajeTEST_faltaElUltimo_TestD2Ev called 1 returned 100% blocks executed 100%
+        4:    7:TEST(corregirViajeTEST, faltaElUltimo){
+        1:    7-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:    7-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:    7-block  2
+branch  4 taken 1
+branch  5 taken 0
+        1:    7-block  3
+branch  6 taken 1
+branch  7 taken 0
+        1:    7-block  4
+branch  8 taken 1
+branch  9 taken 0
+        1:    7-block  5
+    $$$$$:    7-block  6
+    $$$$$:    7-block  7
+    $$$$$:    7-block  8
+    $$$$$:    7-block  9
+    $$$$$:    7-block 10
+    $$$$$:    7-block 11
+        1:    7-block 12
+        1:    7-block 13
+       10:    8:    viaje v = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:    9:               medicion(T0+30, puntoGps(-34.591586, -58.401064)),
+        1:   10:               medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   11:               medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   12:               medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   13:               medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   14:               medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   15:               medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   16:               medicion(T0+675, puntoGps(-34.578941, -58.424878)),
+        1:   17:               medicion(T0+1051, puntoGps(0, 0))};
+        -:   18:
+       10:   19:    viaje res = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:   19-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   19-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   19-block  2
+branch  4 taken 1
+branch  5 taken 0
+        1:   20:                 medicion(T0+30, puntoGps(-34.591586, -58.401064)),
+        1:   20-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   20-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   21:                 medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   21-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   21-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   22:                 medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   22-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   22-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   23:                 medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   23-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   23-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   24:                 medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   24-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   24-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   25:                 medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   25-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   25-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   26:                 medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   26-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   26-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   27:                 medicion(T0+675, puntoGps(-34.578941, -58.424878)),
+        1:   27-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   27-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   28:                 medicion(T0+1051, puntoGps(-34.545704, -58.441383))};
+        1:   28-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   28-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   29:    vector<tiempo> errores = {T0+1051};
+        1:   29-block  0
+branch  0 taken 1
+branch  1 taken 0
+        -:   30:
+        1:   31:    corregirViaje(v, errores);
+        1:   31-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   31-block  1
+branch  2 taken 1
+branch  3 taken 0
+    $$$$$:   31-block  2
+        1:   32:    EXPECT_EQ(v.size(),res.size());
+        1:   32-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   32-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   32-block  2
+branch  4 taken 0
+branch  5 taken 1
+        1:   32-block  3
+    $$$$$:   32-block  4
+branch  6 never executed
+branch  7 never executed
+    $$$$$:   32-block  5
+branch  8 never executed
+branch  9 never executed
+    $$$$$:   32-block  6
+branch 10 never executed
+branch 11 never executed
+    $$$$$:   32-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   32-block  8
+    $$$$$:   32-block  9
+    $$$$$:   32-block 10
+    $$$$$:   32-block 11
+        -:   33:
+       11:   34:    for (int i = 0; i < res.size(); ++i) {
+        1:   34-block  0
+       11:   34-block  1
+branch  0 taken 10
+branch  1 taken 1
+       10:   34-block  2
+       10:   35:        EXPECT_NEAR(obtenerLatitud(obtenerPosicion(v[i])),
+       10:   35-block  0
+branch  0 taken 10
+branch  1 taken 0
+       10:   35-block  1
+branch  2 taken 10
+branch  3 taken 0
+       10:   35-block  2
+branch  4 taken 10
+branch  5 taken 0
+       10:   35-block  3
+branch  6 taken 10
+branch  7 taken 0
+       10:   35-block  4
+branch  8 taken 10
+branch  9 taken 0
+       10:   35-block  5
+branch 10 taken 10
+branch 11 taken 0
+       10:   35-block  6
+branch 12 taken 0
+branch 13 taken 10
+       10:   35-block  7
+    $$$$$:   35-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   35-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:   35-block 10
+branch 18 never executed
+branch 19 never executed
+    $$$$$:   35-block 11
+branch 20 never executed
+branch 21 never executed
+    $$$$$:   35-block 12
+    $$$$$:   35-block 13
+    $$$$$:   35-block 14
+    $$$$$:   35-block 15
+        -:   36:                    obtenerLatitud(obtenerPosicion(res[i])), 0.00001);
+       10:   37:        EXPECT_NEAR(obtenerLongitud(obtenerPosicion(v[i])),
+       10:   37-block  0
+branch  0 taken 10
+branch  1 taken 0
+       10:   37-block  1
+branch  2 taken 10
+branch  3 taken 0
+       10:   37-block  2
+branch  4 taken 10
+branch  5 taken 0
+       10:   37-block  3
+branch  6 taken 10
+branch  7 taken 0
+       10:   37-block  4
+branch  8 taken 10
+branch  9 taken 0
+       10:   37-block  5
+branch 10 taken 10
+branch 11 taken 0
+       10:   37-block  6
+branch 12 taken 0
+branch 13 taken 10
+       10:   37-block  7
+    $$$$$:   37-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   37-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:   37-block 10
+branch 18 never executed
+branch 19 never executed
+    $$$$$:   37-block 11
+branch 20 never executed
+branch 21 never executed
+    $$$$$:   37-block 12
+    $$$$$:   37-block 13
+    $$$$$:   37-block 14
+    $$$$$:   37-block 15
+        -:   38:                    obtenerLongitud(obtenerPosicion(res[i])), 0.00001);
+       10:   39:        EXPECT_EQ(obtenerTiempo(v[i]),obtenerTiempo(res[i]));
+       10:   39-block  0
+branch  0 taken 10
+branch  1 taken 0
+       10:   39-block  1
+branch  2 taken 10
+branch  3 taken 0
+       10:   39-block  2
+branch  4 taken 10
+branch  5 taken 0
+       10:   39-block  3
+branch  6 taken 10
+branch  7 taken 0
+       10:   39-block  4
+branch  8 taken 0
+branch  9 taken 10
+       10:   39-block  5
+    $$$$$:   39-block  6
+branch 10 never executed
+branch 11 never executed
+    $$$$$:   39-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   39-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   39-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:   39-block 10
+    $$$$$:   39-block 11
+    $$$$$:   39-block 12
+    $$$$$:   39-block 13
+       10:   40:    }
+       10:   40-block  0
+        1:   41:}
+    $$$$$:   41-block  0
+    $$$$$:   41-block  1
+    $$$$$:   41-block  2
+    $$$$$:   41-block  3
+    $$$$$:   41-block  4
+    $$$$$:   41-block  5
+    $$$$$:   41-block  6
+    $$$$$:   41-block  7
+    $$$$$:   41-block  8
+    $$$$$:   41-block  9
+    $$$$$:   41-block 10
+        1:   41-block 11
+    $$$$$:   41-block 12
+    $$$$$:   41-block 13
+    $$$$$:   41-block 14
+    $$$$$:   41-block 15
+        -:   42:
+function _ZN45corregirViajeTEST_elMasCercanoTieneError_Test8TestBodyEv called 1 returned 100% blocks executed 63%
+function _ZN45corregirViajeTEST_elMasCercanoTieneError_TestD1Ev called 1 returned 100% blocks executed 100%
+function _ZN45corregirViajeTEST_elMasCercanoTieneError_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN45corregirViajeTEST_elMasCercanoTieneError_TestC1Ev called 1 returned 100% blocks executed 100%
+function _ZN45corregirViajeTEST_elMasCercanoTieneError_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN45corregirViajeTEST_elMasCercanoTieneError_TestD2Ev called 1 returned 100% blocks executed 100%
+        4:   43:TEST(corregirViajeTEST, elMasCercanoTieneError){
+        1:   43-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   43-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   43-block  2
+branch  4 taken 1
+branch  5 taken 0
+        1:   43-block  3
+branch  6 taken 1
+branch  7 taken 0
+        1:   43-block  4
+branch  8 taken 1
+branch  9 taken 0
+        1:   43-block  5
+    $$$$$:   43-block  6
+    $$$$$:   43-block  7
+    $$$$$:   43-block  8
+    $$$$$:   43-block  9
+    $$$$$:   43-block 10
+    $$$$$:   43-block 11
+        1:   43-block 12
+        1:   43-block 13
+       10:   44:    viaje v = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:   45:               medicion(T0+30, puntoGps(-34.591586, -58.401064)),
+        1:   46:               medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   47:               medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   48:               medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   49:               medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   50:               medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   51:               medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   52:               medicion(T0+675, puntoGps(-34.578941, -58.424878)),
+        1:   53:               medicion(T0+1051, puntoGps(0, 0))};
+        -:   54:
+       10:   55:    viaje res = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:   55-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   55-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   55-block  2
+branch  4 taken 1
+branch  5 taken 0
+        1:   56:                 medicion(T0+30, puntoGps(-34.591586, -58.401064)),
+        1:   56-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   56-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   57:                 medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   57-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   57-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   58:                 medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   58-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   58-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   59:                 medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   59-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   59-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   60:                 medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   60-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   60-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   61:                 medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   61-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   61-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   62:                 medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   62-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   62-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   63:                 medicion(T0+675, puntoGps(-34.578941, -58.424878)),
+        1:   63-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   63-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   64:                 medicion(T0+1051, puntoGps(-34.545704, -58.441383))};
+        1:   64-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   64-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   65:    vector<tiempo> errores = {T0+1051, T0+999};
+        1:   65-block  0
+branch  0 taken 1
+branch  1 taken 0
+        -:   66:
+        1:   67:    corregirViaje(v, errores);
+        1:   67-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   67-block  1
+branch  2 taken 1
+branch  3 taken 0
+    $$$$$:   67-block  2
+        1:   68:    EXPECT_EQ(v.size(),res.size());
+        1:   68-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   68-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   68-block  2
+branch  4 taken 0
+branch  5 taken 1
+        1:   68-block  3
+    $$$$$:   68-block  4
+branch  6 never executed
+branch  7 never executed
+    $$$$$:   68-block  5
+branch  8 never executed
+branch  9 never executed
+    $$$$$:   68-block  6
+branch 10 never executed
+branch 11 never executed
+    $$$$$:   68-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   68-block  8
+    $$$$$:   68-block  9
+    $$$$$:   68-block 10
+    $$$$$:   68-block 11
+        -:   69:
+       11:   70:    for (int i = 0; i < res.size(); ++i) {
+        1:   70-block  0
+       11:   70-block  1
+branch  0 taken 10
+branch  1 taken 1
+       10:   70-block  2
+       10:   71:        EXPECT_NEAR(obtenerLatitud(obtenerPosicion(v[i])),
+       10:   71-block  0
+branch  0 taken 10
+branch  1 taken 0
+       10:   71-block  1
+branch  2 taken 10
+branch  3 taken 0
+       10:   71-block  2
+branch  4 taken 10
+branch  5 taken 0
+       10:   71-block  3
+branch  6 taken 10
+branch  7 taken 0
+       10:   71-block  4
+branch  8 taken 10
+branch  9 taken 0
+       10:   71-block  5
+branch 10 taken 10
+branch 11 taken 0
+       10:   71-block  6
+branch 12 taken 2
+branch 13 taken 8
+        8:   71-block  7
+        2:   71-block  8
+branch 14 taken 2
+branch 15 taken 0
+        2:   71-block  9
+branch 16 taken 2
+branch 17 taken 0
+        2:   71-block 10
+branch 18 taken 2
+branch 19 taken 0
+        2:   71-block 11
+branch 20 taken 2
+branch 21 taken 0
+        2:   71-block 12
+    $$$$$:   71-block 13
+    $$$$$:   71-block 14
+    $$$$$:   71-block 15
+        -:   72:                    obtenerLatitud(obtenerPosicion(res[i])), 0.00001);
+       10:   73:        EXPECT_NEAR(obtenerLongitud(obtenerPosicion(v[i])),
+       10:   73-block  0
+branch  0 taken 10
+branch  1 taken 0
+       10:   73-block  1
+branch  2 taken 10
+branch  3 taken 0
+       10:   73-block  2
+branch  4 taken 10
+branch  5 taken 0
+       10:   73-block  3
+branch  6 taken 10
+branch  7 taken 0
+       10:   73-block  4
+branch  8 taken 10
+branch  9 taken 0
+       10:   73-block  5
+branch 10 taken 10
+branch 11 taken 0
+       10:   73-block  6
+branch 12 taken 2
+branch 13 taken 8
+        8:   73-block  7
+        2:   73-block  8
+branch 14 taken 2
+branch 15 taken 0
+        2:   73-block  9
+branch 16 taken 2
+branch 17 taken 0
+        2:   73-block 10
+branch 18 taken 2
+branch 19 taken 0
+        2:   73-block 11
+branch 20 taken 2
+branch 21 taken 0
+        2:   73-block 12
+    $$$$$:   73-block 13
+    $$$$$:   73-block 14
+    $$$$$:   73-block 15
+        -:   74:                    obtenerLongitud(obtenerPosicion(res[i])), 0.00001);
+       10:   75:        EXPECT_EQ(obtenerTiempo(v[i]),obtenerTiempo(res[i]));
+       10:   75-block  0
+branch  0 taken 10
+branch  1 taken 0
+       10:   75-block  1
+branch  2 taken 10
+branch  3 taken 0
+       10:   75-block  2
+branch  4 taken 10
+branch  5 taken 0
+       10:   75-block  3
+branch  6 taken 10
+branch  7 taken 0
+       10:   75-block  4
+branch  8 taken 0
+branch  9 taken 10
+       10:   75-block  5
+    $$$$$:   75-block  6
+branch 10 never executed
+branch 11 never executed
+    $$$$$:   75-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   75-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   75-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:   75-block 10
+    $$$$$:   75-block 11
+    $$$$$:   75-block 12
+    $$$$$:   75-block 13
+       10:   76:    }
+       10:   76-block  0
+        1:   77:}
+    $$$$$:   77-block  0
+    $$$$$:   77-block  1
+    $$$$$:   77-block  2
+    $$$$$:   77-block  3
+    $$$$$:   77-block  4
+    $$$$$:   77-block  5
+    $$$$$:   77-block  6
+    $$$$$:   77-block  7
+    $$$$$:   77-block  8
+    $$$$$:   77-block  9
+    $$$$$:   77-block 10
+        1:   77-block 11
+    $$$$$:   77-block 12
+    $$$$$:   77-block 13
+    $$$$$:   77-block 14
+    $$$$$:   77-block 15
+        -:   78:

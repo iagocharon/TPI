@@ -1,0 +1,92 @@
+        -:    0:Source:/Users/IAGO/Desktop/TPI/testEnunciado/distanciaTotalTEST.cpp
+        -:    0:Graph:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/distanciaTotalTEST.gcno
+        -:    0:Data:/Users/IAGO/Desktop/TPI/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/distanciaTotalTEST.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+function _ZN40distanciaTotalTEST_viajeDesordenado_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+function _ZN40distanciaTotalTEST_viajeDesordenado_TestD1Ev called 1 returned 100% blocks executed 100%
+function _ZN40distanciaTotalTEST_viajeDesordenado_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN40distanciaTotalTEST_viajeDesordenado_TestC1Ev called 1 returned 100% blocks executed 100%
+function _ZN40distanciaTotalTEST_viajeDesordenado_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN40distanciaTotalTEST_viajeDesordenado_TestD2Ev called 1 returned 100% blocks executed 100%
+        4:    7:TEST(distanciaTotalTEST, viajeDesordenado){
+        1:    7-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:    7-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:    7-block  2
+branch  4 taken 1
+branch  5 taken 0
+        1:    7-block  3
+branch  6 taken 1
+branch  7 taken 0
+        1:    7-block  4
+branch  8 taken 1
+branch  9 taken 0
+        1:    7-block  5
+    $$$$$:    7-block  6
+    $$$$$:    7-block  7
+    $$$$$:    7-block  8
+    $$$$$:    7-block  9
+    $$$$$:    7-block 10
+    $$$$$:    7-block 11
+        1:    7-block 12
+        1:    7-block 13
+        1:    8:    gps p1 = puntoGps(-33, -34);
+        1:    9:    gps p2 = desviarPunto(p1, 2000, 0);
+        1:   10:    gps p3 = desviarPunto(p2, 2000, 0);
+        -:   11:
+        3:   12:    viaje v = {medicion(1.6, p2),
+        1:   13:               medicion(1.5, p1),
+        1:   14:               medicion(1.7, p3)};
+        -:   15:
+        1:   16:    EXPECT_NEAR(distanciaTotal(v), 4.0, 0.01);
+        1:   16-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:   16-block  1
+branch  2 taken 1
+branch  3 taken 0
+        1:   16-block  2
+branch  4 taken 1
+branch  5 taken 0
+        1:   16-block  3
+branch  6 taken 1
+branch  7 taken 0
+        1:   16-block  4
+branch  8 taken 0
+branch  9 taken 1
+        1:   16-block  5
+    $$$$$:   16-block  6
+    $$$$$:   16-block  7
+branch 10 never executed
+branch 11 never executed
+    $$$$$:   16-block  8
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   16-block  9
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   16-block 10
+branch 16 never executed
+branch 17 never executed
+    $$$$$:   16-block 11
+    $$$$$:   16-block 12
+    $$$$$:   16-block 13
+    $$$$$:   16-block 14
+        1:   17:}
+    $$$$$:   17-block  0
+    $$$$$:   17-block  1
+    $$$$$:   17-block  2
+        1:   17-block  3
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+        -:   18:
