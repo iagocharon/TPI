@@ -1,6 +1,10 @@
 #ifndef TRANSPORTEURBANO_AUXILIARES_H
 #define TRANSPORTEURBANO_AUXILIARES_H
 
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+
 #include "definiciones.h"
 #include "string"
 
@@ -18,8 +22,9 @@ double velocidadMedia(puntoViaje p1, puntoViaje p2);
 gps desviarPunto(gps p, double desvioMtsLatitud, double desvioMtsLongitud);
 gps puntoGps(double latitud, double longitud);
 tuple<tiempo, gps> medicion(tiempo t, gps g);
-
+bool sonGrillasIguales(grilla g1, grilla g2);
 void guardarGrillaEnArchivo(grilla g, string nombreArchivo);
-void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchivo);
+void guardarRecorridosEnArchivo(vector<recorrido> recorridos,
+                                string nombreArchivo);
 
-#endif //TRANSPORTEURBANO_AUXILIARES_H
+#endif  // TRANSPORTEURBANO_AUXILIARES_H

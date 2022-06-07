@@ -5,6 +5,9 @@
     "__tuple": "cpp",
     "algorithm": "cpp",
     "__locale": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "cmath": "cpp",
+    "iomanip": "cpp",
+    "fstream": "cpp"
   }
 }

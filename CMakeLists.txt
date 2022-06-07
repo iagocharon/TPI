@@ -12,7 +12,7 @@ file(GLOB DIR_TESTS_GRP "testGrupo/*.cpp")
 
 set(SOURCE_FILES main.cpp
         auxiliares.cpp
-        ejercicios.cpp)
+        ejercicios.cpp testGrupo/grillasIgualesTEST.cpp)
 
 add_executable(tpi ${SOURCE_FILES}
         ${DIR_TESTS_EN}
