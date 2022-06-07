@@ -54,8 +54,9 @@ distancia distanciaTotal(viaje v) {  // n=|v|
 /*****************************+***** EJERCICIO excesoDeVelocidad
  * **********************************/
 bool excesoDeVelocidad(viaje v) {
-    for (int i = 0; i < v.size() - 1; i++) {
-        if (velocidadMedia(v[i], v[i + 1]) * 3600 > 80) {
+    viaje aux = viajeOrdenado(v);
+    for (int i = 0; i < aux.size() - 1; i++) {
+        if (velocidadMedia(aux[i], aux[i + 1]) * 3600 > 80) {
             return true;
         }
     }
