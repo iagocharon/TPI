@@ -27,9 +27,10 @@ tuple<tiempo, tiempo> tiemposMaximoYMinimo(viaje v) {
 }
 
 tiempo tiempoTotal(viaje v) {
-    return get<0>(tiemposMaximoYMinimo(v)) -
-           get<1>(tiemposMaximoYMinimo(v));  // 0(n) no se como justificar bien
-                                             // este, es 0(n)-0(n) => O(n)??
+    return obtenerTiempoMaximo(tiemposMaximoYMinimo(v)) -
+           obtenerTiempoMinimo(
+               tiemposMaximoYMinimo(v));  // 0(n) no se como justificar bien
+                                          // este, es 0(n)-0(n) => O(n)??
 }
 
 /************++*********************** EJERCICIO distanciaTotal
@@ -54,9 +55,9 @@ distancia distanciaTotal(viaje v) {  // n=|v|
 /*****************************+***** EJERCICIO excesoDeVelocidad
  * **********************************/
 bool excesoDeVelocidad(viaje v) {
-    viaje aux = viajeOrdenado(v);
-    for (int i = 0; i < aux.size() - 1; i++) {
-        if (velocidadMedia(aux[i], aux[i + 1]) * 3600 > 80) {
+    viaje vOrd = viajeOrdenado(v);
+    for (int i = 0; i < vOrd.size() - 1; i++) {
+        if (velocidadMedia(vOrd[i], vOrd[i + 1]) * 3600 > 80) {
             return true;
         }
     }
@@ -108,17 +109,18 @@ vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {  // m=|r|
 /************************************** EJERCICIO construirGrilla
  * *******************************/
 grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
-    distancia ladoHorizontal =
-        (obtenerLongitud(esq2) - obtenerLongitud(esq1)) / n;
-    distancia ladoVertical = (obtenerLatitud(esq2) - obtenerLatitud(esq1)) / m;
+    distancia anchoCelda = (obtenerLongitud(esq2) - obtenerLongitud(esq1)) / m;
+    distancia altoCelda = (obtenerLatitud(esq1) - obtenerLatitud(esq2)) / n;
     grilla resp = {};
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            gps auxEsq1 = {obtenerLongitud(esq1) + i * ladoHorizontal,
-                           obtenerLatitud(esq1) + j * ladoVertical};
-            gps auxEsq2 = {obtenerLongitud(esq1) + (i + 1) * ladoHorizontal,
-                           obtenerLatitud(esq1) + (j + 1) * ladoVertical};
+            gps auxEsq1 = {obtenerLatitud(esq1) - i * altoCelda,
+                           obtenerLongitud(esq1) + j * anchoCelda};
+            gps auxEsq2 = {
+                obtenerLatitud(esq1) - (i + 1) * altoCelda,
+                obtenerLongitud(esq1) + (j + 1) * anchoCelda,
+            };
             resp.push_back({auxEsq1, auxEsq2, {i + 1, j + 1}});
         }
     }
@@ -127,7 +129,7 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
 
 /************************************* EJERCICIO cantidadDeSaltos
  * ******************************/
-nombre getNombreCelda(gps p, grilla g) {
+nombre obtenerNombreCelda(gps p, grilla g) {
     for (int i = 0; i < g.size(); i++) {
         if ((obtenerLatitud(p) >= obtenerLatitud(obtenerEsq1(g[i]))) &&
             (obtenerLatitud(p) <= obtenerLatitud(obtenerEsq2(g[i]))) &&
@@ -140,32 +142,17 @@ nombre getNombreCelda(gps p, grilla g) {
 }
 
 int distanciaEnCeldas(gps p1, gps p2, grilla g) {
-    nombre n1 = getNombreCelda(p1, g);
-    nombre n2 = getNombreCelda(p2, g);
+    nombre n1 = obtenerNombreCelda(p1, g);
+    nombre n2 = obtenerNombreCelda(p2, g);
     return abs(obtenerFila(n1) - obtenerFila(n2)) +
            abs(obtenerColumna(n1) - obtenerColumna(n2));
 }
 
-int siguienteEnGrilla(grilla g, viaje v, int index) {
-    nombre noExiste = {-1, -1};
-    int posSiguiente = -1;
-    for (int i = index + 1; i < v.size(); i++) {
-        if (getNombreCelda(obtenerPosicion(v[i]), g) != noExiste) {
-            return i;
-        }
-    }
-    return -1;
-}
-
 int cantidadDeSaltos(grilla g, viaje v) {
     int resp = 0;
-    for (int i = 0; i < v.size(); i++) {
-        if (siguienteEnGrilla(g, v, i) != -1) {
-            if (distanciaEnCeldas(
-                    obtenerPosicion(v[i]),
-                    obtenerPosicion(v[siguienteEnGrilla(g, v, i)]), g) >= 2) {
-                resp++;
-            }
+    for (int i = 0; i < v.size() - 1; i++) {
+        if (distanciaEnCeldas(obtenerPosicion(v[i]), obtenerPosicion(v[i + 1]), g) >= 2) {
+            resp++;
         }
     }
     return resp;
@@ -187,8 +174,8 @@ tuple<puntoViaje, puntoViaje> puntosCercanos(tiempo error, viaje v,
                                              vector<tiempo> errores) {
     puntoViaje puntoCercano1;
     puntoViaje puntoCercano2;
-    tiempo minimo =
-        (get<0>(tiemposMaximoYMinimo(v)) - get<1>(tiemposMaximoYMinimo(v)));
+    tiempo minimo = (obtenerTiempoMaximo(tiemposMaximoYMinimo(v)) -
+                     obtenerTiempoMinimo(tiemposMaximoYMinimo(v)));
     for (int i = 0; i < v.size(); i++) {
         if ((abs(obtenerTiempo(v[i]) - error) < minimo) &&
             (!esError(v[i], errores))) {
@@ -197,8 +184,8 @@ tuple<puntoViaje, puntoViaje> puntosCercanos(tiempo error, viaje v,
         }
     }
 
-    minimo =
-        (get<0>(tiemposMaximoYMinimo(v)) - get<1>(tiemposMaximoYMinimo(v)));
+    minimo = (obtenerTiempoMaximo(tiemposMaximoYMinimo(v)) -
+              obtenerTiempoMinimo(tiemposMaximoYMinimo(v)));
     for (int i = 0; i < v.size(); i++) {
         if ((abs(obtenerTiempo(v[i]) - error) < minimo) &&
             (!esError(v[i], errores)) && (v[i] != puntoCercano1)) {
@@ -235,20 +222,20 @@ puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
         (distanciaHastaError / distEnKM(obtenerPosicion(puntoCercano1),
                                         obtenerPosicion(puntoCercano2)));
 
-    distancia distanciaHorizontalRecorrida =
+    distancia distanciaLatitudRecorrida =
         (obtenerLatitud(obtenerPosicion(puntoCercano2)) -
          obtenerLatitud(obtenerPosicion(puntoCercano1))) *
         factorRecorrido;
-    distancia distanciaVerticalRecorrida =
+    distancia distanciaLongitudRecorrida =
         (obtenerLongitud(obtenerPosicion(puntoCercano2)) -
          obtenerLongitud(obtenerPosicion(puntoCercano1))) *
         factorRecorrido;
 
     double auxLatitud = obtenerLatitud(obtenerPosicion(puntoCercano1)) +
-                        distanciaHorizontalRecorrida;
+                        distanciaLatitudRecorrida;
 
     double auxLongitud = obtenerLongitud(obtenerPosicion(puntoCercano1)) +
-                         distanciaVerticalRecorrida;
+                         distanciaLongitudRecorrida;
 
     return {obtenerTiempo(error), {auxLatitud, auxLongitud}};
 }
@@ -256,9 +243,9 @@ puntoViaje puntoCorregido(puntoViaje error, puntoViaje puntoCercano1,
 void corregirViaje(viaje &v, vector<tiempo> errores) {
     for (int i = 0; i < errores.size(); i++) {
         puntoViaje puntoCercano1 =
-            get<0>(puntosCercanos(errores[i], v, errores));
+            obtenerPrimerPuntoCercano(puntosCercanos(errores[i], v, errores));
         puntoViaje puntoCercano2 =
-            get<1>(puntosCercanos(errores[i], v, errores));
+            obtenerSegundoPuntoCercano(puntosCercanos(errores[i], v, errores));
         int indiceError = getIndiceViaje(v, errores[i]);
         v[indiceError] =
             puntoCorregido(v[indiceError], puntoCercano1, puntoCercano2);

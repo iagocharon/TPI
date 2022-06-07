@@ -15,6 +15,18 @@ gps obtenerEsq2(celda celda) { return get<1>(celda); }
 nombre obtenerNombre(celda celda) { return get<2>(celda); }
 int obtenerFila(nombre nombre) { return get<0>(nombre); }
 int obtenerColumna(nombre nombre) { return get<1>(nombre); }
+tiempo obtenerTiempoMaximo(tuple<tiempo, tiempo> tiemposMaximoYMinimo) {
+    return get<0>(tiemposMaximoYMinimo);
+}
+tiempo obtenerTiempoMinimo(tuple<tiempo, tiempo> tiemposMaximoYMinimo) {
+    return get<1>(tiemposMaximoYMinimo);
+}
+puntoViaje obtenerPrimerPuntoCercano(tuple<puntoViaje, puntoViaje> puntosCercanos) {
+    return get<0>(puntosCercanos);
+}
+puntoViaje obtenerSegundoPuntoCercano(tuple<puntoViaje, puntoViaje> puntosCercanos) {
+    return get<1>(puntosCercanos);
+}
 
 double distEnKM(gps posicion1, gps posicion2) {
     double latitud1 = obtenerLatitud(posicion1);
