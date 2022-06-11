@@ -132,9 +132,9 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
 nombre obtenerNombreCelda(gps p, grilla g) {
     for (int i = 0; i < g.size(); i++) {
         if ((obtenerLatitud(p) >= obtenerLatitud(obtenerEsq1(g[i]))) &&
-            (obtenerLatitud(p) <= obtenerLatitud(obtenerEsq2(g[i]))) &&
+            (obtenerLatitud(p) < obtenerLatitud(obtenerEsq2(g[i]))) &&
             (obtenerLongitud(p) >= obtenerLongitud(obtenerEsq1(g[i]))) &&
-            (obtenerLongitud(p) <= obtenerLongitud(obtenerEsq2(g[i])))) {
+            (obtenerLongitud(p) < obtenerLongitud(obtenerEsq2(g[i])))) {
             return obtenerNombre(g[i]);
         }
     }
@@ -144,7 +144,7 @@ nombre obtenerNombreCelda(gps p, grilla g) {
 int distanciaEnCeldas(gps p1, gps p2, grilla g) {
     nombre n1 = obtenerNombreCelda(p1, g);
     nombre n2 = obtenerNombreCelda(p2, g);
-    return abs(obtenerFila(n1) - obtenerFila(n2)) +
+    return  abs(obtenerFila(n1) - obtenerFila(n2)) +
            abs(obtenerColumna(n1) - obtenerColumna(n2));
 }
 
